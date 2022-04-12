@@ -22,7 +22,6 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt install -y $(cat pkglist.txt)
-          
       - name: Install dependencies
         run: |
           pip install --upgrade pip
