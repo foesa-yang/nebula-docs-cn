@@ -2877,6 +2877,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#submit_job_balance_data" class="md-nav__link">
+    SUBMIT JOB BALANCE DATA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#submit_job_compact" class="md-nav__link">
     SUBMIT JOB COMPACT
   </a>
@@ -6086,6 +6093,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#submit_job_balance_data" class="md-nav__link">
+    SUBMIT JOB BALANCE DATA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#submit_job_compact" class="md-nav__link">
     SUBMIT JOB COMPACT
   </a>
@@ -6191,6 +6205,20 @@
 <p class="admonition-title">Note</p>
 <p>所有作业管理命令都需要先选择图空间后才能执行。</p>
 </div>
+<h2 id="submit_job_balance_data">SUBMIT JOB BALANCE DATA<a class="headerlink" href="#submit_job_balance_data" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅企业版支持本功能。</p>
+</div>
+<p><code>SUBMIT JOB BALANCE DATA</code>语句会在当前图空间内启动任务均衡分布分片。该命令会返回任务 ID。</p>
+<p>示例：</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; SUBMIT JOB BALANCE DATA;
++------------+
+| New Job Id |
++------------+
+| 28         |
++------------+
+</code></pre></div>
 <!-- balance-3.1
 ## SUBMIT JOB BALANCE IN ZONE
 
@@ -6392,7 +6420,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2022</span>
       
     
   </small>

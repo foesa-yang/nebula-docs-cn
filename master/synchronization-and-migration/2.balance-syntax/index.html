@@ -5991,10 +5991,6 @@
 
 <h1 id="balance">BALANCE<a class="headerlink" href="#balance" title="Permanent link">&para;</a></h1>
 <p><code>BALANCE</code>语句可以让 Nebula Graph 的 Storage 服务实现负载均衡。更多<code>BALANCE</code>语句示例和 Storage 负载均衡，请参见 <a href="../../8.service-tuning/load-balance/">Storage 负载均衡</a>。</p>
-<div class="admonition compatibility">
-<p class="admonition-title">历史版本兼容性</p>
-<p>不支持<code>BALANCE DATA</code>命令。</p>
-</div>
 <p><code>BALANCE</code>语法说明如下。</p>
 <table>
 <thead>
@@ -6005,8 +6001,16 @@
 </thead>
 <tbody>
 <tr>
+<td align="left"><code>BALANCE DATA</code></td>
+<td align="left">启动任务均衡分布当前图空间中的所有分片。该命令会返回任务 ID（<code>job_id</code>）。</td>
+</tr>
+<tr>
+<td align="left"><code>BALANCE DATA REMOVE &lt;ip:port&gt; [,&lt;ip&gt;:&lt;port&gt; ...]</code></td>
+<td align="left">启动任务迁空当前图空间指定的 Storage 服务中的分片。</td>
+</tr>
+<tr>
 <td align="left"><code>BALANCE LEADER</code></td>
-<td align="left">在当前图空间内所有 Zone 之间启动任务均衡分布 leader。该命令会返回任务 ID。</td>
+<td align="left">启动任务均衡分布当前图空间中的所有 leader。该命令会返回任务 ID（<code>job_id</code>）。</td>
 </tr>
 </tbody>
 </table>
@@ -6026,7 +6030,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2022</span>
       
     
   </small>

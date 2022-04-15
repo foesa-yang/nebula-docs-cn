@@ -3817,6 +3817,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    均衡分片分布
+  </a>
+  
+    <nav class="md-nav" aria-label="均衡分片分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    停止负载均衡作业
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    迁移分片
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#leader" class="md-nav__link">
     均衡 leader 分布
   </a>
@@ -3825,7 +3859,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     示例
   </a>
   
@@ -6024,6 +6058,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    均衡分片分布
+  </a>
+  
+    <nav class="md-nav" aria-label="均衡分片分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    停止负载均衡作业
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    迁移分片
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#leader" class="md-nav__link">
     均衡 leader 分布
   </a>
@@ -6032,7 +6100,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     示例
   </a>
   
@@ -6063,9 +6131,107 @@
 
 <h1 id="storage">Storage 负载均衡<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h1>
 <p>用户可以使用<code>BALANCE</code>语句平衡分片和 Raft leader 的分布，或者清空某些 Storage 服务器方便进行维护。详情请参见 <a href="../../synchronization-and-migration/2.balance-syntax/">BALANCE</a>。</p>
-<div class="admonition compatibility">
-<p class="admonition-title">历史版本兼容性</p>
-<p>不支持<code>BALANCE DATA</code>命令。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><code>BALANCE</code>命令通过创建和执行一组子任务来迁移数据和均衡分片分布，<strong>禁止</strong>停止集群中的任何机器或改变机器的 IP 地址，直到所有子任务完成，否则后续子任务会失败。</p>
+</div>
+<h2 id="_1">均衡分片分布<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅企业版支持均衡分片分布。</p>
+</div>
+<p><code>BALANCE DATA</code>语句会开始一个任务，将当前图空间的分片平均分配到所有 Storage 服务器。通过创建和执行一组子任务来迁移数据和均衡分片分布。</p>
+<h3 id="_2">示例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>以横向扩容 Nebula Graph 为例，集群中增加新的 Storage 主机后，新主机上没有分片。</p>
+<ol>
+<li>
+<p>执行命令<code>SHOW HOSTS</code>检查分片的分布。</p>
+<div class="highlight"><pre><span></span><code>nebual&gt; SHOW HOSTS;
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+| Host            | Port | HTTP port | Status   | Leader count | Leader distribution   | Partition distribution | Version     |
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+| &quot;192.168.8.101&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 0            | &quot;No valid partition&quot;  | &quot;No valid partition&quot;   | &quot;3.1.0-ent&quot; |
+| &quot;192.168.8.100&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 15           | &quot;basketballplayer:15&quot; | &quot;basketballplayer:15&quot;  | &quot;3.1.0-ent&quot; |
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+</code></pre></div>
+</li>
+<li>
+<p>进入图空间<code>basketballplayer</code>，然后执行命令<code>BALANCE DATA</code>将所有分片均衡分布。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
+nebula&gt; BALANCE DATA;
++------------+
+| New Job Id |
++------------+
+| 2          |
++------------+
+</code></pre></div>
+</li>
+<li>
+<p>根据返回的任务ID，执行命令<code>SHOW JOB &lt;job_id&gt;</code>检查任务状态。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; SHOW JOB 2;
++------------------------+------------------------------------------+-------------+---------------------------------+---------------------------------+-------------+
+| Job Id(spaceId:partId) | Command(src-&gt;dst)                        | Status      | Start Time                      | Stop Time                       | Error Code  |
++------------------------+------------------------------------------+-------------+---------------------------------+---------------------------------+-------------+
+| 2                      | &quot;DATA_BALANCE&quot;                           | &quot;FINISHED&quot;  | &quot;2022-04-12T03:41:43.000000000&quot; | &quot;2022-04-12T03:41:53.000000000&quot; | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:1&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:2&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:3&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:4&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:5&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:6&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:43.000000      | &quot;SUCCEEDED&quot; |
+| &quot;2, 1:7&quot;               | &quot;192.168.8.100:9779-&gt;192.168.8.101:9779&quot; | &quot;SUCCEEDED&quot; | 2022-04-12T03:41:43.000000      | 2022-04-12T03:41:53.000000      | &quot;SUCCEEDED&quot; |
+| &quot;Total:7&quot;              | &quot;Succeeded:7&quot;                            | &quot;Failed:0&quot;  | &quot;In Progress:0&quot;                 | &quot;Invalid:0&quot;                     | &quot;&quot;          |
++------------------------+------------------------------------------+-------------+---------------------------------+---------------------------------+-------------+
+</code></pre></div>
+</li>
+<li>
+<p>等待所有子任务完成，负载均衡进程结束，执行命令<code>SHOW HOSTS</code>确认分片已经均衡分布。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>BALANCE DATA</code>不会均衡 leader 的分布。均衡 leader 请参见<a href="#leader">均衡leader分布</a>。</p>
+</div>
+<div class="highlight"><pre><span></span><code>nebula&gt; SHOW HOSTS;
++-----------------+------+-----------+----------+--------------+----------------------+------------------------+-------------+
+| Host            | Port | HTTP port | Status   | Leader count | Leader distribution  | Partition distribution | Version     |
++-----------------+------+-----------+----------+--------------+----------------------+------------------------+-------------+
+| &quot;192.168.8.101&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 7            | &quot;basketballplayer:7&quot; | &quot;basketballplayer:7&quot;   | &quot;3.1.0-ent&quot; |
+| &quot;192.168.8.100&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 8            | &quot;basketballplayer:8&quot; | &quot;basketballplayer:8&quot;   | &quot;3.1.0-ent&quot; |
++-----------------+------+-----------+----------+--------------+----------------------+------------------------+-------------+
+</code></pre></div>
+</li>
+</ol>
+<p>如果有子任务失败，请执行<code>RECOVER JOB &lt;job_id&gt;</code>。如果重做负载均衡仍然不能解决问题，请到<a href="https://discuss.nebula-graph.com.cn/">Nebula Graph社区</a>寻求帮助。</p>
+<h3 id="_3">停止负载均衡作业<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>停止负载均衡作业，请执行命令<code>STOP JOB &lt;job_id&gt;</code>。</p>
+<ul>
+<li>如果没有正在执行的负载均衡作业，会返回错误。</li>
+</ul>
+<ul>
+<li>如果有正在执行的负载均衡作业，会返回<code>Job stopped</code>。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>STOP JOB &lt;job_id&gt;</code>不会停止正在执行的子任务，而是取消所有后续子任务，状态会置为<code>INVALID</code>，然后等待正在执行的子任执行完毕根据结果置为<code>SUCCEEDED</code>或<code>FAILED</code>。用户可以执行命令<code>SHOW JOB &lt;job_id&gt;</code>检查停止的作业状态。</li>
+<li>宕机重启后，作业状态变为<code>QUEUE</code>，子任务如果之前是<code>INVALID</code>或<code>FAILED</code>，状态会置为<code>IN_PROGRESS</code>，如果是<code>IN_PROGRESS</code>或<code>SUCCEEDED</code>则保持不变。</li>
+</ul>
+</div>
+<p>一旦所有子任务都完成或停止，用户可以再次执行命令<code>RECOVER JOB &lt;job_id&gt;</code>重启作业，子任务按原有的状态继续执行。</p>
+<h3 id="_4">迁移分片<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>迁移指定的 Storage 主机中的分片来缩小集群规模，可以使用命令<code>BALANCE DATA REMOVE &lt;ip:port&gt; [,&lt;ip&gt;:&lt;port&gt; ...]</code>。</p>
+<p>例如需要迁移<code>192.168.8.100:9779</code>中的分片，请执行如下命令：</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; BALANCE DATA REMOVE 192.168.8.100:9779;
+nebula&gt; SHOW HOSTS;
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+| Host            | Port | HTTP port | Status   | Leader count | Leader distribution   | Partition distribution | Version     |
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+| &quot;192.168.8.101&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 15           | &quot;basketballplayer:15&quot; | &quot;basketballplayer:15&quot;  | &quot;3.1.0-ent&quot; |
+| &quot;192.168.8.100&quot; | 9779 | 19669     | &quot;ONLINE&quot; | 0            | &quot;No valid partition&quot;  | &quot;No valid partition&quot;   | &quot;3.1.0-ent&quot; |
++-----------------+------+-----------+----------+--------------+-----------------------+------------------------+-------------+
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>该命令仅迁移分片，不会将 Storage 主机从集群中删除。删除 Storage 主机请参见<a href="../../4.deployment-and-installation/manage-storage-host/">管理 Storage 主机</a>。</p>
 </div>
 <!-- balance-3.1
 !!! danger
@@ -6187,7 +6353,7 @@ nebula&gt; BALANCE IN ZONE;
 
 <h2 id="leader">均衡 leader 分布<a class="headerlink" href="#leader" title="Permanent link">&para;</a></h2>
 <p>用户可以使用命令<code>BALANCE LEADER</code>均衡 leader 分布。</p>
-<h3 id="_1">示例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_5">示例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>nebula&gt; BALANCE LEADER;
 </code></pre></div>
 <p>用户可以执行<code>SHOW HOSTS</code>检查结果。</p>
@@ -6213,7 +6379,7 @@ nebula&gt; BALANCE IN ZONE;
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2022</span>
       
     
   </small>

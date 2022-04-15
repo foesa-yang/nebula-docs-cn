@@ -5905,8 +5905,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zone_not_enough" class="md-nav__link">
-    如何处理错误信息 Zone not enough!
+  <a href="#host_not_enough" class="md-nav__link">
+    如何处理错误信息 Host not enough!
   </a>
   
 </li>
@@ -6404,8 +6404,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zone_not_enough" class="md-nav__link">
-    如何处理错误信息 Zone not enough!
+  <a href="#host_not_enough" class="md-nav__link">
+    如何处理错误信息 Host not enough!
   </a>
   
 </li>
@@ -6769,7 +6769,7 @@
 <h2 id="_4">关于执行报错<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="semanticerror_missing_yield_clause">如何处理错误信息 <code>SemanticError: Missing yield clause.</code><a class="headerlink" href="#semanticerror_missing_yield_clause" title="Permanent link">&para;</a></h3>
 <p>从 Nebula Graph 3.0.0 开始，查询语句<code>LOOKUP</code>、<code>GO</code>、<code>FETCH</code>必须用<code>YIELD</code>子句指定输出结果。详情请参见<a href="../../3.ngql-guide/8.clauses-and-options/yield/">YIELD</a>。</p>
-<h3 id="zone_not_enough">如何处理错误信息 <code>Zone not enough!</code><a class="headerlink" href="#zone_not_enough" title="Permanent link">&para;</a></h3>
+<h3 id="host_not_enough">如何处理错误信息 <code>Host not enough!</code><a class="headerlink" href="#host_not_enough" title="Permanent link">&para;</a></h3>
 <p>从 3.0.0 版本开始，在配置文件中添加的 Storage 节点无法直接读写，配置文件的作用仅仅是将 Storage 节点注册至 Meta 服务中。必须使用<code>ADD HOSTS</code>命令后，才能正常读写 Storage 节点。详情参见<a href="../../4.deployment-and-installation/manage-storage-host/">管理 Storage 主机</a>。</p>
 <h3 id="to_get_the_property_of_the_vertex_in_vage_should_use_the_format_vartagprop">如何处理错误信息 <code>To get the property of the vertex in 'v.age', should use the format 'var.tag.prop'</code><a class="headerlink" href="#to_get_the_property_of_the_vertex_in_vage_should_use_the_format_vartagprop" title="Permanent link">&para;</a></h3>
 <p>从 3.0.0 版本开始，<code>pattern</code>支持同时匹配多个 Tag，所以返回属性时，需要额外指定 Tag 名称。即从<code>RETURN 变量名.属性名</code>改为<code>RETURN 变量名.Tag名.属性名</code>。</p>
@@ -7109,7 +7109,7 @@ telnet: connect to address <span class="m">192</span>.168.1.10: Connection refus
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2022</span>
       
     
   </small>

@@ -6203,10 +6203,14 @@
 </table>
 <p>单击右上角的<strong>详情</strong>，查看更多信息。</p>
 <h3 id="partition">Partition 分布<a class="headerlink" href="#partition" title="Permanent link">&para;</a></h3>
-<p>选择指定图空间，查看指定图空间的分片分布情况。显示所有 Storage 服务的 IP 地址、端口，及对应 Storage 服务中的分片数量。</p>
+<p>左上方选择指定图空间：</p>
+<ul>
+<li>查看指定图空间的分片分布情况。显示所有 Storage 服务的 IP 地址、端口，及对应 Storage 服务中的分片数量。</li>
+<li>单击 <strong>Balance Data</strong> 均衡分布当前图空间中的所有分片。</li>
+<li>单击 <strong>Balance Data Remove</strong> 迁移指定的 Storage 服务中的所有分片至其他 Storage 服务中，操作前系统会先引导用户选择 Storage 服务所在的节点 IP。</li>
+</ul>
 <!-- 增加balance data 
-- 单击`balance data`，
-- 单击`balance remove` -->
+ -->
 <p>单击右上角的<strong>详情</strong>，查看更多信息。</p>
 <h3 id="_5">分片信息<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>显示分片信息。用户需要在左上角选择图空间，查看分片信息。参数说明如下：</p>
@@ -6259,7 +6263,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 14, 2022</span>
       
     
   </small>
