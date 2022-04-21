@@ -75,13 +75,13 @@ extra:
     tag: v3.0.0
   importer:
     release: 3.1.0
-    branch: v3.0.0
+    branch: release-3.1
   algorithm:
     release: 3.0.0
     branch: v3.0.0
   plato:
     release: 1.1.0
-    branch: v1.0.0
+    branch: release-1.1
   sparkconnector:
     release: 3.0.0
     branch: v3.0.0
@@ -92,17 +92,17 @@ extra:
     tag: v3.0.0
   dockercompose:
     release: 3.1.0
-    branch: v3.0.0
+    branch: release-3.1
   common:
     release: 2.5.0
   dashboard:
     release: 3.0.0
     base100: 1.0.0
-    branch: v1.1.0
+    branch: release-3.0
   dashboard_ent:
     release: 3.0.0
   console:
-    release: 3.1.0
+    release: 3.0.0
     branch: v3.0.0
   br:
     release: 0.7.0
@@ -113,20 +113,23 @@ extra:
     release: 3.0.0
     branch: v3.0.0
   python:
-    release: 3.0.0
-    branch: v3.0.0
+    release: 3.1.0
+    branch: release-3.1
   go:
     release: 3.0.0
     branch: release-v3.0.0
   bench:
-    release: 1.0.0
-    branch: master
-    tag: v1.0.0
+    release: 1.1.0
+    branch: release-1.1
+    tag: v1.1.0
   operator:
     release: 1.1.0
-    branch: v0.9.0
+    branch: release-1.1
+    upgrade_from: 3.0.0
+    upgrade_to: 3.1.x
   exporter:
     release: 3.0.0
+    branch: release-3.1
 nav:
   - 前言: README.md
   - 简介:
@@ -493,21 +496,21 @@ nav:
       - 导出 Nebula Graph 数据: nebula-exchange/use-exchange/ex-ug-export-from-nebula.md
     - Exchange 常见问题: nebula-exchange/ex-ug-FAQ.md
 
-#   - Nebula Operator:
-#       - 什么是 Nebula Operator: nebula-operator/1.introduction-to-nebula-operator.md
-#       - 使用流程: nebula-operator/6.get-started-with-operator.md
-#       - 部署 Nebula Operator: nebula-operator/2.deploy-nebula-operator.md
-#       - 部署 Nebula Graph集群: 
-#         - 使用 Kubectl 部署 Nebula Graph 集群: nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md
-#         - 使用 Helm 部署 Nebula Graph 集群: nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md
-#       - 配置 Nebula Graph 集群:
-#         - 自定义 Nebula Graph 集群的配置参数: nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter.md
-#         - 回收 PV: nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim.md 
-# #banlance-3.1  notice Exclude       - 均衡扩容后的 Storage 数据: nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
-#       - 升级 Nebula Graph 集群: nebula-operator/9.upgrade-nebula-cluster.md   
-#       - 连接 Nebula Graph 数据库: nebula-operator/4.connect-to-nebula-graph-service.md
-#       - 故障自愈: nebula-operator/5.operator-failover.md
-#       - 常见问题: nebula-operator/7.operator-faq.md
+  - Nebula Operator:
+      - 什么是 Nebula Operator: nebula-operator/1.introduction-to-nebula-operator.md
+      - 使用流程: nebula-operator/6.get-started-with-operator.md
+      - 部署 Nebula Operator: nebula-operator/2.deploy-nebula-operator.md
+      - 部署 Nebula Graph集群: 
+        - 使用 Kubectl 部署 Nebula Graph 集群: nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md
+        - 使用 Helm 部署 Nebula Graph 集群: nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md
+      - 配置 Nebula Graph 集群:
+        - 自定义 Nebula Graph 集群的配置参数: nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter.md
+        - 回收 PV: nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim.md 
+        - 均衡扩容后的 Storage 数据: nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
+      - 升级 Nebula Graph 集群: nebula-operator/9.upgrade-nebula-cluster.md   
+      - 连接 Nebula Graph 数据库: nebula-operator/4.connect-to-nebula-graph-service.md
+      - 故障自愈: nebula-operator/5.operator-failover.md
+      - 常见问题: nebula-operator/7.operator-faq.md
 
   - Nebula Algorithm: nebula-algorithm.md
 
@@ -528,6 +531,8 @@ nav:
       - 社区参与: 15.contribution/how-to-contribute.md
       - 年表: 20.appendix/history.md
       - 思维导图: 20.appendix/mind-map.md
+      - 错误码: 20.appendix/error-code.md
+
 
   - English Docs: https://docs.nebula-graph.io/
   - PDF: ./pdf/NebulaGraph-CN.pdf
