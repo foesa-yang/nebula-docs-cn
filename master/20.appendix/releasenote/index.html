@@ -5724,7 +5724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/1.introduction-to-nebula-operator.md" class="md-nav__link">
+      <a href="../../nebula-operator/1.introduction-to-nebula-operator/" class="md-nav__link">
         什么是 Nebula Operator
       </a>
     </li>
@@ -5738,7 +5738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/6.get-started-with-operator.md" class="md-nav__link">
+      <a href="../../nebula-operator/6.get-started-with-operator/" class="md-nav__link">
         使用流程
       </a>
     </li>
@@ -5752,7 +5752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/2.deploy-nebula-operator.md" class="md-nav__link">
+      <a href="../../nebula-operator/2.deploy-nebula-operator/" class="md-nav__link">
         部署 Nebula Operator
       </a>
     </li>
@@ -5792,7 +5792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md" class="md-nav__link">
+      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/" class="md-nav__link">
         使用 Kubectl 部署 Nebula Graph 集群
       </a>
     </li>
@@ -5806,7 +5806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md" class="md-nav__link">
+      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/" class="md-nav__link">
         使用 Helm 部署 Nebula Graph 集群
       </a>
     </li>
@@ -5853,7 +5853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter.md" class="md-nav__link">
+      <a href="../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter/" class="md-nav__link">
         自定义 Nebula Graph 集群的配置参数
       </a>
     </li>
@@ -5867,7 +5867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim.md" class="md-nav__link">
+      <a href="../../nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim/" class="md-nav__link">
         回收 PV
       </a>
     </li>
@@ -5881,7 +5881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md" class="md-nav__link">
+      <a href="../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage/" class="md-nav__link">
         均衡扩容后的 Storage 数据
       </a>
     </li>
@@ -5902,7 +5902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/9.upgrade-nebula-cluster.md" class="md-nav__link">
+      <a href="../../nebula-operator/9.upgrade-nebula-cluster/" class="md-nav__link">
         升级 Nebula Graph 集群
       </a>
     </li>
@@ -5916,7 +5916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/4.connect-to-nebula-graph-service.md" class="md-nav__link">
+      <a href="../../nebula-operator/4.connect-to-nebula-graph-service/" class="md-nav__link">
         连接 Nebula Graph 数据库
       </a>
     </li>
@@ -5930,7 +5930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/5.operator-failover.md" class="md-nav__link">
+      <a href="../../nebula-operator/5.operator-failover/" class="md-nav__link">
         故障自愈
       </a>
     </li>
@@ -5944,7 +5944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/7.operator-faq.md" class="md-nav__link">
+      <a href="../../nebula-operator/7.operator-faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -6104,6 +6104,20 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    优化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    缺陷修复
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     历史版本
   </a>
   
@@ -6294,6 +6308,20 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    优化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    缺陷修复
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     历史版本
   </a>
   
@@ -6318,8 +6346,59 @@
 
 
 <h1 id="nebula_graph_master_release_notes">Nebula Graph master release notes<a class="headerlink" href="#nebula_graph_master_release_notes" title="Permanent link">&para;</a></h1>
-<p>TODO</p>
-<h2 id="_1">历史版本<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">优化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>支持在表达式中使用模式，如：<code>MATCH (v:player) WHERE (v)-[:like]-&gt;() RETURN v</code>。<a href="https://github.com/vesoft-inc/nebula/pull/3997">#3997</a> </li>
+<li>支持用<code>CLEAR SPACE</code>清除图空间数据并保留 Schema 信息。<a href="https://github.com/vesoft-inc/nebula/pull/3989">#3989</a> </li>
+<li>支持在匹配模式中重复点的别名，如：<code>MATCH (v)--&gt;(v)</code>。<a href="https://github.com/vesoft-inc/nebula/pull/3929">#3929</a> </li>
+<li>优化<code>SUBGRAPH</code>和<code>FIND PATH</code>从而提高性能。<a href="https://github.com/vesoft-inc/nebula/pull/3871">#3871</a> <a href="https://github.com/vesoft-inc/nebula/pull/4095">#4095</a> </li>
+<li>优化路径以减少冗余路径和时间复杂度。<a href="https://github.com/vesoft-inc/nebula/pull/4162">#4126</a> </li>
+<li>优化获取属性的方式进而优化<code>MATCH</code>语句的性能。<a href="https://github.com/vesoft-inc/nebula/pull/3750">#3750</a> </li>
+<li>优化<code>GO</code>、<code>YIELD</code>子句，减少不必要的属性读取。<a href="https://github.com/vesoft-inc/nebula/pull/3974">#3974</a> </li>
+<li>支持获取属性时 Filter 及 Limit 下推。 <a href="https://github.com/vesoft-inc/nebula/pull/3844">#3844</a> <a href="https://github.com/vesoft-inc/nebula/pull/3839">#3839</a> </li>
+<li>支持<code>LOOKUP</code>聚合下推。<a href="https://github.com/vesoft-inc/nebula/pull/3504">#3504</a> </li>
+<li><code>maxHop</code>在匹配可变长度路径中是可选的。<a href="https://github.com/vesoft-inc/nebula/pull/3881">#3881</a> </li>
+<li>使用<code>DROP SPACE</code>之后图空间将进行物理删除。<a href="https://github.com/vesoft-inc/nebula/pull/3913">#3913</a> </li>
+<li>优化日期时间/日期/时间中数字解析。<a href="https://github.com/vesoft-inc/nebula/pull/3797">#3797</a> </li>
+<li>添加<code>toSet</code>函数，将<code>LIST</code>或<code>SET</code>转换为<code>SET</code>。<a href="https://github.com/vesoft-inc/nebula/pull/3594">#3594</a> </li>
+<li>支持使用 nGQL 来显示服务的 HTTP 端口，并禁用 HTTP2 端口。<a href="https://github.com/vesoft-inc/nebula/pull/3808">#3808</a> </li>
+<li>限制单用户、单机器连接数据库的会话数量。<a href="https://github.com/vesoft-inc/nebula/pull/3729">#3729</a> </li>
+<li>优化存储启动时的等待机制，保证与 Meta 服务及时连接。<a href="https://github.com/vesoft-inc/nebula/pull/3971">#3971</a> </li>
+<li>当节点存在多条路径，某条数据路径对应磁盘故障时，不再需要重建整个节点。<a href="https://github.com/vesoft-inc/nebula/pull/4131">#4131</a></li>
+<li>优化 Job 管理。<a href="https://github.com/vesoft-inc/nebula/pull/3976">#3976</a> <a href="https://github.com/vesoft-inc/nebula/pull/4045">#4045</a> <a href="https://github.com/vesoft-inc/nebula/pull/4001">#4001</a>  </li>
+<li>支持在作业管理中管理<code>DOWNLOAD</code>、<code>INGEST SST</code>文件。<a href="https://github.com/vesoft-inc/nebula/pull/3994">#3994</a></li>
+<li>支持显示失败作业的错误码。<a href="https://github.com/vesoft-inc/nebula/pull/4067">#4067</a> </li>
+<li>支持禁用 OS 页面缓存，只在共享环境中使用块缓存和 Nebula 存储缓存，以避免应用程序之间的内存占用干扰。<a href="https://github.com/vesoft-inc/nebula/pull/3890">#3890</a> </li>
+<li>更新 KV 分离阈值的默认值（从 0 到 100）。<a href="https://github.com/vesoft-inc/nebula/pull/3879">#3879</a> </li>
+<li>支持 gflag 设置表达式深度上限，方便调整适配不同的机器环境。<a href="https://github.com/vesoft-inc/nebula/pull/3722">#3722</a> </li>
+<li>新增<code>KILL QUERY</code>的权限检查。当启用身份验证时，具有 GOD 角色的用户可以终止所有查询，而具有其他角色的用户只能终止自己的查询。<a href="https://github.com/vesoft-inc/nebula/pull/3896">#3896</a> </li>
+<li>新增 distcc、sccache 等编译方式的支持。<a href="https://github.com/vesoft-inc/nebula/pull/3896">#3896</a> </li>
+<li>meta dump 工具支持更多可 dump 的表。<a href="https://github.com/vesoft-inc/nebula/pull/3870">#3870</a> </li>
+</ul>
+<h2 id="_2">缺陷修复<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>修复<code>LOOKUP</code>中使用函数调用作为过滤器的一部分导致的服务崩溃问题。<a href="https://github.com/vesoft-inc/nebula/pull/4111">#4111</a> </li>
+<li>修复<code>IN</code>表达式中的属性没有索引绑定时的崩溃问题。<a href="https://github.com/vesoft-inc/nebula/pull/3986">#3986</a> </li>
+<li>修复并发扫描点或者边时导致 Storage 服务崩溃的问题。<a href="https://github.com/vesoft-inc/nebula/pull/4190">#4190</a> </li>
+<li>修复<code>MATCH</code>语句的聚合子句中，使用模式表达式时崩溃的问题。<a href="https://github.com/vesoft-inc/nebula/pull/4180">#4180</a> </li>
+<li>修复获取<code>profile</code>查询的 JSON 结果导致的崩溃问题。<a href="https://github.com/vesoft-inc/nebula/pull/3998">#3998</a> </li>
+<li>修复 Lambda 函数中的<code>async</code>接口运行完毕且<code>threadManager</code>中的任务未执行时的崩溃问题。<a href="https://github.com/vesoft-inc/nebula/pull/4000">#4000</a> </li>
+<li>修复<code>GROUP BY</code>输出的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4128">#4128</a> </li>
+<li>修复<code>SHOW HOSTS</code>有时不能不显示版本的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4116">#4116</a> </li>
+<li>修复<code>id(n) == $var</code>，<code>id(n) IN [$var]</code>， <code>id(n) == $var.foo.bar</code>， <code>id(n) IN $var.foo.bar</code>参数化的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4024">#4024</a> </li>
+<li>修复<code>MATCH...WHERE</code>中出现错误路径方向的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4091">#4091</a> </li>
+<li>修复<code>WHERE</code>子句同时引用多<code>MATCH</code>变量结果显示不正确的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4143">#4143</a> </li>
+<li>修复优化规则的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4146">#4146</a> </li>
+<li>修复节点处理 Raft 快照失败的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4019">#4019</a> </li>
+<li>修复节点接收快照后无法接受更多日志的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/3909">#3909</a></li>
+<li>修复快照中不包含不带 Tag 的点的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4189">#4189</a> </li>
+<li>修复同一个 Tag 或者 Edge 的版本超过 255 后读取最新版本的 Schema 失败的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4023">#4023</a> </li>
+<li>修复<code>SHOW STATS</code>不统计不带 Tag 的点的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/3967">#3967</a> </li>
+<li>修复有时时间戳获取错误的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/3958">#3958</a> </li>
+<li>修复可以为<code>root</code>用户分配图空间中的其他角色的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/3868">#3868</a> </li>
+<li>修复词法分析器中的列索引重复计数的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/3626">#3626</a> </li>
+</ul>
+<h2 id="_3">历史版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><a href="https://nebula-graph.com.cn/tags/release-note/">历史版本</a></p>
 
   <hr>
@@ -6327,7 +6406,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 24, 2022</span>
       
     
   </small>
