@@ -46,7 +46,11 @@ Nebula Graph 的审计日志功能可以将 Graph 服务接受到的所有操作
 
 ## 审计日志格式
 
-不同的存储方案和不同的格式，日志内的字段是相同的。以默认路径（`logs/audit/audit.log`）和默认 XML 格式为例说明各个字段的含义。
+不同的存储方案和不同的格式，日志内的字段是相同的。以默认路径（`/usr/local/nebula/logs/audit/audit.log`）和默认 XML 格式为例说明各个字段的含义。
+
+!!! note
+
+    如果在 Nebula Graph 运行过程中删除审计日志目录，日志不会继续打印，但是不会影响业务。重启服务可以恢复正常。
 
 ```bash
 <AUDIT_RECORD
