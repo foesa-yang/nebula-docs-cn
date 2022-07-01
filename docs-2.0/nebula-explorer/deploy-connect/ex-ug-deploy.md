@@ -29,12 +29,11 @@
        Explorer 默认使用的端口号为 7002，用户可以在安装目录下的 `conf/app.conf` 文件中修改 `httpport`，并重启服务。
 
 - 使用的 Linux 发行版为 CentOS。
-- 安装有版本为 1.13 及以上的 Go。
-- 准备 License。
+- [准备 License](3.explorer-license.md)。
 
   !!! enterpriseonly
 
-        License 仅在企业版提供，申请 License 需填写 [Nebula Explorer 试用申请](https://wj.qq.com/s2/9414111/81f4)。
+        License 仅在企业版提供，申请 License 需填写 [Nebula Explorer 试用申请](https://wj.qq.com/s2/10158890/69a8)。
 
 ## RPM 部署
 ### 安装
@@ -43,7 +42,7 @@
 
   !!! enterpriseonly
 
-        用户可以[在线申请](https://wj.qq.com/s2/9414111/81f4)试用 Explorer 企业版；如需购买，通过邮箱(inquiry@vesoft.com)联系销售人员。点击[定价](https://nebula-graph.com.cn/pricing/)查看更多。
+        用户可以[在线申请](https://wj.qq.com/s2/10158890/69a8)试用 Explorer 企业版；如需购买，通过邮箱(inquiry@vesoft.com)联系销售人员。点击[定价](https://nebula-graph.com.cn/pricing/)查看更多。
 
 2. 使用`sudo rpm -i <rpm>`命令安装 RPM 包。
 
@@ -53,9 +52,9 @@
    sudo rpm -i nebula-explorer-<version>.x86_64.rpm
    ```
 
-   也可以使用以下命令安装到指定路径：
+   也可以使用`--prefix`选项安装到指定路径：
    ```bash
-   sudo rpm -i nebula-explorer-xxx.rpm --prefix=<path> 
+   sudo rpm -i nebula-explorer-<version>.x86_64.rpm --prefix=<path> 
    ```
 
 3. 拷贝 License 至安装路径下。
@@ -69,11 +68,10 @@
    cp -r nebula.license /usr/local/nebula-explorer
    ```
 
-4. 添加 License 后需要使用以下命令停止并重启服务。
+4. 执行以下命令启动服务。
 
    ```bash
-   systemctl stop nebula-explorer #停止服务
-   systemctl start nebula-explorer #启动服务
+   systemctl start nebula-explorer
    ```
 
 ### 启停服务
@@ -109,7 +107,7 @@ sudo rpm -e nebula-explorer-<version>.x86_64
 
   !!! enterpriseonly
 
-        用户可以[在线申请](https://wj.qq.com/s2/9414111/81f4)试用 Explorer 企业版；如需购买，通过邮箱(inquiry@vesoft.com)联系销售人员。点击[定价](https://nebula-graph.com.cn/pricing/)查看更多。
+        用户可以[在线申请](https://wj.qq.com/s2/10158890/69a8)试用 Explorer 企业版；如需购买，通过邮箱(inquiry@vesoft.com)联系销售人员。点击[定价](https://nebula-graph.com.cn/pricing/)查看更多。
 
 
 2. 使用`sudo dpkg -i <package_name>`命令安装 DEB 包。

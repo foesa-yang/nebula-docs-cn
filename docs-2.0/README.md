@@ -1,13 +1,13 @@
 # 欢迎阅读 Nebula Graph {{ nebula.release }} 文档
 
-!!! Note "[查看版本发布说明](20.appendix/releasenote.md)"
+!!! Note "[查看版本发布说明](20.appendix/release-note.md)"
 
     本文档更新时间{{ now().year }}-{{ now().month }}-{{ now().day }}，GitHub commit [{{ git.short_commit }}](https://github.com/vesoft-inc/nebula-docs/commits/v{{nebula.release}})。
 
 Nebula Graph 是一款开源的、分布式的、易扩展的原生图数据库，能够承载数千亿个点和数万亿条边的超大规模数据集，并且提供毫秒级查询。
 
 ## 快速开始
-* [学习路径](20.appendix/learning-path.md)
+* [学习路径](20.appendix/learning-path.md)与[获取认证](https://academic.nebula-graph.io/?lang=ZH_CN)
 * [什么是 Nebula Graph](1.introduction/1.what-is-nebula-graph.md)
 * [快速开始](2.quick-start/1.quick-start-workflow.md)
 * [部署要求](4.deployment-and-installation/1.resource-preparations.md)
@@ -17,9 +17,9 @@ Nebula Graph 是一款开源的、分布式的、易扩展的原生图数据库�
 
 ## 其他资料
 
-- [《开源分布式图数据库 Nebula
-Graph 完全指南》](https://docs.nebula-graph.com.cn/site/pdf/NebulaGraph-book.pdf)
-- [发布说明](20.appendix/releasenote.md)
+- [Nebula
+Graph 完全指南](https://docs.nebula-graph.com.cn/site/pdf/NebulaGraph-book.pdf)与[摘要版本](https://arxiv.org/abs/2206.07278)
+- [发布说明](20.appendix/release-note.md)
 - [论坛](https://discuss.nebula-graph.com.cn/)
 - [项目主页](https://nebula-graph.com.cn/)
 - [系列视频](https://space.bilibili.com/472621355)

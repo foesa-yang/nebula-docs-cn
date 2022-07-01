@@ -163,11 +163,18 @@
  
 ### 3.7 周边工具
 
+- 云
+
+  |Cloud 版本|文档|视频| 
+  |---------|---------|--------|
+  |Azure 版|[Nebula Graph Cloud Azure云版](https://docs.nebula-graph.com.cn/2.6.2/nebula-cloud/1.what-is-cloud/)|-|
+  |阿里云版|[Nebula Graph Cloud 阿里云版](../nebula-cloud/nebula-cloud-on-alibabacloud/1.create-service-instance.md)|[Nebula Graph Cloud 阿里云版介绍](https://www.bilibili.com/video/BV1BY411K7QJ)|
+
 - 可视化
 
   | 可视化工具     | 文档                                                         | 视频                                                         |
   | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-  | 数据可视化     | [Nebula Graph Studio](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-studio/about-studio/st-ug-what-is-graph-studio/) | [Nebula Studio 图探索功能](https://www.bilibili.com/video/BV1QN411Z7Vh)和[Nebula Graph Studio 可视化建模](https://www.bilibili.com/video/BV19A411L77h?spm_id_from=333.999.0.0) |
+  | 数据可视化     | [Nebula Studio](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-studio/about-studio/st-ug-what-is-graph-studio/) | [Nebula Studio 图探索功能](https://www.bilibili.com/video/BV1QN411Z7Vh)和[Nebula Studio 可视化建模](https://www.bilibili.com/video/BV19A411L77h?spm_id_from=333.999.0.0) |
   | 数据监控和运维 | [Nebula Dashboard 企业版](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-dashboard-ent/1.what-is-dashboard-ent/)和 [Nebula Dashboard 社区版](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-dashboard/1.what-is-dashboard/) | [可视化监控 Nebula Dashboard](https://www.bilibili.com/video/BV1qQ4y1k7gb?)                                                            |
   | 数据分析       | [Nebula Explorer 企业版](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-explorer/about-explorer/ex-ug-what-is-explorer/) | [可视化图探索 Nebula Explorer](https://www.bilibili.com/video/BV1fP4y1h7Fx?)                                                            |
 
@@ -181,7 +188,13 @@
   | 数据导入       | [Nebula Flink Connector](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-flink-connector/) | -                                                            |
   | 数据导入       | [Nebula Exchange 社区版](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-exchange/about-exchange/ex-ug-what-is-exchange/) | [Nebula Graph 数据导入工具——Exchange](https://www.bilibili.com/video/BV1Pq4y177D9)、[Exchange 导入 SST 数据](https://www.bilibili.com/video/BV1y34y1o7Di?)  |
   | 数据导出       | [Nebula Exchange 企业版](https://docs.nebula-graph.com.cn/{{nebula.release}}/nebula-exchange/about-exchange/ex-ug-what-is-exchange/) | -                                                            |
-  
+
+- 备份与恢复
+
+  | 文档                    |     视频                               |
+  | ------------------------|------------------------------------ |
+  |[Nebula BR](../backup-and-restore/nebula-br/1.what-is-br.md)|[Nebula Graph 容灾备份工具 nebula-br](https://www.bilibili.com/video/BV11L4y1g7rD)|
+
 - 性能测试
 
   | 文档                                                         |
@@ -260,4 +273,4 @@
 
 考试用书[《开源分布式图数据库 Nebula Graph 完全指南》](https://docs.nebula-graph.com.cn/site/pdf/NebulaGraph-book.pdf)
 
-单击[Nebula Graph （第N期） 个人技能认证](https://discuss.nebula-graph.com.cn/t/topic/5253)查看考试入口及考试开放和截止时间。
+单击[Nebula Graph 个人技能认证](https://discuss.nebula-graph.com.cn/t/topic/8728)查看考试说明及入口。
