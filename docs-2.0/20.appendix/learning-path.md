@@ -274,3 +274,8 @@
 考试用书[《开源分布式图数据库 Nebula Graph 完全指南》](https://docs.nebula-graph.com.cn/site/pdf/NebulaGraph-book.pdf)
 
 单击[Nebula Graph 个人技能认证](https://discuss.nebula-graph.com.cn/t/topic/8728)查看考试说明及入口。
+
+### 视频
+
+* [技能认证](https://www.bilibili.com/video/BV1Ga411x7RE)（3 分 13 秒）
+<iframe src="//player.bilibili.com/player.html?aid=215181639&bvid=BV1Ga411x7RE&cid=752738115&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720px" height="480px"> </iframe>
