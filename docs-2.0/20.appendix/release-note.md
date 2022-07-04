@@ -1,5 +1,6 @@
 # Nebula Graph {{ nebula.release }} release notes
 
+{{ ent.ent_begin }}
 ## 企业版
 
 ### 功能
@@ -65,3 +66,5 @@
 ## 历史版本
 
 [历史版本](https://nebula-graph.com.cn/tags/release-note/)
+
+{{ ent.ent_end }}

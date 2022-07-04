@@ -186,6 +186,7 @@
 |`tags.path`|string|-|是|指定需要生成 SST 文件的源文件的路径。|
 |`tags.repartitionWithNebula`|bool|`false`|否|生成 SST 文件时是否要基于 Nebula Graph 中图空间的 partition 进行数据重分区。开启该功能可减少 DOWNLOAD 和 INGEST SST 文件需要的时间。当图空间的分片数量（partition_num）大于`1`时，请设置为`true`，否则可能会导致生成的数据文件中只包含无 Tag 的点。|
 
+{{ ent.ent_begin }}
 ### Nebula Graph 源特有参数
 
 !!! enterpriseonly
@@ -197,6 +198,8 @@
 |`tags.path`|string|`"hdfs://namenode:9000/path/vertex"`|是|指定 CSV 文件的存储路径。设置的路径必须不存在，Exchange 会自动创建该路径。存储到 HDFS 服务器时路径格式同默认值，例如`"hdfs://192.168.8.177:9000/vertex/player"`。存储到本地时路径格式为`"file:///path/vertex"`，例如`"file:///home/nebula/vertex/player"`。有多个 Tag 时必须为每个 Tag 设置不同的目录。|
 |`tags.noField`|bool|`false`|是|当值为`true`时，仅导出 VID 而不导出属性数据；当值为`false`时导出 VID 和属性数据。|
 |`tags.return.fields`|list|`[]`|是|指定要导出的属性。例如，要导出`name`和`age`属性，需将参数值设置为`["name","age"]`。该参数仅在`tags.noField`的值为`false`时生效。|
+
+{{ ent.ent_end }}
 
 ## 边配置
 

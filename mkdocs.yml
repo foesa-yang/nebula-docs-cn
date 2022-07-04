@@ -75,7 +75,24 @@ plugins:
         - spark-connector/*
         - 4.deployment-and-installation/5.zone.md
         - 4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-200-to-latest.md
+        # 文档为企业版需注释以下页面（以下文档均为企业版）
         - nebula-cloud/*
+        - 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
+        - 4.deployment-and-installation/deploy-license.md
+        - 5.configurations-and-logs/2.log-management/audit-log.md
+        - 7.data-security/1.authentication/4.ldap.md
+        - 8.service-tuning/load-balance.md
+        - graph-computing/0.deploy-controller-analytics.md
+        - graph-computing/nebula-analytics.md
+        - graph-computing/use-explorer.md
+        - nebula-dashboard-ent/*
+        - nebula-explorer/*
+        - nebula-exchange/use-exchange/ex-ug-export-from-nebula.md
+        - nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
+        - synchronization-and-migration/replication-between-clusters.md
+        - 20.appendix/8.about-license/
+        
+
 # Exclude the file with the following file name.
 #        - abc.md
 # Exclude files with regular expressions (regexes)
@@ -223,6 +240,13 @@ extra:
   cloud:
     azureRelease: 2.6.2 # Azure云兼容的最新内核版本
     aliyunRelease: 3.1.0 # 阿里云兼容的最新内核版本
+  ent:
+    ent_begin: <!-- # 文档为企业版时需补全该注释
+    ent_end: -->
+  commu:
+    commu_begin: <!-- --> # 文档为社区版时需补全该注释
+    commu_end: <!-- -->
+    
 
 
 nav:
@@ -297,7 +321,7 @@ nav:
           - 条件表达式函数: 3.ngql-guide/6.functions-and-expressions/5.conditional-expressions.md
           - 谓词函数: 3.ngql-guide/6.functions-and-expressions/8.predicate.md
           - geo 函数: 3.ngql-guide/6.functions-and-expressions/14.geo.md
-          - Elasticsearch 查询函数: 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
+#ent          - Elasticsearch 查询函数: 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
           - 自定义函数: 3.ngql-guide/6.functions-and-expressions/9.user-defined-functions.md
 
       - 通用查询语句:
@@ -408,7 +432,7 @@ nav:
           - 使用 RPM/DEB 包部署多机集群: 4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster.md
           - 使用生态工具安装: 4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals.md
       - 安装存算合并版 Nebula Graph: 4.deployment-and-installation/standalone-deployment.md
-      - 设置 Nebula Graph 企业版 License: 4.deployment-and-installation/deploy-license.md      
+#ent      - 设置 Nebula Graph 企业版 License: 4.deployment-and-installation/deploy-license.md      
       - 管理服务: 4.deployment-and-installation/manage-service.md
       - 连接服务: 4.deployment-and-installation/connect-to-nebula-graph.md
       - 管理 Storage 主机: 4.deployment-and-installation/manage-storage-host.md
@@ -428,7 +452,7 @@ nav:
           - Linux 内核配置: 5.configurations-and-logs/1.configurations/6.kernel-config.md
       - 日志:
           - 运行日志: 5.configurations-and-logs/2.log-management/logs.md
-          - 审计日志（企业版）: 5.configurations-and-logs/2.log-management/audit-log.md
+#ent          - 审计日志（企业版）: 5.configurations-and-logs/2.log-management/audit-log.md
 
   - 监控:
       - 查询 Nebula Graph 监控指标: 6.monitor-and-metrics/1.query-performance-metrics.md
@@ -439,7 +463,7 @@ nav:
           - 身份验证: 7.data-security/1.authentication/1.authentication.md
           - 用户管理: 7.data-security/1.authentication/2.management-user.md
           - 内置角色权限: 7.data-security/1.authentication/3.role-list.md
-          - OpenLDAP 验证: 7.data-security/1.authentication/4.ldap.md
+#ent          - OpenLDAP 验证: 7.data-security/1.authentication/4.ldap.md
       - SSL 加密: 7.data-security/4.ssl.md
 
   - 备份与恢复:
@@ -452,7 +476,7 @@ nav:
 
   - 同步与迁移:
       - 负载均衡: synchronization-and-migration/2.balance-syntax.md
-      - 集群间数据同步: synchronization-and-migration/replication-between-clusters.md
+#ent      - 集群间数据同步: synchronization-and-migration/replication-between-clusters.md
 
   - 最佳实践:
       - Compaction: 8.service-tuning/compaction.md
@@ -474,8 +498,9 @@ nav:
 
 #  - Nebula Graph Cloud: nebula-cloud.md
 
-  - Nebula Graph Cloud:
-    - 什么是 Nebula Graph Cloud: nebula-cloud/1.what-is-cloud.md
+#ent
+#  - Nebula Graph Cloud:
+#    - 什么是 Nebula Graph Cloud: nebula-cloud/1.what-is-cloud.md
 #    - Nebula Graph Cloud Azure版:
 #      - 创建订阅: nebula-cloud/nebula-cloud-on-azure/2.how-to-create-subsciption.md
 #      - 配置Solution: nebula-cloud/nebula-cloud-on-azure/3.how-to-set-solution.md
@@ -488,10 +513,10 @@ nav:
 #      - 价格: nebula-cloud/nebula-cloud-on-azure/6.pricing.md
 #      - 用户服务条款: nebula-cloud/nebula-cloud-on-azure/7.terms-and-conditions.md
 #      - 隐私政策条款: nebula-cloud/nebula-cloud-on-azure/8.privacy-policy.md
-    - Nebula Graph Cloud 阿里云版:
-      - 创建服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/1.create-service-instance.md
-      - 使用服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/2.use-cloud-services.md
-      - 删除服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/3.delete-service-instance.md
+#    - Nebula Graph Cloud 阿里云版:
+#      - 创建服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/1.create-service-instance.md
+#      - 使用服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/2.use-cloud-services.md
+#      - 删除服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/3.delete-service-instance.md
 
   - Nebula Studio:
     - Studio 版本更新说明: nebula-studio/about-studio/st-ug-release-note.md
@@ -524,50 +549,52 @@ nav:
       - Dashboard 页面介绍: nebula-dashboard/4.use-dashboard.md
       - 监控指标说明: nebula-dashboard/6.monitor-parameter.md
 
-  - Nebula Dashboard（企业版）:
-      - 什么是 Nebula Dashboard 企业版: nebula-dashboard-ent/1.what-is-dashboard-ent.md
-      - 部署 Nebula Dashboard 企业版: nebula-dashboard-ent/2.deploy-connect-dashboard-ent.md
-      - Nebula Dashboard 企业版 License: nebula-dashboard-ent/11.dashboard-ent-license.md
-      - 创建及导入集群:
-        - 创建集群: nebula-dashboard-ent/3.create-import-dashboard/1.create-cluster.md
-        - 导入集群: nebula-dashboard-ent/3.create-import-dashboard/2.import-cluster.md
-      - 集群管理:
-        - 集群总览: nebula-dashboard-ent/4.cluster-operator/1.overview.md
-        - 集群监控: nebula-dashboard-ent/4.cluster-operator/2.monitor.md
-        - 监控告警: nebula-dashboard-ent/9.alerts.md
-        - 集群信息: nebula-dashboard-ent/4.cluster-operator/3.cluster-information.md
-        - 集群诊断: nebula-dashboard-ent/4.cluster-operator/7.cluster-diagnosis.md
-        - 集群操作: nebula-dashboard-ent/4.cluster-operator/4.manage.md
-        - 备份与恢复: nebula-dashboard-ent/4.cluster-operator/8.backup-and-restore.md
-        - 操作记录: nebula-dashboard-ent/4.cluster-operator/5.operation-record.md
-        - 其他设置: nebula-dashboard-ent/4.cluster-operator/6.settings.md
-      - 任务中心: nebula-dashboard-ent/10.tasks.md
-      - 权限管理: nebula-dashboard-ent/5.account-management.md
-      - 安装包管理: nebula-dashboard-ent/11.manage-package.md
-      - 全局配置: nebula-dashboard-ent/6.global-config.md
-      - 监控指标说明: nebula-dashboard-ent/7.monitor-parameter.md
-      - 常见问题 FAQ: nebula-dashboard-ent/8.faq.md
+#ent
+#  - Nebula Dashboard（企业版）:
+#      - 什么是 Nebula Dashboard 企业版: nebula-dashboard-ent/1.what-is-dashboard-ent.md
+#      - 部署 Nebula Dashboard 企业版: nebula-dashboard-ent/2.deploy-connect-dashboard-ent.md
+#      - Nebula Dashboard 企业版 License: nebula-dashboard-ent/11.dashboard-ent-license.md
+#      - 创建及导入集群:
+#        - 创建集群: nebula-dashboard-ent/3.create-import-dashboard/1.create-cluster.md
+#        - 导入集群: nebula-dashboard-ent/3.create-import-dashboard/2.import-cluster.md
+#      - 集群管理:
+#        - 集群总览: nebula-dashboard-ent/4.cluster-operator/1.overview.md
+#        - 集群监控: nebula-dashboard-ent/4.cluster-operator/2.monitor.md
+#        - 监控告警: nebula-dashboard-ent/9.alerts.md
+#        - 集群信息: nebula-dashboard-ent/4.cluster-operator/3.cluster-information.md
+#        - 集群诊断: nebula-dashboard-ent/4.cluster-operator/7.cluster-diagnosis.md
+#        - 集群操作: nebula-dashboard-ent/4.cluster-operator/4.manage.md
+#        - 备份与恢复: nebula-dashboard-ent/4.cluster-operator/8.backup-and-restore.md
+#        - 操作记录: nebula-dashboard-ent/4.cluster-operator/5.operation-record.md
+#        - 其他设置: nebula-dashboard-ent/4.cluster-operator/6.settings.md
+#      - 任务中心: nebula-dashboard-ent/10.tasks.md
+#      - 权限管理: nebula-dashboard-ent/5.account-management.md
+#      - 安装包管理: nebula-dashboard-ent/11.manage-package.md
+#      - 全局配置: nebula-dashboard-ent/6.global-config.md
+#      - 监控指标说明: nebula-dashboard-ent/7.monitor-parameter.md
+#      - 常见问题 FAQ: nebula-dashboard-ent/8.faq.md
 
-  - Nebula Explorer:
-    - 什么是 Nebula Explorer: nebula-explorer/about-explorer/ex-ug-what-is-explorer.md
-    - 安装与登录:
-      - 部署 Explorer: nebula-explorer/deploy-connect/ex-ug-deploy.md
-      - 连接数据库: nebula-explorer/deploy-connect/ex-ug-connect.md
-      - Nebula Explorer License（企业版）: nebula-explorer/deploy-connect/3.explorer-license.md
-    - 页面概览: nebula-explorer/ex-ug-page-overview.md
-    - 创建 Schema: nebula-explorer/10.create-schema.md
-    - 导入数据: nebula-explorer/11.import-data.md
-    - 选择图空间: nebula-explorer/13.choose-graphspace.md
-    - 开始探索: nebula-explorer/ex-ug-query-exploration.md
-    - 节点筛选: nebula-explorer/node-filtering.md
-    - 探索拓展: nebula-explorer/ex-ug-graph-exploration.md
-    - 可视化查询: nebula-explorer/12.query-visually.md
-    - 画布功能: 
-      - 画布概览: nebula-explorer/canvas-operations/canvas-overview.md
-      - 可视化模式: nebula-explorer/canvas-operations/visualization-mode.md
-      - 画布快照: nebula-explorer/canvas-operations/canvas-snapshot.md
-    - 控制台: nebula-explorer/explorer-console.md
-    - 基本操作和快捷键: nebula-explorer/ex-ug-shortcuts.md
+#ent
+#  - Nebula Explorer:
+#    - 什么是 Nebula Explorer: nebula-explorer/about-explorer/ex-ug-what-is-explorer.md
+#    - 安装与登录:
+#      - 部署 Explorer: nebula-explorer/deploy-connect/ex-ug-deploy.md
+#      - 连接数据库: nebula-explorer/deploy-connect/ex-ug-connect.md
+#      - Nebula Explorer License（企业版）: nebula-explorer/deploy-connect/3.explorer-license.md
+#    - 页面概览: nebula-explorer/ex-ug-page-overview.md
+#    - 创建 Schema: nebula-explorer/10.create-schema.md
+#    - 导入数据: nebula-explorer/11.import-data.md
+#    - 选择图空间: nebula-explorer/13.choose-graphspace.md
+#    - 开始探索: nebula-explorer/ex-ug-query-exploration.md
+#    - 节点筛选: nebula-explorer/node-filtering.md
+#    - 探索拓展: nebula-explorer/ex-ug-graph-exploration.md
+#    - 可视化查询: nebula-explorer/12.query-visually.md
+#    - 画布功能: 
+#      - 画布概览: nebula-explorer/canvas-operations/canvas-overview.md
+#      - 可视化模式: nebula-explorer/canvas-operations/visualization-mode.md
+#      - 画布快照: nebula-explorer/canvas-operations/canvas-snapshot.md
+#    - 控制台: nebula-explorer/explorer-console.md
+#    - 基本操作和快捷键: nebula-explorer/ex-ug-shortcuts.md
 
   - Nebula Importer:
     - 使用 Nebula Importer: nebula-importer/use-importer.md
@@ -621,11 +648,11 @@ nav:
 
     - Nebula Algorithm: graph-computing/nebula-algorithm.md
 
-    - Nebula Analytics: graph-computing/nebula-analytics.md
+#ent    - Nebula Analytics: graph-computing/nebula-analytics.md
 
-    - Nebula Explorer 工作流: graph-computing/use-explorer.md
+#ent    - Nebula Explorer 工作流: graph-computing/use-explorer.md
     
-    - Dag Controller: graph-computing/0.deploy-controller-analytics.md
+#ent    - Dag Controller: graph-computing/0.deploy-controller-analytics.md
 
   - Nebula Spark Connector: nebula-spark-connector.md
       
@@ -636,7 +663,7 @@ nav:
   - 附录:
       - Release Note: 20.appendix/release-note.md
       - 学习路径: 20.appendix/learning-path.md
-      - 关于 License: 20.appendix/8.about-license.md
+#ent      - 关于 License: 20.appendix/8.about-license.md
       - 常见问题 FAQ: 20.appendix/0.FAQ.md
       - 生态工具概览: 20.appendix/6.eco-tool-version.md
       - 导入工具选择: 20.appendix/write-tools.md
