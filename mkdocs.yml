@@ -72,11 +72,12 @@ plugins:
 # Exclude all files in a directory. The path starts with the directory name in docs-2.0, such as `20.appendix/*`.
         - nebula-flink/*
         - CHANGELOG.md
+        - nebula-cloud/*
         - spark-connector/*
         - 4.deployment-and-installation/5.zone.md
         - 4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-200-to-latest.md
         # 发布包含企业版功能的文档版本时，注释以下页面
-        - nebula-cloud/*
+        # begin
         - 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
         - 4.deployment-and-installation/deploy-license.md
         - 5.configurations-and-logs/2.log-management/audit-log.md
@@ -89,6 +90,7 @@ plugins:
         - nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
         - synchronization-and-migration/replication-between-clusters.md
         - 20.appendix/8.about-license/
+        # end
         
 
 # Exclude the file with the following file name.
