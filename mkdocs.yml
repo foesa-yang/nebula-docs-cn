@@ -85,8 +85,6 @@ plugins:
         - graph-computing/0.deploy-controller-analytics.md
         - graph-computing/nebula-analytics.md
         - graph-computing/use-explorer.md
-        - nebula-dashboard-ent/*
-        - nebula-explorer/*
         - nebula-exchange/use-exchange/ex-ug-export-from-nebula.md
         - nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
         - synchronization-and-migration/replication-between-clusters.md
