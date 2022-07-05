@@ -241,7 +241,7 @@ extra:
     azureRelease: 2.6.2 # Azure云兼容的最新内核版本
     aliyunRelease: 3.1.0 # 阿里云兼容的最新内核版本
   ent:
-    ent_begin: <!-- # 文档为企业版时需补全该注释
+    ent_begin: <!-- # 文档包含企业版时需补全该注释（<!-- -->），只包含社区版时只保留注释头（<!--）
     ent_end: -->
   commu:
     commu_begin: <!-- --> # 文档为社区版时需补全该注释
