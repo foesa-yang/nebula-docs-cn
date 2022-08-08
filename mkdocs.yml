@@ -72,10 +72,26 @@ plugins:
 # Exclude all files in a directory. The path starts with the directory name in docs-2.0, such as `20.appendix/*`.
         - nebula-flink/*
         - CHANGELOG.md
+        - nebula-cloud/*
         - spark-connector/*
         - 4.deployment-and-installation/5.zone.md
         - 4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-200-to-latest.md
-        - nebula-cloud/*
+        # 仅发布包含企业版功能的文档版本时，注释以下页面
+        # begin
+        - 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
+        - 4.deployment-and-installation/deploy-license.md
+        - 5.configurations-and-logs/2.log-management/audit-log.md
+        - 7.data-security/1.authentication/4.ldap.md
+        - graph-computing/0.deploy-controller-analytics.md
+        - graph-computing/nebula-analytics.md
+        - graph-computing/use-explorer.md
+        - nebula-exchange/use-exchange/ex-ug-export-from-nebula.md
+        - nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md
+        - synchronization-and-migration/replication-between-clusters.md
+        - 20.appendix/8.about-license/
+        # end
+        
+
 # Exclude the file with the following file name.
 #        - abc.md
 # Exclude files with regular expressions (regexes)
@@ -129,12 +145,12 @@ extra:
     base111b: 1.1.1-beta
     base220: 2.2.1
     base300: 3.0.0
-    release: 3.3.2
-    tag: v3.3.0
+    release: 3.4.0
+    tag: v3.4.0
   explorer:
-    release: 3.0.0
-    branch: reelase-3.0
-    tag: v3.0.0
+    release: 3.1.0
+    branch: release-3.1
+    tag: v3.1.0
   exchange_ent:
     release: 3.0.0
     branch: v3.0.0
@@ -152,11 +168,13 @@ extra:
     branch: v3.0.0
     tag: v3.0.0
   plato:
-    release: 3.1.0
-    branch: release-3.1
-    tag: v3.1.0
+    release: 3.2.0
+    branch: release-3.2
+    tag: v3.2.0
   dag:
-    release: 1.0.0
+    release: 3.2.0
+    branch: release-3.2
+    tag: v3.2.0
   sparkconnector:
     release: 3.0.0
     branch: v3.0.0
@@ -166,30 +184,30 @@ extra:
     branch: v3.0.0
     tag: v3.0.0
   dockercompose:
-    release: 3.1.0
-    branch: release-3.1
-    tag: v3.1.0
+    release: 3.2.0
+    branch: release-3.2
+    tag: v3.2.0
   dashboard:
-    release: 1.1.1
-    tag: v1.1.1
+    release: 3.0.0
+    tag: v3.0.0
     base100: 1.0.0
-    branch: v1.1.1
-  dashboard_ent:
-    release: 3.0.4
-    tag: v3.0.4
     branch: release-3.0
+  dashboard_ent:
+    release: 3.1.0
+    tag: v3.1.0
+    branch: release-3.1
   console:
     release: 3.0.0
     branch: v3.0.0
     tag: v3.0.0
   br:
-    release: 0.6.0
+    release: 0.6.1
     branch: master
-    tag: v0.6.0
+    tag: v0.6.1
   cpp:
-    release: 3.0.0
-    branch: v3.0.0
-    tag: v3.0.0
+    release: 3.0.2
+    branch: v3.0.2
+    tag: v3.0.2
   java:
     release: 3.0.0
     branch: v3.0.0
@@ -207,9 +225,9 @@ extra:
     branch: release-1.2
     tag: v1.2.0
   operator:
-    release: 1.1.0
-    tag: v1.1.0
-    branch: release-1.1
+    release: 1.2.0
+    tag: v1.2.0
+    branch: release-1.2
     upgrade_from: 3.0.0
     upgrade_to: 3.1.x
   exporter:
@@ -221,8 +239,13 @@ extra:
     branch: release-3.1
     tag: v3.1.2
   cloud:
-    azureRelease: 2.6.2 # Azure云兼容的最新内核版本
-    aliyunRelease: 3.1.0 # 阿里云兼容的最新内核版本
+    azureRelease: 3.1.1 # Azure云兼容的最新内核版本
+    aliyunRelease: 3.1.1 # 阿里云兼容的最新内核版本
+    azureLatestRelease: 3.1.0 # 支持Azure云的最新文档版本
+    aliyunLatestRelease: 3.1.0 # 支持阿里云的最新文档版本
+  ent:
+    ent_begin: <!-- # 文档包含企业版时需补全该注释（<!-- -->），只包含社区版时只保留注释头（<!--）
+    ent_end: --> #文档包含企业版时需补全该注释（<!-- -->），只包含社区版时只保留注释尾（-->）
 
 
 nav:
@@ -297,7 +320,7 @@ nav:
           - 条件表达式函数: 3.ngql-guide/6.functions-and-expressions/5.conditional-expressions.md
           - 谓词函数: 3.ngql-guide/6.functions-and-expressions/8.predicate.md
           - geo 函数: 3.ngql-guide/6.functions-and-expressions/14.geo.md
-          - Elasticsearch 查询函数: 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
+#ent          - Elasticsearch 查询函数: 3.ngql-guide/6.functions-and-expressions/17.ES-function.md
           - 自定义函数: 3.ngql-guide/6.functions-and-expressions/9.user-defined-functions.md
 
       - 通用查询语句:
@@ -408,7 +431,7 @@ nav:
           - 使用 RPM/DEB 包部署多机集群: 4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster.md
           - 使用生态工具安装: 4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals.md
       - 安装存算合并版 Nebula Graph: 4.deployment-and-installation/standalone-deployment.md
-      - 设置 Nebula Graph 企业版 License: 4.deployment-and-installation/deploy-license.md      
+#ent      - 设置 Nebula Graph 企业版 License: 4.deployment-and-installation/deploy-license.md      
       - 管理服务: 4.deployment-and-installation/manage-service.md
       - 连接服务: 4.deployment-and-installation/connect-to-nebula-graph.md
       - 管理 Storage 主机: 4.deployment-and-installation/manage-storage-host.md
@@ -428,7 +451,7 @@ nav:
           - Linux 内核配置: 5.configurations-and-logs/1.configurations/6.kernel-config.md
       - 日志:
           - 运行日志: 5.configurations-and-logs/2.log-management/logs.md
-          - 审计日志（企业版）: 5.configurations-and-logs/2.log-management/audit-log.md
+#ent          - 审计日志（企业版）: 5.configurations-and-logs/2.log-management/audit-log.md
 
   - 监控:
       - 查询 Nebula Graph 监控指标: 6.monitor-and-metrics/1.query-performance-metrics.md
@@ -439,7 +462,7 @@ nav:
           - 身份验证: 7.data-security/1.authentication/1.authentication.md
           - 用户管理: 7.data-security/1.authentication/2.management-user.md
           - 内置角色权限: 7.data-security/1.authentication/3.role-list.md
-          - OpenLDAP 验证: 7.data-security/1.authentication/4.ldap.md
+#ent          - OpenLDAP 验证: 7.data-security/1.authentication/4.ldap.md
       - SSL 加密: 7.data-security/4.ssl.md
 
   - 备份与恢复:
@@ -452,7 +475,7 @@ nav:
 
   - 同步与迁移:
       - 负载均衡: synchronization-and-migration/2.balance-syntax.md
-      - 集群间数据同步: synchronization-and-migration/replication-between-clusters.md
+#ent      - 集群间数据同步: synchronization-and-migration/replication-between-clusters.md
 
   - 最佳实践:
       - Compaction: 8.service-tuning/compaction.md
@@ -472,10 +495,11 @@ nav:
     - Nebula Python: 14.client/5.nebula-python-client.md
     - Nebula Go: 14.client/6.nebula-go-client.md
 
-#  - Nebula Graph Cloud: nebula-cloud.md
+  - Nebula Graph Cloud: nebula-cloud.md
 
-  - Nebula Graph Cloud:
-    - 什么是 Nebula Graph Cloud: nebula-cloud/1.what-is-cloud.md
+#ent
+#  - Nebula Graph Cloud:
+#    - 什么是 Nebula Graph Cloud: nebula-cloud/1.what-is-cloud.md
 #    - Nebula Graph Cloud Azure版:
 #      - 创建订阅: nebula-cloud/nebula-cloud-on-azure/2.how-to-create-subsciption.md
 #      - 配置Solution: nebula-cloud/nebula-cloud-on-azure/3.how-to-set-solution.md
@@ -488,13 +512,12 @@ nav:
 #      - 价格: nebula-cloud/nebula-cloud-on-azure/6.pricing.md
 #      - 用户服务条款: nebula-cloud/nebula-cloud-on-azure/7.terms-and-conditions.md
 #      - 隐私政策条款: nebula-cloud/nebula-cloud-on-azure/8.privacy-policy.md
-    - Nebula Graph Cloud 阿里云版:
-      - 创建服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/1.create-service-instance.md
-      - 使用服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/2.use-cloud-services.md
-      - 删除服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/3.delete-service-instance.md
+#    - Nebula Graph Cloud 阿里云版:
+#      - 创建服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/1.create-service-instance.md
+#      - 使用服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/2.use-cloud-services.md
+#      - 删除服务实例: nebula-cloud/nebula-cloud-on-alibabacloud/3.delete-service-instance.md
 
   - Nebula Studio:
-    - Studio 版本更新说明: nebula-studio/about-studio/st-ug-release-note.md
     - 认识 Nebula Studio:
       - 什么是 Nebula Studio: nebula-studio/about-studio/st-ug-what-is-graph-studio.md
       - 使用限制: nebula-studio/about-studio/st-ug-limitations.md
@@ -555,18 +578,34 @@ nav:
       - 连接数据库: nebula-explorer/deploy-connect/ex-ug-connect.md
       - Nebula Explorer License（企业版）: nebula-explorer/deploy-connect/3.explorer-license.md
     - 页面概览: nebula-explorer/ex-ug-page-overview.md
-    - 创建 Schema: nebula-explorer/10.create-schema.md
-    - 导入数据: nebula-explorer/11.import-data.md
-    - 选择图空间: nebula-explorer/13.choose-graphspace.md
-    - 开始探索: nebula-explorer/ex-ug-query-exploration.md
-    - 节点筛选: nebula-explorer/node-filtering.md
-    - 探索拓展: nebula-explorer/ex-ug-graph-exploration.md
+    - 数据库管理:
+      - Schema 管理: nebula-explorer/db-management/10.create-schema.md
+      - 数据导入: nebula-explorer/db-management/11.import-data.md
+      - 控制台: nebula-explorer/db-management/explorer-console.md
+    - 图探索:
+      - 选择图空间: nebula-explorer/graph-explorer/13.choose-graphspace.md
+      - 开始探索: nebula-explorer/graph-explorer/ex-ug-query-exploration.md
+      - 节点筛选: nebula-explorer/graph-explorer/node-filtering.md
+      - 探索拓展: nebula-explorer/graph-explorer/ex-ug-graph-exploration.md
+      - 图计算: nebula-explorer/graph-explorer/graph-algorithm.md
     - 可视化查询: nebula-explorer/12.query-visually.md
     - 画布功能: 
       - 画布概览: nebula-explorer/canvas-operations/canvas-overview.md
       - 可视化模式: nebula-explorer/canvas-operations/visualization-mode.md
       - 画布快照: nebula-explorer/canvas-operations/canvas-snapshot.md
-    - 控制台: nebula-explorer/explorer-console.md
+    - 工作流:
+      - 工作流简介: nebula-explorer/workflow/workflows.md
+      - 资源配置: nebula-explorer/workflow/1.prepare-resources.md
+      - 工作流示例: nebula-explorer/workflow/2.create-workflow.md
+      - 工作流管理: nebula-explorer/workflow/3.workflow-management.md
+      - 作业管理: nebula-explorer/workflow/4.jobs-management.md
+      - 工作流 API:
+        - 新增作业: nebula-explorer/workflow/workflow-api/api-post-jobs.md
+        - 获取所有作业列表: nebula-explorer/workflow/workflow-api/api-get-jobs.md
+        - 获取指定工作流的作业列表: nebula-explorer/workflow/workflow-api/api-get-workflow-jobs.md
+        - 查询指定作业详情: nebula-explorer/workflow/workflow-api/api-desc-job.md
+        - 取消作业运行: nebula-explorer/workflow/workflow-api/api-cancel-job.md
+        - 获取指定任务的运行结果数据: nebula-explorer/workflow/workflow-api/api-desc-task.md
     - 基本操作和快捷键: nebula-explorer/ex-ug-shortcuts.md
 
   - Nebula Importer:
@@ -621,11 +660,11 @@ nav:
 
     - Nebula Algorithm: graph-computing/nebula-algorithm.md
 
-    - Nebula Analytics: graph-computing/nebula-analytics.md
+#ent    - Nebula Analytics: graph-computing/nebula-analytics.md
 
-    - Nebula Explorer 工作流: graph-computing/use-explorer.md
+#ent    - Nebula Explorer 工作流: graph-computing/use-explorer.md
     
-    - Dag Controller: graph-computing/0.deploy-controller-analytics.md
+#ent    - Dag Controller: graph-computing/0.deploy-controller-analytics.md
 
   - Nebula Spark Connector: nebula-spark-connector.md
       
@@ -634,9 +673,15 @@ nav:
   - Nebula Bench: nebula-bench.md
 
   - 附录:
-      - Release Note: 20.appendix/release-note.md
+      - Release Note:
+        - Nebula Graph 社区版: 20.appendix/release-notes/nebula-comm-release-note.md
+        - Nebula Graph 企业版: 20.appendix/release-notes/nebula-ent-release-note.md
+        - Nebula Studio: 20.appendix/release-notes/studio-release-note.md
+        - Nebula Dashboard 社区版: 20.appendix/release-notes/dashboard-comm-release-note.md
+        - Nebula Dashboard 企业版: 20.appendix/release-notes/dashboard-ent-release-note.md
+        - Nebula Explorer: 20.appendix/release-notes/explorer-release-note.md
       - 学习路径: 20.appendix/learning-path.md
-      - 关于 License: 20.appendix/8.about-license.md
+#ent      - 关于 License: 20.appendix/8.about-license.md
       - 常见问题 FAQ: 20.appendix/0.FAQ.md
       - 生态工具概览: 20.appendix/6.eco-tool-version.md
       - 导入工具选择: 20.appendix/write-tools.md

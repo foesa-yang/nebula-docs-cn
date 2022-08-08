@@ -100,3 +100,8 @@ Nebula Graph 的审计日志功能可以将 Graph 服务接受到的所有操作
 |`QUERY`| 查询语句。|
 |`QUERY_STATUS`| 查询状态。`0`表示成功，其他数字代表不同的错误信息。|
 |`QUERY_MESSAGE`| 如果查询出错，会显示报错信息。|
+
+## 视频
+
+* [Nebula Graph 的审计日志](https://www.bilibili.com/video/BV17F41157JB)（3 分 53 秒）
+<iframe src="//player.bilibili.com/player.html?aid=299493340&bvid=BV17F41157JB&cid=731096973&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720px" height="480px"> </iframe>

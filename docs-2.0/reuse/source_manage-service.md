@@ -1,4 +1,4 @@
-Nebula Graph 支持通过脚本或 systemd 管理服务。本文详细介绍这两种方式。
+Nebula Graph 支持通过脚本或 systemd 管理服务。
 
 !!! enterpriseonly
 
@@ -39,6 +39,7 @@ $ sudo /usr/local/nebula/scripts/nebula.service
 |`storaged`|管理 Storage 服务。|
 |`all`|管理所有服务。|
 
+{{ ent.ent_begin }}
 ## 使用 systemd 管理服务
 
 为方便使用，Nebula Graph 企业版支持用 systemd 管理服务，通过`systemctl`启动、停止、重启和查看服务。
@@ -51,8 +52,6 @@ $ sudo /usr/local/nebula/scripts/nebula.service
     
     - 对于其他方式安装的企业版 Nebula Graph，需要用户手动将`.service`文件移动到`/usr/lib/systemd/system`目录内，并修改`.service`文件内的`ExecStart`的文件路径，才可以正常使用`systemctl`命令。
     
-
-
 ### 语法
 
 ```bash
@@ -69,6 +68,8 @@ $ systemctl <start | stop | restart | status > <nebula | nebula-metad | nebula-g
 |`nebula-metad`|管理 Meta 服务。|
 |`nebula-graphd`|管理 Graph 服务。|
 |`nebula-storaged`|管理 Storage 服务。|
+
+{{ ent.ent_end }}
 
 ## 启动 Nebula Graph 服务
 

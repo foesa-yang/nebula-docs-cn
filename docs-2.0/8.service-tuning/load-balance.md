@@ -6,6 +6,7 @@
 
     `BALANCE`命令通过创建和执行一组子任务来迁移数据和均衡分片分布，**禁止**停止集群中的任何机器或改变机器的 IP 地址，直到所有子任务完成，否则后续子任务会失败。
 
+{{ ent.ent_begin }}
 ## 均衡分片分布
 
 !!! enterpriseonly
@@ -250,6 +251,7 @@ nebula> SHOW HOSTS;
   ```
 -->
 
+{{ ent.ent_end }}
 ## 均衡 leader 分布
 
 用户可以使用命令`BALANCE LEADER`均衡 leader 分布。
