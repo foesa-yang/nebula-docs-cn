@@ -68,7 +68,7 @@ NebulaGraph 项目有很多[仓库](https://github.com/vesoft-inc)，以 [Nebula
   # 正确的格式为：
   # origin    git@github.com:$(user)/nebula.git (fetch)
   # origin    git@github.com:$(user)/nebula.git (push)
-  # upstream  https://github.com/vesoft-inc/NebulaGraph (fetch)
+  # upstream  https://github.com/vesoft-inc/nebula (fetch)
   # upstream  no_push (push)
   git remote -v
   ```
