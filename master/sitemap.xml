@@ -831,6 +831,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.nebula-graph.com.cn/master/4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/</loc>
+         <lastmod>2022-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.nebula-graph.com.cn/master/4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/</loc>
          <lastmod>2022-08-09</lastmod>
          <changefreq>daily</changefreq>
