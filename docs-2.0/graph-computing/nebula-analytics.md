@@ -130,7 +130,7 @@ sudo rpm -i nebula-analytics-{{plato.release}}-centos.x86_64.rpm  --prefix /home
       # NebulaGraph 的登录用户名。
       --user=root  
       # NebulaGraph 的登录密码。
-      --password=NebulaGraph  
+      --password=nebula 
       # 写回 NebulaGraph 时采用的模式: insert 和 update。
       --mode=insert  
       # 写回到 NebulaGraph 的 Tag 名称。
