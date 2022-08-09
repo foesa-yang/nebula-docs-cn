@@ -55,7 +55,7 @@ $ sudo /usr/local/nebula/scripts/nebula.service
 ### 语法
 
 ```bash
-$ systemctl <start | stop | restart | status > <NebulaGraph | nebula-metad | nebula-graphd | nebula-storaged>
+$ systemctl <start | stop | restart | status > <nebula | nebula-metad | nebula-graphd | nebula-storaged>
 ```
 
 |参数|说明|
