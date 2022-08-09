@@ -30,7 +30,7 @@
 目前仅支持使用源码安装存算合并版 NebulaGraph。其安装步骤与多进程的 NebulaGraph 步骤类似，用户只需在**使用 CMake 生成 makefile 文件**步骤的命令中添加`-DENABLE_STANDALONE_VERSION=on`。示例如下：
 
 ```bash
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local/NebulaGraph -DENABLE_TESTING=OFF -DENABLE_STANDALONE_VERSION=on -DCMAKE_BUILD_TYPE=Release ..
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/nebula -DENABLE_TESTING=OFF -DENABLE_STANDALONE_VERSION=on -DCMAKE_BUILD_TYPE=Release ..
 ``` 
 
 有关具体的安装步骤，参见[使用源码安装](2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code.md)。
