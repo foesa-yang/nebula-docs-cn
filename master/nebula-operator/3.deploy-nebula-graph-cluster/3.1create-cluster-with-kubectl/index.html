@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.0">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.1">
     
     
       
@@ -3540,7 +3540,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -6104,13 +6104,20 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    删除集群
+    扩缩容集群
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    删除集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     后续操作
   </a>
   
@@ -6194,20 +6201,6 @@
     <li class="md-nav__item">
       <a href="../../8.custom-cluster-configurations/8.2.pv-reclaim/" class="md-nav__link">
         回收 PV
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage.md" class="md-nav__link">
-        均衡扩容后的 Storage 数据
       </a>
     </li>
   
@@ -6710,13 +6703,20 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    删除集群
+    扩缩容集群
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    删除集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     后续操作
   </a>
   
@@ -7106,13 +7106,13 @@ nebula   <span class="m">1</span>                <span class="m">1</span>       
 </code></pre></div>
 </li>
 </ol>
+<h2 id="_3">扩缩容集群<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>不支持扩缩容社区版的 NebulaGraph 集群。</li>
+</ul>
 <!--
-## 扩缩容集群
 
-!!! enterpriseonly
-
-    - 仅支持通过 v1.1.0 及以上版本的 NebulaGraph Operator 扩缩容企业版的 NebulaGraph 集群。
-    - 不支持扩缩容社区版的 NebulaGraph 集群。
+- 仅支持通过 v1.1.0 及以上版本的 NebulaGraph Operator 扩缩容企业版的 NebulaGraph 集群。
 
 用户可以通过编辑`apps_v1alpha1_nebulacluster.yaml`文件中的`replicas`的值进行 NebulaGraph 集群的扩缩容。
 
@@ -7181,11 +7181,11 @@ nebula-storaged-4   <span class="m">1</span>/1     Running   <span class="m">0</
 
 -->
 
-<h2 id="_3">删除集群<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">删除集群<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>使用 Kubectl 删除 NebulaGraph 集群的命令如下：</p>
 <div class="highlight"><pre><span></span><code>kubectl delete -f apps_v1alpha1_nebulacluster.yaml
 </code></pre></div>
-<h2 id="_4">后续操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">后续操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p><a href="../../4.connect-to-nebula-graph-service/">连接 NebulaGraph 数据库</a></p>
 
   <hr>
@@ -7193,7 +7193,7 @@ nebula-storaged-4   <span class="m">1</span>/1     Running   <span class="m">0</
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 26, 2022</span>
       
     
   </small>
