@@ -8,7 +8,7 @@
 
 - 修复语法错误的表达式导致的崩溃。[#4607](https://github.com/vesoft-inc/nebula/pull/4607)
 
-- 修复多 MATCH 语句相关的并发异常。[#4605](https://github.com/vesoft-inc/nebula/pull/4605)
+- 修复多`MATCH`语句相关的并发异常。[#4605](https://github.com/vesoft-inc/nebula/pull/4605)
 
 - 修复扫描顶点或边不过滤过期数据的缺陷。[#4578](https://github.com/vesoft-inc/nebula/pull/4578)
 
