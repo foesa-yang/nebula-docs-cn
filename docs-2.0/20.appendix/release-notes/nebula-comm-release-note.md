@@ -14,7 +14,7 @@
 
 - 修复 properties 函数返回 UNKNOWN PROP 的缺陷。[#4604](https://github.com/vesoft-inc/nebula/pull/4604)
 
-- 修复 raft 脑裂。[#4479](https://github.com/vesoft-inc/nebula/pull/4479)
+- 修复 raft 中脑裂问题。[#4479](https://github.com/vesoft-inc/nebula/pull/4479)
 
 - 替换过时的 RocksDB API。[#4395](https://github.com/vesoft-inc/nebula/pull/4395)
 
