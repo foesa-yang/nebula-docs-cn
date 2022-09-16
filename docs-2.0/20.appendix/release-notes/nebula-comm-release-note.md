@@ -12,7 +12,7 @@
 
 - 修复扫描顶点或边不过滤过期数据的缺陷。[#4578](https://github.com/vesoft-inc/nebula/pull/4578)
 
-- 修复 properties 函数返回 UNKNOWN PROP 的缺陷。[#4604](https://github.com/vesoft-inc/nebula/pull/4604)
+- 修复`properties`函数返回`UNKNOWN PROP`的缺陷。[#4604](https://github.com/vesoft-inc/nebula/pull/4604)
 
 - 修复 raft 中脑裂问题。[#4479](https://github.com/vesoft-inc/nebula/pull/4479)
 
