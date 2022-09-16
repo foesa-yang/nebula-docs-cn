@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/3.2.1/20.appendix/release-notes/nebula-comm-release-note/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.0">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.1">
     
     
       
@@ -6466,20 +6466,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    优化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
     缺陷修复
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     历史版本
   </a>
   
@@ -6732,20 +6725,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    优化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
     缺陷修复
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     历史版本
   </a>
   
@@ -6772,99 +6758,32 @@
 
 
 <h1 id="nebulagraph_321_release_notes">NebulaGraph 社区版 3.2.1 release notes<a class="headerlink" href="#nebulagraph_321_release_notes" title="Permanent link">&para;</a></h1>
-<h2 id="_1">优化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">缺陷修复<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>支持 <a href="../../../3.ngql-guide/6.functions-and-expressions/2.string/">extract() 函数</a>。</li>
+<li>修复 LOOKUP 语句中存在 AND 和 IN 导致的崩溃问题。 <a href="https://github.com/vesoft-inc/nebula/issues/4551">#4551</a></li>
 </ul>
 <ul>
-<li>优化配置文件，增加部分配置。 <a href="https://github.com/vesoft-inc/nebula/pull/4310">#4310</a></li>
+<li>修复 GetProp 中过滤器无效导致的崩溃。<a href="https://github.com/vesoft-inc/nebula/pull/4568">#4568</a></li>
 </ul>
 <ul>
-<li>增加优化规则，移除无用的 AppendVertices 操作符。 <a href="https://github.com/vesoft-inc/nebula/pull/4277">#4277</a></li>
+<li>修复语法错误的表达式导致的崩溃。<a href="https://github.com/vesoft-inc/nebula/pull/4607">#4607</a></li>
 </ul>
 <ul>
-<li>增加优化规则，优化边过滤的下推。 <a href="https://github.com/vesoft-inc/nebula/pull/4270">#4270</a></li>
+<li>修复多 MATCH 语句相关的并发异常。<a href="https://github.com/vesoft-inc/nebula/pull/4605">#4605</a></li>
 </ul>
 <ul>
-<li>增加优化规则，优化点属性过滤的下推。 <a href="https://github.com/vesoft-inc/nebula/pull/4260">#4260</a></li>
+<li>修复扫描顶点或边不过滤过期数据的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4578">#4578</a></li>
 </ul>
 <ul>
-<li>剔除点的预测过滤器。 <a href="https://github.com/vesoft-inc/nebula/pull/4249">#4249</a></li>
+<li>修复 properties 函数返回 UNKNOWN PROP 的缺陷。<a href="https://github.com/vesoft-inc/nebula/pull/4604">#4604</a></li>
 </ul>
 <ul>
-<li>减少连接操作的数据复制量。 <a href="https://github.com/vesoft-inc/nebula/pull/4283">#4283</a></li>
+<li>修复 raft 脑裂。<a href="https://github.com/vesoft-inc/nebula/pull/4479">#4479</a></li>
 </ul>
 <ul>
-<li>通过下标获取属性值，减少属性查询的时间。 <a href="https://github.com/vesoft-inc/nebula/pull/4242">#4242</a></li>
+<li>替换过时的 RocksDB API。<a href="https://github.com/vesoft-inc/nebula/pull/4395">#4395</a></li>
 </ul>
-<ul>
-<li>优化查询最短路径的性能。 <a href="https://github.com/vesoft-inc/nebula/pull/4071">#4071</a></li>
-</ul>
-<ul>
-<li>优化查询子图的循环条件。 <a href="https://github.com/vesoft-inc/nebula/pull/4226">#4226</a></li>
-</ul>
-<ul>
-<li>减少 Traverse 和 AppendVertices 操作符的数据复制量。 <a href="https://github.com/vesoft-inc/nebula/pull/4176">#4176</a></li>
-</ul>
-<ul>
-<li>改善优化规则，去除无效的项目操作符。 <a href="https://github.com/vesoft-inc/nebula/pull/4157">#4157</a></li>
-</ul>
-<ul>
-<li>使用 Arena Allocator 优化内存分配。 <a href="https://github.com/vesoft-inc/nebula/pull/4239">#4239</a></li>
-</ul>
-<h2 id="_2">缺陷修复<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>修复 Web 服务在接收一些特殊攻击消息时崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4334">#4334</a></li>
-</ul>
-<ul>
-<li>修复并发扫描属性时 Storage 服务崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4268">#4268</a></li>
-</ul>
-<ul>
-<li>修复插入超过限制长度的边时 Storage 服务崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4305">#4305</a></li>
-</ul>
-<ul>
-<li>修复启用查询并发模式时服务崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4288">#4288</a></li>
-</ul>
-<ul>
-<li>修复查找具有 NULL 属性的索引时 Storage 服务崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4234">#4234</a></li>
-</ul>
-<ul>
-<li>修复存算合并版 NebulaGraph 重启后守护进程退出的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4269">#4269</a></li>
-</ul>
-<ul>
-<li>修复 Graphviz 在线工具由于两次 JSON 转换导致 Join 点格式的解释结果不正确的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4280">#4280</a></li>
-</ul>
-<ul>
-<li>修复属性查找的缺陷，不允许在 Schema 中使用英文句号（.）。 <a href="https://github.com/vesoft-inc/nebula/pull/4194">#4194</a></li>
-</ul>
-<ul>
-<li>修复恢复数据时机器丢失 key 的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4311">#4311</a></li>
-</ul>
-<ul>
-<li>修复使用相同语句返回相同顶点不同属性时，结果显示<code>BAD TYPE</code>的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4151">#4151</a></li>
-</ul>
-<ul>
-<li>修复无索引时，语句<code>MATCH p=(:team)--&gt;() RETURN p LIMIT 1</code>的报错信息缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4053">#4053</a></li>
-</ul>
-<ul>
-<li>增强运算符<code>AND</code>和<code>OR</code>的报错信息。 <a href="https://github.com/vesoft-inc/nebula/pull/4304">#4304</a></li>
-</ul>
-<ul>
-<li>修复索引条件下没有统计信息的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4353">#4353</a></li>
-</ul>
-<ul>
-<li>修复集群内时区不同的缺陷。 <a href="https://github.com/vesoft-inc/nebula/pull/4391">#4391</a></li>
-</ul>
-<ul>
-<li>修复删除全文索引时崩溃的问题。 <a href="https://github.com/vesoft-inc/nebula/pull/4384">#4384</a></li>
-</ul>
-<ul>
-<li>修复当发送 PUT 请求，请求体为空时，服务崩溃的问题。<a href="https://github.com/vesoft-inc/nebula/pull/4405">#4405</a></li>
-</ul>
-<ul>
-<li>修复当在有索引的基础上删除点和边时，语句中的 VID 的长度超出定义的长度时，Storage 服务崩溃的问题。<a href="https://github.com/vesoft-inc/nebula/pull/4406">#4406</a>  </li>
-</ul>
-<h2 id="_3">历史版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_2">历史版本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><a href="https://nebula-graph.com.cn/tags/release-note/">历史版本</a></p>
 
   <hr>
@@ -6872,7 +6791,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2022</span>
       
     
   </small>
@@ -6979,7 +6898,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d691e9de.min.js"></script>
       
         <script src="../../../js/version-select.js"></script>
       
