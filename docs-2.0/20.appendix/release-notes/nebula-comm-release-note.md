@@ -4,7 +4,7 @@
 
 - 修复 LOOKUP 语句中存在 AND 和 IN 运算符导致的崩溃问题。 [#4551](https://github.com/vesoft-inc/nebula/issues/4551)
 
-- 修复 GetProp 中过滤器无效导致的崩溃。[#4568](https://github.com/vesoft-inc/nebula/pull/4568)
+- 修复`GetProp`中过滤器无效导致的崩溃。[#4568](https://github.com/vesoft-inc/nebula/pull/4568)
 
 - 修复语法错误的表达式导致的崩溃。[#4607](https://github.com/vesoft-inc/nebula/pull/4607)
 
