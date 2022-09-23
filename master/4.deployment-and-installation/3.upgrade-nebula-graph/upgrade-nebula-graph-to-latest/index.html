@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.1">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.3">
     
     
       
@@ -23,13 +23,14 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
+
     
     
     
@@ -60,12 +61,13 @@
   
 
 
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-15","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){if(document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document.forms.feedback){var e,a=document.forms.feedback;for(e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-7","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
 
+    
     
     
   </head>
@@ -191,7 +193,7 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -215,7 +217,7 @@
         <a href="https://github.com/vesoft-inc/nebula-docs-cn" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     vesoft-inc/nebula-docs-cn
@@ -259,7 +261,7 @@
       <a href="https://github.com/vesoft-inc/nebula-docs-cn" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     vesoft-inc/nebula-docs-cn
@@ -1335,6 +1337,20 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
+        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -2995,6 +3011,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../deploy-license/" class="md-nav__link">
+        设置 NebulaGraph 企业版 License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../manage-service/" class="md-nav__link">
         管理服务
       </a>
@@ -3042,18 +3072,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_7">
+        <label class="md-nav__link" for="__nav_5_8">
           升级版本
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="升级版本" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_7">
+        <label class="md-nav__title" for="__nav_5_8">
           <span class="md-nav__icon md-icon"></span>
           升级版本
         </label>
@@ -3151,6 +3181,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade-nebula-from-300-to-latest/" class="md-nav__link">
+        升级 v3.0.x 至当前版本
+      </a>
     </li>
   
 
@@ -3354,6 +3398,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5.configurations-and-logs/2.log-management/audit-log/" class="md-nav__link">
+        审计日志（企业版）
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3525,6 +3583,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../7.data-security/1.authentication/4.ldap/" class="md-nav__link">
+        OpenLDAP 验证
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3595,14 +3667,14 @@
       
       
         <label class="md-nav__link" for="__nav_9_1">
-          NebulaGraph BR
+          NebulaGraph BR（社区版）
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="NebulaGraph BR" data-md-level="2">
+      <nav class="md-nav" aria-label="NebulaGraph BR（社区版）" data-md-level="2">
         <label class="md-nav__title" for="__nav_9_1">
           <span class="md-nav__icon md-icon"></span>
-          NebulaGraph BR
+          NebulaGraph BR（社区版）
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3613,7 +3685,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/1.what-is-br/" class="md-nav__link">
-        什么是 BR
+        BR（社区版）概述
       </a>
     </li>
   
@@ -3627,7 +3699,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        安装 BR
+        编译 BR
       </a>
     </li>
   
@@ -3674,9 +3746,98 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
+          NebulaGraph BR（企业版）
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NebulaGraph BR（企业版）" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          NebulaGraph BR（企业版）
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/nebula-br-ent/1.br-ent-overview/" class="md-nav__link">
+        BR（企业版）概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/nebula-br-ent/2.install-tools/" class="md-nav__link">
+        安装 BR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/nebula-br-ent/3.backup-data/" class="md-nav__link">
+        使用 BR 备份数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/nebula-br-ent/4.restore-data/" class="md-nav__link">
+        使用 BR 恢复数据
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
-        管理快照
+        快照
       </a>
     </li>
   
@@ -3725,6 +3886,20 @@
     <li class="md-nav__item">
       <a href="../../../synchronization-and-migration/2.balance-syntax/" class="md-nav__link">
         负载均衡
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../synchronization-and-migration/replication-between-clusters/" class="md-nav__link">
+        集群间数据同步
       </a>
     </li>
   
@@ -4720,8 +4895,48 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/9.alerts/" class="md-nav__link">
-        监控告警
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/9.notification/" class="md-nav__link">
+        通知
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16_5_4" type="checkbox" id="__nav_16_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16_5_4">
+          集群信息
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="集群信息" data-md-level="3">
+        <label class="md-nav__title" for="__nav_16_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          集群信息
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/overview-info/" class="md-nav__link">
+        信息总览
       </a>
     </li>
   
@@ -4734,21 +4949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/3.cluster-information/" class="md-nav__link">
-        集群信息
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/7.cluster-diagnosis/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/cluster-diagnosis/" class="md-nav__link">
         集群诊断
       </a>
     </li>
@@ -4762,8 +4963,55 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/4.manage/" class="md-nav__link">
-        集群操作
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
+        备份恢复
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16_5_5" type="checkbox" id="__nav_16_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16_5_5">
+          集群操作
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="集群操作" data-md-level="3">
+        <label class="md-nav__title" for="__nav_16_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          集群操作
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/node/" class="md-nav__link">
+        节点管理
       </a>
     </li>
   
@@ -4776,9 +5024,72 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/8.backup-and-restore/" class="md-nav__link">
-        备份与恢复
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/scale/" class="md-nav__link">
+        扩缩容
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/service/" class="md-nav__link">
+        服务管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/update-config/" class="md-nav__link">
+        更新配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/member-management/" class="md-nav__link">
+        成员管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
+        版本升级
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -4825,20 +5136,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/10.tasks/" class="md-nav__link">
-        任务中心
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/5.account-management/" class="md-nav__link">
         权限管理
       </a>
@@ -4853,7 +5150,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/11.manage-package/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/10.tasks/" class="md-nav__link">
+        任务中心
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16_8" type="checkbox" id="__nav_16_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16_8">
+          平台设置
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="平台设置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_16_8">
+          <span class="md-nav__icon md-icon"></span>
+          平台设置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/system-settings/system-settings/" class="md-nav__link">
+        系统设置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/system-settings/notification-endpoint/" class="md-nav__link">
+        通知设置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/system-settings/single-sign-on/" class="md-nav__link">
+        单点登录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         安装包管理
       </a>
     </li>
@@ -4867,9 +5246,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/6.global-config/" class="md-nav__link">
-        全局配置
+      <a href="../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
+        其他设置
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -5205,6 +5591,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-explorer/graph-explorer/graph-algorithm/" class="md-nav__link">
         图计算
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/graph-explorer/property-calculation/" class="md-nav__link">
+        属性计算
       </a>
     </li>
   
@@ -5903,6 +6303,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
+        导入 Oracle 数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
         导入 ClickHouse 数据
       </a>
@@ -6001,7 +6415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-exchange/use-exchange/ex-ug-export-from-nebula.md" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-export-from-nebula/" class="md-nav__link">
         导出 NebulaGraph 数据
       </a>
     </li>
@@ -6221,6 +6635,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage/" class="md-nav__link">
+        均衡扩容后的 Storage 数据
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -6340,6 +6768,48 @@
     <li class="md-nav__item">
       <a href="../../../graph-computing/nebula-algorithm/" class="md-nav__link">
         NebulaGraph Algorithm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/nebula-analytics/" class="md-nav__link">
+        NebulaGraph Analytics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/use-explorer/" class="md-nav__link">
+        NebulaGraph Explorer 工作流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/0.deploy-controller-analytics/" class="md-nav__link">
+        Dag Controller
       </a>
     </li>
   
@@ -6562,6 +7032,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../20.appendix/8.about-license/" class="md-nav__link">
+        关于 License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../20.appendix/0.FAQ/" class="md-nav__link">
         常见问题 FAQ
       </a>
@@ -6758,14 +7242,16 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
   <a href="https://github.com/vesoft-inc/nebula-docs-cn/edit/master/docs-2.0/4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest.md" title="编辑此页" class="md-content__button md-icon">
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
-
 
 
 <h1 id="nebulagraph_2x_master">升级 NebulaGraph 2.x 至 master 版本<a class="headerlink" href="#nebulagraph_2x_master" title="Permanent link">&para;</a></h1>
@@ -7011,12 +7497,14 @@ A: 有部分 glags 改变了，详情参见版本发布说明和配置说明文�
 
 
 
-              
-            </article>
-            
+
+                
+              </article>
+            </div>
+          
+          
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
-          </div>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -7048,13 +7536,13 @@ A: 有部分 glags 改变了，详情参见版本发布说明和配置说明文�
       
       
         
-        <a href="../../4.uninstall-nebula-graph/" class="md-footer__link md-footer__link--next" aria-label="下一页: 卸载 NebulaGraph" rel="next">
+        <a href="../upgrade-nebula-from-300-to-latest/" class="md-footer__link md-footer__link--next" aria-label="下一页: 升级 v3.0.x 至当前版本" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              卸载 NebulaGraph
+              升级 v3.0.x 至当前版本
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -7088,7 +7576,7 @@ A: 有部分 glags 改变了，详情参见版本发布说明和配置说明文�
       
     
     <a href="https://github.com/vesoft-inc/nebula-docs-cn" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -7102,10 +7590,10 @@ A: 有部分 glags 改变了，详情参见版本发布说明和配置说明文�
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="../../../js/version-select.js"></script>
       
