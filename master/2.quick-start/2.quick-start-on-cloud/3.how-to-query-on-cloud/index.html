@@ -12,21 +12,21 @@
         <meta name="author" content="NebulaGraph">
       
       
-        <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/2.quick-start/3.connect-to-nebula-graph/">
+        <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/2.quick-start/2.quick-start-on-cloud/3.how-to-query-on-cloud/">
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.3">
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
       
-        <title>步骤3:连接 NebulaGraph - NebulaGraph Database 手册</title>
+        <title>步骤 3：管理数据 - NebulaGraph Database 手册</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.80dcb947.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,15 +43,15 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/logo.css">
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
     
-      <link rel="stylesheet" href="../../stylesheets/note.css">
+      <link rel="stylesheet" href="../../../stylesheets/note.css">
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../css/version-select.css">
+      <link rel="stylesheet" href="../../../css/version-select.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3_nebulagraph" class="md-skip">
+        <a href="#nebulagraph" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
+    <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
   <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
 
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              步骤3:连接 NebulaGraph
+              步骤 3：管理数据
             
           </span>
         </div>
@@ -249,7 +249,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
+    <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
   <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
 
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         前言
       </a>
     </li>
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-0-graph/" class="md-nav__link">
+      <a href="../../../1.introduction/0-0-graph/" class="md-nav__link">
         图
       </a>
     </li>
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-1-graph-database/" class="md-nav__link">
+      <a href="../../../1.introduction/0-1-graph-database/" class="md-nav__link">
         图数据库
       </a>
     </li>
@@ -348,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-2.relates/" class="md-nav__link">
+      <a href="../../../1.introduction/0-2.relates/" class="md-nav__link">
         相关技术
       </a>
     </li>
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/1.what-is-nebula-graph/" class="md-nav__link">
+      <a href="../../../1.introduction/1.what-is-nebula-graph/" class="md-nav__link">
         什么是 NebulaGraph
       </a>
     </li>
@@ -376,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/2.data-model/" class="md-nav__link">
+      <a href="../../../1.introduction/2.data-model/" class="md-nav__link">
         数据模型
       </a>
     </li>
@@ -390,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/2.1.path/" class="md-nav__link">
+      <a href="../../../1.introduction/2.1.path/" class="md-nav__link">
         路径
       </a>
     </li>
@@ -404,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.vid/" class="md-nav__link">
+      <a href="../../../1.introduction/3.vid/" class="md-nav__link">
         VID
       </a>
     </li>
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/1.architecture-overview/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/1.architecture-overview/" class="md-nav__link">
         架构总览
       </a>
     </li>
@@ -458,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/2.meta-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/2.meta-service/" class="md-nav__link">
         Meta 服务
       </a>
     </li>
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/3.graph-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/3.graph-service/" class="md-nav__link">
         Graph 服务
       </a>
     </li>
@@ -486,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/4.storage-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/4.storage-service/" class="md-nav__link">
         Storage 服务
       </a>
     </li>
@@ -543,8 +543,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../1.quick-start-workflow/" class="md-nav__link">
-        快速入门流程
+      <a href="../../1.quick-start-overview/" class="md-nav__link">
+        入门概览
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          从云开始（免费试用）
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="从云开始（免费试用）" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          从云开始（免费试用）
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.create-instance-on-cloud/" class="md-nav__link">
+        步骤 1：创建云服务实例
       </a>
     </li>
   
@@ -557,22 +599,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../2.install-nebula-graph/" class="md-nav__link">
-        步骤1:安装 NebulaGraph
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5.start-stop-service/" class="md-nav__link">
-        步骤2:启动 NebulaGraph
+      <a href="../2.connect-to-nebulagraph-on-cloud/" class="md-nav__link">
+        步骤 2：连接 NebulaGraph
       </a>
     </li>
   
@@ -595,12 +623,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          步骤3:连接 NebulaGraph
+          步骤 3：管理数据
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        步骤3:连接 NebulaGraph
+        步骤 3：管理数据
       </a>
       
         
@@ -627,8 +655,251 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    操作步骤
+    基本流程
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    操作入口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    图空间和 Schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    异步实现创建和修改
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第一步：创建和选择图空间
+  </a>
+  
+    <nav class="md-nav" aria-label="第一步：创建和选择图空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag_edge_type" class="md-nav__link">
+    第二步：创建 Tag 和 Edge type
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步：创建 Tag 和 Edge type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_1" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    第三步：插入数据
+  </a>
+  
+    <nav class="md-nav" aria-label="第三步：插入数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_2" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    第四步：查询数据
+  </a>
+  
+    <nav class="md-nav" aria-label="第四步：查询数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_3" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    GO语句示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch" class="md-nav__link">
+    FETCH语句示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    其他操作
+  </a>
+  
+    <nav class="md-nav" aria-label="其他操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    修改点和边
+  </a>
+  
+    <nav class="md-nav" aria-label="修改点和边">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_4" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    删除点和边
+  </a>
+  
+    <nav class="md-nav" aria-label="删除点和边">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_5" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    使用索引
+  </a>
+  
+    <nav class="md-nav" aria-label="使用索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_6" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lookupmatch" class="md-nav__link">
+    基于索引的LOOKUP和MATCH示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -641,14 +912,47 @@
 
             
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          本地部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="本地部署" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          本地部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../3.1add-storage-hosts/" class="md-nav__link">
-        步骤4:注册 Storage 服务
+      <a href="../../3.quick-start-on-premise/2.install-nebula-graph/" class="md-nav__link">
+        步骤 1：安装 NebulaGraph
       </a>
     </li>
   
@@ -661,8 +965,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.nebula-graph-crud/" class="md-nav__link">
-        步骤5:使用常用命令
+      <a href="../../3.quick-start-on-premise/5.start-stop-service/" class="md-nav__link">
+        步骤 2：启动 NebulaGraph
       </a>
     </li>
   
@@ -675,7 +979,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../6.cheatsheet-for-ngql-command/" class="md-nav__link">
+      <a href="../../3.quick-start-on-premise/3.connect-to-nebula-graph/" class="md-nav__link">
+        步骤 3：连接 NebulaGraph
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.quick-start-on-premise/3.1add-storage-hosts/" class="md-nav__link">
+        步骤 4：注册 Storage 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.quick-start-on-premise/4.nebula-graph-crud/" class="md-nav__link">
+        步骤 5：使用基本 nGQL 命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.cheatsheet-for-ngql-command/" class="md-nav__link">
         nGQL 命令汇总
       </a>
     </li>
@@ -749,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/1.overview/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/1.overview/" class="md-nav__link">
         什么是 nGQL
       </a>
     </li>
@@ -763,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/3.graph-patterns/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/3.graph-patterns/" class="md-nav__link">
         图模式
       </a>
     </li>
@@ -777,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/comments/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/comments/" class="md-nav__link">
         注释
       </a>
     </li>
@@ -791,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/identifier-case-sensitivity/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/identifier-case-sensitivity/" class="md-nav__link">
         大小写区分
       </a>
     </li>
@@ -805,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/keywords-and-reserved-words/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/keywords-and-reserved-words/" class="md-nav__link">
         关键字
       </a>
     </li>
@@ -819,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/ngql-style-guide/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/ngql-style-guide/" class="md-nav__link">
         nGQL 风格指南
       </a>
     </li>
@@ -866,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/1.numeric/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/1.numeric/" class="md-nav__link">
         数值
       </a>
     </li>
@@ -880,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/2.boolean/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/2.boolean/" class="md-nav__link">
         布尔
       </a>
     </li>
@@ -894,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/3.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/3.string/" class="md-nav__link">
         字符串
       </a>
     </li>
@@ -908,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/4.date-and-time/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/4.date-and-time/" class="md-nav__link">
         日期时间
       </a>
     </li>
@@ -922,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/5.null/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/5.null/" class="md-nav__link">
         NULL
       </a>
     </li>
@@ -936,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/6.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/6.list/" class="md-nav__link">
         列表
       </a>
     </li>
@@ -950,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/7.set/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/7.set/" class="md-nav__link">
         集合
       </a>
     </li>
@@ -964,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/8.map/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/8.map/" class="md-nav__link">
         映射
       </a>
     </li>
@@ -978,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/9.type-conversion/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/9.type-conversion/" class="md-nav__link">
         类型转换
       </a>
     </li>
@@ -992,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/10.geography/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/10.geography/" class="md-nav__link">
         地理位置
       </a>
     </li>
@@ -1039,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/1.composite-queries/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/1.composite-queries/" class="md-nav__link">
         复合查询
       </a>
     </li>
@@ -1053,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/2.user-defined-variables/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/2.user-defined-variables/" class="md-nav__link">
         自定义变量
       </a>
     </li>
@@ -1067,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/3.property-reference/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/3.property-reference/" class="md-nav__link">
         引用属性
       </a>
     </li>
@@ -1114,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/1.comparison/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/1.comparison/" class="md-nav__link">
         比较符
       </a>
     </li>
@@ -1128,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/2.boolean/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/2.boolean/" class="md-nav__link">
         布尔符
       </a>
     </li>
@@ -1142,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/4.pipe/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/4.pipe/" class="md-nav__link">
         管道符
       </a>
     </li>
@@ -1156,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/5.property-reference/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/5.property-reference/" class="md-nav__link">
         属性引用符
       </a>
     </li>
@@ -1170,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/6.set/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/6.set/" class="md-nav__link">
         集合运算符
       </a>
     </li>
@@ -1184,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/7.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/7.string/" class="md-nav__link">
         字符串运算符
       </a>
     </li>
@@ -1198,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/8.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/8.list/" class="md-nav__link">
         列表运算符
       </a>
     </li>
@@ -1212,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/9.precedence/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/9.precedence/" class="md-nav__link">
         运算符优先级
       </a>
     </li>
@@ -1259,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/1.math/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/1.math/" class="md-nav__link">
         数学函数
       </a>
     </li>
@@ -1273,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/15.aggregating/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/15.aggregating/" class="md-nav__link">
         聚合函数
       </a>
     </li>
@@ -1287,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/2.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/2.string/" class="md-nav__link">
         字符串函数
       </a>
     </li>
@@ -1301,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/3.date-and-time/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/3.date-and-time/" class="md-nav__link">
         日期时间函数
       </a>
     </li>
@@ -1315,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/4.schema/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/4.schema/" class="md-nav__link">
         Schema 函数
       </a>
     </li>
@@ -1329,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/6.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/6.list/" class="md-nav__link">
         列表函数
       </a>
     </li>
@@ -1343,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/16.type-conversion/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/16.type-conversion/" class="md-nav__link">
         类型转换函数
       </a>
     </li>
@@ -1357,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/5.conditional-expressions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/5.conditional-expressions/" class="md-nav__link">
         条件表达式函数
       </a>
     </li>
@@ -1371,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/8.predicate/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/8.predicate/" class="md-nav__link">
         谓词函数
       </a>
     </li>
@@ -1385,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
       </a>
     </li>
@@ -1399,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
         Elasticsearch 查询函数
       </a>
     </li>
@@ -1413,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
     </li>
@@ -1460,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/2.match/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/2.match/" class="md-nav__link">
         MATCH
       </a>
     </li>
@@ -1474,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/optional-match/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/optional-match/" class="md-nav__link">
         OPTIONAL MATCH
       </a>
     </li>
@@ -1488,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/5.lookup/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/5.lookup/" class="md-nav__link">
         LOOKUP
       </a>
     </li>
@@ -1502,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/3.go/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/3.go/" class="md-nav__link">
         GO
       </a>
     </li>
@@ -1516,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/4.fetch/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/4.fetch/" class="md-nav__link">
         FETCH
       </a>
     </li>
@@ -1556,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/1.show-charset/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/1.show-charset/" class="md-nav__link">
         SHOW CHARSET
       </a>
     </li>
@@ -1570,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/2.show-collation/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/2.show-collation/" class="md-nav__link">
         SHOW COLLATION
       </a>
     </li>
@@ -1584,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/4.show-create-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/4.show-create-space/" class="md-nav__link">
         SHOW CREATE SPACE
       </a>
     </li>
@@ -1598,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/5.show-create-tag-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/5.show-create-tag-edge/" class="md-nav__link">
         SHOW CREATE TAG/EDGE
       </a>
     </li>
@@ -1612,7 +1965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/6.show-hosts/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/6.show-hosts/" class="md-nav__link">
         SHOW HOSTS
       </a>
     </li>
@@ -1626,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/7.show-index-status/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/7.show-index-status/" class="md-nav__link">
         SHOW INDEX STATUS
       </a>
     </li>
@@ -1640,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/8.show-indexes/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/8.show-indexes/" class="md-nav__link">
         SHOW INDEXES
       </a>
     </li>
@@ -1654,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/9.show-parts/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/9.show-parts/" class="md-nav__link">
         SHOW PARTS
       </a>
     </li>
@@ -1668,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/10.show-roles/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/10.show-roles/" class="md-nav__link">
         SHOW ROLES
       </a>
     </li>
@@ -1682,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/11.show-snapshots/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/11.show-snapshots/" class="md-nav__link">
         SHOW SNAPSHOTS
       </a>
     </li>
@@ -1696,7 +2049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/12.show-spaces/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/12.show-spaces/" class="md-nav__link">
         SHOW SPACES
       </a>
     </li>
@@ -1710,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/14.show-stats/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/14.show-stats/" class="md-nav__link">
         SHOW STATS
       </a>
     </li>
@@ -1724,7 +2077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/15.show-tags-edges/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/15.show-tags-edges/" class="md-nav__link">
         SHOW TAGS/EDGES
       </a>
     </li>
@@ -1738,7 +2091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/16.show-users/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/16.show-users/" class="md-nav__link">
         SHOW USERS
       </a>
     </li>
@@ -1752,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/17.show-sessions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/17.show-sessions/" class="md-nav__link">
         SHOW SESSIONS
       </a>
     </li>
@@ -1766,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/18.show-queries/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/18.show-queries/" class="md-nav__link">
         SHOW QUERIES
       </a>
     </li>
@@ -1780,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/19.show-meta-leader/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/19.show-meta-leader/" class="md-nav__link">
         SHOW META LEADER
       </a>
     </li>
@@ -1834,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/group-by/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/group-by/" class="md-nav__link">
         GROUP BY
       </a>
     </li>
@@ -1848,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/limit/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/limit/" class="md-nav__link">
         LIMIT and SKIP
       </a>
     </li>
@@ -1862,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/sample/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/sample/" class="md-nav__link">
         SAMPLE
       </a>
     </li>
@@ -1876,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/order-by/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/order-by/" class="md-nav__link">
         ORDER BY
       </a>
     </li>
@@ -1890,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/return/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/return/" class="md-nav__link">
         RETURN
       </a>
     </li>
@@ -1904,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/ttl-options/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/ttl-options/" class="md-nav__link">
         TTL
       </a>
     </li>
@@ -1918,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/where/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/where/" class="md-nav__link">
         WHERE
       </a>
     </li>
@@ -1932,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/yield/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/yield/" class="md-nav__link">
         YIELD
       </a>
     </li>
@@ -1946,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/with/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/with/" class="md-nav__link">
         WITH
       </a>
     </li>
@@ -1960,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/unwind/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/unwind/" class="md-nav__link">
         UNWIND
       </a>
     </li>
@@ -2007,7 +2360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/1.create-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/1.create-space/" class="md-nav__link">
         CREATE SPACE
       </a>
     </li>
@@ -2021,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/2.use-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/2.use-space/" class="md-nav__link">
         USE SPACE
       </a>
     </li>
@@ -2035,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/3.show-spaces/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/3.show-spaces/" class="md-nav__link">
         SHOW SPACES
       </a>
     </li>
@@ -2049,7 +2402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/4.describe-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/4.describe-space/" class="md-nav__link">
         DESCRIBE SPACE
       </a>
     </li>
@@ -2063,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/6.clear-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/6.clear-space/" class="md-nav__link">
         CLEAR SPACE
       </a>
     </li>
@@ -2077,7 +2430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/5.drop-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/5.drop-space/" class="md-nav__link">
         DROP SPACE
       </a>
     </li>
@@ -2124,7 +2477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/1.create-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/1.create-tag/" class="md-nav__link">
         CREATE TAG
       </a>
     </li>
@@ -2138,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/2.drop-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/2.drop-tag/" class="md-nav__link">
         DROP TAG
       </a>
     </li>
@@ -2152,7 +2505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/3.alter-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/3.alter-tag/" class="md-nav__link">
         ALTER TAG
       </a>
     </li>
@@ -2166,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/4.show-tags/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/4.show-tags/" class="md-nav__link">
         SHOW TAGS
       </a>
     </li>
@@ -2180,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/5.describe-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/5.describe-tag/" class="md-nav__link">
         DESCRIBE TAG
       </a>
     </li>
@@ -2194,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/6.delete-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/6.delete-tag/" class="md-nav__link">
         DELETE TAG
       </a>
     </li>
@@ -2208,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/improve-query-by-tag-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/improve-query-by-tag-index/" class="md-nav__link">
         增加和删除标签
       </a>
     </li>
@@ -2255,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/1.create-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/1.create-edge/" class="md-nav__link">
         CREATE EDGE
       </a>
     </li>
@@ -2269,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/2.drop-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/2.drop-edge/" class="md-nav__link">
         DROP EDGE
       </a>
     </li>
@@ -2283,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/3.alter-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/3.alter-edge/" class="md-nav__link">
         ALTER EDGE
       </a>
     </li>
@@ -2297,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/4.show-edges/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/4.show-edges/" class="md-nav__link">
         SHOW EDGES
       </a>
     </li>
@@ -2311,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/5.describe-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/5.describe-edge/" class="md-nav__link">
         DESCRIBE EDGE
       </a>
     </li>
@@ -2358,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/1.insert-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/1.insert-vertex/" class="md-nav__link">
         INSERT VERTEX
       </a>
     </li>
@@ -2372,7 +2725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/4.delete-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/4.delete-vertex/" class="md-nav__link">
         DELETE VERTEX
       </a>
     </li>
@@ -2386,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/2.update-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/2.update-vertex/" class="md-nav__link">
         UPDATE VERTEX
       </a>
     </li>
@@ -2400,7 +2753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/3.upsert-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/3.upsert-vertex/" class="md-nav__link">
         UPSERT VERTEX
       </a>
     </li>
@@ -2447,7 +2800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/1.insert-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/1.insert-edge/" class="md-nav__link">
         INSERT EDGE
       </a>
     </li>
@@ -2461,7 +2814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/4.delete-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/4.delete-edge/" class="md-nav__link">
         DELETE EDGE
       </a>
     </li>
@@ -2475,7 +2828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/2.update-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/2.update-edge/" class="md-nav__link">
         UPDATE EDGE
       </a>
     </li>
@@ -2489,7 +2842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/3.upsert-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/3.upsert-edge/" class="md-nav__link">
         UPSERT EDGE
       </a>
     </li>
@@ -2536,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/" class="md-nav__link">
         索引介绍
       </a>
     </li>
@@ -2550,7 +2903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/1.create-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/1.create-native-index/" class="md-nav__link">
         CREATE INDEX
       </a>
     </li>
@@ -2564,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/2.show-native-indexes/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/2.show-native-indexes/" class="md-nav__link">
         SHOW INDEX
       </a>
     </li>
@@ -2578,7 +2931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/2.1.show-create-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/2.1.show-create-index/" class="md-nav__link">
         SHOW CREATE INDEX
       </a>
     </li>
@@ -2592,7 +2945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/3.describe-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/3.describe-native-index/" class="md-nav__link">
         DESCRIBE INDEX
       </a>
     </li>
@@ -2606,7 +2959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/4.rebuild-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/4.rebuild-native-index/" class="md-nav__link">
         REBUILD INDEX
       </a>
     </li>
@@ -2620,7 +2973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/5.show-native-index-status/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/5.show-native-index-status/" class="md-nav__link">
         SHOW INDEX STATUS
       </a>
     </li>
@@ -2634,7 +2987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/6.drop-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/6.drop-native-index/" class="md-nav__link">
         DROP INDEX
       </a>
     </li>
@@ -2681,7 +3034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/1.text-based-index-restrictions/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/1.text-based-index-restrictions/" class="md-nav__link">
         全文索引限制
       </a>
     </li>
@@ -2695,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/" class="md-nav__link">
         部署全文索引
       </a>
     </li>
@@ -2709,7 +3062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/3.deploy-listener/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/3.deploy-listener/" class="md-nav__link">
         部署 Raft listener
       </a>
     </li>
@@ -2723,7 +3076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/15.full-text-index-statements/1.search-with-text-based-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/15.full-text-index-statements/1.search-with-text-based-index/" class="md-nav__link">
         全文搜索
       </a>
     </li>
@@ -2770,7 +3123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/16.subgraph-and-path/1.get-subgraph/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/16.subgraph-and-path/1.get-subgraph/" class="md-nav__link">
         GET SUBGRAPH
       </a>
     </li>
@@ -2784,7 +3137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/16.subgraph-and-path/2.find-path/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/16.subgraph-and-path/2.find-path/" class="md-nav__link">
         FIND PATH
       </a>
     </li>
@@ -2831,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/17.query-tuning-statements/1.explain-and-profile/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/17.query-tuning-statements/1.explain-and-profile/" class="md-nav__link">
         EXPLAIN和PROFILE
       </a>
     </li>
@@ -2845,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/17.query-tuning-statements/6.kill-query/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/17.query-tuning-statements/6.kill-query/" class="md-nav__link">
         终止查询
       </a>
     </li>
@@ -2866,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.job-statements/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.job-statements/" class="md-nav__link">
         作业管理
       </a>
     </li>
@@ -2914,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/1.resource-preparations/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/1.resource-preparations/" class="md-nav__link">
         准备资源
       </a>
     </li>
@@ -2954,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/" class="md-nav__link">
         使用源码安装
       </a>
     </li>
@@ -2968,7 +3321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/2.install-nebula-graph-by-rpm-or-deb/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/2.install-nebula-graph-by-rpm-or-deb/" class="md-nav__link">
         使用 RPM/DEB 包安装
       </a>
     </li>
@@ -2982,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/4.install-nebula-graph-from-tar/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/4.install-nebula-graph-from-tar/" class="md-nav__link">
         使用 tar.gz 文件安装
       </a>
     </li>
@@ -2996,7 +3349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/3.deploy-nebula-graph-with-docker-compose/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/3.deploy-nebula-graph-with-docker-compose/" class="md-nav__link">
         使用 Docker Compose 部署
       </a>
     </li>
@@ -3010,7 +3363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster/" class="md-nav__link">
         使用 RPM/DEB 包部署多机集群
       </a>
     </li>
@@ -3024,7 +3377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals/" class="md-nav__link">
         使用生态工具安装
       </a>
     </li>
@@ -3045,7 +3398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/standalone-deployment/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/standalone-deployment/" class="md-nav__link">
         安装存算合并版 NebulaGraph
       </a>
     </li>
@@ -3059,7 +3412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/deploy-license/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/deploy-license/" class="md-nav__link">
         设置 NebulaGraph 企业版 License
       </a>
     </li>
@@ -3073,7 +3426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/manage-service/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
         管理服务
       </a>
     </li>
@@ -3087,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
         连接服务
       </a>
     </li>
@@ -3101,7 +3454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
         管理 Storage 主机
       </a>
     </li>
@@ -3141,7 +3494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
         升级 NebulaGraph 版本
       </a>
     </li>
@@ -3155,7 +3508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
         升级 v3.0.x 至当前版本
       </a>
     </li>
@@ -3176,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/4.uninstall-nebula-graph/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/4.uninstall-nebula-graph/" class="md-nav__link">
         卸载 NebulaGraph
       </a>
     </li>
@@ -3250,7 +3603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/1.configurations/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/1.configurations/" class="md-nav__link">
         配置管理
       </a>
     </li>
@@ -3264,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/2.meta-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/2.meta-config/" class="md-nav__link">
         Meta 服务配置
       </a>
     </li>
@@ -3278,7 +3631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/3.graph-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/3.graph-config/" class="md-nav__link">
         Graph 服务配置
       </a>
     </li>
@@ -3292,7 +3645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/4.storage-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/4.storage-config/" class="md-nav__link">
         Storage 服务配置
       </a>
     </li>
@@ -3306,7 +3659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/6.kernel-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/6.kernel-config/" class="md-nav__link">
         Linux 内核配置
       </a>
     </li>
@@ -3353,7 +3706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/2.log-management/logs/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/2.log-management/logs/" class="md-nav__link">
         运行日志
       </a>
     </li>
@@ -3367,7 +3720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/2.log-management/audit-log/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/2.log-management/audit-log/" class="md-nav__link">
         审计日志（企业版）
       </a>
     </li>
@@ -3422,7 +3775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/1.query-performance-metrics/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/1.query-performance-metrics/" class="md-nav__link">
         查询 NebulaGraph 监控指标
       </a>
     </li>
@@ -3436,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/2.rocksdb-statistics/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/2.rocksdb-statistics/" class="md-nav__link">
         RocksDB 统计数据
       </a>
     </li>
@@ -3510,7 +3863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/1.authentication/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/1.authentication/" class="md-nav__link">
         身份验证
       </a>
     </li>
@@ -3524,7 +3877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/2.management-user/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/2.management-user/" class="md-nav__link">
         用户管理
       </a>
     </li>
@@ -3538,7 +3891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/3.role-list/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/3.role-list/" class="md-nav__link">
         内置角色权限
       </a>
     </li>
@@ -3552,7 +3905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/4.ldap/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/4.ldap/" class="md-nav__link">
         OpenLDAP 验证
       </a>
     </li>
@@ -3573,7 +3926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/4.ssl/" class="md-nav__link">
+      <a href="../../../7.data-security/4.ssl/" class="md-nav__link">
         SSL 加密
       </a>
     </li>
@@ -3647,7 +4000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/1.what-is-br/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/1.what-is-br/" class="md-nav__link">
         BR（社区版）概述
       </a>
     </li>
@@ -3661,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
         编译 BR
       </a>
     </li>
@@ -3675,7 +4028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/3.br-backup-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/3.br-backup-data/" class="md-nav__link">
         使用 BR 备份数据
       </a>
     </li>
@@ -3689,7 +4042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/4.br-restore-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/4.br-restore-data/" class="md-nav__link">
         使用 BR 恢复数据
       </a>
     </li>
@@ -3736,7 +4089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/1.br-ent-overview/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/1.br-ent-overview/" class="md-nav__link">
         BR（企业版）概述
       </a>
     </li>
@@ -3750,7 +4103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/2.install-tools/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/2.install-tools/" class="md-nav__link">
         安装 BR
       </a>
     </li>
@@ -3764,7 +4117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/3.backup-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/3.backup-data/" class="md-nav__link">
         使用 BR 备份数据
       </a>
     </li>
@@ -3778,7 +4131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/4.restore-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/4.restore-data/" class="md-nav__link">
         使用 BR 恢复数据
       </a>
     </li>
@@ -3799,7 +4152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
         快照
       </a>
     </li>
@@ -3847,7 +4200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../synchronization-and-migration/2.balance-syntax/" class="md-nav__link">
+      <a href="../../../synchronization-and-migration/2.balance-syntax/" class="md-nav__link">
         负载均衡
       </a>
     </li>
@@ -3861,7 +4214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../synchronization-and-migration/replication-between-clusters/" class="md-nav__link">
+      <a href="../../../synchronization-and-migration/replication-between-clusters/" class="md-nav__link">
         集群间数据同步
       </a>
     </li>
@@ -3909,7 +4262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/compaction/" class="md-nav__link">
+      <a href="../../../8.service-tuning/compaction/" class="md-nav__link">
         Compaction
       </a>
     </li>
@@ -3923,7 +4276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/load-balance/" class="md-nav__link">
+      <a href="../../../8.service-tuning/load-balance/" class="md-nav__link">
         Storage 负载均衡
       </a>
     </li>
@@ -3937,7 +4290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/2.graph-modeling/" class="md-nav__link">
+      <a href="../../../8.service-tuning/2.graph-modeling/" class="md-nav__link">
         图建模
       </a>
     </li>
@@ -3951,7 +4304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/3.system-design/" class="md-nav__link">
+      <a href="../../../8.service-tuning/3.system-design/" class="md-nav__link">
         系统建模
       </a>
     </li>
@@ -3965,7 +4318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/4.plan/" class="md-nav__link">
+      <a href="../../../8.service-tuning/4.plan/" class="md-nav__link">
         执行计划
       </a>
     </li>
@@ -3979,7 +4332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/super-node/" class="md-nav__link">
+      <a href="../../../8.service-tuning/super-node/" class="md-nav__link">
         超级节点(稠密点)
       </a>
     </li>
@@ -3993,7 +4346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/practice/" class="md-nav__link">
+      <a href="../../../8.service-tuning/practice/" class="md-nav__link">
         实践案例
       </a>
     </li>
@@ -4041,7 +4394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/1.nebula-client/" class="md-nav__link">
+      <a href="../../../14.client/1.nebula-client/" class="md-nav__link">
         客户端介绍
       </a>
     </li>
@@ -4055,7 +4408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-console/" class="md-nav__link">
+      <a href="../../../nebula-console/" class="md-nav__link">
         NebulaGraph Console
       </a>
     </li>
@@ -4069,7 +4422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/3.nebula-cpp-client/" class="md-nav__link">
+      <a href="../../../14.client/3.nebula-cpp-client/" class="md-nav__link">
         NebulaGraph CPP
       </a>
     </li>
@@ -4083,7 +4436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/4.nebula-java-client/" class="md-nav__link">
+      <a href="../../../14.client/4.nebula-java-client/" class="md-nav__link">
         NebulaGraph Java
       </a>
     </li>
@@ -4097,7 +4450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/5.nebula-python-client/" class="md-nav__link">
+      <a href="../../../14.client/5.nebula-python-client/" class="md-nav__link">
         NebulaGraph Python
       </a>
     </li>
@@ -4111,7 +4464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/6.nebula-go-client/" class="md-nav__link">
+      <a href="../../../14.client/6.nebula-go-client/" class="md-nav__link">
         NebulaGraph Go
       </a>
     </li>
@@ -4133,7 +4486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-cloud/" class="md-nav__link">
+      <a href="../../../nebula-cloud/" class="md-nav__link">
         NebulaGraph Cloud
       </a>
     </li>
@@ -4200,7 +4553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/about-studio/st-ug-what-is-graph-studio/" class="md-nav__link">
+      <a href="../../../nebula-studio/about-studio/st-ug-what-is-graph-studio/" class="md-nav__link">
         什么是 NebulaGraph Studio
       </a>
     </li>
@@ -4214,7 +4567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/about-studio/st-ug-limitations/" class="md-nav__link">
+      <a href="../../../nebula-studio/about-studio/st-ug-limitations/" class="md-nav__link">
         使用限制
       </a>
     </li>
@@ -4261,7 +4614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy/" class="md-nav__link">
         部署 Studio
       </a>
     </li>
@@ -4275,7 +4628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy-by-helm/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm/" class="md-nav__link">
         使用 Helm 部署 Studio
       </a>
     </li>
@@ -4289,7 +4642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         连接数据库
       </a>
     </li>
@@ -4336,7 +4689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-plan-schema/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-plan-schema/" class="md-nav__link">
         规划 Schema
       </a>
     </li>
@@ -4350,7 +4703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-create-schema/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-create-schema/" class="md-nav__link">
         创建 Schema
       </a>
     </li>
@@ -4364,7 +4717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-import-data/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-import-data/" class="md-nav__link">
         导入数据
       </a>
     </li>
@@ -4378,7 +4731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-console/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-console/" class="md-nav__link">
         控制台界面
       </a>
     </li>
@@ -4418,7 +4771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
         操作图空间
       </a>
     </li>
@@ -4432,7 +4785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
         操作 Tag
       </a>
     </li>
@@ -4446,7 +4799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
         操作 Edge type
       </a>
     </li>
@@ -4460,7 +4813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
         操作索引
       </a>
     </li>
@@ -4514,7 +4867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-config-server-errors/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-config-server-errors/" class="md-nav__link">
         连接数据库错误
       </a>
     </li>
@@ -4528,7 +4881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-connection-errors/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-connection-errors/" class="md-nav__link">
         无法访问 Studio
       </a>
     </li>
@@ -4542,7 +4895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-faq/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-faq/" class="md-nav__link">
         Studio 常见问题
       </a>
     </li>
@@ -4597,7 +4950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
         什么是NebulaGraph Dashboard
       </a>
     </li>
@@ -4611,7 +4964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/2.deploy-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/2.deploy-dashboard/" class="md-nav__link">
         部署 Dashboard
       </a>
     </li>
@@ -4625,7 +4978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/3.connect-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/3.connect-dashboard/" class="md-nav__link">
         连接 Dashboard
       </a>
     </li>
@@ -4639,7 +4992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/4.use-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/4.use-dashboard/" class="md-nav__link">
         Dashboard 页面介绍
       </a>
     </li>
@@ -4653,7 +5006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/6.monitor-parameter/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/6.monitor-parameter/" class="md-nav__link">
         监控指标说明
       </a>
     </li>
@@ -4701,7 +5054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/1.what-is-dashboard-ent/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/1.what-is-dashboard-ent/" class="md-nav__link">
         什么是 NebulaGraph Dashboard 企业版
       </a>
     </li>
@@ -4715,7 +5068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/2.deploy-connect-dashboard-ent/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/2.deploy-connect-dashboard-ent/" class="md-nav__link">
         部署 NebulaGraph Dashboard 企业版
       </a>
     </li>
@@ -4729,7 +5082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/11.dashboard-ent-license/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/11.dashboard-ent-license/" class="md-nav__link">
         NebulaGraph Dashboard 企业版 License
       </a>
     </li>
@@ -4769,7 +5122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/3.create-import-dashboard/1.create-cluster/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/3.create-import-dashboard/1.create-cluster/" class="md-nav__link">
         创建集群
       </a>
     </li>
@@ -4783,7 +5136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/3.create-import-dashboard/2.import-cluster/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/3.create-import-dashboard/2.import-cluster/" class="md-nav__link">
         导入集群
       </a>
     </li>
@@ -4830,7 +5183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/1.overview/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/1.overview/" class="md-nav__link">
         集群总览
       </a>
     </li>
@@ -4844,7 +5197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/2.monitor/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/2.monitor/" class="md-nav__link">
         集群监控
       </a>
     </li>
@@ -4858,7 +5211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/9.notification/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/9.notification/" class="md-nav__link">
         通知
       </a>
     </li>
@@ -4898,7 +5251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/overview-info/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/overview-info/" class="md-nav__link">
         信息总览
       </a>
     </li>
@@ -4912,7 +5265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/cluster-diagnosis/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/cluster-diagnosis/" class="md-nav__link">
         集群诊断
       </a>
     </li>
@@ -4926,7 +5279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         备份恢复
       </a>
     </li>
@@ -4973,7 +5326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/node/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/node/" class="md-nav__link">
         节点管理
       </a>
     </li>
@@ -4987,7 +5340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/scale/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/scale/" class="md-nav__link">
         扩缩容
       </a>
     </li>
@@ -5001,7 +5354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/service/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/service/" class="md-nav__link">
         服务管理
       </a>
     </li>
@@ -5015,7 +5368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/update-config/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/update-config/" class="md-nav__link">
         更新配置
       </a>
     </li>
@@ -5029,7 +5382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/member-management/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/member-management/" class="md-nav__link">
         成员管理
       </a>
     </li>
@@ -5043,7 +5396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         版本升级
       </a>
     </li>
@@ -5064,7 +5417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/5.operation-record/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/5.operation-record/" class="md-nav__link">
         操作记录
       </a>
     </li>
@@ -5078,7 +5431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/6.settings/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/6.settings/" class="md-nav__link">
         其他设置
       </a>
     </li>
@@ -5099,7 +5452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/5.account-management/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/5.account-management/" class="md-nav__link">
         权限管理
       </a>
     </li>
@@ -5113,7 +5466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/10.tasks/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/10.tasks/" class="md-nav__link">
         任务中心
       </a>
     </li>
@@ -5153,7 +5506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/system-settings/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/system-settings/system-settings/" class="md-nav__link">
         系统设置
       </a>
     </li>
@@ -5167,7 +5520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/notification-endpoint/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/system-settings/notification-endpoint/" class="md-nav__link">
         通知设置
       </a>
     </li>
@@ -5181,7 +5534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/single-sign-on/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/system-settings/single-sign-on/" class="md-nav__link">
         单点登录
       </a>
     </li>
@@ -5195,7 +5548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         安装包管理
       </a>
     </li>
@@ -5209,7 +5562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
         其他设置
       </a>
     </li>
@@ -5230,7 +5583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/7.monitor-parameter/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/7.monitor-parameter/" class="md-nav__link">
         监控指标说明
       </a>
     </li>
@@ -5244,7 +5597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/8.faq/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/8.faq/" class="md-nav__link">
         常见问题 FAQ
       </a>
     </li>
@@ -5292,7 +5645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/about-explorer/ex-ug-what-is-explorer/" class="md-nav__link">
+      <a href="../../../nebula-explorer/about-explorer/ex-ug-what-is-explorer/" class="md-nav__link">
         什么是 NebulaGraph Explorer
       </a>
     </li>
@@ -5332,7 +5685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/deploy-connect/ex-ug-deploy/" class="md-nav__link">
+      <a href="../../../nebula-explorer/deploy-connect/ex-ug-deploy/" class="md-nav__link">
         部署 Explorer
       </a>
     </li>
@@ -5346,7 +5699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/deploy-connect/ex-ug-connect/" class="md-nav__link">
+      <a href="../../../nebula-explorer/deploy-connect/ex-ug-connect/" class="md-nav__link">
         连接数据库
       </a>
     </li>
@@ -5360,7 +5713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/deploy-connect/3.explorer-license/" class="md-nav__link">
+      <a href="../../../nebula-explorer/deploy-connect/3.explorer-license/" class="md-nav__link">
         NebulaGraph Explorer License（企业版）
       </a>
     </li>
@@ -5381,7 +5734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/ex-ug-page-overview/" class="md-nav__link">
+      <a href="../../../nebula-explorer/ex-ug-page-overview/" class="md-nav__link">
         页面概览
       </a>
     </li>
@@ -5421,7 +5774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/db-management/10.create-schema/" class="md-nav__link">
+      <a href="../../../nebula-explorer/db-management/10.create-schema/" class="md-nav__link">
         Schema 管理
       </a>
     </li>
@@ -5435,7 +5788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/db-management/11.import-data/" class="md-nav__link">
+      <a href="../../../nebula-explorer/db-management/11.import-data/" class="md-nav__link">
         数据导入
       </a>
     </li>
@@ -5449,7 +5802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/db-management/explorer-console/" class="md-nav__link">
+      <a href="../../../nebula-explorer/db-management/explorer-console/" class="md-nav__link">
         控制台
       </a>
     </li>
@@ -5496,7 +5849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/13.choose-graphspace/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/13.choose-graphspace/" class="md-nav__link">
         选择图空间
       </a>
     </li>
@@ -5510,7 +5863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/ex-ug-query-exploration/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/ex-ug-query-exploration/" class="md-nav__link">
         开始探索
       </a>
     </li>
@@ -5524,7 +5877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/node-filtering/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/node-filtering/" class="md-nav__link">
         节点筛选
       </a>
     </li>
@@ -5538,7 +5891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/ex-ug-graph-exploration/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/ex-ug-graph-exploration/" class="md-nav__link">
         探索拓展
       </a>
     </li>
@@ -5552,7 +5905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/graph-algorithm/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/graph-algorithm/" class="md-nav__link">
         图计算
       </a>
     </li>
@@ -5566,7 +5919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/graph-explorer/property-calculation/" class="md-nav__link">
+      <a href="../../../nebula-explorer/graph-explorer/property-calculation/" class="md-nav__link">
         属性计算
       </a>
     </li>
@@ -5587,7 +5940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/12.query-visually/" class="md-nav__link">
+      <a href="../../../nebula-explorer/12.query-visually/" class="md-nav__link">
         可视化查询
       </a>
     </li>
@@ -5627,7 +5980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/canvas-operations/canvas-overview/" class="md-nav__link">
+      <a href="../../../nebula-explorer/canvas-operations/canvas-overview/" class="md-nav__link">
         画布概览
       </a>
     </li>
@@ -5641,7 +5994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/canvas-operations/visualization-mode/" class="md-nav__link">
+      <a href="../../../nebula-explorer/canvas-operations/visualization-mode/" class="md-nav__link">
         可视化模式
       </a>
     </li>
@@ -5655,7 +6008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/canvas-operations/canvas-snapshot/" class="md-nav__link">
+      <a href="../../../nebula-explorer/canvas-operations/canvas-snapshot/" class="md-nav__link">
         画布快照
       </a>
     </li>
@@ -5702,7 +6055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflows/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflows/" class="md-nav__link">
         工作流简介
       </a>
     </li>
@@ -5716,7 +6069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/1.prepare-resources/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/1.prepare-resources/" class="md-nav__link">
         资源配置
       </a>
     </li>
@@ -5730,7 +6083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/2.create-workflow/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/2.create-workflow/" class="md-nav__link">
         工作流示例
       </a>
     </li>
@@ -5744,7 +6097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/3.workflow-management/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/3.workflow-management/" class="md-nav__link">
         工作流管理
       </a>
     </li>
@@ -5758,7 +6111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/4.jobs-management/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/4.jobs-management/" class="md-nav__link">
         作业管理
       </a>
     </li>
@@ -5798,7 +6151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-post-jobs/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-post-jobs/" class="md-nav__link">
         新增作业
       </a>
     </li>
@@ -5812,7 +6165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-get-jobs/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-get-jobs/" class="md-nav__link">
         获取所有作业列表
       </a>
     </li>
@@ -5826,7 +6179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-get-workflow-jobs/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-get-workflow-jobs/" class="md-nav__link">
         获取指定工作流的作业列表
       </a>
     </li>
@@ -5840,7 +6193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-desc-job/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-desc-job/" class="md-nav__link">
         查询指定作业详情
       </a>
     </li>
@@ -5854,7 +6207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-cancel-job/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-cancel-job/" class="md-nav__link">
         取消作业运行
       </a>
     </li>
@@ -5868,7 +6221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/workflow/workflow-api/api-desc-task/" class="md-nav__link">
+      <a href="../../../nebula-explorer/workflow/workflow-api/api-desc-task/" class="md-nav__link">
         获取指定任务的运行结果数据
       </a>
     </li>
@@ -5896,7 +6249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-explorer/ex-ug-shortcuts/" class="md-nav__link">
+      <a href="../../../nebula-explorer/ex-ug-shortcuts/" class="md-nav__link">
         基本操作和快捷键
       </a>
     </li>
@@ -5944,7 +6297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-importer/use-importer/" class="md-nav__link">
+      <a href="../../../nebula-importer/use-importer/" class="md-nav__link">
         使用 NebulaGraph Importer
       </a>
     </li>
@@ -5958,7 +6311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-importer/config-with-header/" class="md-nav__link">
+      <a href="../../../nebula-importer/config-with-header/" class="md-nav__link">
         有表头配置说明
       </a>
     </li>
@@ -5972,7 +6325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-importer/config-without-header/" class="md-nav__link">
+      <a href="../../../nebula-importer/config-without-header/" class="md-nav__link">
         无表头配置说明
       </a>
     </li>
@@ -6046,7 +6399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
         什么是 NebulaGraph Exchange
       </a>
     </li>
@@ -6060,7 +6413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/about-exchange/ex-ug-limitations/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-limitations/" class="md-nav__link">
         使用限制
       </a>
     </li>
@@ -6081,7 +6434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/ex-ug-compile/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-compile/" class="md-nav__link">
         获取 NebulaGraph Exchange
       </a>
     </li>
@@ -6121,7 +6474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
         导入命令参数
       </a>
     </li>
@@ -6135,7 +6488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/parameter-reference/ex-ug-parameter/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-parameter/" class="md-nav__link">
         配置参数
       </a>
     </li>
@@ -6182,7 +6535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-csv/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-csv/" class="md-nav__link">
         导入 CSV 文件数据
       </a>
     </li>
@@ -6196,7 +6549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-json/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-json/" class="md-nav__link">
         导入 JSON 文件数据
       </a>
     </li>
@@ -6210,7 +6563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-orc/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-orc/" class="md-nav__link">
         导入 ORC 文件数据
       </a>
     </li>
@@ -6224,7 +6577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-parquet/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-parquet/" class="md-nav__link">
         导入 Parquet 文件数据
       </a>
     </li>
@@ -6238,7 +6591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-hbase/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hbase/" class="md-nav__link">
         导入 HBase 数据
       </a>
     </li>
@@ -6252,7 +6605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-mysql/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-mysql/" class="md-nav__link">
         导入 MySQL/PostgreSQL 数据
       </a>
     </li>
@@ -6266,7 +6619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
         导入 Oracle 数据
       </a>
     </li>
@@ -6280,7 +6633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
         导入 ClickHouse 数据
       </a>
     </li>
@@ -6294,7 +6647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-neo4j/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-neo4j/" class="md-nav__link">
         导入 Neo4j 数据
       </a>
     </li>
@@ -6308,7 +6661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-hive/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hive/" class="md-nav__link">
         导入 Hive 数据
       </a>
     </li>
@@ -6322,7 +6675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-maxcompute/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-maxcompute/" class="md-nav__link">
         导入 MaxCompute 数据
       </a>
     </li>
@@ -6336,7 +6689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-pulsar/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-pulsar/" class="md-nav__link">
         导入 Pulsar 数据
       </a>
     </li>
@@ -6350,7 +6703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
         导入 Kafka 数据
       </a>
     </li>
@@ -6364,7 +6717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
         导入 SST 文件数据
       </a>
     </li>
@@ -6378,7 +6731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-export-from-nebula/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-export-from-nebula/" class="md-nav__link">
         导出 NebulaGraph 数据
       </a>
     </li>
@@ -6399,7 +6752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/ex-ug-FAQ/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-FAQ/" class="md-nav__link">
         Exchange 常见问题
       </a>
     </li>
@@ -6447,7 +6800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/1.introduction-to-nebula-operator/" class="md-nav__link">
+      <a href="../../../nebula-operator/1.introduction-to-nebula-operator/" class="md-nav__link">
         什么是 NebulaGraph Operator
       </a>
     </li>
@@ -6461,7 +6814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/6.get-started-with-operator/" class="md-nav__link">
+      <a href="../../../nebula-operator/6.get-started-with-operator/" class="md-nav__link">
         使用流程
       </a>
     </li>
@@ -6475,7 +6828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/2.deploy-nebula-operator/" class="md-nav__link">
+      <a href="../../../nebula-operator/2.deploy-nebula-operator/" class="md-nav__link">
         部署 NebulaGraph Operator
       </a>
     </li>
@@ -6515,7 +6868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/" class="md-nav__link">
+      <a href="../../../nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/" class="md-nav__link">
         使用 Kubectl 部署 NebulaGraph 集群
       </a>
     </li>
@@ -6529,7 +6882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/" class="md-nav__link">
+      <a href="../../../nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/" class="md-nav__link">
         使用 Helm 部署 NebulaGraph 集群
       </a>
     </li>
@@ -6576,7 +6929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter/" class="md-nav__link">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter/" class="md-nav__link">
         自定义 NebulaGraph 集群的配置参数
       </a>
     </li>
@@ -6590,7 +6943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim/" class="md-nav__link">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim/" class="md-nav__link">
         回收 PV
       </a>
     </li>
@@ -6604,7 +6957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage/" class="md-nav__link">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage/" class="md-nav__link">
         均衡扩容后的 Storage 数据
       </a>
     </li>
@@ -6625,7 +6978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/9.upgrade-nebula-cluster/" class="md-nav__link">
+      <a href="../../../nebula-operator/9.upgrade-nebula-cluster/" class="md-nav__link">
         升级 NebulaGraph 集群
       </a>
     </li>
@@ -6639,7 +6992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/4.connect-to-nebula-graph-service/" class="md-nav__link">
+      <a href="../../../nebula-operator/4.connect-to-nebula-graph-service/" class="md-nav__link">
         连接 NebulaGraph 数据库
       </a>
     </li>
@@ -6653,7 +7006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/5.operator-failover/" class="md-nav__link">
+      <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         故障自愈
       </a>
     </li>
@@ -6667,7 +7020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/7.operator-faq/" class="md-nav__link">
+      <a href="../../../nebula-operator/7.operator-faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -6715,7 +7068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/algorithm-description/" class="md-nav__link">
+      <a href="../../../graph-computing/algorithm-description/" class="md-nav__link">
         算法简介
       </a>
     </li>
@@ -6729,7 +7082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/nebula-algorithm/" class="md-nav__link">
+      <a href="../../../graph-computing/nebula-algorithm/" class="md-nav__link">
         NebulaGraph Algorithm
       </a>
     </li>
@@ -6743,7 +7096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/nebula-analytics/" class="md-nav__link">
+      <a href="../../../graph-computing/nebula-analytics/" class="md-nav__link">
         NebulaGraph Analytics
       </a>
     </li>
@@ -6757,7 +7110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/use-explorer/" class="md-nav__link">
+      <a href="../../../graph-computing/use-explorer/" class="md-nav__link">
         NebulaGraph Explorer 工作流
       </a>
     </li>
@@ -6771,7 +7124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/0.deploy-controller-analytics/" class="md-nav__link">
+      <a href="../../../graph-computing/0.deploy-controller-analytics/" class="md-nav__link">
         Dag Controller
       </a>
     </li>
@@ -6793,7 +7146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-spark-connector/" class="md-nav__link">
+      <a href="../../../nebula-spark-connector/" class="md-nav__link">
         NebulaGraph Spark Connector
       </a>
     </li>
@@ -6808,7 +7161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-flink-connector/" class="md-nav__link">
+      <a href="../../../nebula-flink-connector/" class="md-nav__link">
         NebulaGraph Flink Connector
       </a>
     </li>
@@ -6823,7 +7176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-bench/" class="md-nav__link">
+      <a href="../../../nebula-bench/" class="md-nav__link">
         NebulaGraph Bench
       </a>
     </li>
@@ -6890,7 +7243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/nebula-comm-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/nebula-comm-release-note/" class="md-nav__link">
         NebulaGraph 社区版
       </a>
     </li>
@@ -6904,7 +7257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/nebula-ent-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/nebula-ent-release-note/" class="md-nav__link">
         NebulaGraph 企业版
       </a>
     </li>
@@ -6918,7 +7271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/studio-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/studio-release-note/" class="md-nav__link">
         NebulaGraph Studio
       </a>
     </li>
@@ -6932,7 +7285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/dashboard-comm-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/dashboard-comm-release-note/" class="md-nav__link">
         NebulaGraph Dashboard 社区版
       </a>
     </li>
@@ -6946,7 +7299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/dashboard-ent-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/dashboard-ent-release-note/" class="md-nav__link">
         NebulaGraph Dashboard 企业版
       </a>
     </li>
@@ -6960,7 +7313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/explorer-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/explorer-release-note/" class="md-nav__link">
         NebulaGraph Explorer
       </a>
     </li>
@@ -6981,7 +7334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/learning-path/" class="md-nav__link">
+      <a href="../../../20.appendix/learning-path/" class="md-nav__link">
         学习路径
       </a>
     </li>
@@ -6995,7 +7348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/8.about-license/" class="md-nav__link">
+      <a href="../../../20.appendix/8.about-license/" class="md-nav__link">
         关于 License
       </a>
     </li>
@@ -7009,7 +7362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/0.FAQ/" class="md-nav__link">
+      <a href="../../../20.appendix/0.FAQ/" class="md-nav__link">
         常见问题 FAQ
       </a>
     </li>
@@ -7023,7 +7376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/6.eco-tool-version/" class="md-nav__link">
+      <a href="../../../20.appendix/6.eco-tool-version/" class="md-nav__link">
         生态工具概览
       </a>
     </li>
@@ -7037,7 +7390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/write-tools/" class="md-nav__link">
+      <a href="../../../20.appendix/write-tools/" class="md-nav__link">
         导入工具选择
       </a>
     </li>
@@ -7051,7 +7404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15.contribution/how-to-contribute/" class="md-nav__link">
+      <a href="../../../15.contribution/how-to-contribute/" class="md-nav__link">
         社区参与
       </a>
     </li>
@@ -7065,7 +7418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/history/" class="md-nav__link">
+      <a href="../../../20.appendix/history/" class="md-nav__link">
         年表
       </a>
     </li>
@@ -7079,7 +7432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/mind-map/" class="md-nav__link">
+      <a href="../../../20.appendix/mind-map/" class="md-nav__link">
         思维导图
       </a>
     </li>
@@ -7093,7 +7446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/error-code/" class="md-nav__link">
+      <a href="../../../20.appendix/error-code/" class="md-nav__link">
         错误码
       </a>
     </li>
@@ -7115,7 +7468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pdf/NebulaGraph-CN.pdf" class="md-nav__link">
+      <a href="../../../pdf/NebulaGraph-CN.pdf" class="md-nav__link">
         PDF
       </a>
     </li>
@@ -7157,8 +7510,251 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    操作步骤
+    基本流程
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    操作入口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    图空间和 Schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    异步实现创建和修改
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第一步：创建和选择图空间
+  </a>
+  
+    <nav class="md-nav" aria-label="第一步：创建和选择图空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag_edge_type" class="md-nav__link">
+    第二步：创建 Tag 和 Edge type
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步：创建 Tag 和 Edge type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_1" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    第三步：插入数据
+  </a>
+  
+    <nav class="md-nav" aria-label="第三步：插入数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_2" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    第四步：查询数据
+  </a>
+  
+    <nav class="md-nav" aria-label="第四步：查询数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_3" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    GO语句示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch" class="md-nav__link">
+    FETCH语句示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    其他操作
+  </a>
+  
+    <nav class="md-nav" aria-label="其他操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    修改点和边
+  </a>
+  
+    <nav class="md-nav" aria-label="修改点和边">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_4" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    删除点和边
+  </a>
+  
+    <nav class="md-nav" aria-label="删除点和边">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_5" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    使用索引
+  </a>
+  
+    <nav class="md-nav" aria-label="使用索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngql_6" class="md-nav__link">
+    nGQL 语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lookupmatch" class="md-nav__link">
+    基于索引的LOOKUP和MATCH示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7176,146 +7772,580 @@
                 
                   
 
-  <a href="https://github.com/vesoft-inc/nebula-docs-cn/edit/master/docs-2.0/2.quick-start/3.connect-to-nebula-graph.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/vesoft-inc/nebula-docs-cn/edit/master/docs-2.0/2.quick-start/2.quick-start-on-cloud/3.how-to-query-on-cloud.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="3_nebulagraph">步骤 3：连接 NebulaGraph<a class="headerlink" href="#3_nebulagraph" title="Permanent link">&para;</a></h1>
-<p>本文介绍如何使用原生命令行客户端 Nebula Console 连接 NebulaGraph。</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>首次连接到 NebulaGraph 后，必须先<a href="../3.1add-storage-hosts/">注册 Storage 服务</a>，才能正常查询数据。</p>
+<h1 id="nebulagraph">管理 NebulaGraph 数据<a class="headerlink" href="#nebulagraph" title="Permanent link">&para;</a></h1>
+<p>nGQL 是 NebulaGraph 创建的声明式图查询语言。用户可以使用 nGQL 语句对 NebulaGraph 数据库进行增删改查。本文介绍如何通过 NebulaGraph Cloud 中 Explorer 的控制台功能快速使用 Nebula Graph 基本语句。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>用户可以在 Explorer 中通过可视化查询 NebulaGraph 数据。本文介绍通过控制台功能使用 nGQL 语句增删改查 NebulaGraph 数据。关于如何可视化使用 Explorer 查询数据，参见<a href="../../../nebula-explorer/graph-explorer/ex-ug-query-exploration/">开始探索</a>和<a href="../../../nebula-explorer/graph-explorer/ex-ug-graph-exploration/">探索拓展</a>，或者观看视频。</p>
+<p><iframe src="//player.bilibili.com/player.html?aid=853353222&bvid=BV1VL4y1V7C2&cid=581214591&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720px" height="480px"> </iframe></p>
 </div>
-<p>NebulaGraph 支持多种类型的客户端，包括命令行客户端、可视化界面客户端和流行编程语言客户端。详情参见<a href="../../14.client/1.nebula-client/">客户端列表</a>。</p>
 <h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>NebulaGraph 服务已<a href="https://docs.nebula-graph.com.cn/master/4.deployment-and-installation/manage-service/">启动</a>。<!--必须用外链，因为这篇文档是复用的，用内部链接会出错。--></li>
-</ul>
-<ul>
-<li>运行 Nebula Console 的机器和运行 NebulaGraph 的服务器网络互通。</li>
-</ul>
-<ul>
-<li>
-<p>Nebula Console 的版本兼容 NebulaGraph 的版本。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>版本相同的 Nebula Console 和 NebulaGraph 兼容程度最高，版本不同的 Nebula Console 连接 NebulaGraph 时，可能会有兼容问题，或者无法连接并报错<code>incompatible version between client and server</code>。</p>
-</div>
-</li>
-</ul>
-<h2 id="_2">操作步骤<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>在 Nebula Console <a href="https://github.com/vesoft-inc/nebula-console/releases" title="the nebula-console Releases page">下载页面</a>，确认需要的版本，单击 <strong>Assets</strong>。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>建议选择<strong>最新</strong>版本。</p>
-</div>
-</li>
-<li>
-<p>在 <strong>Assets</strong> 区域找到机器运行所需的二进制文件，下载文件到机器上。</p>
-</li>
-<li>
-<p>（可选）为方便使用，重命名文件为<code>nebula-console</code>。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在 Windows 系统中，请重命名为<code>nebula-console.exe</code>。</p>
-</div>
-</li>
-<li>
-<p>在运行 Nebula Console 的机器上执行如下命令，为用户授予 nebula-console 文件的执行权限。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Windows 系统请跳过此步骤。</p>
-</div>
-<div class="highlight"><pre><span></span><code>$ chmod <span class="m">111</span> nebula-console
-</code></pre></div>
-</li>
-<li>
-<p>在命令行界面中，切换工作目录至 nebula-console 文件所在目录。</p>
-</li>
-<li>
-<p>执行如下命令连接 NebulaGraph。</p>
-<ul>
-<li>
-<p>Linux 或 macOS</p>
-<div class="highlight"><pre><span></span><code>$ ./nebula-console -addr &lt;ip&gt; -port &lt;port&gt; -u &lt;username&gt; -p &lt;password&gt;
-  <span class="o">[</span>-t <span class="m">120</span><span class="o">]</span> <span class="o">[</span>-e <span class="s2">&quot;nGQL_statement&quot;</span> <span class="p">|</span> -f filename.nGQL<span class="o">]</span>
-</code></pre></div>
-</li>
-</ul>
-<ul>
-<li>
-<p>Windows</p>
-<div class="highlight"><pre><span></span><code><span class="p">&gt;</span> <span class="n">nebula-console</span><span class="p">.</span><span class="n">exe</span> <span class="n">-addr</span> <span class="p">&lt;</span><span class="n">ip</span><span class="p">&gt;</span> <span class="n">-port</span> <span class="p">&lt;</span><span class="n">port</span><span class="p">&gt;</span> <span class="n">-u</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;</span> <span class="n">-p</span> <span class="p">&lt;</span><span class="n">password</span><span class="p">&gt;</span>
-  <span class="p">[</span><span class="n">-t</span> <span class="n">120</span><span class="p">]</span> <span class="p">[</span><span class="n">-e</span> <span class="s2">&quot;nGQL_statement&quot;</span> <span class="p">|</span> <span class="o">-f</span> <span class="n">filename</span><span class="p">.</span><span class="n">nGQL</span><span class="p">]</span>
-</code></pre></div>
-</li>
-</ul>
-<p>参数说明如下。</p>
+<p><a href="../2.connect-to-nebulagraph-on-cloud/">连接 NebulaGraph</a></p>
+<h2 id="_2">基本流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><img alt="queryflow" src="https://docs-cdn.nebula-graph.com.cn/figures/queryflow_2022-09-29_17-27-31.png" /></p>
+<h2 id="_3">操作入口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>在 Explorer 页面的右上方，单击<img alt="console" src="https://docs-cdn.nebula-graph.com.cn/figures/nav-console2.png" />进入控制台页面。在控制台命令行中执行 nGQL 语句。</p>
+<h2 id="_4">使用说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="schema">图空间和 Schema<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h3>
+<p>一个 NebulaGraph 实例由一个或多个图空间组成。每个图空间都是物理隔离的，用户可以在同一个实例中使用不同的图空间存储不同的数据集。</p>
+<p><img alt="NebulaGraph and graph spaces" src="https://docs-cdn.nebula-graph.com.cn/docs-2.0/2.quick-start/nebula-graph-instance-and-graph-spaces.png" /></p>
+<p>为了在图空间中插入数据，需要为图数据库定义一个 Schema。NebulaGraph 的 Schema 是由如下几部分组成。</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th align="left">组成部分</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>-h/-help</code></td>
-<td>显示帮助菜单。</td>
+<td align="left">点（Vertex）</td>
+<td align="left">表示现实世界中的实体。一个点可以有 0 到多个标签。</td>
 </tr>
 <tr>
-<td><code>-addr/-address</code></td>
-<td>设置要连接的 Graph 服务的 IP 地址。默认地址为 127.0.0.1。<!-- 如果 NebulaGraph 部署在 <a href="https://docs.nebula-graph.com.cn/2.6.2/nebula-cloud/1.what-is-cloud/">Nebula Cloud</a> 上，需要创建 <a href="https://docs.nebula-graph.com.cn/2.6.2/nebula-cloud/5.solution/5.2.connection-configuration-and-use">Private Link</a>，并设置该参数的值为专用终结点的 IP 地址。 --></td>
+<td align="left">标签（Tag）</td>
+<td align="left">点的类型，定义了一组描述点类型的属性。</td>
 </tr>
 <tr>
-<td><code>-P/-port</code></td>
-<td>设置要连接的 Graph 服务的端口。默认端口为 9669。</td>
+<td align="left">边（Edge）</td>
+<td align="left">表示两个点之间<strong>有方向</strong>的关系。</td>
 </tr>
 <tr>
-<td><code>-u/-user</code></td>
-<td>设置 NebulaGraph 账号的用户名。未启用身份认证时，可以使用任意已存在的用户名（默认为<code>root</code>）。</td>
-</tr>
-<tr>
-<td><code>-p/-password</code></td>
-<td>设置用户名对应的密码。未启用身份认证时，密码可以填写任意字符。</td>
-</tr>
-<tr>
-<td><code>-t/-timeout</code></td>
-<td>设置整数类型的连接超时时间。单位为秒，默认值为 120。</td>
-</tr>
-<tr>
-<td><code>-e/-eval</code></td>
-<td>设置字符串类型的 nGQL 语句。连接成功后会执行一次该语句并返回结果，然后自动断开连接。</td>
-</tr>
-<tr>
-<td><code>-f/-file</code></td>
-<td>设置存储 nGQL 语句的文件的路径。连接成功后会执行该文件内的 nGQL 语句并返回结果，执行完毕后自动断开连接。</td>
-</tr>
-<tr>
-<td><code>-enable_ssl</code></td>
-<td>连接 NebulaGraph 时使用 SSL 加密。</td>
-</tr>
-<tr>
-<td><code>-ssl_root_ca_path</code></td>
-<td>指定 CA 证书的存储路径。</td>
-</tr>
-<tr>
-<td><code>-ssl_cert_path</code></td>
-<td>指定 CRT 证书的存储路径。</td>
-</tr>
-<tr>
-<td><code>-ssl_private_key_path</code></td>
-<td>指定私钥文件的存储路径。</td>
+<td align="left">边类型（Edge type）</td>
+<td align="left">边的类型，定义了一组描述边的类型的属性。</td>
 </tr>
 </tbody>
 </table>
-<p>更多参数参见<a href="https://github.com/vesoft-inc/nebula-console/tree/v3.0.0">项目仓库</a>。</p>
+<p>更多信息，请参见<a href="https://docs.nebula-graph.com.cn/master/1.introduction/2.data-model/">数据结构</a>。</p>
+<p>本文将使用下图的数据集演示基础操作的语法。</p>
+<p><img alt="The demo dataset" src="https://docs-cdn.nebula-graph.com.cn/figures/dataset-for-crud.png" /></p>
+<h3 id="_5">异步实现创建和修改<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>NebulaGraph 中执行如下创建和修改操作，是异步实现的。要在<strong>下一个</strong>心跳周期之后才能生效，否则访问会报错。为确保数据同步，后续操作能顺利进行，请等待 2 个心跳周期（20 秒）。</p>
+</div>
+<ul>
+<li><code>CREATE SPACE</code></li>
+<li><code>CREATE TAG</code></li>
+<li><code>CREATE EDGE</code></li>
+<li><code>ALTER TAG</code></li>
+<li><code>ALTER EDGE</code></li>
+<li><code>CREATE TAG INDEX</code></li>
+<li><code>CREATE EDGE INDEX</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>默认心跳周期是 10 秒。修改心跳周期参数<code>heartbeat_interval_secs</code>，请参见<a href="https://docs.nebula-graph.com.cn/master/5.configurations-and-logs/1.configurations/1.configurations/">配置简介</a>。</p>
+</div>
+<h2 id="_6">第一步：创建和选择图空间<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="ngql">nGQL 语法<a class="headerlink" href="#ngql" title="Permanent link">&para;</a></h3>
+<ul>
+<li>创建图空间<div class="highlight"><pre><span></span><code>CREATE SPACE [IF NOT EXISTS] &lt;graph_space_name&gt; (
+[partition_num = &lt;partition_number&gt;,]
+[replica_factor = &lt;replica_number&gt;,]
+vid_type = {FIXED_STRING(&lt;N&gt;) | INT64}
+)
+
+[COMMENT = &#39;&lt;comment&gt;&#39;];
+</code></pre></div>
+<p>参数详情请参见 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/9.space-statements/1.create-space/">CREATE SPACE</a>。</p>
+<!-- <code>charset</code>和<code>collate</code>当前只有一个可选值，忽略。
+      charset = <charset>
+      collate = <collate>
+  -->
+</li>
+</ul>
+<ul>
+<li>列出创建成功的图空间<div class="highlight"><pre><span></span><code>nebula&gt; SHOW SPACES;
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>选择数据库<div class="highlight"><pre><span></span><code>USE &lt;graph_space_name&gt;;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="_7">示例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>执行如下语句创建名为<code>basketballplayer</code>的图空间。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; CREATE SPACE basketballplayer(partition_num=15, replica_factor=1, vid_type=fixed_string(30));
+</code></pre></div>
+</li>
+<li>
+<p>执行命令<code>SHOW HOSTS</code>检查分片的分布情况，确保平衡分布。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; SHOW HOSTS;
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+| Host        | Port      | HTTP port | Status    | Leader count | Leader distribution              | Partition distribution | Version |
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+| &quot;storaged0&quot; | 9779      | 19669     | &quot;ONLINE&quot;  | 5            | &quot;basketballplayer:5&quot;             | &quot;basketballplayer:5&quot;   | &quot;3.1.0&quot; |
+| &quot;storaged1&quot; | 9779      | 19669     | &quot;ONLINE&quot;  | 5            | &quot;basketballplayer:5&quot;             | &quot;basketballplayer:5&quot;   | &quot;3.1.0&quot; |
+| &quot;storaged2&quot; | 9779      | 19669     | &quot;ONLINE&quot;  | 5            | &quot;basketballplayer:5&quot;             | &quot;basketballplayer:5&quot;   | &quot;3.1.0&quot; |
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+</code></pre></div>
+<p>如果<strong> Leader distribution </strong>分布不均匀，请执行命令<code>BALANCE LEADER</code>重新分配。更多信息，请参见 <a href="https://docs.nebula-graph.com.cn/master/8.service-tuning/load-balance/">Storage 负载均衡</a>。</p>
+</li>
+<li>
+<p>选择图空间<code>basketballplayer</code>。</p>
+<div class="highlight"><pre><span></span><code>nebula[(none)]&gt; USE basketballplayer;
+</code></pre></div>
+<p>用户可以执行命令<code>SHOW SPACES</code>查看创建的图空间。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; SHOW SPACES;
++--------------------+
+| Name               |
++--------------------+
+| &quot;basketballplayer&quot; |
++--------------------+
+</code></pre></div>
 </li>
 </ol>
+<h2 id="tag_edge_type">第二步：创建 Tag 和 Edge type<a class="headerlink" href="#tag_edge_type" title="Permanent link">&para;</a></h2>
+<h3 id="ngql_1">nGQL 语法<a class="headerlink" href="#ngql_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>CREATE {TAG | EDGE} [IF NOT EXISTS] {&lt;tag_name&gt; | &lt;edge_type_name&gt;}
+    (
+      &lt;prop_name&gt; &lt;data_type&gt; [NULL | NOT NULL] [DEFAULT &lt;default_value&gt;] [COMMENT &#39;&lt;comment&gt;&#39;]
+      [{, &lt;prop_name&gt; &lt;data_type&gt; [NULL | NOT NULL] [DEFAULT &lt;default_value&gt;] [COMMENT &#39;&lt;comment&gt;&#39;]} ...] 
+    )
+    [TTL_DURATION = &lt;ttl_duration&gt;]
+    [TTL_COL = &lt;prop_name&gt;]
+    [COMMENT = &#39;&lt;comment&gt;&#39;];
+</code></pre></div>
+<p>参数详情请参见 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/10.tag-statements/1.create-tag/">CREATE TAG</a> 和 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/11.edge-type-statements/1.create-edge/">CREATE EDGE</a>。</p>
+<h3 id="_8">示例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>创建 Tag:<code>player</code>和<code>team</code>，以及 Edge type:<code>follow</code>和<code>serve</code>。说明如下表。</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">类型</th>
+<th align="left">属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">player</td>
+<td align="left">Tag</td>
+<td align="left">name (string), age (int)</td>
+</tr>
+<tr>
+<td align="left">team</td>
+<td align="left">Tag</td>
+<td align="left">name (string)</td>
+</tr>
+<tr>
+<td align="left">follow</td>
+<td align="left">Edge type</td>
+<td align="left">degree (int)</td>
+</tr>
+<tr>
+<td align="left">serve</td>
+<td align="left">Edge type</td>
+<td align="left">start_year (int), end_year (int)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>nebula&gt; CREATE TAG player(name string, age int);
+
+nebula&gt; CREATE TAG team(name string);
+
+nebula&gt; CREATE EDGE follow(degree int);
+
+nebula&gt; CREATE EDGE serve(start_year int, end_year int);
+</code></pre></div>
+<h2 id="_9">第三步：插入数据<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>用户可以使用<code>INSERT</code>语句，基于现有的 Tag 插入点，或者基于现有的 Edge type 插入边。</p>
+<h3 id="ngql_2">nGQL 语法<a class="headerlink" href="#ngql_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>插入点<div class="highlight"><pre><span></span><code>INSERT VERTEX [IF NOT EXISTS] [tag_props, [tag_props] ...]
+VALUES &lt;vid&gt;: ([prop_value_list])
+
+tag_props:
+  tag_name ([prop_name_list])
+
+prop_name_list:
+   [prop_name [, prop_name] ...]
+
+prop_value_list:
+   [prop_value [, prop_value] ...]  
+</code></pre></div>
+<p><code>vid</code>是 Vertex ID 的缩写，<code>vid</code>在一个图空间中是唯一的。参数详情请参见 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/12.vertex-statements/1.insert-vertex/">INSERT VERTEX</a>。</p>
+</li>
+</ul>
+<ul>
+<li>插入边<div class="highlight"><pre><span></span><code>INSERT EDGE [IF NOT EXISTS] &lt;edge_type&gt; ( &lt;prop_name_list&gt; ) VALUES 
+&lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;] : ( &lt;prop_value_list&gt; )
+[, &lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;] : ( &lt;prop_value_list&gt; ), ...];
+
+&lt;prop_name_list&gt; ::=
+[ &lt;prop_name&gt; [, &lt;prop_name&gt; ] ...]
+
+&lt;prop_value_list&gt; ::=
+[ &lt;prop_value&gt; [, &lt;prop_value&gt; ] ...]
+</code></pre></div>
+<p>参数详情请参见 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/13.edge-statements/1.insert-edge/">INSERT EDGE</a>。</p>
+</li>
+</ul>
+<h3 id="_10">示例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>插入代表球员和球队的点。<div class="highlight"><pre><span></span><code>nebula&gt; INSERT VERTEX player(name, age) VALUES &quot;player100&quot;:(&quot;Tim Duncan&quot;, 42);
+
+nebula&gt; INSERT VERTEX player(name, age) VALUES &quot;player101&quot;:(&quot;Tony Parker&quot;, 36);
+
+nebula&gt; INSERT VERTEX player(name, age) VALUES &quot;player102&quot;:(&quot;LaMarcus Aldridge&quot;, 33);
+
+nebula&gt; INSERT VERTEX team(name) VALUES &quot;team203&quot;:(&quot;Trail Blazers&quot;), &quot;team204&quot;:(&quot;Spurs&quot;);
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>插入代表球员和球队之间关系的边。<div class="highlight"><pre><span></span><code>nebula&gt; INSERT EDGE follow(degree) VALUES &quot;player101&quot; -&gt; &quot;player100&quot;:(95);
+
+nebula&gt; INSERT EDGE follow(degree) VALUES &quot;player101&quot; -&gt; &quot;player102&quot;:(90);
+
+nebula&gt; INSERT EDGE follow(degree) VALUES &quot;player102&quot; -&gt; &quot;player100&quot;:(75);
+
+nebula&gt; INSERT EDGE serve(start_year, end_year) VALUES &quot;player101&quot; -&gt; &quot;team204&quot;:(1999, 2018),&quot;player102&quot; -&gt; &quot;team203&quot;:(2006,  2015);
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_11">第四步：查询数据<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/7.general-query-statements/3.go/">GO</a> 语句可以根据指定的条件遍历数据库。<code>GO</code>语句从一个或多个点开始，沿着一条或多条边遍历，返回<code>YIELD</code>子句中指定的信息。</li>
+</ul>
+<ul>
+<li><a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/7.general-query-statements/4.fetch/">FETCH</a> 语句可以获得点或边的属性。</li>
+</ul>
+<ul>
+<li><a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/7.general-query-statements/5.lookup/">LOOKUP</a> 语句是基于<a href="#_12">索引</a>的，和<code>WHERE</code>子句一起使用，查找符合特定条件的数据。</li>
+</ul>
+<ul>
+<li><a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/7.general-query-statements/2.match/">MATCH</a> 语句是查询图数据最常用的，可以灵活的描述各种图模式，但是它依赖<a href="#_12">索引</a>去匹配 NebulaGraph 中的数据模型，性能也还需要调优。</li>
+</ul>
+<h3 id="ngql_3">nGQL 语法<a class="headerlink" href="#ngql_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GO</code><div class="highlight"><pre><span></span><code>GO [[&lt;M&gt; TO] &lt;N&gt; STEPS ] FROM &lt;vertex_list&gt;
+OVER &lt;edge_type_list&gt; [{REVERSELY | BIDIRECT}]
+[ WHERE &lt;conditions&gt; ]
+YIELD [DISTINCT] &lt;return_list&gt;
+[{ SAMPLE &lt;sample_list&gt; | &lt;limit_by_list_clause&gt; }]
+[| GROUP BY {&lt;col_name&gt; | expression&gt; | &lt;position&gt;} YIELD &lt;col_name&gt;]
+[| ORDER BY &lt;expression&gt; [{ASC | DESC}]]
+[| LIMIT [&lt;offset&gt;,] &lt;number_rows&gt;];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>
+<p><code>FETCH</code></p>
+<ul>
+<li>
+<p>查询 Tag 属性</p>
+<div class="highlight"><pre><span></span><code>FETCH PROP ON {&lt;tag_name&gt;[, tag_name ...] | *}
+&lt;vid&gt; [, vid ...]
+YIELD &lt;return_list&gt; [AS &lt;alias&gt;];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>
+<p>查询边属性</p>
+<div class="highlight"><pre><span></span><code>FETCH PROP ON &lt;edge_type&gt; &lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;] [, &lt;src_vid&gt; -&gt; &lt;dst_vid&gt; ...]
+YIELD &lt;output&gt;;
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>LOOKUP</code><div class="highlight"><pre><span></span><code>LOOKUP ON {&lt;vertex_tag&gt; | &lt;edge_type&gt;}
+[WHERE &lt;expression&gt; [AND &lt;expression&gt; ...]]
+YIELD &lt;return_list&gt; [AS &lt;alias&gt;];
+
+&lt;return_list&gt;
+    &lt;prop_name&gt; [AS &lt;col_alias&gt;] [, &lt;prop_name&gt; [AS &lt;prop_alias&gt;] ...];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><code>MATCH</code><div class="highlight"><pre><span></span><code>MATCH &lt;pattern&gt; [&lt;clause_1&gt;]  RETURN &lt;output&gt;  [&lt;clause_2&gt;];
+</code></pre></div>
+</li>
+</ul>
+<h3 id="go"><code>GO</code>语句示例<a class="headerlink" href="#go" title="Permanent link">&para;</a></h3>
+<ul>
+<li>从 VID 为<code>player101</code>的球员开始，沿着边<code>follow</code>找到连接的球员。<div class="highlight"><pre><span></span><code>nebula&gt; GO FROM &quot;player101&quot; OVER follow YIELD id($$);
++-------------+
+| id($$)      |
++-------------+
+| &quot;player100&quot; |
+| &quot;player102&quot; |
+| &quot;player125&quot; |
++-------------+
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>从 VID 为<code>player101</code>的球员开始，沿着边<code>follow</code>查找年龄大于或等于 35 岁的球员，并返回他们的姓名和年龄，同时重命名对应的列。<div class="highlight"><pre><span></span><code>nebula&gt; GO FROM &quot;player101&quot; OVER follow WHERE properties($$).age &gt;= 35 \
+        YIELD properties($$).name AS Teammate, properties($$).age AS Age;
++-----------------+-----+
+| Teammate        | Age |
++-----------------+-----+
+| &quot;Tim Duncan&quot;    | 42  |
+| &quot;Manu Ginobili&quot; | 41  |
++-----------------+-----+
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">子句/符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>YIELD</code></td>
+<td align="left">指定该查询需要返回的值或结果。</td>
+</tr>
+<tr>
+<td align="left"><code>$$</code></td>
+<td align="left">表示边的终点。</td>
+</tr>
+<tr>
+<td align="left"><code>\</code></td>
+<td align="left">表示换行继续输入。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>从 VID 为<code>player101</code>的球员开始，沿着边<code>follow</code>查找连接的球员，然后检索这些球员的球队。为了合并这两个查询请求，可以使用管道符或临时变量。</p>
+<ul>
+<li>
+<p>使用管道符</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; GO FROM &quot;player101&quot; OVER follow YIELD dst(edge) AS id | \
+        GO FROM $-.id OVER serve YIELD properties($$).name AS Team, \
+        properties($^).name AS Player;
++-----------------+---------------------+
+| Team            | Player              |
++-----------------+---------------------+
+| &quot;Spurs&quot;         | &quot;Tim Duncan&quot;        |
+| &quot;Trail Blazers&quot; | &quot;LaMarcus Aldridge&quot; |
+| &quot;Spurs&quot;         | &quot;LaMarcus Aldridge&quot; |
+| &quot;Spurs&quot;         | &quot;Manu Ginobili&quot;     |
++-----------------+---------------------+
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">子句/符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>$^</code></td>
+<td align="left">表示边的起点。</td>
+</tr>
+<tr>
+<td align="left"><code>|</code></td>
+<td align="left">组合多个查询的管道符，将前一个查询的结果集用于后一个查询。</td>
+</tr>
+<tr>
+<td align="left"><code>$-</code></td>
+<td align="left">表示管道符前面的查询输出的结果集。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>使用临时变量</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当复合语句作为一个整体提交给服务器时，其中的临时变量会在语句结束时被释放。</p>
+</div>
+<div class="highlight"><pre><span></span><code>nebula&gt; $var = GO FROM &quot;player101&quot; OVER follow YIELD dst(edge) AS id; \
+        GO FROM $var.id OVER serve YIELD properties($$).name AS Team, \
+        properties($^).name AS Player;
++-----------------+---------------------+
+| Team            | Player              |
++-----------------+---------------------+
+| &quot;Spurs&quot;         | &quot;Tim Duncan&quot;        |
+| &quot;Trail Blazers&quot; | &quot;LaMarcus Aldridge&quot; |
+| &quot;Spurs&quot;         | &quot;LaMarcus Aldridge&quot; |
+| &quot;Spurs&quot;         | &quot;Manu Ginobili&quot;     |
++-----------------+---------------------+
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="fetch"><code>FETCH</code>语句示例<a class="headerlink" href="#fetch" title="Permanent link">&para;</a></h3>
+<p>查询 VID 为<code>player100</code>的球员的属性。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; FETCH PROP ON player &quot;player100&quot; YIELD properties(vertex);
++-------------------------------+
+| properties(VERTEX)            |
++-------------------------------+
+| {age: 42, name: &quot;Tim Duncan&quot;} |
++-------------------------------+
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>LOOKUP</code>和<code>MATCH</code>的示例在下文的<a href="#_12">索引</a> 部分查看。</p>
+</div>
+<h2 id="_12">其他操作<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">修改点和边<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>用户可以使用<code>UPDATE</code>语句或<code>UPSERT</code>语句修改现有数据。</p>
+<p><code>UPSERT</code>是<code>UPDATE</code>和<code>INSERT</code>的结合体。当使用<code>UPSERT</code>更新一个点或边，如果它不存在，数据库会自动插入一个新的点或边。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>每个 partition 内部，<code>UPSERT</code> 操作是一个串行操作，所以执行速度比执行 <code>INSERT</code> 或 <code>UPDATE</code> 慢很多。其仅在多个 partition 之间有并发。</p>
+</div>
+<h4 id="ngql_4">nGQL 语法<a class="headerlink" href="#ngql_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>UPDATE</code>点<div class="highlight"><pre><span></span><code>UPDATE VERTEX &lt;vid&gt; SET &lt;properties to be updated&gt;
+[WHEN &lt;condition&gt;] [YIELD &lt;columns&gt;];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><code>UPDATE</code>边<div class="highlight"><pre><span></span><code>UPDATE EDGE ON &lt;edge_type&gt; &lt;source vid&gt; -&gt; &lt;destination vid&gt; [@rank] 
+SET &lt;properties to be updated&gt; [WHEN &lt;condition&gt;] [YIELD &lt;columns to be output&gt;];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><code>UPSERT</code>点或边<div class="highlight"><pre><span></span><code>UPSERT {VERTEX &lt;vid&gt; | EDGE &lt;edge_type&gt;} SET &lt;update_columns&gt;
+[WHEN &lt;condition&gt;] [YIELD &lt;columns&gt;];
+</code></pre></div>
+</li>
+</ul>
+<h4 id="_14">示例<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>用<code>UPDATE</code>修改 VID 为<code>player100</code>的球员的<code>name</code>属性，然后用<code>FETCH</code>语句检查结果。<div class="highlight"><pre><span></span><code>nebula&gt; UPDATE VERTEX &quot;player100&quot; SET player.name = &quot;Tim&quot;;
+
+nebula&gt; FETCH PROP ON player &quot;player100&quot; YIELD properties(vertex);
++------------------------+
+| properties(VERTEX)     |
++------------------------+
+| {age: 42, name: &quot;Tim&quot;} |
++------------------------+
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>用<code>UPDATE</code>修改某条边的<code>degree</code>属性，然后用<code>FETCH</code>检查结果。<div class="highlight"><pre><span></span><code>nebula&gt; UPDATE EDGE ON follow &quot;player101&quot; -&gt; &quot;player100&quot; SET degree = 96;
+
+nebula&gt; FETCH PROP ON follow &quot;player101&quot; -&gt; &quot;player100&quot; YIELD properties(edge);
++------------------+
+| properties(EDGE) |
++------------------+
+| {degree: 96}     |
++------------------+
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>用<code>INSERT</code>插入一个 VID 为<code>player111</code>的点，然后用<code>UPSERT</code>更新它。<div class="highlight"><pre><span></span><code>nebula&gt; INSERT VERTEX player(name,age) VALUES &quot;player111&quot;:(&quot;David West&quot;, 38);
+
+nebula&gt; UPSERT VERTEX &quot;player111&quot; SET player.name = &quot;David&quot;, player.age = $^.player.age + 11 \
+        WHEN $^.player.name == &quot;David West&quot; AND $^.player.age &gt; 20 \
+        YIELD $^.player.name AS Name, $^.player.age AS Age;
++---------+-----+
+| Name    | Age |
++---------+-----+
+| &quot;David&quot; | 49  |
++---------+-----+
+</code></pre></div>
+</li>
+</ul>
+<h3 id="_15">删除点和边<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h4 id="ngql_5">nGQL 语法<a class="headerlink" href="#ngql_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>删除点<div class="highlight"><pre><span></span><code>DELETE VERTEX &lt;vid1&gt;[, &lt;vid2&gt;...]
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>删除边<div class="highlight"><pre><span></span><code>DELETE EDGE &lt;edge_type&gt; &lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;]
+[, &lt;src_vid&gt; -&gt; &lt;dst_vid&gt;...]
+</code></pre></div>
+</li>
+</ul>
+<h4 id="_16">示例<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>删除点<div class="highlight"><pre><span></span><code>nebula&gt; DELETE VERTEX &quot;player111&quot;, &quot;team203&quot;;
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>删除边<div class="highlight"><pre><span></span><code>nebula&gt; DELETE EDGE follow &quot;player101&quot; -&gt; &quot;team204&quot;;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="_17">使用索引<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>用户可以通过 <a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/14.native-index-statements/1.create-native-index/">CREATE INDEX</a> 语句为 Tag 和 Edge type 增加索引。</p>
+<div class="admonition caution">
+<p class="admonition-title">使用索引必读</p>
+<p><code>MATCH</code>和<code>LOOKUP</code>语句的执行都依赖索引，但是索引会导致写性能大幅降低<!--（降低 90% 甚至更多）-->。请<strong>不要随意</strong>在生产环境中使用索引，除非很清楚使用索引对业务的影响。</p>
+<p><strong>必须</strong>为“已写入但未构建索引”的数据重建索引，否则无法在<code>MATCH</code>和<code>LOOKUP</code>语句中返回这些数据。参见<a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/14.native-index-statements/4.rebuild-native-index/">重建索引</a>。</p>
+</div>
+<h4 id="ngql_6">nGQL 语法<a class="headerlink" href="#ngql_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>创建索引<div class="highlight"><pre><span></span><code>CREATE {TAG | EDGE} INDEX [IF NOT EXISTS] &lt;index_name&gt;
+ON {&lt;tag_name&gt; | &lt;edge_name&gt;} ([&lt;prop_name_list&gt;]) [COMMENT = &#39;&lt;comment&gt;&#39;];
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>重建索引<div class="highlight"><pre><span></span><code>REBUILD {TAG | EDGE} INDEX &lt;index_name&gt;;
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>为没有指定长度的变量属性创建索引时，需要指定索引长度。在 utf-8 编码中，一个中文字符占 3 字节，请根据变量属性长度设置合适的索引长度。例如 10 个中文字符，索引长度需要为 30。详情请参见<a href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/14.native-index-statements/1.create-native-index/">创建索引</a>。</p>
+</div>
+<h4 id="lookupmatch">基于索引的<code>LOOKUP</code>和<code>MATCH</code>示例<a class="headerlink" href="#lookupmatch" title="Permanent link">&para;</a></h4>
+<p>确保<code>LOOKUP</code>或<code>MATCH</code>有一个索引可用。如果没有，请先创建索引。</p>
+<p>找到 Tag 为<code>player</code>的点的信息，它的<code>name</code>属性值为<code>Tony Parker</code>。</p>
+<div class="highlight"><pre><span></span><code>// 为 name 属性创建索引 player_index_1。
+nebula&gt; CREATE TAG INDEX IF NOT EXISTS player_index_1 ON player(name(20));
+
+// 重建索引确保能对已存在数据生效。
+nebula&gt; REBUILD TAG INDEX player_index_1
++------------+
+| New Job Id |
++------------+
+| 31         |
++------------+
+
+// 使用 LOOKUP 语句检索点的属性。
+nebula&gt; LOOKUP ON player WHERE player.name == &quot;Tony Parker&quot; \
+        YIELD properties(vertex).name AS name, properties(vertex).age AS age;
++---------------+-----+
+| name          | age |
++---------------+-----+
+| &quot;Tony Parker&quot; | 36  |
++---------------+-----+
+
+// 使用 MATCH 语句检索点的属性。
+nebula&gt; MATCH (v:player{name:&quot;Tony Parker&quot;}) RETURN v;
++-----------------------------------------------------+
+| v                                                   |
++-----------------------------------------------------+
+| (&quot;player101&quot; :player{age: 36, name: &quot;Tony Parker&quot;}) |
++-----------------------------------------------------+
+</code></pre></div>
 <!-- The line above is for content reusing. The source file is in the docs-2.0/reuse directory. -->
 
   <hr>
@@ -7323,7 +8353,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 30, 2022</span>
       
     
   </small>
@@ -7357,7 +8387,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../5.start-stop-service/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 步骤2:启动 NebulaGraph" rel="prev">
+        <a href="../2.connect-to-nebulagraph-on-cloud/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 步骤 2：连接 NebulaGraph" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -7366,20 +8396,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              步骤2:启动 NebulaGraph
+              步骤 2：连接 NebulaGraph
             </div>
           </div>
         </a>
       
       
         
-        <a href="../3.1add-storage-hosts/" class="md-footer__link md-footer__link--next" aria-label="下一页: 步骤4:注册 Storage 服务" rel="next">
+        <a href="../../3.quick-start-on-premise/2.install-nebula-graph/" class="md-footer__link md-footer__link--next" aria-label="下一页: 步骤 1：安装 NebulaGraph" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              步骤4:注册 Storage 服务
+              步骤 1：安装 NebulaGraph
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -7427,18 +8457,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
-        <script src="../../js/version-select.js"></script>
+        <script src="../../../js/version-select.js"></script>
       
-        <script src="../../js/config.js"></script>
+        <script src="../../../js/config.js"></script>
       
-        <script src="../../js/jquery.js"></script>
+        <script src="../../../js/jquery.js"></script>
       
-        <script src="../../js/init.js"></script>
+        <script src="../../../js/init.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
