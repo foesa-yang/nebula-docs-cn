@@ -1,10 +1,6 @@
-# 步骤 4：使用常用 nGQL（CRUD 命令）
+## 使用说明
 
-本文介绍 NebulaGraph 查询语言的基础语法，包括用于 Schema 创建和常用增删改查操作的语句。
-
-如需了解更多语句的用法，参见 [nGQL 指南](../3.ngql-guide/1.nGQL-overview/1.overview.md)。
-
-## 图空间和 Schema
+### 图空间和 Schema
 
 一个 NebulaGraph 实例由一个或多个图空间组成。每个图空间都是物理隔离的，用户可以在同一个实例中使用不同的图空间存储不同的数据集。
 
@@ -19,7 +15,7 @@
 | 边（Edge） | 表示两个点之间**有方向**的关系。|
 | 边类型（Edge type） | 边的类型，定义了一组描述边的类型的属性。 |
 
-更多信息，请参见[数据结构](../1.introduction/2.data-model.md)。
+更多信息，请参见[数据结构](https://docs.nebula-graph.com.cn/{{nebula.release}}/1.introduction/2.data-model/)。
 
 本文将使用下图的数据集演示基础操作的语法。
 
@@ -41,9 +37,9 @@
 
 !!! Note
 
-    默认心跳周期是 10 秒。修改心跳周期参数`heartbeat_interval_secs`，请参见[配置简介](../5.configurations-and-logs/1.configurations/1.configurations.md)。
+    默认心跳周期是 10 秒。修改心跳周期参数`heartbeat_interval_secs`，请参见[配置简介](https://docs.nebula-graph.com.cn/{{nebula.release}}/5.configurations-and-logs/1.configurations/1.configurations/)。
 
-## 创建和选择图空间
+## 第一步：创建和选择图空间
 
 ### nGQL 语法
 
@@ -59,7 +55,7 @@
     [COMMENT = '<comment>'];
     ```
 
-    参数详情请参见 [CREATE SPACE](../3.ngql-guide/9.space-statements/1.create-space.md)。
+    参数详情请参见 [CREATE SPACE](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/9.space-statements/1.create-space/)。
 
     <!-- `charset`和`collate`当前只有一个可选值，忽略。
         charset = <charset>
@@ -99,7 +95,7 @@
     +-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
     ```
 
-    如果** Leader distribution **分布不均匀，请执行命令`BALANCE LEADER`重新分配。更多信息，请参见 [Storage 负载均衡](../8.service-tuning/load-balance.md)。
+    如果** Leader distribution **分布不均匀，请执行命令`BALANCE LEADER`重新分配。更多信息，请参见 [Storage 负载均衡](https://docs.nebula-graph.com.cn/{{nebula.release}}/8.service-tuning/load-balance/)。
 
 3. 选择图空间`basketballplayer`。
 
@@ -118,7 +114,7 @@
     +--------------------+
     ```
 
-## 创建 Tag 和 Edge type
+## 第二步：创建 Tag 和 Edge type
 
 ### nGQL 语法
 
@@ -133,7 +129,7 @@ CREATE {TAG | EDGE} [IF NOT EXISTS] {<tag_name> | <edge_type_name>}
     [COMMENT = '<comment>'];
 ```
 
-参数详情请参见 [CREATE TAG](../3.ngql-guide/10.tag-statements/1.create-tag.md) 和 [CREATE EDGE](../3.ngql-guide/11.edge-type-statements/1.create-edge.md)。
+参数详情请参见 [CREATE TAG](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/10.tag-statements/1.create-tag/) 和 [CREATE EDGE](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/11.edge-type-statements/1.create-edge/)。
 
 ### 示例
 
@@ -156,7 +152,7 @@ nebula> CREATE EDGE follow(degree int);
 nebula> CREATE EDGE serve(start_year int, end_year int);
 ```
 
-## 插入点和边
+## 第三步：插入数据
 
 用户可以使用`INSERT`语句，基于现有的 Tag 插入点，或者基于现有的 Edge type 插入边。
 
@@ -178,7 +174,7 @@ nebula> CREATE EDGE serve(start_year int, end_year int);
        [prop_value [, prop_value] ...]  
     ```
 
-    `vid`是 Vertex ID 的缩写，`vid`在一个图空间中是唯一的。参数详情请参见 [INSERT VERTEX](../3.ngql-guide/12.vertex-statements/1.insert-vertex.md)。
+    `vid`是 Vertex ID 的缩写，`vid`在一个图空间中是唯一的。参数详情请参见 [INSERT VERTEX](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/12.vertex-statements/1.insert-vertex/)。
 
 - 插入边
 
@@ -194,7 +190,7 @@ nebula> CREATE EDGE serve(start_year int, end_year int);
     [ <prop_value> [, <prop_value> ] ...]
     ```
 
-    参数详情请参见 [INSERT EDGE](../3.ngql-guide/13.edge-statements/1.insert-edge.md)。
+    参数详情请参见 [INSERT EDGE](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/13.edge-statements/1.insert-edge/)。
 
 ### 示例
 
@@ -222,15 +218,15 @@ nebula> CREATE EDGE serve(start_year int, end_year int);
     nebula> INSERT EDGE serve(start_year, end_year) VALUES "player101" -> "team204":(1999, 2018),"player102" -> "team203":(2006,  2015);
     ```
 
-## 查询数据
+## 第四步：查询数据
 
-- [GO](../3.ngql-guide/7.general-query-statements/3.go.md) 语句可以根据指定的条件遍历数据库。`GO`语句从一个或多个点开始，沿着一条或多条边遍历，返回`YIELD`子句中指定的信息。
+- [GO](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/7.general-query-statements/3.go/) 语句可以根据指定的条件遍历数据库。`GO`语句从一个或多个点开始，沿着一条或多条边遍历，返回`YIELD`子句中指定的信息。
 
-- [FETCH](../3.ngql-guide/7.general-query-statements/4.fetch.md) 语句可以获得点或边的属性。
+- [FETCH](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/7.general-query-statements/4.fetch/) 语句可以获得点或边的属性。
 
-- [LOOKUP](../3.ngql-guide/7.general-query-statements/5.lookup.md) 语句是基于[索引](#_12)的，和`WHERE`子句一起使用，查找符合特定条件的数据。
+- [LOOKUP](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/7.general-query-statements/5.lookup/) 语句是基于[索引](#_12)的，和`WHERE`子句一起使用，查找符合特定条件的数据。
 
-- [MATCH](../3ngql-guide/../3.ngql-guide/7.general-query-statements/2.match.md) 语句是查询图数据最常用的，可以灵活的描述各种图模式，但是它依赖[索引](#_12)去匹配 NebulaGraph 中的数据模型，性能也还需要调优。
+- [MATCH](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/7.general-query-statements/2.match/) 语句是查询图数据最常用的，可以灵活的描述各种图模式，但是它依赖[索引](#_12)去匹配 NebulaGraph 中的数据模型，性能也还需要调优。
 
 ### nGQL 语法
 
@@ -376,7 +372,9 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
 
     `LOOKUP`和`MATCH`的示例在下文的[索引](#_12) 部分查看。
 
-## 修改点和边
+## 其他操作
+
+### 修改点和边
 
 用户可以使用`UPDATE`语句或`UPSERT`语句修改现有数据。
 
@@ -386,7 +384,7 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
 
     每个 partition 内部，`UPSERT` 操作是一个串行操作，所以执行速度比执行 `INSERT` 或 `UPDATE` 慢很多。其仅在多个 partition 之间有并发。
 
-### nGQL 语法
+#### nGQL 语法
 
 - `UPDATE`点
 
@@ -398,7 +396,7 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
 - `UPDATE`边
 
     ```ngql
-    UPDATE EDGE <source vid> -> <destination vid> [@rank] OF <edge_type>
+    UPDATE EDGE ON <edge_type> <source vid> -> <destination vid> [@rank] 
     SET <properties to be updated> [WHEN <condition>] [YIELD <columns to be output>];
     ```
 
@@ -409,7 +407,7 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
     [WHEN <condition>] [YIELD <columns>];
     ```
 
-### 示例
+#### 示例
 
 - 用`UPDATE`修改 VID 为`player100`的球员的`name`属性，然后用`FETCH`语句检查结果。
 
@@ -427,7 +425,7 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
 - 用`UPDATE`修改某条边的`degree`属性，然后用`FETCH`检查结果。
 
     ```ngql
-    nebula> UPDATE EDGE "player101" -> "player100" OF follow SET degree = 96;
+    nebula> UPDATE EDGE ON follow "player101" -> "player100" SET degree = 96;
 
     nebula> FETCH PROP ON follow "player101" -> "player100" YIELD properties(edge);
     +------------------+
@@ -452,9 +450,9 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
     +---------+-----+
     ```
 
-## 删除点和边
+### 删除点和边
 
-### nGQL 语法
+#### nGQL 语法
 
 - 删除点
 
@@ -469,7 +467,7 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
     [, <src_vid> -> <dst_vid>...]
     ```
 
-### 示例
+#### 示例
 
 - 删除点
 
@@ -483,17 +481,17 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
     nebula> DELETE EDGE follow "player101" -> "team204";
     ```
 
-## 索引
+### 使用索引
 
-用户可以通过 [CREATE INDEX](../3.ngql-guide/14.native-index-statements/1.create-native-index.md) 语句为 Tag 和 Edge type 增加索引。
+用户可以通过 [CREATE INDEX](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/14.native-index-statements/1.create-native-index/) 语句为 Tag 和 Edge type 增加索引。
 
 !!! caution "使用索引必读"
 
     `MATCH`和`LOOKUP`语句的执行都依赖索引，但是索引会导致写性能大幅降低<!--（降低 90% 甚至更多）-->。请**不要随意**在生产环境中使用索引，除非很清楚使用索引对业务的影响。
 
-    **必须**为“已写入但未构建索引”的数据重建索引，否则无法在`MATCH`和`LOOKUP`语句中返回这些数据。参见[重建索引](../3.ngql-guide/14.native-index-statements/4.rebuild-native-index.md)。
+    **必须**为“已写入但未构建索引”的数据重建索引，否则无法在`MATCH`和`LOOKUP`语句中返回这些数据。参见[重建索引](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/14.native-index-statements/4.rebuild-native-index/)。
 
-### nGQL 语法
+#### nGQL 语法
 
 - 创建索引
 
@@ -510,9 +508,9 @@ nebula> FETCH PROP ON player "player100" YIELD properties(vertex);
 
 !!! Note
 
-    为没有指定长度的变量属性创建索引时，需要指定索引长度。在 utf-8 编码中，一个中文字符占 3 字节，请根据变量属性长度设置合适的索引长度。例如 10 个中文字符，索引长度需要为 30。详情请参见[创建索引](../3.ngql-guide/14.native-index-statements/1.create-native-index.md)。
+    为没有指定长度的变量属性创建索引时，需要指定索引长度。在 utf-8 编码中，一个中文字符占 3 字节，请根据变量属性长度设置合适的索引长度。例如 10 个中文字符，索引长度需要为 30。详情请参见[创建索引](https://docs.nebula-graph.com.cn/{{nebula.release}}/3.ngql-guide/14.native-index-statements/1.create-native-index/)。
 
-### 基于索引的`LOOKUP`和`MATCH`示例
+#### 基于索引的`LOOKUP`和`MATCH`示例
 
 确保`LOOKUP`或`MATCH`有一个索引可用。如果没有，请先创建索引。
 
