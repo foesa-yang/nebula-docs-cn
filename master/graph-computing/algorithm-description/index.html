@@ -6892,6 +6892,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shortestpath" class="md-nav__link">
+    ShortestPath
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6933,6 +6940,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#infomap" class="md-nav__link">
+    InfoMap
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6956,6 +6970,20 @@
           <li class="md-nav__item">
   <a href="#node2vec" class="md-nav__link">
     Node2Vec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree_stat" class="md-nav__link">
+    Tree_stat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperanf" class="md-nav__link">
+    HyperANF
   </a>
   
 </li>
@@ -7523,6 +7551,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shortestpath" class="md-nav__link">
+    ShortestPath
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7564,6 +7599,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#infomap" class="md-nav__link">
+    InfoMap
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7587,6 +7629,20 @@
           <li class="md-nav__item">
   <a href="#node2vec" class="md-nav__link">
     Node2Vec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree_stat" class="md-nav__link">
+    Tree_stat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyperanf" class="md-nav__link">
+    HyperANF
   </a>
   
 </li>
@@ -8451,6 +8507,60 @@ NebulaGraph 支持多种图计算工具，本文介绍这些工具支持的算�
 </ul>
 </li>
 </ul>
+<h3 id="shortestpath">ShortestPath<a class="headerlink" href="#shortestpath" title="Permanent link">&para;</a></h3>
+<p>ShortestPath（最短路径）算法用于寻找图中起点和终点任意两两之间的最短路径，适用于路径设计、网络规划等场景。</p>
+<ul>
+<li>
+<p>NebulaGraph Analytics</p>
+<ul>
+<li>
+<p>传入参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>src</code></td>
+<td align="left"><code>"100"</code></td>
+<td align="left">起点。多个值用逗号分隔。</td>
+</tr>
+<tr>
+<td align="left"><code>dst</code></td>
+<td align="left"><code>"200"</code></td>
+<td align="left">终点。多个值用逗号分隔。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>输出参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>VALUE</code></td>
+<td align="left">list</td>
+<td align="left">返回最短路径中的点。格式为<code>src, vid1,vid2...dst</code>。同时有多个最短路径时，只返回一条。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="_4">社区发现算法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="lpa">LPA<a class="headerlink" href="#lpa" title="Permanent link">&para;</a></h3>
 <p>LPA（标签传播）算法是一种基于图的半监督学习方法，其基本思路是用已标记点的标签信息去预测未标记点的标签信息。利用样本间的关系建图，点包括已标注和未标注数据，其边表示两个点的相似度，点的标签按相似度传递给其他点。标签数据就像是一个源头，可以对无标签数据进行标注，点的相似度越大，标签越容易传播。</p>
@@ -8760,6 +8870,89 @@ NebulaGraph 支持多种图计算工具，本文介绍这些工具支持的算�
 </ul>
 </li>
 </ul>
+<h3 id="infomap">InfoMap<a class="headerlink" href="#infomap" title="Permanent link">&para;</a></h3>
+<p>InfoMap 算法使用双层编码方式将有向图进行社区分类。不同社区内部节点的编码复用，可以大幅缩短描述的信息长度。在实现方式上，该算法包含了 PageRank 算法，用于将随机游走转变为随机冲浪。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>仅 NebulaGraph Analytics 支持该算法。</p>
+</div>
+<ul>
+<li>
+<p>NebulaGraph Analytics</p>
+<ul>
+<li>
+<p>传入参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>pagerank_iter</code></td>
+<td align="left"><code>10</code></td>
+<td align="left">内部 PageRank 算法的最大迭代次数。</td>
+</tr>
+<tr>
+<td align="left"><code>pagerank_threshold</code></td>
+<td align="left"><code>0.0001</code></td>
+<td align="left">内部 PageRank 算法的收敛精度。</td>
+</tr>
+<tr>
+<td align="left"><code>teleport_prob</code></td>
+<td align="left"><code>0.15</code></td>
+<td align="left">穿越概率。</td>
+</tr>
+<tr>
+<td align="left"><code>inner_iter</code></td>
+<td align="left"><code>3</code></td>
+<td align="left">内层迭代次数。</td>
+</tr>
+<tr>
+<td align="left"><code>outer_iter</code></td>
+<td align="left"><code>2</code></td>
+<td align="left">外层迭代次数。</td>
+</tr>
+<tr>
+<td align="left"><code>comm_info_num</code></td>
+<td align="left"><code>100</code></td>
+<td align="left">输出的社群数量。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>输出参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>VID</code></td>
+<td align="left">创建图空间时<code>vid_type</code>决定</td>
+<td align="left">点的 ID。</td>
+</tr>
+<tr>
+<td align="left"><code>LABEL</code></td>
+<td align="left">与<code>VID</code>类型相同</td>
+<td align="left">输出标签相同的点的 ID。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="_5">图特征算法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="trianglecount">TriangleCount<a class="headerlink" href="#trianglecount" title="Permanent link">&para;</a></h3>
 <p>TriangleCount（三角计数）算法用于统计图中三角形个数。三角形越多，代表图中节点关联程度越高，组织关系越严密。</p>
@@ -8970,6 +9163,117 @@ NebulaGraph 支持多种图计算工具，本文介绍这些工具支持的算�
 </ul>
 </li>
 </ul>
+<h3 id="tree_stat">Tree_stat<a class="headerlink" href="#tree_stat" title="Permanent link">&para;</a></h3>
+<p>Tree_stat 算法用于统计图空间中指定根节点的子图的宽度或深度。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>仅 NebulaGraph Analytics 支持该算法。</p>
+</div>
+<ul>
+<li>
+<p>NebulaGraph Analytics</p>
+<ul>
+<li>
+<p>传入参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>root</code></td>
+<td align="left"><code>100</code></td>
+<td align="left">根节点的 VID。</td>
+</tr>
+<tr>
+<td align="left"><code>stat</code></td>
+<td align="left"><code>width,depth</code></td>
+<td align="left">统计宽度或深度。多个值用逗号分隔。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>输出参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>VALUE</code></td>
+<td align="left">list</td>
+<td align="left">返回一行统计数据，格式与参数<code>stat</code>一致。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="hyperanf">HyperANF<a class="headerlink" href="#hyperanf" title="Permanent link">&para;</a></h3>
+<p>HyperANF 算法用于评估图中任意两点的平均距离。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>仅 NebulaGraph Analytics 支持该算法。</p>
+</div>
+<ul>
+<li>
+<p>NebulaGraph Analytics</p>
+<ul>
+<li>
+<p>传入参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>bits</code></td>
+<td align="left"><code>6</code></td>
+<td align="left">HyperLogLog 计数器的 bit 位长度，取值范围：6~16。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>输出参数</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>VALUE</code></td>
+<td align="left">double</td>
+<td align="left">平均距离。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="_6">聚类算法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <h3 id="clusteringcoefficient">ClusteringCoefficient<a class="headerlink" href="#clusteringcoefficient" title="Permanent link">&para;</a></h3>
 <p>ClusteringCoefficient（聚集系数）算法用于计算图中节点的聚集程度。在各类反映真实世界的网络结构，特别是社交网络结构中，各个点之间倾向于形成密度相对较高的网络群，也就是说，相对于在两个点之间随机连接而得到的网络，真实世界网络的聚集系数更高。</p>
@@ -9161,7 +9465,7 @@ NebulaGraph 支持多种图计算工具，本文介绍这些工具支持的算�
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2022</span>
       
     
   </small>
