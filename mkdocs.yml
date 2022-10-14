@@ -583,6 +583,7 @@ nav:
         - 集群信息: 
           - 信息总览: nebula-dashboard-ent/4.cluster-operator/cluster-information/overview-info.md
           - 集群诊断: nebula-dashboard-ent/4.cluster-operator/cluster-information/cluster-diagnosis.md
+          - 集群作业管理: nebula-dashboard-ent/4.cluster-operator/cluster-information/job-management.md
           - 备份恢复: nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md
         - 集群操作: 
           - 节点管理: nebula-dashboard-ent/4.cluster-operator/operator/node.md
@@ -615,6 +616,7 @@ nav:
       - Schema 管理: nebula-explorer/db-management/10.create-schema.md
       - 数据导入: nebula-explorer/db-management/11.import-data.md
       - 控制台: nebula-explorer/db-management/explorer-console.md
+      - 查询语句模板: nebula-explorer/db-management/ngql-template.md
     - 图探索:
       - 选择图空间: nebula-explorer/graph-explorer/13.choose-graphspace.md
       - 开始探索: nebula-explorer/graph-explorer/ex-ug-query-exploration.md
