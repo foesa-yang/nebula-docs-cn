@@ -306,6 +306,7 @@ schema:
 |`files.schema.edge.srcVID.index`|-|否|边的起始点 ID 对应 CSV 文件中列的序号。|
 |`files.schema.edge.srcVID.function`|-|否|生成 VID 的函数。目前，我们只支持 `hash` 函数。|
 |`files.schema.edge.dstVID.index`|-|否|边的目的点 ID 对应 CSV 文件中列的序号。|
+|`files.schema.edge.dstVID.function`|-|否|生成 VID 的函数。目前，我们只支持 `hash` 函数。|
 |`files.schema.edge.rank.index`|-|否|边的 rank 值对应 CSV 文件中列的序号。|
 |`files.schema.edge.props.name`|-|是|Edge type 属性名称，必须和 NebulaGraph 中的 Edge type 属性一致。|
 |`files.schema.edge.props.type`|-|是|属性类型，支持`bool`、`int`、`float`、`double`、`timestamp`、`string`和`geo`。|
