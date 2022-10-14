@@ -5113,6 +5113,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/job-management/" class="md-nav__link">
+        集群作业管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         备份恢复
       </a>
@@ -5638,6 +5652,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-explorer/db-management/explorer-console/" class="md-nav__link">
         控制台
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/ngql-template/" class="md-nav__link">
+        查询语句模板
       </a>
     </li>
   
@@ -7897,14 +7925,9 @@ disable_auto_compactions
 <td align="left">为 Storage 缓存预留的内存大小，取值需要稍大于<code>vertex_pool_capacity</code>和<code>empty_key_pool_capacity</code>的总和。单位：兆字节。</td>
 </tr>
 <tr>
-<td align="left"><code>storage_cache_buckets_power</code></td>
+<td align="left"><code>storage_cache_entries_power</code></td>
 <td align="left"><code>20</code></td>
-<td align="left">bucket 的个数。取值为以 2 为底的对数，取值范围：0~32。例如取值为 20，表示 bucket 个数为 2<span class="arithmatex">\(^{20}\)</span>。建议值为<code>ceil(log2(cacheEntries * 1.6))</code>。<code>cacheEntries</code>为要缓存的条目总数。</td>
-</tr>
-<tr>
-<td align="left"><code>storage_cache_locks_power</code></td>
-<td align="left"><code>10</code></td>
-<td align="left">锁的个数。取值为以 2 为底的对数，取值范围：0~32。例如取值为 10，表示锁个数为 2<span class="arithmatex">\(^{10}\)</span>。建议值为<code>max(1, storage_cache_buckets_power - 10)</code>。</td>
+<td align="left">预估 Storage 节点上缓存条目的个数，计算公式：2<span class="arithmatex">\(^{&lt;设置值&gt;}\)</span>。例如当设置的值为<code>20</code>时，表示缓存条目的个数为 2<span class="arithmatex">\(^{20}\)</span>。建议设置的值为<code>log2(该 Storage 中点的数量)</code>，最大值可设置为<code>31</code>。</td>
 </tr>
 <tr>
 <td align="left"><code>enable_vertex_pool</code></td>
@@ -7922,19 +7945,19 @@ disable_auto_compactions
 <td align="left">点缓存条目的有效时间。单位：秒。</td>
 </tr>
 <tr>
-<td align="left"><code>enable_empty_key_pool</code></td>
+<td align="left"><code>enable_negative_pool</code></td>
 <td align="left"><code>false</code></td>
-<td align="left">是否使用 empty_key 的缓存池。empty_key 表示用户查询过但是实际不存在的 key。</td>
+<td align="left">是否添加消极缓存池（消极缓存池表示 Key 不存在于数据库中的数据缓存池）。仅当<code>enable_storage_cache</code>为<code>true</code>时有效。</td>
 </tr>
 <tr>
-<td align="left"><code>empty_key_pool_capacity</code></td>
+<td align="left"><code>negative_pool_capacity</code></td>
 <td align="left"><code>50</code></td>
-<td align="left">empty_key 缓存池的大小。 单位：兆字节。</td>
+<td align="left">消极缓存池的大小。 单位：兆字节。</td>
 </tr>
 <tr>
-<td align="left"><code>empty_key_item_ttl</code></td>
+<td align="left"><code>negative_item_ttl</code></td>
 <td align="left"><code>300</code></td>
-<td align="left">empty_key 缓存条目的有效时间。单位：秒。</td>
+<td align="left">消极缓存条目的有效时间。单位：秒。</td>
 </tr>
 </tbody>
 </table>
@@ -7970,7 +7993,7 @@ disable_auto_compactions
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>

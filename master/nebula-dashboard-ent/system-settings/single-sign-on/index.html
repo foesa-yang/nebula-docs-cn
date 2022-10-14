@@ -4986,6 +4986,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../4.cluster-operator/cluster-information/job-management/" class="md-nav__link">
+        集群作业管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         备份恢复
       </a>
@@ -5601,6 +5615,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-explorer/db-management/explorer-console/" class="md-nav__link">
         控制台
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/ngql-template/" class="md-nav__link">
+        查询语句模板
       </a>
     </li>
   
@@ -7476,9 +7504,19 @@
 <td align="left">获取用户信息的 URL。</td>
 </tr>
 <tr>
-<td align="left"><code>Name</code></td>
-<td align="left"><code>vesoft</code></td>
-<td align="left">Oauth 的名称。</td>
+<td align="left"><code>Username Key</code></td>
+<td align="left"><code>email</code></td>
+<td align="left">用户名字段。</td>
+</tr>
+<tr>
+<td align="left"><code>Organization</code></td>
+<td align="left"><code>vesoft company</code></td>
+<td align="left">组织名称。</td>
+</tr>
+<tr>
+<td align="left"><code>Requested scopes for OAuth</code></td>
+<td align="left"><code>email</code></td>
+<td align="left">OAuth 的权限范围。权限范围需要是厂商 OAuth2.0 平台配置的 scope 的子集，否则请求会失败。请求的 scope 需要能获取到 <code>Username Key</code>的值。</td>
 </tr>
 </tbody>
 </table>
@@ -7488,7 +7526,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>
