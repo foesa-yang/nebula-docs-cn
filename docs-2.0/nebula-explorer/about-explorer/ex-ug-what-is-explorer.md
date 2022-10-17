@@ -4,7 +4,7 @@ NebulaGraph Explorer （简称 Explorer）是一款可以通过 Web 访问的可
 
 !!! enterpriseonly
 
-    如需获取 NebulaGraph Explorer 安装包，请发送邮件至 inquiry@vesoft.com。
+    如需获取 NebulaGraph Explorer 安装包，请[申请试用](https://nebula-graph.com.cn/visualization-tools-free-trial)。
 
 !!! Note
 

@@ -4,7 +4,7 @@ NebulaGraph v3.0.x 升级至 v{{nebula.release}}，只需要使用 v{{nebula.rel
 
 ## RPM/DEB 包升级步骤
 
-1. 下载 [RPM/DEB 包](https://github.com/vesoft-inc/nebula-graph/releases/tag/v{{nebula.release}})。
+1. 下载 [RPM/DEB 包](https://github.com/vesoft-inc/nebula/releases/tag/v{{nebula.release}})。
 
 2. 停止所有 NebulaGraph 服务。详情请参见[管理 NebulaGraph 服务](../../2.quick-start/5.start-stop-service.md)。建议更新前备份配置文件。
 

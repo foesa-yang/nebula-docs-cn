@@ -4,8 +4,7 @@ NebulaGraph Analytics 是一款高性能图计算框架工具，支持对 Nebula
 
 !!! enterpriseonly
 
-    如需获取 NebulaGraph Analytics 安装包，请发送邮件至 inquiry@vesoft.com。
-
+    如需获取 NebulaGraph Analytics 安装包，请[联系我们](https://nebula-graph.com.cn/contact)。
 ## 适用场景
 
 支持将数据源为 NebulaGraph 集群、HDFS 上的 CSV 文件或本地 CSV 文件中的数据导入 NebulaGraph Analytics，并将图计算结果输出至 NebulaGraph 集群、HDFS 上的 CSV 文件或本地 CSV 文件。
