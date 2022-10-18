@@ -3502,6 +3502,81 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          黑匣子
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="黑匣子" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          黑匣子
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.monitor-and-metrics/3.bbox/3.1.bbox.md" class="md-nav__link">
+        黑匣子介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer.md" class="md-nav__link">
+        Nebula-BBox 工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.monitor-and-metrics/3.bbox/3.3.bbox-metrics.md" class="md-nav__link">
+        黑匣子指标
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7829,10 +7904,11 @@ $ go build -mod vendor cmd/importer.go
 <p>文件配置存储数据文件和日志的相关配置，以及 Schema 的具体信息。</p>
 <h4 id="_13">文件和日志配置<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>示例配置如下：</p>
-<div class="highlight"><pre><span></span><code><span class="nt">logPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/test.log</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">workingDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data/</span><span class="w"></span>
+<span class="nt">logPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/test.log</span><span class="w"></span>
 <span class="nt">files</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./student_without_header.csv</span><span class="w"></span>
-<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/studenterr.csv</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./student.csv</span><span class="w"></span>
+<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/student.csv</span><span class="w"></span>
 <span class="w">    </span><span class="nt">batchSize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w"></span>
 <span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
@@ -7852,6 +7928,12 @@ $ go build -mod vendor cmd/importer.go
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left"><code>workingDir</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">在多个目录包含具有相同文件结构的数据，使用此参数在多个目录之间切换。例如，下面配置的 <code>path</code> 和 <code>failDataPath</code> 的值会自动更改为 <code>./data/student.csv</code> 和 <code>./data/err/student.csv</code>。参数可以是绝对的或相对的。</td>
+</tr>
 <tr>
 <td align="left"><code>logPath</code></td>
 <td align="left">-</td>
@@ -7924,20 +8006,20 @@ $ go build -mod vendor cmd/importer.go
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vertex</span><span class="w"></span>
 <span class="w">  </span><span class="nt">vertex</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">vid</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">abc</span><span class="w"></span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">student</span><span class="w"></span>
 <span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">age</span><span class="w"></span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span><span class="w"></span>
 <span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="w"></span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gender</span><span class="w"></span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
 </code></pre></div>
 <table>
 <thead>
@@ -7956,16 +8038,28 @@ $ go build -mod vendor cmd/importer.go
 <td align="left">Schema 的类型，可选值为<code>vertex</code>和<code>edge</code>。</td>
 </tr>
 <tr>
+<td align="left"><code>files.schema.vertex.vid.index</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">点 ID 对应 CSV 文件中列的序号。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.vid.function</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">生成 VID 的函数。目前，我们只支持 <code>hash</code> 函数。</td>
+</tr>
+<tr>
 <td align="left"><code>files.schema.vertex.vid.type</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
 <td align="left">点 ID 的数据类型，可选值为<code>int</code>和<code>string</code>。</td>
 </tr>
 <tr>
-<td align="left"><code>files.schema.vertex.vid.index</code></td>
+<td align="left"><code>files.schema.vertex.vid.prefix</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
-<td align="left">点 ID 对应 CSV 文件中列的序号。</td>
+<td align="left">给 原始vid 添加的前缀，当同时指定了 <code>function</code> 时, 生成 VID 的方法是先添加 <code>prefix</code> 前缀, 再用 <code>function</code>生成 VID。</td>
 </tr>
 <tr>
 <td align="left"><code>files.schema.vertex.tags.name</code></td>
@@ -7983,7 +8077,7 @@ $ go build -mod vendor cmd/importer.go
 <td align="left"><code>files.schema.vertex.tags.props.type</code></td>
 <td align="left">-</td>
 <td align="left">是</td>
-<td align="left">属性数据类型，支持<code>bool</code>、<code>int</code>、<code>float</code>、<code>double</code>、<code>timestamp</code>、<code>string</code>和<code>geo</code>。</td>
+<td align="left">属性数据类型，支持<code>bool</code>、 <code>int</code>、 <code>float</code>、 <code>double</code>、 <code>string</code>、 <code>time</code>、 <code>timestamp</code>、 <code>date</code>、 <code>datetime</code>、 <code>geography</code>、 <code>geography(point)</code>、 <code>geography(linestring)</code> 和 <code>geography(polygon)</code>。</td>
 </tr>
 <tr>
 <td align="left"><code>files.schema.vertex.tags.props.index</code></td>
@@ -8005,18 +8099,17 @@ $ go build -mod vendor cmd/importer.go
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edge</span><span class="w"></span>
 <span class="w">  </span><span class="nt">edge</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">follow</span><span class="w"></span>
-<span class="w">    </span><span class="nt">withRanking</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 <span class="w">    </span><span class="nt">srcVID</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
 <span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span><span class="w"></span>
 <span class="w">    </span><span class="nt">dstVID</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
 <span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
 <span class="w">    </span><span class="nt">props</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">degree</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">double</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grade</span><span class="w"></span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span><span class="w"></span>
 <span class="w">        </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
 </code></pre></div>
 <table>
@@ -8042,28 +8135,28 @@ $ go build -mod vendor cmd/importer.go
 <td align="left">Edge type 名称。</td>
 </tr>
 <tr>
-<td align="left"><code>files.schema.edge.srcVID.type</code></td>
-<td align="left">-</td>
-<td align="left">否</td>
-<td align="left">边的起始点 ID 的数据类型。</td>
-</tr>
-<tr>
 <td align="left"><code>files.schema.edge.srcVID.index</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
 <td align="left">边的起始点 ID 对应 CSV 文件中列的序号。</td>
 </tr>
 <tr>
-<td align="left"><code>files.schema.edge.dstVID.type</code></td>
+<td align="left"><code>files.schema.edge.srcVID.function</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
-<td align="left">边的目的点 ID 的数据类型。</td>
+<td align="left">生成 VID 的函数。目前，我们只支持 <code>hash</code> 函数。</td>
 </tr>
 <tr>
 <td align="left"><code>files.schema.edge.dstVID.index</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
 <td align="left">边的目的点 ID 对应 CSV 文件中列的序号。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.edge.dstVID.function</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">生成 VID 的函数。目前，我们只支持 <code>hash</code> 函数。</td>
 </tr>
 <tr>
 <td align="left"><code>files.schema.edge.rank.index</code></td>
@@ -8110,7 +8203,7 @@ $ go build -mod vendor cmd/importer.go
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
       
     
   </small>
