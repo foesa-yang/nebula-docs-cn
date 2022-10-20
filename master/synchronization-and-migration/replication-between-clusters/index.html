@@ -3534,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/3.bbox/3.1.bbox.md" class="md-nav__link">
+      <a href="../../6.monitor-and-metrics/3.bbox/3.1.bbox/" class="md-nav__link">
         黑匣子介绍
       </a>
     </li>
@@ -3548,22 +3548,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer.md" class="md-nav__link">
+      <a href="../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer/" class="md-nav__link">
         Nebula-BBox 工具
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/3.bbox/3.3.bbox-metrics.md" class="md-nav__link">
-        黑匣子指标
       </a>
     </li>
   
@@ -8140,44 +8126,74 @@ nebula&gt; SHOW SYNC STATUS;
 <p class="admonition-title">Note</p>
 <p>在切换主从之前需要为新的主集群搭建并启动 listener 服务（示例 IP 为<code>192.168.10.105</code>），为新的从集群搭建并启动 drainer 服务（示例 IP 为<code>192.168.10.106</code>）。</p>
 </div>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>在切换主从集群之前，请勿往主集群中写入数据，同时确保主集群中的数据已经同步至从集群中。</p>
-</div>
 <ol>
 <li>
-<p>登录主集群，取消 drainer 和 listener 服务。</p>
+<p>登录旧的主集群并设置图空间为只读，防止有新的数据写入旧的主集群，而导致数据不一致。</p>
 <div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
+nebula&gt; SET VARIABLES read_only=true;
+</code></pre></div>
+</li>
+<li>
+<p>查看旧的主集群中的图空间的数据是否已经同步至旧的从集群中，确保旧的主集群中的数据已经同步至旧的从集群中。</p>
+<ol>
+<li>在旧的主集群中查看旧的主集群同步数据的状态。</li>
+</ol>
+<div class="highlight"><pre><span></span><code>nebula&gt; SHOW SYNC STATUS;
+</code></pre></div>
+<ol>
+<li>登录旧的从集群并查看旧的从集群同步数据的状态。</li>
+</ol>
+<div class="highlight"><pre><span></span><code>nebula&gt; USE replication_basketballplayer;
+nebula&gt; SHOW DRAINER SYNC STATUS;
+</code></pre></div>
+<p>当旧的主从集群返回结果中的<code>LogId Lag</code>和<code>Time Latency</code>对应的值都为<code>0</code>时，表示旧的主集群中的数据已经被同步至旧的从集群中。</p>
+</li>
+<li>
+<p>在旧的从集群中设置图空间为可读写。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; SET VARIABLES read_only=false;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果有业务在等待写数据，此时，可在旧的从集群（新的主集群）中进行业务数据的写入操作。</p>
+</div>
+</li>
+<li>
+<p>在旧的从集群中移除 drainer 服务。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; REMOVE DRAINER;
+</code></pre></div>
+</li>
+<li>
+<p>登录旧的主集群，修改图空间为可读写并移除之前注册的 drainer 服务和之前添加的 listener 服务。</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
+//需先修改旧的主集群图空间为可读写，否则无法设置 drainer 服务。
+nebula&gt; SET VARIABLES read_only=false;
 nebula&gt; SIGN OUT DRAINER SERVICE;
 nebula&gt; REMOVE LISTENER SYNC;
 </code></pre></div>
 </li>
 <li>
-<p>设置图空间为只读，防止有新的数据写入主集群，导致数据不一致。</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; SET VARIABLES read_only=true;
-</code></pre></div>
-</li>
-<li>
-<p>登录从集群，设置图空间为可读写，取消 drainer。</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; USE replication_basketballplayer;
-nebula&gt; SET VARIABLES read_only=false;
-nebula&gt; REMOVE DRAINER;
-</code></pre></div>
-</li>
-<li>
-<p>将从集群更改为主集群。</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; SIGN IN DRAINER SERVICE(192.168.10.106:9889);
-nebula&gt; ADD LISTENER SYNC META 192.168.10.105:9569 STORAGE 192.168.10.105:9789 TO SPACE basketballplayer;
-</code></pre></div>
-</li>
-<li>
-<p>登录之前的主集群，将其更改为从集群。</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
-//修改图空间为可读写，否则无法设置 drainer 服务。
-nebula&gt; SET VARIABLES read_only=false;
+<p>在旧的主集群中将旧的主集群更改为新的从集群。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>确保已为新的从集群搭建并启动 drainer 服务。</p>
+</div>
+<div class="highlight"><pre><span></span><code>//添加新的 drainer 服务。
 nebula&gt; ADD DRAINER 192.168.10.106:9889;
+//设置图空间为只读。
 nebula&gt; SET VARIABLES read_only=true;
 </code></pre></div>
+</li>
+<li>
+<p>登录旧的从集群，将旧的从集群更改为新的主集群。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>确保已为新的主集群搭建并启动 Meta listener 和 Storage listener 服务。</p>
+</div>
+<div class="highlight"><pre><span></span><code>nebula&gt; USE replication_basketballplayer;
+nebula&gt; SIGN IN DRAINER SERVICE(192.168.10.106:9889);
+nebula&gt; ADD LISTENER SYNC META 192.168.10.105:9569 STORAGE 192.168.10.105:9789 TO SPACE basketballplayer;
+</code></pre></div>
+<p>至此主从集群切换完成。</p>
 </li>
 </ol>
 <h2 id="_13">常见问题<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
@@ -8205,7 +8221,7 @@ nebula&gt; SET VARIABLES read_only=true;
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2022</span>
       
     
   </small>

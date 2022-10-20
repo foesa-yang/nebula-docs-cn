@@ -3534,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox.md" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox/" class="md-nav__link">
         黑匣子介绍
       </a>
     </li>
@@ -3548,22 +3548,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer.md" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer/" class="md-nav__link">
         Nebula-BBox 工具
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.3.bbox-metrics.md" class="md-nav__link">
-        黑匣子指标
       </a>
     </li>
   
@@ -3719,6 +3705,40 @@
   <a href="#_3" class="md-nav__link">
     角色权限
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7375,6 +7395,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7472,6 +7526,24 @@
 </ul>
 </li>
 </ul>
+<!-- -->
+<ul>
+<li>
+<p>Basic</p>
+<ul>
+<li>对权限内的图空间拥有 Schema 的<strong>只读</strong>权限。</li>
+</ul>
+<ul>
+<li>对权限内的图空间可以自定义 Tag 和 Edge Type 的数据的<strong>读写</strong>权限。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>Basic 角色仅在企业版中提供。</p>
+</div>
+<!-- -->
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -7490,12 +7562,14 @@
 <th align="left">DBA</th>
 <th align="left">User</th>
 <th align="left">Guest</th>
+<th align="left">Basic（企业版）</th>
 <th align="left">相关语句</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Read space</td>
+<td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
@@ -7510,6 +7584,7 @@
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
+<td align="left">Y</td>
 <td align="left"><code>DESCRIBE TAG</code>、<code>DESCRIBE EDGE</code>、<code>DESCRIBE TAG INDEX</code>、<code>DESCRIBE EDGE INDEX</code></td>
 </tr>
 <tr>
@@ -7519,11 +7594,13 @@
 <td align="left">Y</td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"></td>
 <td align="left"><code>CREATE TAG</code>、<code>ALTER TAG</code>、<code>CREATE EDGE</code>、<code>ALTER EDGE</code>、<code>DROP TAG</code>、<code>DELETE TAG</code>、<code>DROP EDGE</code>、<code>CREATE TAG INDEX</code>、<code>CREATE EDGE INDEX</code>、<code>DROP TAG INDEX</code>、<code>DROP EDGE INDEX</code></td>
 </tr>
 <tr>
 <td align="left">Write user</td>
 <td align="left">Y</td>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -7537,6 +7614,7 @@
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"></td>
 <td align="left"><code>GRANT</code>、<code>REVOKE</code></td>
 </tr>
 <tr>
@@ -7546,6 +7624,7 @@
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
+<td align="left">C</td>
 <td align="left"><code>GO</code>、<code>SET</code>、<code>PIPE</code>、<code>MATCH</code>、<code>ASSIGNMENT</code>、<code>LOOKUP</code>、<code>YIELD</code>、<code>ORDER BY</code>、<code>FETCH VERTICES</code>、<code>Find</code>、<code>FETCH EDGES</code>、<code>FIND PATH</code>、<code>LIMIT</code>、<code>GROUP BY</code>、<code>RETURN</code></td>
 </tr>
 <tr>
@@ -7555,10 +7634,12 @@
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left"></td>
+<td align="left">C</td>
 <td align="left"><code>INSERT VERTEX</code>、<code>UPDATE VERTEX</code>、<code>INSERT EDGE</code>、<code>UPDATE EDGE</code>、<code>DELETE VERTEX</code>、<code>DELETE EDGES</code>、<code>DELETE TAG</code></td>
 </tr>
 <tr>
 <td align="left">Show operations</td>
+<td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left">Y</td>
@@ -7573,11 +7654,13 @@
 <td align="left">Y</td>
 <td align="left">Y</td>
 <td align="left"></td>
+<td align="left"></td>
 <td align="left"><code>SUBMIT JOB COMPACT</code>、<code>SUBMIT JOB FLUSH</code>、<code>SUBMIT JOB STATS</code>、<code>STOP JOB</code>、<code>RECOVER JOB</code>、<code>BUILD TAG INDEX</code>、<code>BUILD EDGE INDEX</code>、<code>INGEST</code>、<code>DOWNLOAD</code></td>
 </tr>
 <tr>
 <td align="left">Write space</td>
 <td align="left">Y</td>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -7590,18 +7673,90 @@
   |Write space|Y|||||`CREATE SPACE`、`DROP SPACE`、`CREATE SNAPSHOT`、`DROP SNAPSHOT`、`BALANCE ZONE`、`BALANCE LEADER`、`ADMIN`、`CONFIG`、`INGEST`、`DOWNLOAD`|
 -->
 
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>当前仅企业版支持基于 Basic 角色的细粒度(Tag/Edge type 级别)权限管理。</p>
+</div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>Show operations 为特殊操作，只会在自身权限内执行。例如<code>SHOW SPACES</code>，每个角色都可以执行，但是只会返回自身权限内的图空间。
 只有 God 角色可以执行<code>SHOW USERS</code>和<code>SHOW SNAPSHOTS</code>语句。</p>
 </div>
+<!-- -->
+<h2 id="basic">Basic 角色(企业版)<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h2>
+<h3 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>进入图空间后才可执行以下命令。</p>
+</div>
+<ul>
+<li>授予 Basic 用户 Tag/Edge 权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>GRANT { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
+OPTION = { READ | WRITE }
+</code></pre></div>
+<ul>
+<li>取消 Basic 用户 Tag/Edge 权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>REVOKE { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
+OPTION = { READ | WRITE }
+</code></pre></div>
+<ul>
+<li>查询用户权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>SHOW GRANTS [&lt;user_name&gt;]
+</code></pre></div>
+<h3 id="_5">注意事项<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>默认 Basic 角色无任何 Tag/Edge 读写权限。</li>
+<li>只有 GOD 和 ADMIN 角色用户能执行授权（GRANT）和撤销权限（REVOKE）操作。</li>
+<li>只允许用户在指定图空间对 Basic 角色进行授权（GRANT）和撤销权限（REVOKE）操作，不允许授权给其他角色用户。</li>
+</ul>
+<h3 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># 创建 test 用户
+nebula&gt; CREATE USER test WITH PASSWORD &#39;nebula&#39;;
+
+# 为 test 用户创建 Basic 角色权限
+nebula&gt; GRANT ROLE BASIC ON basketballplayer TO test;
+
+# 选择图空间 basketballplayer
+nebula&gt; use basketballplayer;
+
+# 授予 test 用户 Tag `player` 和 Edge Type `follow` 和 `serve` 的读写权限 
+# 授予用户指定 Tag/Edge 读写权限必须在指定图空间后
+nebula&gt; GRANT READ, WRITE TAG player EDGE follow, serve TO test;
+
+# 查询 test 用户权限
+nebula&gt; &gt; SHOW GRANTS test;
++--------+------------+---------------------+------------+---------------------+
+| user   | READ(TAG)  | READ(EDGE)          | WRITE(TAG) | WRITE(EDGE)         |
++--------+------------+---------------------+------------+---------------------+
+| &quot;test&quot; | [&quot;player&quot;] | [&quot;follow&quot;, &quot;serve&quot;] | [&quot;player&quot;] | [&quot;follow&quot;, &quot;serve&quot;] |
++--------+------------+---------------------+------------+---------------------+
+
+# 取消 test 用户 所有 Edge Type 的读、写权限
+nebula&gt; REVOKE READ,WRITE EDGE * FROM test;
+
+# 查询 test 用户权限
+nebula&gt; SHOW GRANTS test
++--------+------------+------------+------------+-------------+
+| user   | READ(TAG)  | READ(EDGE) | WRITE(TAG) | WRITE(EDGE) |
++--------+------------+------------+------------+-------------+
+| &quot;test&quot; | [&quot;player&quot;] | []         | [&quot;player&quot;] | []          |
++--------+------------+------------+------------+-------------+
+</code></pre></div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>对于 Basic 角色用户，显式指定无读权限的 Tag/Edge Type 将报错，未显式指定无读权限的 Tag/Edge Type 不会报错。在遍历过程中，所有查询无法读取无权限的 Tag/Edge Type 及其上的属性。Edge Type 的读权限可控制边的扩展行为，在遍历过程中，如果 Edge Type 无权限，将不会进行拓展；Tag 的读权限不控制点的拓展行为，拓展过程中即使点上 Tag 无权限，仍可进行拓展。</p>
+</div>
+<!-- -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2022</span>
       
     
   </small>

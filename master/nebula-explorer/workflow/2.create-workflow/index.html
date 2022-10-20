@@ -3534,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox.md" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox/" class="md-nav__link">
         黑匣子介绍
       </a>
     </li>
@@ -3548,22 +3548,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer.md" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer/" class="md-nav__link">
         Nebula-BBox 工具
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.3.bbox-metrics.md" class="md-nav__link">
-        黑匣子指标
       </a>
     </li>
   
@@ -7494,6 +7480,8 @@
 <li>
 <p>在左侧组件库列表里选择<strong>节点重要度</strong>-&gt;<strong>PageRank</strong>，按住左键拖拽至画布中，将图查询组件的<code>output0</code>锚点连接至图计算组件的<code>input0</code>锚点，<code>output1</code>锚点连接至<code>input1</code>锚点。</p>
 <p><img alt="connect-component" src="https://docs-cdn.nebula-graph.com.cn/figures/ex-connect-220623-cn.png" /></p>
+<p>如果串联使用多个图查询组件，需要自行添加参数化文本。例如语句<code>GO FROM ${id} OVER follow YIELD dst(vertex)</code>，填写语句后单击<code>解析参数</code>，图查询组件中会显示黄色锚点表示<code>${id}</code>。前一个图查询组件的输出锚点可以连接至该黄色锚点作为后一个组件的输入。</p>
+<p><img alt="quert-query" src="https://docs-cdn.nebula-graph.com.cn/figures/query_query_221014_cn.png" /></p>
 </li>
 <li>
 <p>单击该图计算组件，在右侧弹出的工作流配置面板中进行如下设置。</p>
@@ -7550,7 +7538,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2022</span>
       
     
   </small>
