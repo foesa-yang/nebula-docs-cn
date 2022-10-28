@@ -12,14 +12,14 @@
         <meta name="author" content="NebulaGraph">
       
       
-        <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/nebula-exchange/use-exchange/ex-ug-import-from-sst/">
+        <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/nebula-explorer/db-management/dbuser_management/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
       
-        <title>导入 SST 文件数据 - NebulaGraph Database 手册</title>
+        <title>数据库用户管理 - NebulaGraph Database 手册</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sst" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              导入 SST 文件数据
+              数据库用户管理
             
           </span>
         </div>
@@ -5390,12 +5390,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
       
       
       
@@ -5418,7 +5420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/about-explorer/ex-ug-what-is-explorer/" class="md-nav__link">
+      <a href="../../about-explorer/ex-ug-what-is-explorer/" class="md-nav__link">
         什么是 NebulaGraph Explorer
       </a>
     </li>
@@ -5458,7 +5460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/deploy-connect/ex-ug-deploy/" class="md-nav__link">
+      <a href="../../deploy-connect/ex-ug-deploy/" class="md-nav__link">
         部署 Explorer
       </a>
     </li>
@@ -5472,7 +5474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/deploy-connect/ex-ug-connect/" class="md-nav__link">
+      <a href="../../deploy-connect/ex-ug-connect/" class="md-nav__link">
         连接数据库
       </a>
     </li>
@@ -5486,7 +5488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/deploy-connect/3.explorer-license/" class="md-nav__link">
+      <a href="../../deploy-connect/3.explorer-license/" class="md-nav__link">
         NebulaGraph Explorer License（企业版）
       </a>
     </li>
@@ -5507,7 +5509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/ex-ug-page-overview/" class="md-nav__link">
+      <a href="../../ex-ug-page-overview/" class="md-nav__link">
         页面概览
       </a>
     </li>
@@ -5519,12 +5521,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_4" type="checkbox" id="__nav_17_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_4" type="checkbox" id="__nav_17_4" checked>
       
       
       
@@ -5547,7 +5551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/draft/" class="md-nav__link">
+      <a href="../draft/" class="md-nav__link">
         Schema 草图
       </a>
     </li>
@@ -5561,7 +5565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/10.create-schema/" class="md-nav__link">
+      <a href="../10.create-schema/" class="md-nav__link">
         Schema 管理
       </a>
     </li>
@@ -5575,7 +5579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/11.import-data/" class="md-nav__link">
+      <a href="../11.import-data/" class="md-nav__link">
         数据导入
       </a>
     </li>
@@ -5589,7 +5593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/explorer-console/" class="md-nav__link">
+      <a href="../explorer-console/" class="md-nav__link">
         控制台
       </a>
     </li>
@@ -5603,7 +5607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/ngql-template/" class="md-nav__link">
+      <a href="../ngql-template/" class="md-nav__link">
         查询语句模板
       </a>
     </li>
@@ -5615,11 +5619,87 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          数据库用户管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         数据库用户管理
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    前提条件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    入口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    创建用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    授权用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    用户列表其他操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    授权列表其他操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5664,7 +5744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/13.choose-graphspace/" class="md-nav__link">
+      <a href="../../graph-explorer/13.choose-graphspace/" class="md-nav__link">
         选择图空间
       </a>
     </li>
@@ -5678,7 +5758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/ex-ug-query-exploration/" class="md-nav__link">
+      <a href="../../graph-explorer/ex-ug-query-exploration/" class="md-nav__link">
         开始探索
       </a>
     </li>
@@ -5692,7 +5772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/node-filtering/" class="md-nav__link">
+      <a href="../../graph-explorer/node-filtering/" class="md-nav__link">
         节点筛选
       </a>
     </li>
@@ -5706,7 +5786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/ex-ug-graph-exploration/" class="md-nav__link">
+      <a href="../../graph-explorer/ex-ug-graph-exploration/" class="md-nav__link">
         探索拓展
       </a>
     </li>
@@ -5720,7 +5800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/graph-algorithm/" class="md-nav__link">
+      <a href="../../graph-explorer/graph-algorithm/" class="md-nav__link">
         图计算
       </a>
     </li>
@@ -5734,7 +5814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/graph-explorer/property-calculation/" class="md-nav__link">
+      <a href="../../graph-explorer/property-calculation/" class="md-nav__link">
         属性计算
       </a>
     </li>
@@ -5755,7 +5835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/12.query-visually/" class="md-nav__link">
+      <a href="../../12.query-visually/" class="md-nav__link">
         可视化查询
       </a>
     </li>
@@ -5795,7 +5875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/canvas-operations/canvas-overview/" class="md-nav__link">
+      <a href="../../canvas-operations/canvas-overview/" class="md-nav__link">
         画布概览
       </a>
     </li>
@@ -5809,7 +5889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/canvas-operations/visualization-mode/" class="md-nav__link">
+      <a href="../../canvas-operations/visualization-mode/" class="md-nav__link">
         可视化模式
       </a>
     </li>
@@ -5823,7 +5903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/canvas-operations/canvas-snapshot/" class="md-nav__link">
+      <a href="../../canvas-operations/canvas-snapshot/" class="md-nav__link">
         画布快照
       </a>
     </li>
@@ -5870,7 +5950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflows/" class="md-nav__link">
+      <a href="../../workflow/workflows/" class="md-nav__link">
         工作流简介
       </a>
     </li>
@@ -5884,7 +5964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/1.prepare-resources/" class="md-nav__link">
+      <a href="../../workflow/1.prepare-resources/" class="md-nav__link">
         资源配置
       </a>
     </li>
@@ -5898,7 +5978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/2.create-workflow/" class="md-nav__link">
+      <a href="../../workflow/2.create-workflow/" class="md-nav__link">
         工作流示例
       </a>
     </li>
@@ -5912,7 +5992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/3.workflow-management/" class="md-nav__link">
+      <a href="../../workflow/3.workflow-management/" class="md-nav__link">
         工作流管理
       </a>
     </li>
@@ -5926,7 +6006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/4.jobs-management/" class="md-nav__link">
+      <a href="../../workflow/4.jobs-management/" class="md-nav__link">
         作业管理
       </a>
     </li>
@@ -5966,7 +6046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-post-jobs/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-post-jobs/" class="md-nav__link">
         新增作业
       </a>
     </li>
@@ -5980,7 +6060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-get-jobs/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-get-jobs/" class="md-nav__link">
         获取所有作业列表
       </a>
     </li>
@@ -5994,7 +6074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-get-workflow-jobs/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-get-workflow-jobs/" class="md-nav__link">
         获取指定工作流的作业列表
       </a>
     </li>
@@ -6008,7 +6088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-desc-job/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-desc-job/" class="md-nav__link">
         查询指定作业详情
       </a>
     </li>
@@ -6022,7 +6102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-cancel-job/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-cancel-job/" class="md-nav__link">
         取消作业运行
       </a>
     </li>
@@ -6036,7 +6116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/workflow/workflow-api/api-desc-task/" class="md-nav__link">
+      <a href="../../workflow/workflow-api/api-desc-task/" class="md-nav__link">
         获取指定任务的运行结果数据
       </a>
     </li>
@@ -6064,7 +6144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/iframe/" class="md-nav__link">
+      <a href="../../iframe/" class="md-nav__link">
         内联框架
       </a>
     </li>
@@ -6078,7 +6158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/ex-ug-shortcuts/" class="md-nav__link">
+      <a href="../../ex-ug-shortcuts/" class="md-nav__link">
         基本操作和快捷键
       </a>
     </li>
@@ -6092,7 +6172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-explorer/faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         常见问题 FAQ
       </a>
     </li>
@@ -6188,14 +6268,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19" type="checkbox" id="__nav_19" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19" type="checkbox" id="__nav_19" >
       
       
       
@@ -6244,7 +6322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
         什么是 NebulaGraph Exchange
       </a>
     </li>
@@ -6258,7 +6336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about-exchange/ex-ug-limitations/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-limitations/" class="md-nav__link">
         使用限制
       </a>
     </li>
@@ -6279,7 +6357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ex-ug-compile/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-compile/" class="md-nav__link">
         获取 NebulaGraph Exchange
       </a>
     </li>
@@ -6319,7 +6397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
         导入命令参数
       </a>
     </li>
@@ -6333,7 +6411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parameter-reference/ex-ug-parameter/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-parameter/" class="md-nav__link">
         配置参数
       </a>
     </li>
@@ -6352,14 +6430,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19_4" type="checkbox" id="__nav_19_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19_4" type="checkbox" id="__nav_19_4" >
       
       
       
@@ -6382,7 +6458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-csv/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-csv/" class="md-nav__link">
         导入 CSV 文件数据
       </a>
     </li>
@@ -6396,7 +6472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-json/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-json/" class="md-nav__link">
         导入 JSON 文件数据
       </a>
     </li>
@@ -6410,7 +6486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-orc/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-orc/" class="md-nav__link">
         导入 ORC 文件数据
       </a>
     </li>
@@ -6424,7 +6500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-parquet/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-parquet/" class="md-nav__link">
         导入 Parquet 文件数据
       </a>
     </li>
@@ -6438,7 +6514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-hbase/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hbase/" class="md-nav__link">
         导入 HBase 数据
       </a>
     </li>
@@ -6452,7 +6528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-mysql/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-mysql/" class="md-nav__link">
         导入 MySQL/PostgreSQL 数据
       </a>
     </li>
@@ -6466,7 +6542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-oracle/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
         导入 Oracle 数据
       </a>
     </li>
@@ -6480,7 +6556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-clickhouse/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
         导入 ClickHouse 数据
       </a>
     </li>
@@ -6494,7 +6570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-neo4j/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-neo4j/" class="md-nav__link">
         导入 Neo4j 数据
       </a>
     </li>
@@ -6508,7 +6584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-hive/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hive/" class="md-nav__link">
         导入 Hive 数据
       </a>
     </li>
@@ -6522,7 +6598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-maxcompute/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-maxcompute/" class="md-nav__link">
         导入 MaxCompute 数据
       </a>
     </li>
@@ -6536,7 +6612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-pulsar/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-pulsar/" class="md-nav__link">
         导入 Pulsar 数据
       </a>
     </li>
@@ -6550,7 +6626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-import-from-kafka/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
         导入 Kafka 数据
       </a>
     </li>
@@ -6562,156 +6638,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          导入 SST 文件数据
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
         导入 SST 文件数据
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    注意事项
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    背景信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    适用场景
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实现方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据集
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    环境配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    前提条件
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    操作步骤
-  </a>
-  
-    <nav class="md-nav" aria-label="操作步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_nebulagraph_schema" class="md-nav__link">
-    步骤 1：在 NebulaGraph 中创建 Schema
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_csv" class="md-nav__link">
-    步骤 2：处理 CSV 文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    步骤 3：修改配置文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4_sst" class="md-nav__link">
-    步骤 4：生成 SST 文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5_sst" class="md-nav__link">
-    步骤 5：导入 SST 文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    步骤 6：（可选）验证数据
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7_nebulagraph" class="md-nav__link">
-    步骤 7：（如有）在 NebulaGraph 中重建索引
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6723,7 +6654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-ug-export-from-nebula/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-export-from-nebula/" class="md-nav__link">
         导出 NebulaGraph 数据
       </a>
     </li>
@@ -6744,7 +6675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ex-ug-FAQ/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-FAQ/" class="md-nav__link">
         Exchange 常见问题
       </a>
     </li>
@@ -7480,113 +7411,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    注意事项
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    背景信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    适用场景
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实现方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据集
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    环境配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
     前提条件
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    操作步骤
-  </a>
-  
-    <nav class="md-nav" aria-label="操作步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_nebulagraph_schema" class="md-nav__link">
-    步骤 1：在 NebulaGraph 中创建 Schema
+  <a href="#_3" class="md-nav__link">
+    入口
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2_csv" class="md-nav__link">
-    步骤 2：处理 CSV 文件
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    创建用户
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    步骤 3：修改配置文件
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    授权用户
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#4_sst" class="md-nav__link">
-    步骤 4：生成 SST 文件
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    用户列表其他操作
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#5_sst" class="md-nav__link">
-    步骤 5：导入 SST 文件
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    授权列表其他操作
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    步骤 6：（可选）验证数据
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7_nebulagraph" class="md-nav__link">
-    步骤 7：（如有）在 NebulaGraph 中重建索引
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7604,582 +7466,116 @@
                 
                   
 
-  <a href="https://github.com/vesoft-inc/nebula-docs-cn/edit/master/docs-2.0/nebula-exchange/use-exchange/ex-ug-import-from-sst.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/vesoft-inc/nebula-docs-cn/edit/master/docs-2.0/nebula-explorer/db-management/dbuser_management.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="sst">导入 SST 文件数据<a class="headerlink" href="#sst" title="Permanent link">&para;</a></h1>
-<p>本文以一个示例说明如何将数据源的数据生成 SST（Sorted String Table）文件并保存在 HDFS 上，然后导入 NebulaGraph，示例数据源是 CSV 文件。</p>
-<h2 id="_1">注意事项<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>仅 Linux 系统支持导入 SST 文件。</li>
-</ul>
-<ul>
-<li>不支持属性的 Default 值。</li>
-</ul>
-<ul>
-<li>企业版 Exchange 3.0.0不支持基于 <a href="../../../3.ngql-guide/3.data-types/10.geography/">GEOGRAPHY</a> 类型的数据生成 SST 文件。</li>
-</ul>
-<h2 id="_2">背景信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Exchange 支持两种数据导入模式：</p>
-<ul>
-<li>直接将数据源的数据通过<strong> nGQL </strong>语句的形式导入 NebulaGraph。</li>
-</ul>
-<ul>
-<li>将数据源的数据生成 SST 文件，然后借助 Console 将 SST 文件导入 NebulaGraph。</li>
-</ul>
-<p>下文将介绍生成 SST 文件并用其导入数据的适用场景、实现方法、前提条件、操作步骤等内容。</p>
-<h2 id="_3">适用场景<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>适合在线业务，因为生成时几乎不会影响业务（只是读取 Schema），导入速度快。</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>导入期间（大约 10 秒）会阻塞对应空间的写操作，并且之后数小时内可能有历史数据整理，建议在业务低峰期进行导入。</p>
-</div>
-</li>
-</ul>
-<ul>
-<li>适合数据源数据量较大的场景，导入速度快。</li>
-</ul>
-<h2 id="_4">实现方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>NebulaGraph 底层使用 RocksDB 作为键值型存储引擎。RocksDB 是基于硬盘的存储引擎，提供了一系列 API 用于创建及导入 SST 格式的文件，有助于快速导入海量数据。</p>
-<p>SST 文件是一个内部包含了任意长度的有序键值对集合的文件，用于高效地存储大量键值型数据。生成 SST 文件的整个过程主要由 Exchange 的 Reader、sstProcessor 和 sstWriter 完成。整个数据处理过程如下：</p>
-<ol>
-<li>
-<p>Reader 从数据源中读取数据。</p>
-</li>
-<li>
-<p>sstProcessor 根据 NebulaGraph 的 Schema 信息生成 SST 文件，然后上传至 HDFS。SST 文件的格式请参见<a href="../../../1.introduction/3.nebula-graph-architecture/4.storage-service/">数据存储格式</a>。</p>
-</li>
-<li>
-<p>sstWriter 打开一个文件并插入数据。生成 SST 文件时，Key 必须按照顺序写入。</p>
-</li>
-<li>
-<p>生成 SST 文件之后，RocksDB 通过<code>IngestExternalFile()</code>方法将 SST 文件导入到 NebulaGraph 中。例如：</p>
-<div class="highlight"><pre><span></span><code>IngestExternalFileOptions ifo;
-# 导入两个 SST 文件
-Status s = db_-&gt;IngestExternalFile({&quot;/home/usr/file1.sst&quot;, &quot;/home/usr/file2.sst&quot;}, ifo);
-if (!s.ok()) {
-  printf(&quot;Error while adding file %s and %s, Error %s\n&quot;,
-         file_path1.c_str(), file_path2.c_str(), s.ToString().c_str());
-  return 1;
-}
-</code></pre></div>
-<p>调用<code>IngestExternalFile()</code>方法时，RocksDB 默认会将文件拷贝到数据目录，并且阻塞 RocksDB 写入操作。如果 SST 文件中的键范围覆盖了 Memtable 键的范围，则将 Memtable 落盘（flush）到硬盘。将 SST 文件放置在 LSM 树最优位置后，为文件分配一个全局序列号，并打开写操作。</p>
-</li>
-</ol>
-<h2 id="_5">数据集<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>本文以 <a href="https://docs-cdn.nebula-graph.com.cn/dataset/dataset.zip">basketballplayer 数据集</a>为例。</p>
-<h2 id="_6">环境配置<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>本文示例在 MacOS 下完成，以下是相关的环境配置信息：</p>
-<ul>
-<li>硬件规格：<ul>
-<li>CPU：1.7 GHz Quad-Core Intel Core i7</li>
-<li>内存：16 GB</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Spark：2.4.7 单机版</li>
-</ul>
-<ul>
-<li>Hadoop：2.9.2 伪分布式部署</li>
-</ul>
-<ul>
-<li>NebulaGraph：master。</li>
-</ul>
-<h2 id="_7">前提条件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>开始导入数据之前，用户需要确认以下信息：</p>
-<ul>
-<li>
-<p>已经<a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/2.install-nebula-graph-by-rpm-or-deb/">安装部署 NebulaGraph master</a> 并获取如下信息：</p>
-<ul>
-<li>Graph 服务和 Meta 服务的的 IP 地址和端口。</li>
-</ul>
-<ul>
-<li>拥有 NebulaGraph 写权限的用户名和密码。</li>
-</ul>
-<ul>
-<li>Meta 服务配置文件中的<code>--ws_storage_http_port</code>和 Storage 服务配置文件中的<code>--ws_http_port</code>一致。例如都为<code>19779</code>。</li>
-</ul>
-<ul>
-<li>Graph 服务配置文件中的<code>--ws_meta_http_port</code>和 Meta 服务配置文件中的<code>--ws_http_port</code>一致。例如都为<code>19559</code>。</li>
-</ul>
-<ul>
-<li>Schema 的信息，包括 Tag 和 Edge type 的名称、属性等。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>已经<a href="../../ex-ug-compile/">编译 Exchange</a>，或者直接<a href="https://repo1.maven.org/maven2/com/vesoft/nebula-exchange/">下载</a>编译完成的。jar 文件。本示例中使用 Exchange 3.0.0。</li>
-</ul>
-<ul>
-<li>已经安装 Spark。</li>
-</ul>
-<ul>
-<li>已经安装 JDK 1.8 或以上版本，并配置环境变量 JAVA_HOME。</li>
-</ul>
-<ul>
-<li>
-<p>确认 Hadoop 服务在所有部署 Storage 服务的机器上运行正常。</p>
+<h1 id="_1">数据库用户管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>NebulaGraph Explorer 支持管理数据库用户，包括创建用户、删除用户、修改密码等。</p>
+<h2 id="_2">前提条件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>登录 Explorer 的用户需要拥有相关操作的权限。例如<code>God</code>权限的用户可以执行所有操作，<code>Admin</code>权限的用户可以将权限内的图空间授权给其他用户。关于角色权限详情，参见<a href="../../../7.data-security/1.authentication/3.role-list/">角色权限</a>。</p>
+<h2 id="_3">入口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>在顶部导航栏里，点击 <img alt="db_user_management" src="https://docs-cdn.nebula-graph.com.cn/figures/db_user_management_221024.png" /> 图标。</p>
+<p><img alt="dbuser_management" src="https://docs-cdn.nebula-graph.com.cn/figures/explorer_dbuser_management_221024_cn.png" /></p>
+<h2 id="_4">创建用户<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ul>
-<li>如果需要生成其他数据源的 SST 文件，请参见相应数据源的文档，查看前提条件部分。</li>
-</ul>
-<ul>
-<li>如果只需要生成 SST 文件，不需要在部署 Storage 服务的机器上安装 Hadoop 服务。</li>
-</ul>
-<ul>
-<li>如需在 INGEST（数据导入）结束后自动移除 SST 文件，在 Storage 服务配置文件中增加<code>--move_files=true</code>，该配置会让 NebulaGraph 在 INGEST 后将 SST 文件移动（<code>mv</code>）到<code>data</code>目录下。<code>--move_files</code>的默认值为<code>false</code>，此时 NebulaGraph 会复制（<code>cp</code>）SST 文件而不是移动。</li>
-</ul>
+<p>仅<code>root</code>用户可以创建用户。</p>
 </div>
-</li>
-</ul>
-<h2 id="_8">操作步骤<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<h3 id="1_nebulagraph_schema">步骤 1：在 NebulaGraph 中创建 Schema<a class="headerlink" href="#1_nebulagraph_schema" title="Permanent link">&para;</a></h3>
-<p>分析 CSV 文件中的数据，按以下步骤在 NebulaGraph 中创建 Schema：</p>
 <ol>
 <li>
-<p>确认 Schema 要素。NebulaGraph 中的 Schema 要素如下表所示。</p>
+<p>在标签<strong>用户列表</strong>内单击<strong>创建用户</strong>，设置如下参数。</p>
 <table>
 <thead>
 <tr>
-<th align="left">要素</th>
-<th align="left">名称</th>
-<th align="left">属性</th>
+<th align="left">参数</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Tag</td>
-<td align="left"><code>player</code></td>
-<td align="left"><code>name string, age int</code></td>
+<td align="left">账号</td>
+<td align="left">用户名。</td>
 </tr>
 <tr>
-<td align="left">Tag</td>
-<td align="left"><code>team</code></td>
-<td align="left"><code>name string</code></td>
+<td align="left">密码</td>
+<td align="left">用户名对应密码。</td>
 </tr>
 <tr>
-<td align="left">Edge Type</td>
-<td align="left"><code>follow</code></td>
-<td align="left"><code>degree int</code></td>
+<td align="left">IP 白名单</td>
+<td align="left">用户只有通过列表内的 IP 才能连接 NebulaGraph。多个 IP 之间用英文逗号（,）分隔。仅 NebulaGraph 企业版支持该参数。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>单击左上角<strong>添加</strong>，可以批量创建用户。</p>
+</div>
+</li>
+<li>
+<p>单击<strong>确认</strong>。</p>
+</li>
+</ol>
+<h2 id="_5">授权用户<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>切换至标签<strong>授权</strong>，在左上角选择需要授权给用户的图空间名称。该页面会展示拥有该图空间权限的所有用户（<code>root</code>用户除外）。</p>
+</li>
+<li>
+<p>单击<strong>授权用户</strong>，设置如下参数。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">用户名</td>
+<td align="left">设置需要授权的用户名。如果登录的是<code>root</code>用户，可以在下拉菜单中选择用户；如果是<code>Admin</code>权限的用户，需要手动填写用户名。</td>
 </tr>
 <tr>
-<td align="left">Edge Type</td>
-<td align="left"><code>serve</code></td>
-<td align="left"><code>start_year int, end_year int</code></td>
+<td align="left">角色</td>
+<td align="left">在下拉菜单中选择要授权的角色。关于角色权限详情，参见<a href="../../../7.data-security/1.authentication/3.role-list/">角色权限</a>。</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>使用 NebulaGraph Console 创建一个图空间<strong> basketballplayer</strong>，并创建一个 Schema，如下所示。</p>
-<div class="highlight"><pre><span></span><code>## 创建图空间
-nebula&gt; CREATE SPACE basketballplayer \
-        (partition_num = 10, \
-        replica_factor = 1, \
-        vid_type = FIXED_STRING(30));
-
-## 选择图空间 basketballplayer
-nebula&gt; USE basketballplayer;
-
-## 创建 Tag player
-nebula&gt; CREATE TAG player(name string, age int);
-
-## 创建 Tag team
-nebula&gt; CREATE TAG team(name string);
-
-## 创建 Edge type follow
-nebula&gt; CREATE EDGE follow(degree int);
-
-## 创建 Edge type serve
-nebula&gt; CREATE EDGE serve(start_year int, end_year int);
-</code></pre></div>
+<p>单击<strong>确认</strong>。</p>
 </li>
 </ol>
-<p>更多信息，请参见<a href="../../../2.quick-start/1.quick-start-overview/">快速开始</a>。</p>
-<h3 id="2_csv">步骤 2：处理 CSV 文件<a class="headerlink" href="#2_csv" title="Permanent link">&para;</a></h3>
-<p>确认以下信息：</p>
-<ol>
-<li>
-<p>处理 CSV 文件以满足 Schema 的要求。</p>
+<h2 id="_6">用户列表其他操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>可以使用有表头或者无表头的 CSV 文件。</p>
+<p>仅<code>root</code>用户可以查看<strong>用户列表</strong>。</p>
 </div>
-</li>
-<li>
-<p>获取 CSV 文件存储路径。</p>
-</li>
-</ol>
-<h3 id="3">步骤 3：修改配置文件<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>编译 Exchange 后，复制<code>target/classes/application.conf</code>文件设置相关配置。在本示例中，复制的文件名为<code>sst_application.conf</code>。各个配置项的详细说明请参见<a href="../../parameter-reference/ex-ug-parameter/">配置说明</a>。</p>
-<div class="highlight"><pre><span></span><code>{
-  # Spark 相关配置
-  spark: {
-    app: {
-      name: NebulaGraph Exchange 3.0.0
-    }
-
-    master:local
-
-    driver: {
-      cores: 1
-      maxResultSize: 1G
-    }
-
-    executor: {
-        memory:1G
-    }
-
-    cores:{
-      max: 16
-    }
-  }
-
-  # NebulaGraph 相关配置
-  nebula: {
-    address:{
-      graph:[&quot;127.0.0.1:9669&quot;]
-      meta:[&quot;127.0.0.1:9559&quot;]
-    }
-    user: root
-    pswd: nebula
-    space: basketballplayer
-
-    # SST 文件相关配置
-    path:{
-        # 本地临时存放生成的 SST 文件的目录
-        local:&quot;/tmp&quot;
-
-        # SST 文件在 HDFS 的存储路径
-        remote:&quot;/sst&quot;
-
-        # HDFS 的 NameNode 地址
-        hdfs.namenode: &quot;hdfs://*.*.*.*:9000&quot;
-    }
-
-    # 客户端连接参数
-    connection: {
-      # socket 连接、执行的超时时间，单位：毫秒。
-      timeout: 30000
-    }
-
-    error: {
-      # 最大失败数，超过后会退出应用程序。
-      max: 32
-      # 失败的导入作业将记录在输出路径中。
-      output: /tmp/errors
-    }
-
-    # 使用Google Guava RateLimiter 来限制发送到 NebulaGraph 的请求。
-    rate: {
-      # RateLimiter 的稳定吞吐量。
-      limit: 1024
-
-      # 从 RateLimiter 获取允许的超时时间，单位：毫秒
-      timeout: 1000
-    }
-  }
-
-  # 处理点
-  tags: [
-    # 设置 Tag player 相关信息。
-    {
-      # 指定 NebulaGraph 中定义的 Tag 名称。
-      name: player
-      type: {
-        # 指定数据源，使用 CSV。
-        source: csv
-
-        # 指定如何将点数据导入 NebulaGraph：Client 或 SST。
-        sink: sst
-      }
-
-      # 指定 CSV 文件的路径。
-      # 文件存储在 HDFS 上，用双引号括起路径，以 hdfs://开头，例如&quot;hdfs://ip:port/xx/xx.csv&quot;。
-      path: &quot;hdfs://*.*.*.*:9000/dataset/vertex_player.csv&quot;
-
-      # 如果 CSV 文件没有表头，使用 [_c0, _c1, _c2, ..., _cn] 表示其表头，并将列指示为属性值的源。
-      # 如果 CSV 文件有表头，则使用实际的列名。
-      fields: [_c1, _c2]
-
-      # 指定 NebulaGraph 中定义的属性名称。
-      # fields 与 nebula.fields 的顺序必须一一对应。
-      nebula.fields: [age, name]
-
-      # 指定一个列作为 VID 的源。
-      # vertex 的值必须与上述 fields 或者 csv.fields 中的列名保持一致。
-      # 目前，NebulaGraph master仅支持字符串或整数类型的 VID。
-      vertex: {
-        field:_c0
-      }
-
-      # 指定的分隔符。默认值为英文逗号（,）。
-      separator: &quot;,&quot;
-
-      # 如果 CSV 文件有表头，请将 header 设置为 true。
-      # 如果 CSV 文件没有表头，请将 header 设置为 false。默认值为 false。
-      header: false
-
-      # 指定单批次写入 NebulaGraph 的最大点数量。
-      batch: 256
-
-      # 指定 Spark 分片数量。
-      partition: 32
-
-      # 生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。
-      repartitionWithNebula: false
-    }
-
-    # 设置 Tag team 相关信息。
-    {
-      # 指定 NebulaGraph 中定义的 Tag 名称。
-      name: team
-      type: {
-        # 指定数据源，使用 CSV。
-        source: csv
-
-        # 指定如何将点数据导入 NebulaGraph：Client 或 SST。
-        sink: sst
-      }
-
-      # 指定 CSV 文件的路径。
-      # 文件存储在 HDFS 上，用双引号括起路径，以 hdfs://开头，例如&quot;hdfs://ip:port/xx/xx.csv&quot;。
-      path: &quot;hdfs://*.*.*.*:9000/dataset/vertex_team.csv&quot;
-
-      # 如果 CSV 文件没有表头，使用 [_c0, _c1, _c2, ..., _cn] 表示其表头，并将列指示为属性值的源。
-      # 如果 CSV 文件有表头，则使用实际的列名。
-      fields: [_c1]
-
-      # 指定 NebulaGraph 中定义的属性名称。
-      # fields 与 nebula.fields 的顺序必须一一对应。
-      nebula.fields: [name]
-
-      # 指定一个列作为 VID 的源。
-      # vertex 的值必须与上述 fields 或者 csv.fields 中的列名保持一致。
-      # 目前，NebulaGraph master仅支持字符串或整数类型的 VID。
-      vertex: {
-        field:_c0
-      }
-
-      # 指定的分隔符。默认值为英文逗号（,）。
-      separator: &quot;,&quot;
-
-      # 如果 CSV 文件有表头，请将 header 设置为 true。
-      # 如果 CSV 文件没有表头，请将 header 设置为 false。默认值为 false。
-      header: false
-
-      # 指定单批次写入 NebulaGraph 的最大点数量。
-      batch: 256
-
-      # 指定 Spark 分片数量。
-      partition: 32
-
-      # 生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。
-      repartitionWithNebula: false
-    }
-
-    # 如果需要添加更多点，请参考前面的配置进行添加。
-  ]
-  # 处理边
-  edges: [
-    # 设置 Edge type follow 相关信息。
-    {
-      # 指定 NebulaGraph 中定义的 Edge type 名称。
-      name: follow
-      type: {
-        # 指定数据源，使用 CSV。
-        source: csv
-
-        # 指定如何将点数据导入 NebulaGraph：Client 或 SST。
-        sink: sst
-      }
-
-      # 指定 CSV 文件的路径。
-      # 文件存储在 HDFS 上，用双引号括起路径，以 hdfs://开头，例如&quot;hdfs://ip:port/xx/xx.csv&quot;。
-      path: &quot;hdfs://*.*.*.*:9000/dataset/edge_follow.csv&quot;
-
-      # 如果 CSV 文件没有表头，使用 [_c0, _c1, _c2, ..., _cn] 表示其表头，并将列指示为属性值的源。
-      # 如果 CSV 文件有表头，则使用实际的列名。
-      fields: [_c2]
-
-      # 指定 NebulaGraph 中定义的属性名称。
-      # fields 与 nebula.fields 的顺序必须一一对应。
-      nebula.fields: [degree]
-
-      # 指定一个列作为起始点和目的点的源。
-      # vertex 的值必须与上述 fields 或者 csv.fields 中的列名保持一致。
-      # 目前，NebulaGraph master仅支持字符串或整数类型的 VID。
-      source: {
-        field: _c0
-      }
-      target: {
-        field: _c1
-      }
-
-      # 指定的分隔符。默认值为英文逗号（,）。
-      separator: &quot;,&quot;
-
-      # 指定一个列作为 rank 的源（可选）。
-
-      #ranking: rank
-
-      # 如果 CSV 文件有表头，请将 header 设置为 true。
-      # 如果 CSV 文件没有表头，请将 header 设置为 false。默认值为 false。
-      header: false
-
-      # 指定单批次写入 NebulaGraph 的最大边数量。
-      batch: 256
-
-      # 指定 Spark 分片数量。
-      partition: 32
-
-      # 生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。
-      repartitionWithNebula: false
-    }
-
-    # 设置 Edge type serve 相关信息。
-    {
-      # 指定 NebulaGraph 中定义的 Edge type 名称。
-      name: serve
-      type: {
-        # 指定数据源，使用 CSV。
-        source: csv
-
-        # 指定如何将点数据导入 NebulaGraph：Client 或 SST。
-        sink: sst
-      }
-
-      # 指定 CSV 文件的路径。
-      # 文件存储在 HDFS 上，用双引号括起路径，以 hdfs://开头，例如&quot;hdfs://ip:port/xx/xx.csv&quot;。
-      path: &quot;hdfs://*.*.*.*:9000/dataset/edge_serve.csv&quot;
-
-      # 如果 CSV 文件没有表头，使用 [_c0, _c1, _c2, ..., _cn] 表示其表头，并将列指示为属性值的源。
-      # 如果 CSV 文件有表头，则使用实际的列名。
-      fields: [_c2,_c3]
-
-      # 指定 NebulaGraph 中定义的属性名称。
-      # fields 与 nebula.fields 的顺序必须一一对应。
-      nebula.fields: [start_year, end_year]
-
-      # 指定一个列作为起始点和目的点的源。
-      # vertex 的值必须与上述 fields 或者 csv.fields 中的列名保持一致。
-      # 目前，NebulaGraph master仅支持字符串或整数类型的 VID。
-      source: {
-        field: _c0
-      }
-      target: {
-        field: _c1
-      }
-
-      # 指定的分隔符。默认值为英文逗号（,）。
-      separator: &quot;,&quot;
-
-      # 指定一个列作为 rank 的源（可选）。
-      #ranking: _c5
-
-      # 如果 CSV 文件有表头，请将 header 设置为 true。
-      # 如果 CSV 文件没有表头，请将 header 设置为 false。默认值为 false。
-      header: false
-
-      # 指定单批次写入 NebulaGraph 的最大边数量。
-      batch: 256
-
-      # 指定 Spark 分片数量。
-      partition: 32
-
-      # 生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。
-      repartitionWithNebula: false
-    }
-
-  ]
-  # 如果需要添加更多边，请参考前面的配置进行添加。
-}
-</code></pre></div>
-<h3 id="4_sst">步骤 4：生成 SST 文件<a class="headerlink" href="#4_sst" title="Permanent link">&para;</a></h3>
-<p>运行如下命令将 CSV 源文件生成为 SST 文件。关于参数的说明，请参见<a href="../../parameter-reference/ex-ug-para-import-command/">命令参数</a>。</p>
-<div class="highlight"><pre><span></span><code><span class="si">${</span><span class="nv">SPARK_HOME</span><span class="si">}</span>/bin/spark-submit --master <span class="s2">&quot;local&quot;</span> --conf spark.sql.shuffle.partitions<span class="o">=</span>&lt;shuffle_concurrency&gt; --class com.vesoft.nebula.exchange.Exchange &lt;nebula-exchange-3.0.0.jar_path&gt; -c &lt;sst_application.conf_path&gt; 
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>生成 SST 文件时，会涉及到 Spark 的 shuffle 操作，请注意在提交命令中增加<code>spark.sql.shuffle.partitions</code>的配置。</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>JAR 包有两种获取方式：<a href="../../ex-ug-compile/">自行编译</a>或者从 maven 仓库下载。</p>
-</div>
-<p>示例：</p>
-<div class="highlight"><pre><span></span><code><span class="si">${</span><span class="nv">SPARK_HOME</span><span class="si">}</span>/bin/spark-submit  --master <span class="s2">&quot;local&quot;</span> --conf spark.sql.shuffle.partitions<span class="o">=</span><span class="m">200</span> --class com.vesoft.nebula.exchange.Exchange  /root/nebula-exchange/nebula-exchange/target/nebula-exchange-3.0.0.jar  -c /root/nebula-exchange/nebula-exchange/target/classes/sst_application.conf
-</code></pre></div>
-<p>任务执行完成后，可以在 HDFS 上的<code>/sst</code>目录（<code>nebula.path.remote</code>参数指定）内查看到生成的 SST 文件。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>如果对 Schema 有修改操作，例如重建图空间、修改 Tag、修改 Edge type 等，需要重新生成 SST 文件，因为 SST 文件会验证 Space ID、Tag ID、Edge ID 等信息。</p>
-</div>
-<h3 id="5_sst">步骤 5：导入 SST 文件<a class="headerlink" href="#5_sst" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>导入前请确认以下信息：</p>
 <ul>
-<li>确认所有部署 Storage 服务的机器上都已部署 Hadoop 服务，并配置 HADOOP_HOME 和 JAVA_HOME。</li>
+<li>查看：查看用户在各个空间内的权限。</li>
+<li>修改密码：修改用户对应的密码。修改时不需要提供旧密码。非<code>root</code>用户无法查看<strong>用户列表</strong>，可以在页面右上角的<img alt="clear_connection" src="https://docs-cdn.nebula-graph.com.cn/figures/session_221024.png" />图标内修改密码。</li>
+<li>删除用户：仅<code>root</code>用户可以删除其他用户。</li>
+<li>搜索账号：通过关键字搜索账号。</li>
 </ul>
+<h2 id="_7">授权列表其他操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Meta 服务配置文件中的<code>--ws_storage_http_port</code>（如果没有，请手动添加）和 Storage 服务配置文件中的<code>--ws_http_port</code>一致。例如都为<code>19779</code>。</li>
+<li>编辑：修改用户的角色。</li>
+<li>取消授权：撤销用户的角色。</li>
+<li>搜索账号：通过关键字搜索账号。</li>
 </ul>
-<ul>
-<li>Graph 服务配置文件中的<code>--ws_meta_http_port</code>（如果没有，请手动添加）和 Meta 服务配置文件中的<code>--ws_http_port</code>一致。例如都为<code>19559</code>。</li>
-</ul>
-</div>
-<p>使用客户端工具连接 NebulaGraph 数据库，按如下操作导入 SST 文件：</p>
-<ol>
-<li>
-<p>执行命令选择之前创建的图空间。</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
-</code></pre></div>
-</li>
-<li>
-<p>执行命令下载 SST 文件：</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; SUBMIT JOB DOWNLOAD HDFS &quot;hdfs://&lt;hadoop_address&gt;:&lt;hadoop_port&gt;/&lt;sst_file_path&gt;&quot;;
-</code></pre></div>
-<p>示例：</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; SUBMIT JOB DOWNLOAD HDFS &quot;hdfs://*.*.*.*:9000/sst&quot;;
-</code></pre></div>
-</li>
-<li>
-<p>执行命令导入 SST 文件：</p>
-<div class="highlight"><pre><span></span><code>nebula&gt; SUBMIT JOB INGEST;
-</code></pre></div>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ul>
-<li>如果需要重新下载，请在 NebulaGraph 安装路径内的<code>data/storage/nebula</code>目录内，将对应 Space ID 目录内的<code>download</code>文件夹删除，然后重新下载 SST 文件。如果图空间是多副本，保存副本的所有机器都需要删除<code>download</code>文件夹。</li>
-</ul>
-<ul>
-<li>如果导入时出现问题需要重新导入，重新执行<code>SUBMIT JOB INGEST;</code>即可。</li>
-</ul>
+<p>修改或撤销角色后，对应的用户需要重新登录才能生效。</p>
 </div>
-<h3 id="6">步骤 6：（可选）验证数据<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
-<p>用户可以在 NebulaGraph 客户端（例如 NebulaGraph Studio）中执行查询语句，确认数据是否已导入。例如：</p>
-<div class="highlight"><pre><span></span><code>GO FROM &quot;player100&quot; OVER follow;
-</code></pre></div>
-<p>用户也可以使用命令 <a href="../../../3.ngql-guide/7.general-query-statements/6.show/14.show-stats/"><code>SHOW STATS</code></a> 查看统计数据。</p>
-<h3 id="7_nebulagraph">步骤 7：（如有）在 NebulaGraph 中重建索引<a class="headerlink" href="#7_nebulagraph" title="Permanent link">&para;</a></h3>
-<p>导入数据后，用户可以在 NebulaGraph 中重新创建并重建索引。详情请参见<a href="../../../3.ngql-guide/14.native-index-statements/">索引介绍</a>。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -8213,7 +7609,7 @@ nebula&gt; CREATE EDGE serve(start_year int, end_year int);
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../ex-ug-import-from-kafka/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 导入 Kafka 数据" rel="prev">
+        <a href="../ngql-template/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 查询语句模板" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -8222,20 +7618,20 @@ nebula&gt; CREATE EDGE serve(start_year int, end_year int);
               <span class="md-footer__direction">
                 上一页
               </span>
-              导入 Kafka 数据
+              查询语句模板
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ex-ug-export-from-nebula/" class="md-footer__link md-footer__link--next" aria-label="下一页: 导出 NebulaGraph 数据" rel="next">
+        <a href="../../graph-explorer/13.choose-graphspace/" class="md-footer__link md-footer__link--next" aria-label="下一页: 选择图空间" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              导出 NebulaGraph 数据
+              选择图空间
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -2866,6 +2866,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    WHERE 语句限制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     示例
   </a>
@@ -5690,6 +5697,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7403,6 +7424,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    WHERE 语句限制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     示例
   </a>
@@ -7461,6 +7489,7 @@
 <h2 id="_1">语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>GET SUBGRAPH [WITH PROP] [&lt;step_count&gt; STEPS] FROM {&lt;vid&gt;, &lt;vid&gt;...}
 [{IN | OUT | BOTH} &lt;edge_type&gt;, &lt;edge_type&gt;...]
+[WHERE &lt;expression&gt; [AND &lt;expression&gt; ...]]
 YIELD [VERTICES AS &lt;vertex_alias&gt;] [, EDGES AS &lt;edge_alias&gt;];
 </code></pre></div>
 <ul>
@@ -7476,16 +7505,23 @@ YIELD [VERTICES AS &lt;vertex_alias&gt;] [, EDGES AS &lt;edge_alias&gt;];
 <li><code>edge_type</code>：指定 Edge type。可以用<code>IN</code>、<code>OUT</code>和<code>BOTH</code>来指定起始点上该 Edge type 的方向。默认为<code>BOTH</code>。</li>
 </ul>
 <ul>
+<li><code>WHERE</code>：指定遍历的过滤条件，可以结合布尔运算符 AND 使用。</li>
+</ul>
+<ul>
 <li><code>YIELD</code>：定义需要返回的输出。可以仅返回点或边。必须设置别名。</li>
 </ul>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p><code>GET SUBGRAPH</code>语句不支持使用<code>WHERE</code>子句。</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>GET SUBGRAPH</code>语句检索的路径类型为<code>trail</code>，即检索的路径只有点可以重复，边不可以重复。详情请参见<a href="../../../1.introduction/2.1.path/">路径</a>。</p>
 </div>
+<h2 id="where">WHERE 语句限制<a class="headerlink" href="#where" title="Permanent link">&para;</a></h2>
+<p>在<code>GET SUBGRAPH</code>语句中使用<code>WHERE</code>子句，注意以下限制：</p>
+<ul>
+<li><strong>仅支持</strong><code>AND</code>运算符。</li>
+<li><strong>仅支持</strong>过滤目的点，点的格式为<code>$$.tagName.propName</code>。</li>
+<li><strong>支持</strong>数学函数、聚合函数、字符串函数、日期时间函数、列表函数中的通用函数和类型转化函数。</li>
+<li><strong>不支持</strong>聚合函数、Schema 函数、条件表达式函数、谓词函数、geo 函数和自定义函数，列表函数中除通用函数以外的函数。</li>
+</ul>
 <h2 id="_2">示例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>以下面的示例图进行演示。</p>
 <p><img alt="A sample graph for GET SUBGRAPH" src="https://docs-cdn.nebula-graph.com.cn/figures/subgraph_2022_8_3.png" /></p>
@@ -7573,7 +7609,7 @@ nebula&gt; GO 1 STEPS FROM &quot;A&quot; OVER follow YIELD src(edge),dst(edge);
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 28, 2022</span>
       
     
   </small>

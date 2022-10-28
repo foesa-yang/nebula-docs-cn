@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nebulagraph_v30x_vmaster" class="md-skip">
+        <a href="#nebulagraph_v3x_vmaster" class="md-skip">
           跳转至
         </a>
       
@@ -5670,6 +5670,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7416,8 +7430,8 @@
   </a>
 
 
-<h1 id="nebulagraph_v30x_vmaster">升级 NebulaGraph v3.0.x 至 vmaster<a class="headerlink" href="#nebulagraph_v30x_vmaster" title="Permanent link">&para;</a></h1>
-<p>NebulaGraph v3.0.x 升级至 vmaster，只需要使用 vmaster的 RPM/DEB 包进行升级操作即可，或者<a href="../../2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/">编译 vmaster</a> 之后重新安装。</p>
+<h1 id="nebulagraph_v3x_vmaster">升级 NebulaGraph v3.x 至 vmaster<a class="headerlink" href="#nebulagraph_v3x_vmaster" title="Permanent link">&para;</a></h1>
+<p>NebulaGraph v3.x 升级至 vmaster，只需要使用 vmaster的 RPM/DEB 包进行升级操作即可，或者<a href="../../2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/">编译 vmaster</a> 之后重新安装。</p>
 <h2 id="rpmdeb">RPM/DEB 包升级步骤<a class="headerlink" href="#rpmdeb" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -7426,6 +7440,12 @@
 <li>
 <p>停止所有 NebulaGraph 服务。详情请参见<a href="../../../2.quick-start/3.quick-start-on-premise/5.start-stop-service/">管理 NebulaGraph 服务</a>。建议更新前备份配置文件。</p>
 </li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>如果用户需要保留无 Tag 的点，在集群内所有 Graph 服务的配置文件（<code>nebula-graphd.conf</code>）中新增<code>--graph_use_vertex_key=true</code>；在所有 Storage 服务的配置文件（<code>nebula-storaged.conf</code>）中新增<code>--use_vertex_key=true</code>。</p>
+</div>
+<ol>
 <li>
 <p>执行如下命令升级：</p>
 <ul>
@@ -7480,7 +7500,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

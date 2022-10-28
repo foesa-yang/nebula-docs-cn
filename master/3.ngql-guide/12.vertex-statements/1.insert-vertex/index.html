@@ -5670,6 +5670,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7472,7 +7486,7 @@ prop_value_list:
 <p><code>tag_name</code>：点关联的 Tag（点类型）。Tag 的创建，详情请参见 <a href="../../10.tag-statements/1.create-tag/">CREATE TAG</a>。</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>NebulaGraph master 中支持插入无 Tag 的点。</p>
+<p>NebulaGraph master 中默认不支持插入无 Tag 的点。如需使用无 Tag 的点，在集群内所有 Graph 服务的配置文件（<code>nebula-graphd.conf</code>）中新增<code>--graph_use_vertex_key=true</code>；在所有 Storage 服务的配置文件（<code>nebula-storaged.conf</code>）中新增<code>--use_vertex_key=true</code>。插入无 Tag 点的命令示例如<code>INSERT VERTEX VALUES "1":();</code>。</p>
 </div>
 </li>
 </ul>
@@ -7496,10 +7510,7 @@ prop_value_list:
 </div>
 <p>参考以下示例。</p>
 <h2 id="_3">示例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code># 插入不包含 Tag 的点。
-nebula&gt; INSERT VERTEX VALUES &quot;1&quot;:();
-
-# 插入不包含属性的点。
+<div class="highlight"><pre><span></span><code># 插入不包含属性的点。
 nebula&gt; CREATE TAG IF NOT EXISTS t1();                   
 nebula&gt; INSERT VERTEX t1() VALUES &quot;10&quot;:(); 
 </code></pre></div>
@@ -7609,7 +7620,7 @@ nebula&gt; FETCH PROP ON t2 &quot;1&quot; YIELD properties(vertex);
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

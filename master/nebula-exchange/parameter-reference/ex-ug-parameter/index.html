@@ -5611,6 +5611,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -8007,6 +8021,23 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NebulaGraph 默认不支持无 Tag 的点。如果需要导入无 Tag 的点，需要先在集群内开启<a href="../../../3.ngql-guide/12.vertex-statements/1.insert-vertex/">支持无 Tag 点</a>，然后在 Exchange 的配置文件内新增<code>nebula.enableTagless</code>参数，值为<code>true</code>。示例如下：</p>
+<div class="highlight"><pre><span></span><code>nebula: <span class="o">{</span>
+    address:<span class="o">{</span>
+      graph:<span class="o">[</span><span class="s2">&quot;127.0.0.1:9669&quot;</span><span class="o">]</span>
+      meta:<span class="o">[</span><span class="s2">&quot;127.0.0.1:9559&quot;</span><span class="o">]</span>
+    <span class="o">}</span>
+    user: root
+    pswd: nebula
+    space: <span class="nb">test</span>
+    enableTagless: <span class="nb">true</span>
+    ......
+
+ <span class="o">}</span>
+</code></pre></div>
+</div>
 <h2 id="_2">点配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>对于不同的数据源，点的配置也有所不同，有很多通用参数，也有部分特有参数，配置时需要配置通用参数和不同数据源的特有参数。</p>
 <h3 id="_3">通用参数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -8598,9 +8629,9 @@
 <tr>
 <td align="left"><code>tags.repartitionWithNebula</code></td>
 <td align="left">bool</td>
-<td align="left"><code>false</code></td>
+<td align="left"><code>true</code></td>
 <td align="left">否</td>
-<td align="left">生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。开启该功能可减少 DOWNLOAD 和 INGEST SST 文件需要的时间。当图空间的分片数量（partition_num）大于<code>1</code>时，请设置为<code>true</code>，否则可能会导致生成的数据文件中只包含无 Tag 的点。</td>
+<td align="left">生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。开启该功能可减少 DOWNLOAD 和 INGEST SST 文件需要的时间。</td>
 </tr>
 </tbody>
 </table>
@@ -8755,7 +8786,7 @@
 <tr>
 <td align="left"><code>edges.repartitionWithNebula</code></td>
 <td align="left">bool</td>
-<td align="left"><code>false</code></td>
+<td align="left"><code>true</code></td>
 <td align="left">否</td>
 <td align="left">生成 SST 文件时是否要基于 NebulaGraph 中图空间的 partition 进行数据重分区。开启该功能可减少 DOWNLOAD 和 INGEST SST 文件需要的时间。</td>
 </tr>
@@ -8802,7 +8833,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

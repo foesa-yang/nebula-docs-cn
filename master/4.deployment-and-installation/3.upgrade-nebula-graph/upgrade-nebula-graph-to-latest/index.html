@@ -5698,6 +5698,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7615,37 +7629,6 @@
 </div>
 </li>
 <li>
-<p>使用<code>bin</code>目录下的新版 db_upgrader 文件升级数据格式。</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>本步骤不会备份 Storage 服务中保存的数据。升级数据格式前，务必按照本文<strong>升级准备</strong>部分的说明备份数据。</p>
-</div>
-<p>命令语法：</p>
-<div class="highlight"><pre><span></span><code>&lt;nebula_install_path&gt;/bin/db_upgrader \
---src_db_path=&lt;old_storage_data_path&gt; \
---dst_db_path=&lt;data_backup_path&gt; \
---upgrade_meta_server=&lt;meta_server_ip&gt;:&lt;port&gt;[, &lt;meta_server_ip&gt;:&lt;port&gt; ...] \
---upgrade_version=2:3
-</code></pre></div>
-<ul>
-<li><code>old_storage_data_path</code>代表数据的存储路径，由 Storage 服务配置文件中的<code>data_path</code>参数定义。</li>
-<li><code>data_backup_path</code>代表自定义的数据备份路径。<strong>当前版本该设置不生效，升级数据格式时不会将原有数据备份到任何路径。</strong></li>
-<li><code>meta_server_ip</code>和<code>port</code>分别代表 Meta 服务各节点的 IP 地址和端口号。</li>
-<li><code>2:3</code>代表从 NebulaGraph 2.x 版本升级到 3.x 版本。</li>
-</ul>
-<p>本文示例：</p>
-<div class="highlight"><pre><span></span><code>&lt;nebula_install_path&gt;/bin/db_upgrader \
---src_db_path=/usr/local/nebula/data/storage \
---dst_db_path=/home/vesoft/nebula/data-backup \
---upgrade_meta_server=192.168.8.132:9559 \
---upgrade_version=2:3
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>如果出现异常，放弃本次升级，并在<a href="https://discuss.nebula-graph.com.cn/">论坛</a>或 <a href="https://github.com/vesoft-inc/nebula/issues">GitHub</a> 提问。</p>
-</div>
-</li>
-<li>
 <p>启动所有 Graph 和 Storage 服务。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7704,7 +7687,7 @@ A: 有部分 glags 改变了，详情参见版本发布说明和配置说明文�
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

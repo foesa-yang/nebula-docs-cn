@@ -5670,6 +5670,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7420,12 +7434,16 @@
 <p><code>DROP TAG</code>语句可以删除当前工作空间内所有点上的指定 Tag。</p>
 <p>点可以有一个或多个 Tag。</p>
 <ul>
-<li>如果某个点只有一个 Tag，删除这个 Tag 后，该点变为无 Tag 的点。</li>
+<li>如果某个点只有一个 Tag，删除这个 Tag 后，用户就<strong>无法访问</strong>这个点，下次 Compaction 操作时会删除该点，但与该点相邻的<strong>边仍然存在</strong>——这会造成悬挂边。</li>
 </ul>
 <ul>
 <li>如果某个点有多个 Tag，删除其中一个 Tag，仍然可以访问这个点，但是<strong>无法访问</strong>已删除 Tag 所定义的所有属性。</li>
 </ul>
 <p>删除 Tag 操作仅删除 Schema 数据，硬盘上的文件或目录不会立刻删除，而是在下一次 Compaction 操作时删除。</p>
+<div class="admonition compatibility">
+<p class="admonition-title">Compatibility</p>
+<p>NebulaGraph master 中默认不支持插入无 Tag 的点。如需使用无 Tag 的点，在集群内所有 Graph 服务的配置文件（<code>nebula-graphd.conf</code>）中新增<code>--graph_use_vertex_key=true</code>；在所有 Storage 服务的配置文件（<code>nebula-storaged.conf</code>）中新增<code>--use_vertex_key=true</code>。</p>
+</div>
 <h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>登录的用户必须拥有对应权限才能执行<code>DROP TAG</code>语句。详情请参见<a href="../../../7.data-security/1.authentication/3.role-list/">内置角色权限</a>。</li>
@@ -7452,7 +7470,7 @@ nebula&gt; DROP TAG test;
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

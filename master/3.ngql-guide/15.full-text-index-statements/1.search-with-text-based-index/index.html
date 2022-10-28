@@ -5725,6 +5725,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7590,11 +7604,17 @@ nebula&gt; CREATE SPACE IF NOT EXISTS basketballplayer (partition_num=3,replica_
 //登录文本搜索客户端。
 nebula&gt; SIGN IN TEXT SERVICE (127.0.0.1:9200, HTTP);
 
+//检查是否成功登录。
+nebula&gt; SHOW TEXT SEARCH CLIENTS;
+
 //切换图空间。
 nebula&gt; USE basketballplayer;
 
 //添加 listener 到 NebulaGraph 集群。
 nebula&gt; ADD LISTENER ELASTICSEARCH 192.168.8.5:9789;
+
+//检查是否成功添加 listener，当状态为 Online 时表示成功添加。
+nebula&gt; SHOW LISTENER;
 
 //创建 Tag。
 nebula&gt; CREATE TAG IF NOT EXISTS player(name string, age int);
@@ -7692,7 +7712,7 @@ nebula&gt; DROP FULLTEXT INDEX nebula_index_1;
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

@@ -5611,6 +5611,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7587,12 +7601,20 @@
 <td>查询邻居延迟时间。</td>
 </tr>
 <tr>
+<td><code>get_dst_by_src_latency_us</code></td>
+<td>通过起始点获取终点的延迟时间。</td>
+</tr>
+<tr>
 <td><code>num_get_prop</code></td>
 <td>GetPropProcessor 执行的次数。</td>
 </tr>
 <tr>
 <td><code>num_get_neighbors_errors</code></td>
 <td>GetNeighborsProcessor 执行出错的次数。</td>
+</tr>
+<tr>
+<td><code>num_get_dst_by_src_errors</code></td>
+<td>GetDstBySrcProcessor 执行出错的次数。</td>
 </tr>
 <tr>
 <td><code>get_prop_latency_us</code></td>
@@ -7799,6 +7821,10 @@
 <td>GetNeighborsProcessor 执行的次数。</td>
 </tr>
 <tr>
+<td><code>num_get_dst_by_src</code></td>
+<td>GetDstBySrcProcessor 执行的次数。</td>
+</tr>
+<tr>
 <td><code>num_get_prop_errors</code></td>
 <td>GetPropProcessor 执行时出错的次数。</td>
 </tr>
@@ -7969,7 +7995,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>

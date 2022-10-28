@@ -5613,6 +5613,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db-management/dbuser_management/" class="md-nav__link">
+        数据库用户管理
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7543,13 +7557,31 @@
 <h2 id="handshake_failed_ssh_unable_to_authenticate_attempted_methods_none_publickey_no_supported_methods_remain">任务运行失败，报错<code>handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain</code>怎么办？<a class="headerlink" href="#handshake_failed_ssh_unable_to_authenticate_attempted_methods_none_publickey_no_supported_methods_remain" title="Permanent link">&para;</a></h2>
 <p>重新配置<code>.ssh</code>文件夹及<code>.ssh/authorized_keys</code>文件的权限，<code>.ssh</code>文件夹权限为<code>744</code>，<code>.ssh/authorized_keys</code>文件权限为<code>600</code>。</p>
 <h2 id="there_are_0_nebulagraph_analytics_available_clustersize_should_be_less_than_or_equal_to_it">任务运行失败，报错<code>There are 0 NebulaGraph Analytics available. clusterSize should be less than or equal to it</code>怎么办？<a class="headerlink" href="#there_are_0_nebulagraph_analytics_available_clustersize_should_be_less_than_or_equal_to_it" title="Permanent link">&para;</a></h2>
-<p>可能是因为如下原因：</p>
+<p>按如下流程排查：</p>
+<ol>
+<li>
+<p>检查节点间 SSH 免密登录配置是否配置成功。可以在 Dag Controller 机器上执行<code>ssh &lt;user_name&gt;@&lt;node_ip&gt;</code>命令看能否成功登录。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dag Controller 和 Analytics 在同一台机器时，也需要配置免密登录。</p>
+</div>
+</li>
+<li>
+<p>检查 Dag Controller 的配置文件。</p>
 <ul>
-<li>未配置 NebulaGraph Analytics。请按本文档配置 NebulaGraph Analytics。</li>
+<li>检查<code>etc/dag-ctrl-api.yaml</code>中的 SSH 用户和启动 Dag Controller 服务的用户、配置 SSH 免密登录的用户是不是一致。</li>
 </ul>
 <ul>
-<li>已配置 NebulaGraph Analytics，但是无法与 Dag Controller 联通。例如 地址错误、未配置 SSH、两个服务的启动用户不一致（导致 SSH 登录失败）等。</li>
+<li>检查<code>etc/tasks.yaml</code>中的算法路径是否正确。</li>
 </ul>
+<ul>
+<li>检查<code>scripts/set_env.sh</code>中的 Hadoop 和 Java 的路径是否正确。</li>
+</ul>
+</li>
+<li>
+<p>修改上述配置后需要重启 Dag Controller 使配置生效。</p>
+</li>
+</ol>
 <h2 id="broadcasthpp193_check_failed_size_trecv_bytes_sizeofchunk_tail_t_recv_message_too_small_0">任务运行失败，报错<code>broadcast.hpp:193] Check failed: (size_t)recv_bytes &gt;= sizeof(chunk_tail_t) recv message too small: 0</code>怎么办？<a class="headerlink" href="#broadcasthpp193_check_failed_size_trecv_bytes_sizeofchunk_tail_t_recv_message_too_small_0" title="Permanent link">&para;</a></h2>
 <p>任务要处理的数据量过小，但是配置的计算节点数与进程数太多。需要在提交作业时设置较小的<code>clusterSize</code>和<code>processes</code>。</p>
 
@@ -7558,7 +7590,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 28, 2022</span>
       
     
   </small>
