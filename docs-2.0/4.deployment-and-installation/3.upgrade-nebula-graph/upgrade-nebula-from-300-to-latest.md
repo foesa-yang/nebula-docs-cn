@@ -44,12 +44,8 @@ NebulaGraph v3.x 升级至 v{{nebula.release}}，只需要使用 v{{nebula.relea
 
         编译时注意设置安装路径，和旧版本的安装路径保持一致。
 
-## Docker Compose 部署升级步骤
+## Docker Compose 部署
 
-1. 修改目录`nebula-docker-compose`内的文件`docker-compose.yaml`，将`image`后的所有版本都修改为`{{nebula.branch}}`。
-
-2. 在目录`nebula-docker-compose`内执行命令`docker-compose pull`，更新所有服务的镜像版本。
- 
-3. 执行命令`docker-compose down`停止 NebulaGraph 服务。
-
-4. 执行命令`docker-compose up -d`启动 NebulaGraph 服务。
+!!! caution
+    
+    Docker Compose 部署的 NebulaGraph 建议重新部署新版本后导入数据。
