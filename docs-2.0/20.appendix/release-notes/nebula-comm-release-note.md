@@ -49,7 +49,7 @@
 
 - 修复了 `MATCH` 语句中使用 `pattern` 表达式作为过滤器时错误输出的缺陷。 [#4778](https://github.com/vesoft-inc/nebula/pull/4778)
 
-- 修复 Tag、Edge Type、Tag 索引、Edge Type 索引显示数据不正确的缺陷。 [#4616](https://github.com/vesoft-inc/nebula/pull/4616)
+- 修复 Tag、Edge、Tag 索引、Edge 索引显示数据不正确的缺陷。 [#4616](https://github.com/vesoft-inc/nebula/pull/4616)
 
 - 修复了日期时间格式的缺陷。 [#4524](https://github.com/vesoft-inc/nebula/pull/4524)
 
