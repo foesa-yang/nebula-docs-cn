@@ -22,7 +22,7 @@
 
 - 启动进程时统计日志打印到控制台。 [#4550](https://github.com/vesoft-inc/nebula/pull/4550)
 
-- 支持 `JSON_EXTRACT 函数`。 [#4743](https://github.com/vesoft-inc/nebula/pull/4743)
+- 支持 `JSON_EXTRACT` 函数。 [#4743](https://github.com/vesoft-inc/nebula/pull/4743)
 
 
 ## 缺陷修复
@@ -69,7 +69,7 @@
 
 ### 变更
 
-- 默认不支持无 tag 的点。 [#4629](https://github.com/vesoft-inc/nebula/pull/4629) 
+- 默认不支持无 Tag 的点。 [#4629](https://github.com/vesoft-inc/nebula/pull/4629) 
   
 ## 历史版本
 
