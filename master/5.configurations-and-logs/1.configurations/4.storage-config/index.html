@@ -6924,6 +6924,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/nebula-analytics/" class="md-nav__link">
+        NebulaGraph Analytics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/analytics-ent-license/" class="md-nav__link">
+        NebulaGraph Analytics License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/use-explorer/" class="md-nav__link">
+        NebulaGraph Explorer 工作流
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -7865,14 +7907,14 @@ disable_auto_compactions
 <p class="admonition-title">Warning</p>
 <p>一个图空间至少占用大约 300 MB 的内存。</p>
 </div>
-<p>如果数据量很大但内存不够，则推荐把 storage 配置中的 <code>enable_partitioned_index_filter</code> 设置为 <code>true</code>；但由于缓存了较少的 RocksDB 索引，性能会受影响。</p>
+<p>如果数据量很大但内存不够，则可以尝试把 storage 配置中的<code>enable_partitioned_index_filter</code>设置为<code>true</code>，减少<code>rocksdb_block_cache</code>。但由于缓存了较少的 RocksDB 索引，性能可能会受影响。此外，当通过语句拉取大量数据时，仍存在 OOM 的可能。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>
