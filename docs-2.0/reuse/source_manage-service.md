@@ -291,4 +291,4 @@ a74054c6ae25   vesoft/nebula-graphd:nightly     "/usr/local/nebula/b…"   36 mi
 
 ## 下一步
 
-[连接 NebulaGraph](https://docs.nebula-graph.com.cn/{{nebula.release}}/2.quick-start/3.connect-to-nebula-graph/)<!--这里用外链。-->
+[连接 NebulaGraph](https://docs.nebula-graph.com.cn/{{nebula.release}}/4.deployment-and-installation/connect-to-nebula-graph/)<!--这里用外链。-->
