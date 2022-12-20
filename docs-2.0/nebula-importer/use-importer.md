@@ -206,7 +206,7 @@ clientSettings:
 workingDir: ./data/
 logPath: ./err/test.log
 files:
-  - path: ./student
+  - path: ./student.csv
     failDataPath: ./err/student
     batchSize: 128
     limit: 10
