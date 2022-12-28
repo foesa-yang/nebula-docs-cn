@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/5.configurations-and-logs/1.configurations/1.configurations/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -3314,9 +3314,88 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          配置管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         配置管理
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    查看配置项列表与说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    查看运行配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置文件简介
+  </a>
+  
+    <nav class="md-nav" aria-label="配置文件简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpmdebtar" class="md-nav__link">
+    源码、RPM/DEB、TAR 包集群的配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose" class="md-nav__link">
+    Docker Compose 集群的配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebulagraph_operator" class="md-nav__link">
+    NebulaGraph Operator 集群的配置文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    修改配置
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7366,6 +7445,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    查看配置项列表与说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    查看运行配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置文件简介
+  </a>
+  
+    <nav class="md-nav" aria-label="配置文件简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpmdebtar" class="md-nav__link">
+    源码、RPM/DEB、TAR 包集群的配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose" class="md-nav__link">
+    Docker Compose 集群的配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebulagraph_operator" class="md-nav__link">
+    NebulaGraph Operator 集群的配置文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    修改配置
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7387,7 +7529,13 @@
 <h1 id="_1">配置管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>NebulaGraph 基于 <a href="https://gflags.github.io/gflags/">gflags</a> 库打造了系统配置，多数配置项都是其中的 flags。NebulaGraph 服务启动时，默认会从<a href="#_4">配置文件</a>中获取配置信息。对于文件中没有的配置项，系统使用默认值。</p>
 <!-- -->
-<h1 id="_2">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>性能、参数、查询语句的调优方式及服务仅在企业版提供。</p>
+</div>
+<!-- -->
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -7399,7 +7547,7 @@
 <p class="admonition-title">历史版本兼容性</p>
 <p>1.x 版本的文档提供了使用 CONFIGS 命令修改缓存中配置的方法，但在生产环境中使用该方法容易导致集群配置与本地配置文件不一致。因此，自 2.x 版本开始文档中将不再介绍 CONFIGS 命令的使用方法。</p>
 </div>
-<h2 id="_3">查看配置项列表与说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_2">查看配置项列表与说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>使用以下命令获取二进制文件对应服务的所有配置项信息：</p>
 <div class="highlight"><pre><span></span><code>&lt;binary&gt; --help
 </code></pre></div>
@@ -7414,7 +7562,7 @@ $ /usr/local/nebula/bin/nebula-graphd --help
 $ /usr/local/nebula/bin/nebula-storaged --help
 </code></pre></div>
 <p>以上示例使用了二进制文件的默认存储路径<code>/usr/local/nebula/bin/</code>。如果修改了 NebulaGraph 安装路径，使用实际路径查询配置项信息。</p>
-<h2 id="_4">查看运行配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">查看运行配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>使用<code>curl</code>命令获取运行中的配置项的值，即 NebulaGraph 的运行配置。</p>
 <!--
 
@@ -7436,7 +7584,7 @@ curl <span class="m">127</span>.0.0.1:19779/flags
 <p class="admonition-title">Note</p>
 <p>实际环境中需使用真实的主机 IP 地址取代以上示例中的<code>127.0.0.1</code>。</p>
 </div>
-<h2 id="_5">配置文件简介<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">配置文件简介<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="rpmdebtar">源码、RPM/DEB、TAR 包集群的配置文件<a class="headerlink" href="#rpmdebtar" title="Permanent link">&para;</a></h3>
 <p>NebulaGraph 为每个服务都提供了两份初始配置文件<code>&lt;service_name&gt;.conf.default</code>和<code>&lt;service_name&gt;.conf.production</code>，方便用户在不同场景中使用。使用源码和 RPM/DEB 安装集群的配置文件的默认路径为<code>/usr/local/nebula/etc/</code>；使用 TAR 包安装集群的配置文件路径为<code>&lt;install_path&gt;/&lt;tar_package_directory&gt;/etc</code>TAR 包的安装路径。</p>
 <p>初始配置文件中的配置值仅供参考，使用时可根据实际需求调整。如需使用初始配置文件，从上述两个文件选择其一，删除后缀<code>.default</code>或<code>.production</code>使其生效。</p>
@@ -7485,7 +7633,7 @@ curl <span class="m">127</span>.0.0.1:19779/flags
 <p>通过 Helm 部署的集群，暂不支持修改集群服务的相关配置。</p>
 </div>
 <p>关于 NebulaGraph 的配置相关的更多信息，参见 <a href="https://siwei.io/sketches/nebula-config-explained/">NebulaGraph Config</a>。</p>
-<h2 id="_6">修改配置<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">修改配置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>默认情况下，所有 NebulaGraph 服务从配置文件获取配置。用户可以按照以下步骤修改配置并使其生效。</p>
 <ul>
 <li>
@@ -7515,13 +7663,6 @@ curl <span class="m">127</span>.0.0.1:19779/flags
 <p>具体操作，参见<a href="../../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter/">自定义集群的配置参数</a>。</p>
 </li>
 </ul>
-<!-- --><!--）
-
-!!! enterpriseonly
-
-    性能、参数、查询语句的调优方式及服务仅在企业版提供。
-
-<!-- -->
 
   <hr>
 <div class="md-source-file">

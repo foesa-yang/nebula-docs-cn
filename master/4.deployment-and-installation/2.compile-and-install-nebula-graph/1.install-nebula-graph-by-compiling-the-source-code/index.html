@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/4.deployment-and-installation/2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -3066,6 +3066,103 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     下一步
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake 参数
+  </a>
+  
+    <nav class="md-nav" aria-label="CMake 参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_install_prefix" class="md-nav__link">
+    CMAKE_INSTALL_PREFIX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_werror" class="md-nav__link">
+    ENABLE_WERROR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_testing" class="md-nav__link">
+    ENABLE_TESTING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_asan" class="md-nav__link">
+    ENABLE_ASAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_build_type" class="md-nav__link">
+    CMAKE_BUILD_TYPE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_include_what_you_use" class="md-nav__link">
+    ENABLE_INCLUDE_WHAT_YOU_USE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebula_use_linker" class="md-nav__link">
+    NEBULA_USE_LINKER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_c_compilercmake_cxx_compiler" class="md-nav__link">
+    CMAKE_C_COMPILER/CMAKE_CXX_COMPILER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_ccache" class="md-nav__link">
+    ENABLE_CCACHE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebula_thirdparty_root" class="md-nav__link">
+    NEBULA_THIRDPARTY_ROOT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    问题排查
   </a>
   
 </li>
@@ -7452,6 +7549,103 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake 参数
+  </a>
+  
+    <nav class="md-nav" aria-label="CMake 参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_install_prefix" class="md-nav__link">
+    CMAKE_INSTALL_PREFIX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_werror" class="md-nav__link">
+    ENABLE_WERROR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_testing" class="md-nav__link">
+    ENABLE_TESTING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_asan" class="md-nav__link">
+    ENABLE_ASAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_build_type" class="md-nav__link">
+    CMAKE_BUILD_TYPE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_include_what_you_use" class="md-nav__link">
+    ENABLE_INCLUDE_WHAT_YOU_USE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebula_use_linker" class="md-nav__link">
+    NEBULA_USE_LINKER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake_c_compilercmake_cxx_compiler" class="md-nav__link">
+    CMAKE_C_COMPILER/CMAKE_CXX_COMPILER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_ccache" class="md-nav__link">
+    ENABLE_CCACHE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebula_thirdparty_root" class="md-nav__link">
+    NEBULA_THIRDPARTY_ROOT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    问题排查
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7557,12 +7751,16 @@
 </ol>
 <h2 id="_3">下一步<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <!-- -->
-<h1 id="_4">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<ul>
+<li>（企业版）<a href="../../deploy-license/">设置 License</a></li>
+</ul>
+<!-- -->
+
 <ul>
 <li><a href="../../../2.quick-start/3.quick-start-on-premise/5.start-stop-service/">管理 NebulaGraph 服务</a></li>
 </ul>
 <h2 id="cmake">CMake 参数<a class="headerlink" href="#cmake" title="Permanent link">&para;</a></h2>
-<h3 id="_5">使用方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_4">使用方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>$ cmake -D&lt;variable&gt;<span class="o">=</span>&lt;value&gt; ...
 </code></pre></div>
 <p>下文的 CMake 参数可以在配置 (CMake) 阶段用来调整编译设置。</p>
@@ -7619,7 +7817,7 @@ $ cmake -DCMAKE_C_COMPILER<span class="o">=</span>&lt;path_to_clang/bin/clang&gt
 <p>如果想要禁用 ccache，仅仅设置<code>ENABLE_CCACHE=OFF</code>是不行的，因为在某些平台上，ccache 会代理当前编译器，因此还需要设置环境变量<code>export CCACHE_DISABLE=true</code>，或者在文件<code>~/.ccache/ccache.conf</code>中添加<code>disable=true</code>。更多信息请参见 <a href="https://ccache.dev/manual/3.7.6.html">ccache official documentation</a>。</p>
 <h3 id="nebula_thirdparty_root">NEBULA_THIRDPARTY_ROOT<a class="headerlink" href="#nebula_thirdparty_root" title="Permanent link">&para;</a></h3>
 <p><code>NEBULA_THIRDPARTY_ROOT</code>指定第三方软件的安装路径，默认路径为<code>/opt/vesoft/third-party</code>。</p>
-<h2 id="_6">问题排查<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">问题排查<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>如果出现编译失败，请参考以下建议：</p>
 <ol>
 <li>
@@ -7632,9 +7830,6 @@ $ cmake -DCMAKE_C_COMPILER<span class="o">=</span>&lt;path_to_clang/bin/clang&gt
 <p>使用<code>make -j1</code>降低编译并发度。</p>
 </li>
 </ol>
-<!-- --><!--）
-- （企业版）[设置 License](../deploy-license.md)
-<!-- -->
 
   <hr>
 <div class="md-source-file">

@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/7.data-security/1.authentication/2.management-user/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -3676,6 +3676,62 @@
         <li class="md-nav__item">
   <a href="#create_user" class="md-nav__link">
     创建用户（CREATE USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grant_role" class="md-nav__link">
+    授权用户（GRANT ROLE）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revoke_role" class="md-nav__link">
+    撤销用户权限（REVOKE ROLE）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describe_user" class="md-nav__link">
+    查看指定用户权限（DESCRIBE USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_roles" class="md-nav__link">
+    查看指定空间内用户权限（SHOW ROLES）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    修改用户密码（CHANGE PASSWORD）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alter_user" class="md-nav__link">
+    修改用户密码（ALTER USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop_user" class="md-nav__link">
+    删除用户（DROP USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_users" class="md-nav__link">
+    查看用户列表（SHOW USERS）
   </a>
   
 </li>
@@ -7410,6 +7466,62 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#grant_role" class="md-nav__link">
+    授权用户（GRANT ROLE）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revoke_role" class="md-nav__link">
+    撤销用户权限（REVOKE ROLE）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describe_user" class="md-nav__link">
+    查看指定用户权限（DESCRIBE USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_roles" class="md-nav__link">
+    查看指定空间内用户权限（SHOW ROLES）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    修改用户密码（CHANGE PASSWORD）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alter_user" class="md-nav__link">
+    修改用户密码（ALTER USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop_user" class="md-nav__link">
+    删除用户（DROP USER）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_users" class="md-nav__link">
+    查看用户列表（SHOW USERS）
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7455,7 +7567,19 @@
 </li>
 </ul>
 <!-- -->
-<h1 id="_2">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+
+<ul>
+<li>
+<p>企业版语法</p>
+<div class="highlight"><pre><span></span><code>CREATE USER [IF NOT EXISTS] &lt;user_name&gt; [WITH PASSWORD &#39;&lt;password&gt;&#39;][WITH IP WHITELIST &lt;ip_list&gt;];
+</code></pre></div>
+<ul>
+<li><code>ip_list</code>（企业版）：IP 白名单列表。该用户只有通过列表内的 IP 才能连接 NebulaGraph。多个 IP 之间用英文逗号（,）分隔。</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+
 <ul>
 <li>
 <p>示例</p>
@@ -7471,7 +7595,21 @@ nebula&gt; SHOW USERS;
 </li>
 </ul>
 <!-- -->
-<h1 id="_3">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>企业版示例</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; CREATE USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10,192.168.10.12;
+nebula&gt; SHOW USERS;
++---------+-------------------------------+
+| Account | IP Whitelist                  |
++---------+-------------------------------+
+| &quot;user2&quot; | &quot;192.168.10.10,192.168.10.12&quot; |
++---------+-------------------------------+
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <h2 id="grant_role">授权用户（<code>GRANT ROLE</code>）<a class="headerlink" href="#grant_role" title="Permanent link">&para;</a></h2>
 <p>执行<code>GRANT ROLE</code>语句可以将指定图空间的内置角色权限授予用户。当前仅 <strong>God</strong> 角色用户和 <strong>Admin</strong> 角色用户能够执行<code>GRANT ROLE</code>语句。角色权限的说明，请参见<a href="../3.role-list/">内置角色权限</a>。</p>
 <ul>
@@ -7573,7 +7711,15 @@ DESC USER &lt;user_name&gt;;
 </li>
 </ul>
 <!-- -->
-<h1 id="_4">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>企业版语法</p>
+<div class="highlight"><pre><span></span><code>ALTER USER &lt;user_name&gt; WITH PASSWORD &#39;&lt;password&gt;&#39; [WITH IP WHITELIST &lt;ip_list&gt;];
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <ul>
 <li>
 <p>示例</p>
@@ -7590,7 +7736,20 @@ nebula&gt; SHOW USERS;
 </li>
 </ul>
 <!-- -->
-<h1 id="_5">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+
+<ul>
+<li>
+<p>企业版示例</p>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>没有使用<code>WITH IP WHITELIST</code>时，表示取消 IP 白名单，用户使用任何 IP 都可以连接 NebulaGraph。  </p>
+</div>
+<div class="highlight"><pre><span></span><code>nebula&gt; ALTER USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10;
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <h2 id="drop_user">删除用户（<code>DROP USER</code>）<a class="headerlink" href="#drop_user" title="Permanent link">&para;</a></h2>
 <p>执行<code>DROP USER</code>语句可以删除用户。当前仅<strong> God </strong>角色用户能够执行<code>DROP USER</code>语句。</p>
 <div class="admonition note">
@@ -7634,42 +7793,6 @@ nebula&gt; SHOW USERS;
 </code></pre></div>
 </li>
 </ul>
-<!-- --><!--）
-
-- 企业版语法
-
-  <div class="highlight"><pre><span></span><code>CREATE USER [IF NOT EXISTS] &lt;user_name&gt; [WITH PASSWORD &#39;&lt;password&gt;&#39;][WITH IP WHITELIST &lt;ip_list&gt;];
-</code></pre></div>
-
-  - `ip_list`（企业版）：IP 白名单列表。该用户只有通过列表内的 IP 才能连接 NebulaGraph。多个 IP 之间用英文逗号（,）分隔。
-
-<!-- --><!-- --><!--）
-- 企业版示例
-
-  <div class="highlight"><pre><span></span><code>nebula&gt; CREATE USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10,192.168.10.12;
-nebula&gt; SHOW USERS;
-+---------+-------------------------------+
-| Account | IP Whitelist                  |
-+---------+-------------------------------+
-| &quot;user2&quot; | &quot;192.168.10.10,192.168.10.12&quot; |
-+---------+-------------------------------+
-</code></pre></div>
-<!-- --><!-- --><!--）
-- 企业版语法
-
-  <div class="highlight"><pre><span></span><code>ALTER USER &lt;user_name&gt; WITH PASSWORD &#39;&lt;password&gt;&#39; [WITH IP WHITELIST &lt;ip_list&gt;];
-</code></pre></div>
-<!-- --><!-- --><!--）
-
-- 企业版示例
-
-  !!! enterpriseonly
-
-        没有使用`WITH IP WHITELIST`时，表示取消 IP 白名单，用户使用任何 IP 都可以连接 NebulaGraph。  
-
-  <div class="highlight"><pre><span></span><code>nebula&gt; ALTER USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10;
-</code></pre></div>
-<!-- -->
 
   <hr>
 <div class="md-source-file">

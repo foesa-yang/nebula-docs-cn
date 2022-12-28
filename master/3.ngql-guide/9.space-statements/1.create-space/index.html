@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/9.space-statements/1.create-space/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -7603,7 +7603,7 @@
 <p><code>graph_space_name</code>, <code>partition_num</code>, <code>replica_factor</code>, <code>vid_type</code>, <code>comment</code> 设置后就无法改变。除非 <a href="../5.drop-space/"><code>DROP SPACE</code></a>，并重新<code>CREATE SPACE</code>。</p>
 </div>
 <h3 id="_4">克隆图空间<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>CREATE SPACE &lt;new_graph_space_name&gt; AS &lt;old_graph_space_name&gt;;
+<div class="highlight"><pre><span></span><code>CREATE SPACE [IF NOT EXISTS] &lt;new_graph_space_name&gt; AS &lt;old_graph_space_name&gt;;
 </code></pre></div>
 <table>
 <thead>
@@ -7613,6 +7613,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left"><code>IF NOT EXISTS</code></td>
+<td align="left">检测待创建的图空间是否存在，只有不存在时，才会克隆图空间。仅检测图空间的名称，不会检测具体属性。</td>
+</tr>
 <tr>
 <td align="left"><code>&lt;new_graph_space_name&gt;</code></td>
 <td align="left">目标图空间名称。该图空间必须未创建。图空间名称以英文字母开头，支持 1~4 字节的 UTF-8 编码字符，包括英文字母（区分大小写）、数字、中文等，但是不包括除下划线外的特殊字符。使用保留关键字时，需要用反引号（`）包围，详情参见<a href="../../1.nGQL-overview/keywords-and-reserved-words/">关键字和保留字</a>。创建时会克隆<code>&lt;old_graph_space_name&gt;</code>图空间的 Schema，包括图空间本身参数（分片数量、副本数量等）、Tag、Edge type 和 原生索引。</td>
@@ -7674,7 +7678,7 @@ nebula&gt; SHOW HOSTS;
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
       
     
   </small>

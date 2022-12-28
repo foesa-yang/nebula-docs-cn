@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -6769,6 +6769,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    创建集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    扩缩容集群
+  </a>
+  
+    <nav class="md-nav" aria-label="扩缩容集群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    扩容集群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    缩容集群
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    删除集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    后续操作
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7410,6 +7458,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    创建集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    扩缩容集群
+  </a>
+  
+    <nav class="md-nav" aria-label="扩缩容集群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    扩容集群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    缩容集群
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    删除集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    后续操作
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7440,8 +7536,18 @@
 <li><a href="../../2.deploy-nebula-operator/">安装 NebulaGraph Operator</a></li>
 </ul>
 <!-- -->
-<h1 id="_2">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
-<h2 id="_3">创建集群<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>准备相应的 License 文件</p>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>只有当创建的 NebulaGraph 集群是企业版本时，才需要提供 License 文件。</p>
+</div>
+</li>
+</ul>
+<!-- -->
+
+<h2 id="_2">创建集群<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本文以创建名为<code>nebula</code>的集群为例，说明如何部署 NebulaGraph 集群。</p>
 <ol>
 <li>
@@ -7646,51 +7752,11 @@
 </tbody>
 </table>
 <!-- -->
-</li>
-</ol>
-<h1 id="_4">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
-<ol>
-<li>
-<p>创建 NebulaGraph 集群。</p>
-<div class="highlight"><pre><span></span><code>kubectl create -f apps_v1alpha1_nebulacluster.yaml
-</code></pre></div>
-<p>返回：</p>
-<div class="highlight"><pre><span></span><code>nebulacluster.apps.nebula-graph.io/nebula created
-</code></pre></div>
-</li>
-<li>
-<p>查看 NebulaGraph 集群状态。</p>
-<div class="highlight"><pre><span></span><code>kubectl get nebulaclusters.apps.nebula-graph.io nebula
-</code></pre></div>
-<p>返回：</p>
-<div class="highlight"><pre><span></span><code>NAME     GRAPHD-DESIRED   GRAPHD-READY   METAD-DESIRED   METAD-READY   STORAGED-DESIRED   STORAGED-READY   AGE
-nebula   <span class="m">1</span>                <span class="m">1</span>              <span class="m">1</span>               <span class="m">1</span>             <span class="m">3</span>                  <span class="m">3</span>                86s
-</code></pre></div>
-</li>
-</ol>
-<h2 id="_5">扩缩容集群<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+
 <ul>
-<li>不支持扩缩容社区版的 NebulaGraph 集群。</li>
-</ul>
-<!-- -->
-<h1 id="_6">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
-<h2 id="_7">删除集群<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>使用 Kubectl 删除 NebulaGraph 集群的命令如下：</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f apps_v1alpha1_nebulacluster.yaml
-</code></pre></div>
-<h2 id="_8">后续操作<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p><a href="../../4.connect-to-nebula-graph-service/">连接 NebulaGraph 数据库</a></p>
-<!-- --><!--）
-- 准备相应的 License 文件
-
-  !!! enterpriseonly
-
-        只有当创建的 NebulaGraph 集群是企业版本时，才需要提供 License 文件。
-<!-- --><!-- --><!--）
-
-   - 企业版集群示例，创建名为`apps_v1alpha1_nebulacluster.yaml`的文件。
-
-    <div class="highlight"><pre><span></span><code><span class="c1"># 联系销售人员获取完整配置。</span><span class="w"></span>
+<li>
+<p>企业版集群示例，创建名为<code>apps_v1alpha1_nebulacluster.yaml</code>的文件。</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 联系销售人员获取完整配置。</span><span class="w"></span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span><span class="w"></span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
@@ -7733,47 +7799,83 @@ nebula   <span class="m">1</span>                <span class="m">1</span>       
 <span class="w">      </span><span class="nt">licenseKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula.license</span><span class="w"></span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w">   </span>
 </code></pre></div>
-
-  企业版特有参数描述如下：
-
-  | 参数    | 默认值  | 描述    |
-  | :---- | :--- | :--- |
-  | `spec.metad.license`       | - | 创建企业版 NebulaGraph 集群所需的 License 配置。               | 
-
-  !!! enterpriseonly
-
-        拉取企业版 NebulaGraph 集群镜像前，请确保已联系销售人员（[inqury@vesoft.com](mailto:inqury@vesoft.com)）获取企业版 NebulaGraph 集群的镜像信息。
-
-
-2. 配置集群 License。
-
-  !!! enterpriseonly
-
-      - 此步骤只适用于创建企业版 NebulaGraph集群。
-
-      - 创建社区版 NebulaGraph 集群时，忽略此步骤。
-
-  <div class="highlight"><pre><span></span><code>kubectl create secret generic nebula-license --from-file<span class="o">=</span>nebula.license
+</li>
+</ul>
+<p>企业版特有参数描述如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>spec.metad.license</code></td>
+<td align="left">-</td>
+<td align="left">创建企业版 NebulaGraph 集群所需的 License 配置。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>拉取企业版 NebulaGraph 集群镜像前，请确保已联系销售人员（<a href="mailto:inqury@vesoft.com">inqury@vesoft.com</a>）获取企业版 NebulaGraph 集群的镜像信息。</p>
+</div>
+</li>
+<li>
+<p>配置集群 License。</p>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<ul>
+<li>此步骤只适用于创建企业版 NebulaGraph集群。</li>
+</ul>
+<ul>
+<li>创建社区版 NebulaGraph 集群时，忽略此步骤。</li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code>kubectl create secret generic nebula-license --from-file<span class="o">=</span>nebula.license
 </code></pre></div>
-
-  查看集群 License 信息：
-
-  <div class="highlight"><pre><span></span><code>kubectl get secrets nebula-license -o yaml
+<p>查看集群 License 信息：</p>
+<div class="highlight"><pre><span></span><code>kubectl get secrets nebula-license -o yaml
 </code></pre></div>
+<!-- -->
 
-  <!-- --><!-- --><!--）
+</li>
+<li>
+<p>创建 NebulaGraph 集群。</p>
+<div class="highlight"><pre><span></span><code>kubectl create -f apps_v1alpha1_nebulacluster.yaml
+</code></pre></div>
+<p>返回：</p>
+<div class="highlight"><pre><span></span><code>nebulacluster.apps.nebula-graph.io/nebula created
+</code></pre></div>
+</li>
+<li>
+<p>查看 NebulaGraph 集群状态。</p>
+<div class="highlight"><pre><span></span><code>kubectl get nebulaclusters.apps.nebula-graph.io nebula
+</code></pre></div>
+<p>返回：</p>
+<div class="highlight"><pre><span></span><code>NAME     GRAPHD-DESIRED   GRAPHD-READY   METAD-DESIRED   METAD-READY   STORAGED-DESIRED   STORAGED-READY   AGE
+nebula   <span class="m">1</span>                <span class="m">1</span>              <span class="m">1</span>               <span class="m">1</span>             <span class="m">3</span>                  <span class="m">3</span>                86s
+</code></pre></div>
+</li>
+</ol>
+<h2 id="_3">扩缩容集群<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>不支持扩缩容社区版的 NebulaGraph 集群。</li>
+</ul>
+<!-- -->
 
-- 仅支持通过 v1.1.0 及以上版本的 NebulaGraph Operator 扩缩容企业版的 NebulaGraph 集群。
-
-用户可以通过编辑`apps_v1alpha1_nebulacluster.yaml`文件中的`replicas`的值进行 NebulaGraph 集群的扩缩容。
-
-### 扩容集群
-
-本文举例扩容 NebulaGraph 集群中 Storage 服务至 5 个。步骤如下：
-
-1. 将`apps_v1alpha1_nebulacluster.yaml`文件中`storaged.replicas`的参数值从`3`改为`5`。
-
-  <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">storaged</span><span class="p">:</span><span class="w"></span>
+<ul>
+<li>仅支持通过 v1.1.0 及以上版本的 NebulaGraph Operator 扩缩容企业版的 NebulaGraph 集群。</li>
+</ul>
+<p>用户可以通过编辑<code>apps_v1alpha1_nebulacluster.yaml</code>文件中的<code>replicas</code>的值进行 NebulaGraph 集群的扩缩容。</p>
+<h3 id="_4">扩容集群<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>本文举例扩容 NebulaGraph 集群中 Storage 服务至 5 个。步骤如下：</p>
+<ol>
+<li>
+<p>将<code>apps_v1alpha1_nebulacluster.yaml</code>文件中<code>storaged.replicas</code>的参数值从<code>3</code>改为<code>5</code>。</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">storaged</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500m&quot;</span><span class="w"></span>
@@ -7803,19 +7905,18 @@ nebula   <span class="m">1</span>                <span class="m">1</span>       
 <span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
 <span class="w">  </span><span class="nt">schedulerName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default-scheduler</span><span class="w"></span>
 </code></pre></div>
-
-2. 执行以下命令使上述更新同步至 NebulaGraph 集群 CR 中。
-
-  <div class="highlight"><pre><span></span><code>kubectl apply -f apps_v1alpha1_nebulacluster.yaml
+</li>
+<li>
+<p>执行以下命令使上述更新同步至 NebulaGraph 集群 CR 中。</p>
+<div class="highlight"><pre><span></span><code>kubectl apply -f apps_v1alpha1_nebulacluster.yaml
 </code></pre></div>
-
-3. 查看 Storage 服务的副本数。
-
-  <div class="highlight"><pre><span></span><code>kubectl  get pods -l app.kubernetes.io/cluster<span class="o">=</span>nebula
+</li>
+<li>
+<p>查看 Storage 服务的副本数。</p>
+<p><div class="highlight"><pre><span></span><code>kubectl  get pods -l app.kubernetes.io/cluster<span class="o">=</span>nebula
 </code></pre></div>
-  返回：
-
-  <div class="highlight"><pre><span></span><code>NAME                READY   STATUS    RESTARTS   AGE
+返回：</p>
+<p><div class="highlight"><pre><span></span><code>NAME                READY   STATUS    RESTARTS   AGE
 nebula-graphd-0     <span class="m">1</span>/1     Running   <span class="m">0</span>          2m
 nebula-metad-0      <span class="m">1</span>/1     Running   <span class="m">0</span>          2m
 nebula-storaged-0   <span class="m">1</span>/1     Running   <span class="m">0</span>          2m
@@ -7824,17 +7925,23 @@ nebula-storaged-2   <span class="m">1</span>/1     Running   <span class="m">0</
 nebula-storaged-3   <span class="m">1</span>/1     Running   <span class="m">0</span>          5m
 nebula-storaged-4   <span class="m">1</span>/1     Running   <span class="m">0</span>          5m
 </code></pre></div>
-  由上可看出 Storage 服务的副本数被扩容至 5 个。
-
-### 缩容集群
-
-缩容集群的原理和扩容一样，用户只需将`apps_v1alpha1_nebulacluster.yaml`文件中的`replicas`的值缩小。具体操作，请参考上文的**扩容集群**部分。
-
-!!! caution
-
-    目前仅支持对 NebulaGraph 集群中的 Graph 服务和 Storage 服务进行扩缩容，不支持扩缩容 Meta 服务。
-
+由上可看出 Storage 服务的副本数被扩容至 5 个。</p>
+</li>
+</ol>
+<h3 id="_5">缩容集群<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>缩容集群的原理和扩容一样，用户只需将<code>apps_v1alpha1_nebulacluster.yaml</code>文件中的<code>replicas</code>的值缩小。具体操作，请参考上文的<strong>扩容集群</strong>部分。</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>目前仅支持对 NebulaGraph 集群中的 Graph 服务和 Storage 服务进行扩缩容，不支持扩缩容 Meta 服务。</p>
+</div>
 <!-- -->
+
+<h2 id="_6">删除集群<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>使用 Kubectl 删除 NebulaGraph 集群的命令如下：</p>
+<div class="highlight"><pre><span></span><code>kubectl delete -f apps_v1alpha1_nebulacluster.yaml
+</code></pre></div>
+<h2 id="_7">后续操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><a href="../../4.connect-to-nebula-graph-service/">连接 NebulaGraph 数据库</a></p>
 
   <hr>
 <div class="md-source-file">

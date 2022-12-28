@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/3.ngql-guide/9.space-statements/6.clear-space/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -2161,6 +2161,20 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    保留的数据
   </a>
   
 </li>
@@ -7424,6 +7438,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    保留的数据
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7446,6 +7474,10 @@
 
 <h1 id="clear_space">CLEAR SPACE<a class="headerlink" href="#clear_space" title="Permanent link">&para;</a></h1>
 <p><code>CLEAR SPACE</code>语句用于清空图空间中的点和边，但不会删除图空间本身以及其中的 Schema 信息。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>建议在执行<code>CLEAR SPACE</code>操作之后，立即执行<a href="../../4.job-statements/#submit_job_compact"><code>SUBMIT JOB COMPACT</code></a>操作以提升查询性能。需要注意的是，COMPACT 操作可能会影响查询性能，建议在业务低峰期（例如凌晨）执行该操作。</p>
+</div>
 <h2 id="_1">权限要求<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>只有 <a href="../../../7.data-security/1.authentication/3.role-list/">God 角色</a>的用户可以执行<code>CLEAR SPACE</code>语句。</p>
 <h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -7453,19 +7485,21 @@
 <li>数据清除后，<strong>如无备份，无法恢复</strong>。使用该功能务必谨慎。</li>
 <li><code>CLEAR SPACE</code>不是原子性操作。如果执行出错，请重新执行，避免残留数据。</li>
 <li>图空间中的数据量越大，<code>CLEAR SPACE</code>消耗的时间越长。如果<code>CLEAR SPACE</code>的执行因客户端连接超时而失败，可以增大 <a href="../../../5.configurations-and-logs/1.configurations/3.graph-config/">Graph 服务配置</a>中<code>storage_client_timeout_ms</code>参数的值。</li>
-<li>
-<p>在<code>CLEAR SPACE</code>的执行过程中，向该图空间写入数据的行为不会被自动禁止。这样的写入行为可能导致<code>CLEAR SPACE</code>清除数据不完全，残留的数据也可能受到损坏。</p>
+<li>在<code>CLEAR SPACE</code>的执行过程中，向该图空间写入数据的行为不会被自动禁止。这样的写入行为可能导致<code>CLEAR SPACE</code>清除数据不完全，残留的数据也可能受到损坏。</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ul>
-<li>社区版 NebulaGraph 不支持在运行<code>CLEAR SPACE</code>的同时禁止写入。</li>
-</ul>
+<p>社区版 NebulaGraph 不支持在运行<code>CLEAR SPACE</code>的同时禁止写入。</p>
 </div>
-</li>
-</ul>
 <!-- -->
-<h1 id="_3">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<h2 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>企业版 NebulaGraph 支持先运行<code>SET VARIABLE read_only=true</code>阻止向 NebulaGraph 写入数据，再运行<code>CLEAR SPACE</code>。数据清除成功后运行<code>SET VARIABLE read_only=false</code>即可重新允许写入。</p>
+</div>
+<!-- -->
+
+<h2 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>CLEAR SPACE [IF EXISTS] &lt;space_name&gt;;
 </code></pre></div>
 <table>
@@ -7489,7 +7523,7 @@
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code>CLEAR SPACE basketballplayer;
 </code></pre></div>
-<h2 id="_5">保留的数据<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">保留的数据<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>图空间中，<code>CLEAR SPACE</code>不会删除的数据包括：</p>
 <ul>
 <li>Tag 信息。</li>
@@ -7591,20 +7625,13 @@ nebula[basketballplayer]&gt; SHOW TAG INDEXES;
 +------------------+----------+----------+
 Got 2 rows (time spent 523/978 us)
 </code></pre></div>
-<!-- --><!--）
-
-  !!! enterpriseonly
-
-      - 企业版 NebulaGraph 支持先运行`SET VARIABLE read_only=true`阻止向 NebulaGraph 写入数据，再运行`CLEAR SPACE`。数据清除成功后运行`SET VARIABLE read_only=false`即可重新允许写入。
-
-<!-- -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
       
     
   </small>

@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/5.configurations-and-logs/1.configurations/3.graph-config/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -3425,6 +3425,41 @@
         <li class="md-nav__item">
   <a href="#memory" class="md-nav__link">
     memory 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    audit 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    metrics 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    session 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental" class="md-nav__link">
+    experimental 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
   </a>
   
 </li>
@@ -7522,6 +7557,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    audit 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    metrics 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    session 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental" class="md-nav__link">
+    experimental 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7847,7 +7917,14 @@
 </tbody>
 </table>
 <!-- -->
-<h1 id="_3">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="audit">audit 配置<a class="headerlink" href="#audit" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅 NebulaGraph 企业版支持审计日志功能。</p>
+</div>
+<p>详细参数说明参见<a href="../../2.log-management/audit-log/">审计日志</a>。</p>
+<!-- -->
+
 <h2 id="metrics">metrics 配置<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -7898,44 +7975,52 @@
 <td>实验性功能开关。可选值为<code>true</code>和<code>false</code>。当前支持的实验性功能请参见下文。</td>
 </tr>
 <tr>
-<td><code>enable_toss</code></td>
-<td><code>false</code></td>
-<td>是否开启 TOSS 功能。TOSS（Transaction on Storage Side）功能，用于保证对边进行<code>INSERT</code>、<code>UPDATE</code>、<code>UPSERT</code>或<code>DELETE</code>操作的最终一致性（因为逻辑上的一条边对应着硬盘上的两个键值对）。开启后会增加相关操作的时延约 1 倍。<br>仅当<code>enable_experimental_feature</code>为<code>true</code>时生效。</td>
-</tr>
-<tr>
 <td><code>enable_data_balance</code></td>
 <td><code>true</code></td>
 <td>是否开启<a href="../../../8.service-tuning/load-balance/">均衡分片</a>功能。仅当<code>enable_experimental_feature</code>为<code>true</code>时生效。</td>
 </tr>
 </tbody>
 </table>
+<!-- |`enable_toss`|`false`|是否开启 TOSS 功能。TOSS（Transaction on Storage Side）功能，用于保证对边进行`INSERT`、`UPDATE`、`UPSERT`或`DELETE`操作的最终一致性（因为逻辑上的一条边对应着硬盘上的两个键值对）。开启后会增加相关操作的时延约 1 倍。<br>仅当`enable_experimental_feature`为`true`时生效。| -->
+
 <!-- -->
-<h1 id="_4">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
-<!-- --><!--）
-## audit 配置
 
-!!! enterpriseonly
-
-    仅 NebulaGraph 企业版支持审计日志功能。
-
-详细参数说明参见[审计日志](../2.log-management/audit-log.md)。
-
-<!-- --><!-- --><!--）
-
-## Black box 配置
-
-!!! enterpriseonly
-
-    仅企业版支持黑匣子功能配置。
-
-| 名称                 | 预设值                    | 说明                               |
-| :------------------- | :------------------------ | :------------------------------------------ |
-|`ng_black_box_switch`    |`true`                     |是否开启黑匣子功能。|
-|`ng_black_box_home`    |`black_box`                     |存储黑匣子数据的目录名称。|
-|`ng_black_box_dump_period_seconds`    |`5`                     |黑匣子采集指标的时间间隔。单位：秒。|
-|`ng_black_box_file_lifetime_seconds`    |`1800`                     |采集指标后生成文件的保存时间。单位：秒|
-
-
+<h2 id="black_box">Black box 配置<a class="headerlink" href="#black_box" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅企业版支持黑匣子功能配置。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">预设值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>ng_black_box_switch</code></td>
+<td align="left"><code>true</code></td>
+<td align="left">是否开启黑匣子功能。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_home</code></td>
+<td align="left"><code>black_box</code></td>
+<td align="left">存储黑匣子数据的目录名称。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_dump_period_seconds</code></td>
+<td align="left"><code>5</code></td>
+<td align="left">黑匣子采集指标的时间间隔。单位：秒。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_file_lifetime_seconds</code></td>
+<td align="left"><code>1800</code></td>
+<td align="left">采集指标后生成文件的保存时间。单位：秒</td>
+</tr>
+</tbody>
+</table>
 <!-- -->
 
   <hr>
@@ -7943,7 +8028,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 16, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2022</span>
       
     
   </small>

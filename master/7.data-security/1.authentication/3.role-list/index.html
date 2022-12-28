@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/7.data-security/1.authentication/3.role-list/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -3691,6 +3691,47 @@
   <a href="#_2" class="md-nav__link">
     内置角色
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    角色权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7410,6 +7451,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    角色权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7508,7 +7590,23 @@
 </li>
 </ul>
 <!-- -->
-<h1 id="_3">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>Basic</p>
+<ul>
+<li>对权限内的图空间拥有 Schema 的<strong>只读</strong>权限。</li>
+</ul>
+<ul>
+<li>对权限内的图空间可以自定义 Tag 和 Edge Type 的数据的<strong>读写</strong>权限。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>Basic 角色仅在企业版中提供。</p>
+</div>
+<!-- -->
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -7516,7 +7614,7 @@
 <li>一个用户在一个图空间内只能拥有一个角色权限。授权用户请参见<a href="../2.management-user/">用户管理</a>。</li>
 </ul>
 </div>
-<h2 id="_4">角色权限<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">角色权限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>各角色的执行权限如下。</p>
 <table>
 <thead>
@@ -7648,51 +7746,36 @@
 只有 God 角色可以执行<code>SHOW USERS</code>和<code>SHOW SNAPSHOTS</code>语句。</p>
 </div>
 <!-- -->
-<h1 id="_5">文档包含企业版时需补全该注释（），只包含社区版时只保留注释头（<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<!-- --><!--）
-- Basic
-
-  - 对权限内的图空间拥有 Schema 的**只读**权限。
-
-  - 对权限内的图空间可以自定义 Tag 和 Edge Type 的数据的**读写**权限。
-
-!!! enterpriseonly
-
-    Basic 角色仅在企业版中提供。
-
-<!-- --><!-- --><!--）
-## Basic 角色(企业版)
-
-### 语法
-
-!!! caution
-
-    进入图空间后才可执行以下命令。
-
-- 授予 Basic 用户 Tag/Edge 权限
-
+<h2 id="basic">Basic 角色(企业版)<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h2>
+<h3 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>进入图空间后才可执行以下命令。</p>
+</div>
+<ul>
+<li>授予 Basic 用户 Tag/Edge 权限</li>
+</ul>
 <div class="highlight"><pre><span></span><code>GRANT { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
 OPTION = { READ | WRITE }
 </code></pre></div>
-
-- 取消 Basic 用户 Tag/Edge 权限
-
+<ul>
+<li>取消 Basic 用户 Tag/Edge 权限</li>
+</ul>
 <div class="highlight"><pre><span></span><code>REVOKE { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
 OPTION = { READ | WRITE }
 </code></pre></div>
-
-- 查询用户权限
-
+<ul>
+<li>查询用户权限</li>
+</ul>
 <div class="highlight"><pre><span></span><code>SHOW GRANTS [&lt;user_name&gt;]
 </code></pre></div>
-
-### 注意事项
-
-- 默认 Basic 角色无任何 Tag/Edge 读写权限。
-- 只有 GOD 和 ADMIN 角色用户能执行授权（GRANT）和撤销权限（REVOKE）操作。
-- 只允许用户在指定图空间对 Basic 角色进行授权（GRANT）和撤销权限（REVOKE）操作，不允许授权给其他角色用户。
-
-### 示例
+<h3 id="_5">注意事项<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>默认 Basic 角色无任何 Tag/Edge 读写权限。</li>
+<li>只有 GOD 和 ADMIN 角色用户能执行授权（GRANT）和撤销权限（REVOKE）操作。</li>
+<li>只允许用户在指定图空间对 Basic 角色进行授权（GRANT）和撤销权限（REVOKE）操作，不允许授权给其他角色用户。</li>
+</ul>
+<h3 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code># 创建 test 用户
 nebula&gt; CREATE USER test WITH PASSWORD &#39;nebula&#39;;
 
@@ -7725,11 +7808,10 @@ nebula&gt; SHOW GRANTS test
 | &quot;test&quot; | [&quot;player&quot;] | []         | [&quot;player&quot;] | []          |
 +--------+------------+------------+------------+-------------+
 </code></pre></div>
-
-!!! caution
-
-    对于 Basic 角色用户，显式指定无读权限的 Tag/Edge Type 将报错，未显式指定无读权限的 Tag/Edge Type 不会报错。在遍历过程中，所有查询无法读取无权限的 Tag/Edge Type 及其上的属性。Edge Type 的读权限可控制边的扩展行为，在遍历过程中，如果 Edge Type 无权限，将不会进行拓展；Tag 的读权限不控制点的拓展行为，拓展过程中即使点上 Tag 无权限，仍可进行拓展。
-
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>对于 Basic 角色用户，显式指定无读权限的 Tag/Edge Type 将报错，未显式指定无读权限的 Tag/Edge Type 不会报错。在遍历过程中，所有查询无法读取无权限的 Tag/Edge Type 及其上的属性。Edge Type 的读权限可控制边的扩展行为，在遍历过程中，如果 Edge Type 无权限，将不会进行拓展；Tag 的读权限不控制点的拓展行为，拓展过程中即使点上 Tag 无权限，仍可进行拓展。</p>
+</div>
 <!-- -->
 
   <hr>

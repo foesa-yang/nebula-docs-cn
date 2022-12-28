@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.com.cn/master/nebula-importer/use-importer/">
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="NebulaGraph Database 手册" class="md-header__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="NebulaGraph Database 手册" class="md-nav__button md-logo" aria-label="NebulaGraph Database 手册" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database 手册
@@ -7957,7 +7957,7 @@ $ go build -mod vendor cmd/importer.go
 <span class="nt">logPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/test.log</span><span class="w"></span>
 <span class="nt">files</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./student.csv</span><span class="w"></span>
-<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/student.csv</span><span class="w"></span>
+<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/student</span><span class="w"></span>
 <span class="w">    </span><span class="nt">batchSize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w"></span>
 <span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
 <span class="w">    </span><span class="nt">inOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
@@ -7966,6 +7966,7 @@ $ go build -mod vendor cmd/importer.go
 <span class="w">      </span><span class="nt">withHeader</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">      </span><span class="nt">withLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">      </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">lazyQuotes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 </code></pre></div>
 <table>
 <thead>
@@ -7981,7 +7982,7 @@ $ go build -mod vendor cmd/importer.go
 <td align="left"><code>workingDir</code></td>
 <td align="left">-</td>
 <td align="left">否</td>
-<td align="left">在多个目录包含具有相同文件结构的数据，使用此参数在多个目录之间切换。例如，下面配置的 <code>path</code> 和 <code>failDataPath</code> 的值会自动更改为 <code>./data/student.csv</code> 和 <code>./data/err/student.csv</code>。参数可以是绝对的或相对的。</td>
+<td align="left">在多个目录包含具有相同文件结构的数据，使用此参数在多个目录之间切换。例如，下面配置的 <code>path</code> 和 <code>failDataPath</code> 的值会自动更改为 <code>./data/student</code> 和 <code>./data/err/student</code>。参数可以是绝对的或相对的。</td>
 </tr>
 <tr>
 <td align="left"><code>logPath</code></td>
@@ -8042,6 +8043,12 @@ $ go build -mod vendor cmd/importer.go
 <td align="left"><code>","</code></td>
 <td align="left">是</td>
 <td align="left">指定 csv 文件的分隔符。只支持一个字符的字符串分隔符。</td>
+</tr>
+<tr>
+<td align="left"><code>files.csv.lazyQuotes</code></td>
+<td align="left"><code>false</code></td>
+<td align="left">否</td>
+<td align="left">LazyQuotes设置为真时，一个引号可能会出现在非引号字段中，一个非双引号可能会出现在引号字段中。</td>
 </tr>
 </tbody>
 </table>
@@ -8252,7 +8259,7 @@ $ go build -mod vendor cmd/importer.go
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 20, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
       
     
   </small>
