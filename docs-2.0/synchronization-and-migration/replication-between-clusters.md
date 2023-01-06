@@ -24,6 +24,8 @@ NebulaGraph 支持在集群间进行数据同步，即主集群 A 的数据可�
 
 ## 注意事项
 
+- 主从集群必须是同一个 NebulaGraph 版本，否则数据同步会失败。
+
 - 数据同步的基本单位是图空间，即只可以设置从一个图空间到另一个图空间的数据同步。
 
 - 主从集群的数据同步是异步的（近实时）。
@@ -37,6 +39,7 @@ NebulaGraph 支持在集群间进行数据同步，即主集群 A 的数据可�
 - listener 服务记录来自主集群的 WAL 或快照，drainer 服务记录来自 listener 的 WAL 和写入从集群的 WAL。这些文件都保存在对应服务的本地。
 
 - 从集群中数据如果不为空，数据同步时可能会导致数据冲突或者数据不一致。建议保持从集群数据为空。
+
 
 ## 操作步骤
 
@@ -75,6 +78,8 @@ drainer：机器 IP 地址为`192.168.10.104`，只启动 drainer 服务。
       - 所有配置文件里都需要用真实的机器 IP 地址替换`local_ip`的`127.0.0.1`。
 
       - 所有`nebula-graphd.conf`配置文件里设置`enable_authorize=true`。
+
+      - 在主集群的`nebula-metad.conf`和`nebula-storaged.conf`文件中，配置`--snapshot_send_files=false`。
 
       - 主从集群填写各自集群的`meta_server_addrs`，注意不要错填其他集群的地址。
 
@@ -512,3 +517,7 @@ nebula> SHOW DRAINER SYNC STATUS;
 ### 如何判断数据同步进度？
 
 用户可以执行`SHOW SYNC STATUS`查看主集群发送数据的状态，执行`SHOW DRAINER SYNC STATUS`查看从集群接收数据的状态。如果同时满足主集群中的所有数据都发送成功，并且从集群成功接收所有数据，则说明数据同步完成。
+
+### WAL 日志文件过期了对集群数据同步有影响吗？
+
+如果 WAL 日志文件过期了（超过了`--wal-ttl`设置的时间），数据会不同步。用户可以通过手动在 Meta 和 Storage 服务的配置文件中添加`--snapshot_send_files=false`配置以同步数据。更新文件中的配置后，需要重启服务。关于配置文件的详细信息，参见[配置文件简介](../5.configurations-and-logs/1.configurations/1.configurations.md)。
