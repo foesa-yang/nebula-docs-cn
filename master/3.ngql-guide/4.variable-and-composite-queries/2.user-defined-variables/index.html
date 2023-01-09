@@ -7456,6 +7456,10 @@
 +----------------------------------------------------+
 </code></pre></div>
 <p>示例中的<code>v</code>就是自定义变量。</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>在同一个 MATCH 语句的模式中，不能重复使用边变量。例如<code>e</code>不能重复被写在模式<code>p=(v1)-[e*2..2]-&gt;(v2)-[e*2..2]-&gt;(v3)</code>中。</p>
+</div>
 <h2 id="ngql">原生 nGQL<a class="headerlink" href="#ngql" title="Permanent link">&para;</a></h2>
 <p>nGQL 扩展的自定义变量可以表示为<code>$var_name</code>，<code>var_name</code>由字母、数字或下划线（_）构成，不允许使用其他字符。</p>
 <p>自定义变量仅在当前执行（本复合查询中）有效，执行结束后变量也会释放，<strong>不能</strong>在其他客户端、执行、session 中使用之前的自定义变量。</p>
@@ -7482,7 +7486,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 9, 2023</span>
       
     
   </small>

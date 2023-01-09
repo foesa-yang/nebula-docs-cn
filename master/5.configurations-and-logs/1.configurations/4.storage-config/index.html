@@ -7659,12 +7659,12 @@
 <tr>
 <td align="left"><code>minloglevel</code></td>
 <td align="left"><code>0</code></td>
-<td align="left">最小日志级别，即不会记录低于这个级别的日志。可选值：<code>0</code>（INFO）、<code>1</code>（WARNING）、<code>2</code>（ERROR）、<code>3</code>（FATAL）。建议在调试时设置为<code>0</code>，生产环境中设置为<code>1</code>。如果设置为<code>4</code>，NebulaGraph 不会记录任何日志。</td>
+<td align="left">最小日志级别，即记录此级别或更高级别的日志。可选值：<code>0</code>（INFO）、<code>1</code>（WARNING）、<code>2</code>（ERROR）、<code>3</code>（FATAL）。建议在调试时设置为<code>0</code>，生产环境中设置为<code>1</code>。如果设置为<code>4</code>，NebulaGraph 不会记录任何日志。</td>
 </tr>
 <tr>
 <td align="left"><code>v</code></td>
 <td align="left"><code>0</code></td>
-<td align="left">日志详细级别，值越大，日志记录越详细。可选值：<code>0</code>、<code>1</code>、<code>2</code>、<code>3</code>。</td>
+<td align="left">VLOG 日志详细级别，即记录小于或等于此级别的所有 VLOG 消息。可选值为<code>0</code>、<code>1</code>、<code>2</code>、<code>3</code>、<code>4</code>、<code>5</code>。glog 提供的 VLOG 宏允许用户定义自己的数字日志记录级别，并用参数<code>v</code>控制记录哪些详细消息。详情参见 <a href="https://github.com/google/glog#verbose-logging">Verbose Logging</a>。</td>
 </tr>
 <tr>
 <td align="left"><code>logbufsecs</code></td>
@@ -8117,7 +8117,7 @@ disable_auto_compactions
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 9, 2023</span>
       
     
   </small>
