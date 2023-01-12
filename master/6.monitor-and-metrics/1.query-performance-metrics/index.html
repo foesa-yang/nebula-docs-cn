@@ -8186,6 +8186,10 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 </tbody>
 </table>
 <h3 id="_6">图空间级别监控指标<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>图空间级别监控指标是动态创建的, 只有当图空间内触发该行为时，对应的指标才会创建，用户才能查询到。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -8243,10 +8247,6 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 <td>索引扫描（IndexScan）算子执行时间。</td>
 </tr>
 <tr>
-<td><code>num_oom_queries</code></td>
-<td>导致内存耗尽的语句数量。</td>
-</tr>
-<tr>
 <td><code>num_auth_failed_sessions_bad_username_password</code></td>
 <td>因用户名密码错误导验证失败的会话数量。</td>
 </tr>
@@ -8288,6 +8288,8 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 </tr>
 </tbody>
 </table>
+<!-- -->
+
 <h3 id="_7">单进程指标<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Graph、Meta 和 Storage 服务都有自身的单进程指标。</p>
 <table>
@@ -8324,6 +8326,8 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 </tr>
 </tbody>
 </table>
+<!-- -->
+
 <!-- The line above is for content reusing. The source file is in the docs-2.0/reuse directory. -->
 
   <hr>

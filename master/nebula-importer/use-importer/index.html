@@ -8062,6 +8062,13 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gender</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phone</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">nullable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wechat</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">nullable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">nullValue</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;__NULL__&quot;</span>
 </code></pre></div>
 <table>
 <thead>
@@ -8126,6 +8133,18 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <td align="left">-</td>
 <td align="left">否</td>
 <td align="left">属性对应 CSV 文件中列的序号。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.tags.props.nullable</code></td>
+<td align="left"><code>false</code></td>
+<td align="left">否</td>
+<td align="left">属性是否可以为<code>NULL</code>，可选<code>true</code>或者<code>false</code>。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.tags.props.nullValue</code></td>
+<td align="left"><code>""</code></td>
+<td align="left">否</td>
+<td align="left"><code>nullable</code>设置为<code>true</code>时，属性的值与<code>nullValue</code>相等则将该属性值设置为<code>NULL</code>。</td>
 </tr>
 </tbody>
 </table>
@@ -8245,7 +8264,7 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>

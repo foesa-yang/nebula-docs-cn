@@ -4134,6 +4134,13 @@
       
         <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
+    权限说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
     常见问题
   </a>
   
@@ -4169,21 +4176,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     主从集群的机器数量、副本数量、分片数量需要相同吗？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     如果同步时出现故障，如何修复？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     如何判断数据同步进度？
   </a>
   
@@ -7671,6 +7678,13 @@
       
         <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
+    权限说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
     常见问题
   </a>
   
@@ -7706,21 +7720,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     主从集群的机器数量、副本数量、分片数量需要相同吗？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     如果同步时出现故障，如何修复？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     如何判断数据同步进度？
   </a>
   
@@ -7802,6 +7816,12 @@
 </ul>
 <ul>
 <li>从集群中数据如果不为空，数据同步时可能会导致数据冲突或者数据不一致。建议保持从集群数据为空。</li>
+</ul>
+<ul>
+<li>建议使用具备 God 权限的<code>root</code>用户进行集群数据同步操作。集群同步操作中各命令需要的用户角色权限不同，详情参见文末的<strong>权限说明</strong>。</li>
+</ul>
+<ul>
+<li>在数据同步期间，请勿同时在主集群进行数据恢复（备份恢复和快照恢复）操作，否则数据同步将失败。</li>
 </ul>
 <h2 id="_5">操作步骤<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="_6">准备工作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
@@ -7943,6 +7963,10 @@ nebula&gt; SHOW DRAINER CLIENTS;
 | &quot;DRAINER&quot; | &quot;192.168.10.104&quot; | 9889 |
 +-----------+------------------+------+
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>注册多个 drainer 服务的命令示例：<code>SIGN IN DRAINER SERVICE(192.168.8.x:9889),(192.168.8.x:9889)</code></p>
+</div>
 </li>
 <li>
 <p>设置 listener 服务。</p>
@@ -7971,6 +7995,10 @@ nebula&gt; SHOW LISTENER SYNC;
 | 15     | &quot;SYNC&quot; | &quot;&quot;192.168.10.103&quot;:9789&quot; | &quot;replication_basketballplayer&quot; | &quot;ONLINE&quot; |
 +--------+--------+------------------------+--------------------------------+----------+
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>添加多个 Storage listener 服务的命令示例：<code>ADD LISTENER SYNC META 192.168.10.xxx:9569 STORAGE 192.168.10.xxx:9789,192.168.10.xxx:9789 TO SPACE replication_basketballplayer</code></p>
+</div>
 </li>
 <li>
 <p>登录从集群，创建图空间<code>replication_basketballplayer</code>。</p>
@@ -7990,6 +8018,10 @@ nebula&gt; SHOW DRAINERS;
 | &quot;&quot;192.168.10.104&quot;:9889&quot; | &quot;ONLINE&quot; |
 +-------------------------+----------+
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>添加多个 drainer 服务的命令示例：<code>ADD DRAINER 192.168.8.x:9889,192.168.8.x:9889</code></p>
+</div>
 </li>
 <li>
 <p>修改图空间<code>replication_basketballplayer</code>为只读。</p>
@@ -8007,10 +8039,8 @@ nebula&gt; GET VARIABLES read_only;
 | &quot;read_only&quot; | &quot;bool&quot; | true  |
 +-------------+--------+-------+
 </code></pre></div>
-</li>
-</ol>
 <h3 id="3">3.验证数据<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<ol>
+</li>
 <li>
 <p>登录主集群，创建 Schema，插入数据。</p>
 <div class="highlight"><pre><span></span><code>nebula&gt; USE basketballplayer;
@@ -8265,7 +8295,79 @@ nebula&gt; ADD LISTENER SYNC META 192.168.10.105:9569 STORAGE 192.168.10.105:978
 <p>至此主从集群切换完成。</p>
 </li>
 </ol>
-<h2 id="_13">常见问题<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h2 id="_13">权限说明<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>集群同步操作中各命令需要的用户角色权限不同，不同命令所需的角色权限如下（打勾代表有权限）。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>God</th>
+<th>Admin</th>
+<th>DBA</th>
+<th>User</th>
+<th>Guest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SIGN IN / SIGN OUT DRAINER SERVICE</code></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADD / REMOVE LISTENER SYNC</code></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>SHOW DRAINER CLIENTS</code></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td><code>SHOW LISTENER SYNC</code></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td><code>ADD / REMOVE DRAINER</code></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>SET VARIABLES read_only</code></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>SHOW DRAINERS</code></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">常见问题<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <h3 id="data_data">主集群中已经有 data 了，从集群可以同步到之前的存量 data 吗？<a class="headerlink" href="#data_data" title="Permanent link">&para;</a></h3>
 <p>可以。对于主集群中的存量 data，主集群的 listener 会从各个分片的 leader 节点拉取快照，然后以 WAL 的形式发送给 drainer。存量 data 相关的 WAL 发送完毕后，开始发送主集群的增量 data 相关的 WAL 给 drainer。</p>
 <h3 id="data">从集群中已经有 data 了，数据同步会有影响吗？<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
@@ -8274,15 +8376,15 @@ nebula&gt; ADD LISTENER SYNC META 192.168.10.105:9569 STORAGE 192.168.10.105:978
 <p>数据同步时主集群中的 Schema 会覆盖从集群中的 Schema，因此可能导致被覆盖的 Schema 对应的数据失效或者数据不一致。请确保从集群中的 Schema 和主集群中的 Schema 没有冲突。</p>
 <h3 id="schema_1">修改主集群的 Schema 会影响数据同步吗？<a class="headerlink" href="#schema_1" title="Permanent link">&para;</a></h3>
 <p>可能会增加数据同步延迟。因为 Schema 数据和 data 数据是分开处理的（Meta listener 和 Storage listener），data 数据同步时，drainer 会检查自身的 Schema 版本，如果版本大于当前存储的版本，说明 Schema 有更新，这时候会暂缓更新，等待从集群中的 Schema 数据先更新完成。</p>
-<h3 id="_14">主从集群的机器数量、副本数量、分片数量需要相同吗？<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_15">主从集群的机器数量、副本数量、分片数量需要相同吗？<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>不需要。因为是以图空间为基本单位，主集群不需要知道从集群的架构信息，只需要 listener 将 WAL 发送给 drainer 即可。</p>
-<h3 id="_15">如果同步时出现故障，如何修复？<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_16">如果同步时出现故障，如何修复？<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>可以根据故障节点，进行如下处理：</p>
 <ul>
 <li>主集群故障：会导致同步暂停，重启主集群服务即可。</li>
 <li>listener/drainer/从集群故障：服务恢复后，会收到前一节点发送的故障期间的 WAL。例如 drainer 故障恢复后，会收到 listener 发送来的故障期间的 WAL。如果用新的节点替换故障的 drainer 节点或从集群，需要将原节点的数据复制到新节点，否则相当于重新同步全量数据。</li>
 </ul>
-<h3 id="_16">如何判断数据同步进度？<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_17">如何判断数据同步进度？<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>用户可以执行<code>SHOW SYNC STATUS</code>查看主集群发送数据的状态，执行<code>SHOW DRAINER SYNC STATUS</code>查看从集群接收数据的状态。如果同时满足主集群中的所有数据都发送成功，并且从集群成功接收所有数据，则说明数据同步完成。</p>
 <h3 id="wal">WAL 日志文件过期了对集群数据同步有影响吗？<a class="headerlink" href="#wal" title="Permanent link">&para;</a></h3>
 <p>如果 WAL 日志文件过期了（超过了<code>--wal-ttl</code>设置的时间），数据会不同步。用户可以通过手动在 Meta 和 Storage 服务的配置文件中添加<code>--snapshot_send_files=false</code>配置以同步数据。更新文件中的配置后，需要重启服务。关于配置文件的详细信息，参见<a href="../../5.configurations-and-logs/1.configurations/1.configurations/">配置文件简介</a>。</p>
@@ -8292,7 +8394,7 @@ nebula&gt; ADD LISTENER SYNC META 192.168.10.105:9569 STORAGE 192.168.10.105:978
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>

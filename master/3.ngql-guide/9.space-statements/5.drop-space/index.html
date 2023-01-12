@@ -7448,7 +7448,11 @@
 <p><code>DROP SPACE</code>语句用于删除指定图空间以及其中的所有信息。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>DROP SPACE</code>是否删除图空间对应的硬盘数据由 Storage 配置参数 auto_remove_invalid_space 决定。auto_remove_invalid_space 的默认值为<code>true</code>，表示会删除数据。如需在删除逻辑图空间时保留硬盘数据，将 auto_remove_invalid_space 的值修改为<code>false</code>。详情参见 <a href="../../../5.configurations-and-logs/1.configurations/4.storage-config/">Storage 服务配置</a>。</p>
+<p><code>DROP SPACE</code>是否删除图空间对应的硬盘数据由 Storage 配置参数<code>auto_remove_invalid_space</code>决定。<code>auto_remove_invalid_space</code>的默认值为<code>true</code>，表示会删除数据。如需在删除逻辑图空间时保留硬盘数据，将<code>auto_remove_invalid_space</code>的值修改为<code>false</code>。详情参见 <a href="../../../5.configurations-and-logs/1.configurations/4.storage-config/">Storage 服务配置</a>。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>执行<code>DROP SPACE</code>后，即使快照中存在该图空间的数据，该图空间的数据也无法恢复。但是如果<code>auto_remove_invalid_space</code>的值为<code>false</code>时，可联系商务人员恢复数据。</p>
 </div>
 <h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>只有 God 角色的用户可以执行<code>DROP SPACE</code>语句。详情请参见<a href="../../../7.data-security/1.authentication/1.authentication/">身份验证</a>。</p>
@@ -7473,7 +7477,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>

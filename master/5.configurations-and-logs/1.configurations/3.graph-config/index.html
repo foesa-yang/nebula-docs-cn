@@ -3478,6 +3478,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#memory_tracker" class="md-nav__link">
+    memory tracker 配置
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7578,6 +7585,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#memory_tracker" class="md-nav__link">
+    memory tracker 配置
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8007,12 +8021,55 @@
 </table>
 <!-- -->
 
+<h2 id="memory_tracker">memory tracker 配置<a class="headerlink" href="#memory_tracker" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">预设值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>memory_tracker_limit_ratio</code></td>
+<td align="left"><code>0.8</code></td>
+<td align="left">可用内存的百分比，当可用内存低于该值时，NebulaGraph 会停止接受查询。<br/>计算公式：可用内存/(总内存 - 保留内存)。<br/> <strong>注意</strong>：对于混合部署的集群，需要根据实际情况<strong>调小</strong>该参数。例如，当预期 Graphd 只占用 50% 的内存时，该参数的值可设置为小于<code>0.5</code>。</td>
+</tr>
+<tr>
+<td align="left"><code>memory_tracker_untracked_reserved_memory_mb</code></td>
+<td align="left"><code>50</code></td>
+<td align="left">保留内存的大小，单位：MB。</td>
+</tr>
+<tr>
+<td align="left"><code>memory_tracker_detail_log</code></td>
+<td align="left"><code>false</code></td>
+<td align="left">是否定期生成较详细的内存跟踪日志。当值为<code>true</code>时，会定期生成内存跟踪日志。</td>
+</tr>
+<tr>
+<td align="left"><code>memory_tracker_detail_log_interval_ms</code></td>
+<td align="left"><code>60000</code></td>
+<td align="left">内存跟踪日志的生成时间间隔，单位：毫秒。仅当<code>memory_tracker_detail_log</code>为<code>true</code>时，该参数生效。</td>
+</tr>
+<tr>
+<td align="left"><code>memory_purge_enabled</code></td>
+<td align="left"><code>true</code></td>
+<td align="left">是否定期开启内存清理功能。当值为<code>true</code>时，会定期清理内存。</td>
+</tr>
+<tr>
+<td align="left"><code>memory_purge_interval_seconds</code></td>
+<td align="left"><code>10</code></td>
+<td align="left">内存清理的时间间隔，单位：秒。<code>memory_purge_enabled</code>为<code>true</code>时，该参数生效。</td>
+</tr>
+</tbody>
+</table>
+
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>

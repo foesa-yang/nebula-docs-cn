@@ -7760,6 +7760,7 @@ OPTION = { READ | WRITE }
 <li>默认 Basic 角色无任何 Tag/Edge 读写权限。</li>
 <li>只有 GOD 和 ADMIN 角色用户能执行授权（GRANT）和撤销权限（REVOKE）操作。</li>
 <li>只允许用户在指定图空间对 Basic 角色进行授权（GRANT）和撤销权限（REVOKE）操作，不允许授权给其他角色用户。</li>
+<li>Basic 角色不允许插入无 Tag 的点。</li>
 </ul>
 <h3 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code># 创建 test 用户
@@ -7805,7 +7806,7 @@ nebula&gt; SHOW GRANTS test
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2023</span>
       
     
   </small>

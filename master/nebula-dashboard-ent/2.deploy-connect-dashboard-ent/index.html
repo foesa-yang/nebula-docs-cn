@@ -7863,6 +7863,14 @@ $<span class="w"> </span>sudo<span class="w"> </span>/dashboard/scripts/dashboar
 </code></pre></div>
 </li>
 <li>
+<p>拷贝 License 至<code>nebula-dashboard-ent</code>目录下。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>&lt;license&gt;<span class="w"> </span>&lt;dashboard_path&gt;
+</code></pre></div>
+<p>例如：
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>nebula.license<span class="w"> </span>/usr/local/nebula-dashboard-ent
+</code></pre></div></p>
+</li>
+<li>
 <p>（可选）使用以下命令查看所有服务状态、启动服务。</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl list-dependencies nebula-dashboard.target  # 查看状态
 sudo systemctl start nebula-dashboard.target   # 启动服务
@@ -7930,6 +7938,14 @@ ldap:
 </div>
 </li>
 <li>
+<p>拷贝 License 至<code>nebula-dashboard-ent</code>目录下。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>&lt;license&gt;<span class="w"> </span>&lt;dashboard_path&gt;
+</code></pre></div>
+<p>例如：
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>nebula.license<span class="w"> </span>/usr/local/nebula-dashboard-ent
+</code></pre></div></p>
+</li>
+<li>
 <p>（可选）使用以下命令查看所有服务状态、启动服务。</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl list-dependencies nebula-dashboard.target  # 查看状态
 sudo systemctl start nebula-dashboard.target   # 启动服务
@@ -7974,7 +7990,7 @@ system:
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>

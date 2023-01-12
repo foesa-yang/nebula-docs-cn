@@ -7578,6 +7578,10 @@ nebula&gt; SHOW SNAPSHOTS;
 +--------------------------------+---------+------------------+
 </code></pre></div>
 <h2 id="_8">恢复快照<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>恢复快照数据时，如果快照中备份的图空间被删除（执行了<code>DROP SPACE</code>操作），那么该图空间数据将无法恢复。</p>
+</div>
 <p>当前未提供恢复快照命令，需要手动拷贝快照文件到对应的文件夹内，也可以通过 shell 脚本进行操作。实现逻辑如下：</p>
 <ol>
 <li>
@@ -7610,7 +7614,7 @@ SNAPSHOT_2021_03_09_09_10_52
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
       
     
   </small>
