@@ -7444,10 +7444,12 @@
 <ul>
 <li>
 <p>终止单个会话</p>
-<p><div class="highlight"><pre><span></span><code>KILL {SESSION|SESSIONS} &lt;SessionId&gt;
+<div class="highlight"><pre><span></span><code>KILL {SESSION|SESSIONS} &lt;SessionId&gt;
 </code></pre></div>
-- <code>{SESSION|SESSIONS}</code>：支持<code>SESSION</code>和<code>SESSIONS</code>的写法。
-- <code>&lt;SessionId&gt;</code>：指会话 Session 的 ID。可执行 <a href="../../7.general-query-statements/6.show/17.show-sessions/">SHOW SESSIONS 命令</a>查看会话 ID。</p>
+<ul>
+<li><code>{SESSION|SESSIONS}</code>：支持<code>SESSION</code>和<code>SESSIONS</code>的写法。</li>
+<li><code>&lt;SessionId&gt;</code>：指会话 Session 的 ID。可执行 <a href="../../7.general-query-statements/6.show/17.show-sessions/">SHOW SESSIONS 命令</a>查看会话 ID。</li>
+</ul>
 </li>
 </ul>
 <ul>
@@ -7525,7 +7527,7 @@ nebula&gt; SHOW SESSIONS | KILL SESSIONS $-.SessionId
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
       
     
   </small>
