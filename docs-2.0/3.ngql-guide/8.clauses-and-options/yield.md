@@ -123,6 +123,16 @@ nebula> $var1 = GO FROM "player101" OVER follow \
 | "player100" |
 | "player125" |
 +-------------+
+
+# 查找 player 的年龄大于 40 的所有属性，返回去掉重复属性的值。
+nebula> LOOKUP ON player \
+        WHERE player.age>40 \
+        YIELD DISTINCT keys(vertex) as p;
++-----------------+
+| p               |
++-----------------+
+| ["age", "name"] |
++-----------------+
 ```
 
 ### 独立使用 YIELD 语句
