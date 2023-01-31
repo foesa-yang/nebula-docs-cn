@@ -248,6 +248,12 @@ schema:
   vertex:
     vid:
       index: 1
+      concatItems: # "c1{index0}c2{index1}2"
+        - "c1"
+        - 0
+        - c2
+        - 1
+        - "2"
       function: hash
       prefix: abc
     tags:
@@ -274,6 +280,7 @@ schema:
 |:---|:---|:---|:---|
 |`files.schema.type`|-|是|Schema 的类型，可选值为`vertex`和`edge`。|
 |`files.schema.vertex.vid.index`|-|否|点 ID 对应 CSV 文件中列的序号。|
+|`files.schema.vertex.vid.concatItem`|-|否|用于连接两个或多个数组，连接项可以是`string`、`int`或者混合。`string`代表常量，`int`表示索引列。如果设置了`concatItem`，`index`参数将不生效。|
 |`files.schema.vertex.vid.function`|-|否|生成 VID 的函数。目前，我们只支持 `hash` 函数。|
 |`files.schema.vertex.vid.type`|-|否|点 ID 的数据类型，可选值为`int`和`string`。|
 |`files.schema.vertex.vid.prefix`|-|否|给 原始vid 添加的前缀，当同时指定了 `function` 时, 生成 VID 的方法是先添加 `prefix` 前缀, 再用 `function`生成 VID。|
