@@ -290,7 +290,7 @@ schema:
 |`files.schema.vertex.tags.props.index`|-|否|属性对应 CSV 文件中列的序号。|
 |`files.schema.vertex.tags.props.nullable`|`false`|否|属性是否可以为`NULL`，可选`true`或者`false`。|
 |`files.schema.vertex.tags.props.nullValue`|`""`|否|`nullable`设置为`true`时，属性的值与`nullValue`相等则将该属性值设置为`NULL`。|
-|`files.schema.vertex.tags.props.alternativeIndices`|-|否|当 `nullable` 为 `false` 时忽略。该属性根据索引顺序从 csv 中获取，直到不等于 `nullValue`。|
+|`files.schema.vertex.tags.props.alternativeIndices`|-|否|当`nullable`为`false`时忽略。该属性根据索引顺序从 csv 中获取，直到不等于`nullValue`。|
 |`files.schema.vertex.tags.props.defaultValue`|-|否当 `nullable` 为 `false` 时忽略。根据 `index` 和 `alternativeIndices` 获取的所有值为 `nullValue` 时设置默认值。|
 
 !!! note
