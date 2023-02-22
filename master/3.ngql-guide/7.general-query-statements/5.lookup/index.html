@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1440,20 +1441,6 @@
     <li class="md-nav__item">
       <a href="../../6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3308,7 +3295,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3322,7 +3309,21 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3889,7 +3890,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4839,7 +4840,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7633,7 +7634,7 @@
 <h2 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>LOOKUP ON {&lt;vertex_tag&gt; | &lt;edge_type&gt;}
 [WHERE &lt;expression&gt; [AND &lt;expression&gt; ...]]
-YIELD &lt;return_list&gt; [AS &lt;alias&gt;]
+YIELD [DISTINCT] &lt;return_list&gt; [AS &lt;alias&gt;]
 [&lt;clause&gt;];
 
 &lt;return_list&gt;
@@ -7644,6 +7645,9 @@ YIELD &lt;return_list&gt; [AS &lt;alias&gt;]
 </ul>
 <ul>
 <li><code>YIELD</code>：定义需要返回的输出。详情请参见 <a href="../../8.clauses-and-options/yield/"><code>YIELD</code></a>。</li>
+</ul>
+<ul>
+<li><code>DISTINCT</code>：聚合输出结果，返回去重后的结果集。</li>
 </ul>
 <ul>
 <li><code>AS</code>：设置别名。</li>
@@ -7883,7 +7887,7 @@ nebula&gt; LOOKUP ON follow YIELD edge AS e| \
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
       
     
   </small>

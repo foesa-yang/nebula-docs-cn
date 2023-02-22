@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -721,26 +722,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    使用 systemd 管理服务
-  </a>
-  
-    <nav class="md-nav" aria-label="使用 systemd 管理服务">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    语法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#nebulagraph" class="md-nav__link">
     启动 NebulaGraph 服务
   </a>
@@ -762,7 +743,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     下一步
   </a>
   
@@ -1544,20 +1525,6 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3313,7 +3280,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3327,7 +3294,21 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3894,7 +3875,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4844,7 +4825,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7541,26 +7522,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    使用 systemd 管理服务
-  </a>
-  
-    <nav class="md-nav" aria-label="使用 systemd 管理服务">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    语法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#nebulagraph" class="md-nav__link">
     启动 NebulaGraph 服务
   </a>
@@ -7582,7 +7543,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     下一步
   </a>
   
@@ -7610,17 +7571,6 @@
 
 <h1 id="2_nebulagraph">步骤 2：启动 NebulaGraph 服务<a class="headerlink" href="#2_nebulagraph" title="Permanent link">&para;</a></h1>
 <p>NebulaGraph 支持通过脚本管理服务。</p>
-<!-- -->
-
-<div class="admonition enterpriseonly">
-<p class="admonition-title">Enterpriseonly</p>
-<p>企业版还支持使用 systemd 管理服务。</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>这两种方式互不兼容，选择使用其中一种。</p>
-</div>
-<!-- -->
 <h2 id="_1">使用脚本管理服务<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>使用脚本<code>nebula.service</code>管理服务，包括启动、停止、重启、中止和查看。</p>
 <div class="admonition note">
@@ -7687,68 +7637,6 @@
 </tr>
 </tbody>
 </table>
-<!-- -->
-<h2 id="systemd">使用 systemd 管理服务<a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h2>
-<p>为方便使用，NebulaGraph 企业版支持用 systemd 管理服务，通过<code>systemctl</code>启动、停止、重启和查看服务。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>安装 NebulaGraph 企业版后，systemd 所需的<code>.service</code>文件在安装目录的<code>etc/unit</code>目录内，使用 RPM/DEB 包安装的 NebulaGraph，会自动将这些<code>.service</code>文件放入<code>/usr/lib/systemd/system</code>目录内，并且<code>ExecStart</code>也会根据指定的 NebulaGraph 安装路径进行生成，因此可以直接使用<code>systemctl</code>命令。</li>
-</ul>
-<ul>
-<li>对于使用企业版 Dashboard 安装的企业版 NebulaGraph，不支持使用<code>systemctl</code>管理服务。</li>
-</ul>
-<ul>
-<li>对于其他方式安装的企业版 NebulaGraph，需要用户手动将<code>.service</code>文件移动到<code>/usr/lib/systemd/system</code>目录内，并修改<code>.service</code>文件内的<code>ExecStart</code>的文件路径，才可以正常使用<code>systemctl</code>命令。</li>
-</ul>
-</div>
-<h3 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span>&lt;start<span class="w"> </span><span class="p">|</span><span class="w"> </span>stop<span class="w"> </span><span class="p">|</span><span class="w"> </span>restart<span class="w"> </span><span class="p">|</span><span class="w"> </span>status<span class="w"> </span>&gt;<span class="w"> </span>&lt;nebula<span class="w"> </span><span class="p">|</span><span class="w"> </span>nebula-metad<span class="w"> </span><span class="p">|</span><span class="w"> </span>nebula-graphd<span class="w"> </span><span class="p">|</span><span class="w"> </span>nebula-storaged&gt;
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>start</code></td>
-<td align="left">启动服务。</td>
-</tr>
-<tr>
-<td align="left"><code>stop</code></td>
-<td align="left">停止服务。</td>
-</tr>
-<tr>
-<td align="left"><code>restart</code></td>
-<td align="left">重启服务。</td>
-</tr>
-<tr>
-<td align="left"><code>status</code></td>
-<td align="left">查看服务状态。</td>
-</tr>
-<tr>
-<td align="left"><code>nebula</code></td>
-<td align="left">管理所有服务。</td>
-</tr>
-<tr>
-<td align="left"><code>nebula-metad</code></td>
-<td align="left">管理 Meta 服务。</td>
-</tr>
-<tr>
-<td align="left"><code>nebula-graphd</code></td>
-<td align="left">管理 Graph 服务。</td>
-</tr>
-<tr>
-<td align="left"><code>nebula-storaged</code></td>
-<td align="left">管理 Storage 服务。</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-
 <h2 id="nebulagraph">启动 NebulaGraph 服务<a class="headerlink" href="#nebulagraph" title="Permanent link">&para;</a></h2>
 <p>执行如下命令启动服务：</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>/usr/local/nebula/scripts/nebula.service<span class="w"> </span>start<span class="w"> </span>all
@@ -7759,15 +7647,6 @@
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>nebula-storaged...
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Done
 </code></pre></div>
-<!-- -->
-<p>或者：</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nebula
-</code></pre></div>
-<p>如果需要设置开机自动启动，命令如下：</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nebula
-</code></pre></div>
-<!-- -->
-
 <h2 id="nebulagraph_1">停止 NebulaGraph 服务<a class="headerlink" href="#nebulagraph_1" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -7782,12 +7661,6 @@
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Stopping<span class="w"> </span>nebula-storaged...
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Done
 </code></pre></div>
-<!-- -->
-<p>或者：</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>nebula
-</code></pre></div>
-<!-- -->
-
 <h2 id="nebulagraph_2">查看 NebulaGraph 服务<a class="headerlink" href="#nebulagraph_2" title="Permanent link">&para;</a></h2>
 <p>执行如下命令查看 NebulaGraph 服务状态：</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>/usr/local/nebula/scripts/nebula.service<span class="w"> </span>status<span class="w"> </span>all
@@ -7814,28 +7687,8 @@
 </code></pre></div>
 </li>
 </ul>
-<!-- -->
-<p>也可以使用<code>systemctl</code>命令查看 NebulaGraph 服务状态：</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nebula
-●<span class="w"> </span>nebula.service
-<span class="w">   </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/usr/lib/systemd/system/nebula.service<span class="p">;</span><span class="w"> </span>disabled<span class="p">;</span><span class="w"> </span>vendor<span class="w"> </span>preset:<span class="w"> </span>disabled<span class="o">)</span>
-<span class="w">   </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>exited<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>一<span class="w"> </span><span class="m">2022</span>-03-28<span class="w"> </span><span class="m">04</span>:13:24<span class="w"> </span>UTC<span class="p">;</span><span class="w"> </span>1h<span class="w"> </span>47min<span class="w"> </span>ago
-<span class="w">  </span>Process:<span class="w"> </span><span class="m">21772</span><span class="w"> </span><span class="nv">ExecStart</span><span class="o">=</span>/usr/local/ent-nightly/scripts/nebula.service<span class="w"> </span>start<span class="w"> </span>all<span class="w"> </span><span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited,<span class="w"> </span><span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
-<span class="w"> </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">21772</span><span class="w"> </span><span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited,<span class="w"> </span><span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
-<span class="w">    </span>Tasks:<span class="w"> </span><span class="m">325</span>
-<span class="w">   </span>Memory:<span class="w"> </span><span class="m">424</span>.5M
-<span class="w">   </span>CGroup:<span class="w"> </span>/system.slice/nebula.service
-<span class="w">           </span>├─21789<span class="w"> </span>/usr/local/ent-nightly/bin/nebula-metad<span class="w"> </span>--flagfile<span class="w"> </span>/usr/local/ent-nightly/etc/nebula-metad.conf
-<span class="w">           </span>├─21827<span class="w"> </span>/usr/local/ent-nightly/bin/nebula-graphd<span class="w"> </span>--flagfile<span class="w"> </span>/usr/local/ent-nightly/etc/nebula-graphd.conf
-<span class="w">           </span>└─21900<span class="w"> </span>/usr/local/ent-nightly/bin/nebula-storaged<span class="w"> </span>--flagfile<span class="w"> </span>/usr/local/ent-nightly/etc/nebula-storaged.conf
-
-3月<span class="w"> </span><span class="m">28</span><span class="w"> </span><span class="m">04</span>:13:24<span class="w"> </span>xxxxxx<span class="w"> </span>systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Started<span class="w"> </span>nebula.service.
-...
-</code></pre></div>
-<!-- -->
-
 <p>NebulaGraph 服务由 Meta 服务、Graph 服务和 Storage 服务共同提供，这三种服务的配置文件都保存在安装目录的<code>etc</code>目录内，默认路径为<code>/usr/local/nebula/etc/</code>，用户可以检查相应的配置文件排查问题。</p>
-<h2 id="_4">下一步<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">下一步<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.nebula-graph.com.cn/3.4.0/2.quick-start/3.quick-start-on-premise/3.connect-to-nebula-graph/">连接 NebulaGraph</a><!--这里用外链。--></li>
 </ul>

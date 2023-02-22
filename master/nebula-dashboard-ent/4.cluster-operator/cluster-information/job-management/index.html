@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3207,7 +3194,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3221,7 +3208,21 @@
   
     <li class="md-nav__item">
       <a href="../../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3788,7 +3789,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4738,7 +4739,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -5121,27 +5122,34 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    入口
+    前提条件
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    查看作业
+    入口
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    停止作业
+    查看作业
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    停止作业
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     重新执行作业
   </a>
   
@@ -7484,27 +7492,34 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    入口
+    前提条件
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    查看作业
+    入口
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    停止作业
+    查看作业
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    停止作业
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     重新执行作业
   </a>
   
@@ -7536,7 +7551,9 @@
 <p class="admonition-title">Note</p>
 <p>如何执行作业，请参见<a href="../../../../3.ngql-guide/4.job-statements/">作业管理</a>。</p>
 </div>
-<h2 id="_2">入口<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">前提条件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>NebulaGraph 集群版本需要为企业版 3.4.0 及以上或 NebulaGraph 社区版 3.3.0 及以上。</p>
+<h2 id="_3">入口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ol>
 <li>在 Dashboard 企业版顶部导航栏，单击<strong>集群管理</strong>。</li>
 <li>单击目标集群右侧<strong>详情</strong>。</li>
@@ -7544,7 +7561,7 @@
 <li>选择任意一个在线的 Graph 服务地址，输入登录 NebulaGraph 的账号（非 Dashboard 登录账号）和对应密码。</li>
 <li>在左上角选择目标图空间。</li>
 </ol>
-<h2 id="_3">查看作业<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">查看作业<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>选择图空间后，页面会默认展示所有未过期的作业信息。用户可以通过上方筛选框快速查找作业。方法如下：</p>
 <ul>
 <li>选择作业状态进行筛选。状态包括<code>QUEUE</code>、<code>RUNNING</code>、<code>FINISHED</code>、<code>FAILED</code>、<code>STOPPED</code>、<code>SUCCEEDED</code>。状态说明请参见<a href="../../../../3.ngql-guide/4.job-statements/">作业管理</a>。</li>
@@ -7553,9 +7570,9 @@
 <li>页面的作业数据默认不自动更新，可以调整<strong>更新频率</strong>让页面自动更新，也可以单击<img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" />按钮手动更新。</li>
 <li>在目标作业右侧的<code>操作</code>列单击<code>详情</code>，可以查看更多详细信息，包括<code>任务 ID</code>、<code>Host</code>、<code>错误码</code>等。</li>
 </ul>
-<h2 id="_4">停止作业<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">停止作业<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>在目标作业右侧的<code>操作</code>列单击<code>停止作业</code>，可以停止未完成的作业，点击后该作业状态变为<code>STOPPED</code>。</p>
-<h2 id="_5">重新执行作业<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">重新执行作业<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>在目标作业右侧的<code>操作</code>列单击<code>重新执行</code>，可以重新执行状态为<code>FAILED</code>、<code>STOPPED</code>的作业，点击后该作业状态变为<code>RUNNING</code>。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7570,7 +7587,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2023</span>
       
     
   </small>

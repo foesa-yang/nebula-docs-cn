@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3207,7 +3194,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3221,7 +3208,21 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3788,7 +3789,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4738,7 +4739,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -6544,13 +6545,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#nebulagraph_1" class="md-nav__link">
-    NebulaGraph 源特有参数
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -6579,7 +6573,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nebulagraph_2" class="md-nav__link">
+  <a href="#nebulagraph_1" class="md-nav__link">
     NebulaGraph 源特有参数
   </a>
   
@@ -7738,13 +7732,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#nebulagraph_1" class="md-nav__link">
-    NebulaGraph 源特有参数
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7773,7 +7760,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nebulagraph_2" class="md-nav__link">
+  <a href="#nebulagraph_1" class="md-nav__link">
     NebulaGraph 源特有参数
   </a>
   
@@ -8239,7 +8226,7 @@
 <td align="left">string</td>
 <td align="left"><code>,</code></td>
 <td align="left">是</td>
-<td align="left">分隔符。默认值为英文逗号（,）。</td>
+<td align="left">分隔符。默认值为英文逗号（,）。对于特殊字符，如控制符<code>^A</code>,可以用 ASCII 八进制<code>\001</code>或 UNICODE 编码十六进制<code>\u0001</code>表示，控制符<code>^B</code>，用 ASCII 八进制<code>\002</code>或 UNICODE 编码十六进制<code>\u0002</code>表示，控制符<code>^C</code>，用 ASCII 八进制<code>\003</code>或 UNICODE 编码十六进制<code>\u0003</code>表示。</td>
 </tr>
 <tr>
 <td align="left"><code>tags.header</code></td>
@@ -8719,48 +8706,6 @@
 </tr>
 </tbody>
 </table>
-<!-- -->
-<h3 id="nebulagraph_1">NebulaGraph 源特有参数<a class="headerlink" href="#nebulagraph_1" title="Permanent link">&para;</a></h3>
-<div class="admonition enterpriseonly">
-<p class="admonition-title">Enterpriseonly</p>
-<p>NebulaGraph 源特有参数用于导出 NebulaGraph 数据，仅企业版 Exchange 支持。</p>
-</div>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">数据类型</th>
-<th align="left">默认值</th>
-<th align="left">是否必须</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>tags.path</code></td>
-<td align="left">string</td>
-<td align="left"><code>"hdfs://namenode:9000/path/vertex"</code></td>
-<td align="left">是</td>
-<td align="left">指定 CSV 文件的存储路径。设置的路径必须不存在，Exchange 会自动创建该路径。存储到 HDFS 服务器时路径格式同默认值，例如<code>"hdfs://192.168.8.177:9000/vertex/player"</code>。存储到本地时路径格式为<code>"file:///path/vertex"</code>，例如<code>"file:///home/nebula/vertex/player"</code>。有多个 Tag 时必须为每个 Tag 设置不同的目录。</td>
-</tr>
-<tr>
-<td align="left"><code>tags.noField</code></td>
-<td align="left">bool</td>
-<td align="left"><code>false</code></td>
-<td align="left">是</td>
-<td align="left">当值为<code>true</code>时，仅导出 VID 而不导出属性数据；当值为<code>false</code>时导出 VID 和属性数据。</td>
-</tr>
-<tr>
-<td align="left"><code>tags.return.fields</code></td>
-<td align="left">list</td>
-<td align="left"><code>[]</code></td>
-<td align="left">是</td>
-<td align="left">指定要导出的属性。例如，要导出<code>name</code>和<code>age</code>属性，需将参数值设置为<code>["name","age"]</code>。该参数仅在<code>tags.noField</code>的值为<code>false</code>时生效。</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-
 <h2 id="_4">边配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>对于不同的数据源，边的配置也有所不同，有很多通用参数，也有部分特有参数，配置时需要配置通用参数和不同数据源的特有参数。</p>
 <p>边配置的不同数据源特有参数请参见上方点配置内的特有参数介绍，注意区分 tags 和 edges 即可。</p>
@@ -8876,7 +8821,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="nebulagraph_2">NebulaGraph 源特有参数<a class="headerlink" href="#nebulagraph_2" title="Permanent link">&para;</a></h3>
+<h3 id="nebulagraph_1">NebulaGraph 源特有参数<a class="headerlink" href="#nebulagraph_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -8917,7 +8862,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2023</span>
       
     
   </small>

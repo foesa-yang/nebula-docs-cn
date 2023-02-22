@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3207,7 +3194,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3221,7 +3208,21 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3788,7 +3789,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4738,7 +4739,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7669,6 +7670,10 @@
 <ul>
 <li>邀请（LDAP 或 OAuth2.0 账户）：设置被邀请人的账号类型、企业邮箱和角色。被邀请人单击邮件中的 <strong>Accept</strong> 按钮激活账户后，然后单击<strong>登录</strong>自动跳转至 Dashboard 企业版登录页面。被邀请人使用企业邮箱账号和邮箱密码即可登录 Dashboard 企业版。</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>开启 LDAP 后还支持自动注册。在登录页面选择 LDAP 方式输入未注册账号登录时，Dashboard 会自动注册该账号，但是角色权限为<code>user</code>。</p>
+</div>
 <ul>
 <li>创建账户（普通账户）：设置新账户的登录名称、密码、角色。关于角色的详情，参见上文。</li>
 </ul>
@@ -7702,7 +7707,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
       
     
   </small>

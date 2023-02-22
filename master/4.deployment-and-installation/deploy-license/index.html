@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3285,7 +3272,7 @@
   
     <li class="md-nav__item">
       <a href="../3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3299,7 +3286,21 @@
   
     <li class="md-nav__item">
       <a href="../3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3866,7 +3867,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4816,7 +4817,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7686,8 +7687,16 @@
 </ol>
 <h2 id="nebulagraph_license_3">续期 NebulaGraph 企业版 License<a class="headerlink" href="#nebulagraph_license_3" title="Permanent link">&para;</a></h2>
 <ol>
-<li>发送邮件至<code>inqury@vesoft.com</code>申请新的 NebulaGraph 企业版 License。</li>
-<li>在所有包含 Meta 服务的机器上，路径为每个 Meta 服务安装目录的<code>share/resources/</code>内，使用新的 License 文件<code>nebula.license</code>替换旧的 License 文件。</li>
+<li>
+<p>发送邮件至<code>inqury@vesoft.com</code>申请新的 NebulaGraph 企业版 License。</p>
+</li>
+<li>
+<p>在所有包含 Meta 服务的机器上，路径为每个 Meta 服务安装目录的<code>share/resources/</code>内，使用新的 License 文件<code>nebula.license</code>替换旧的 License 文件。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>建议使用<code>cp</code>、<code>scp</code>命令替换 License 文件或使用 vi 等工具编辑原文件的内容实现替换。如果使用<code>mv</code>命令，替换后需要重启所有 Meta 服务器。</p>
+</div>
+</li>
 <li>
 <p>重启 Storage 和 Graph 服务。关于重启操作，参见<a href="../manage-service/">启动服务</a>。如果用户的 License 的过期时间在到期后的缓冲期内（默认 14 天），则无需重启 Storage 和 Graph 服务。</p>
 <div class="admonition note">
@@ -7717,7 +7726,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 1, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2023</span>
       
     
   </small>

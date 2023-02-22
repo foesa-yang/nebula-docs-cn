@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3207,7 +3194,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3221,7 +3208,21 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3788,7 +3789,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4738,7 +4739,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7440,13 +7441,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    单进程指标
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -8033,45 +8027,6 @@
 </tr>
 </tbody>
 </table>
-<!-- -->
-
-<h3 id="_2">单进程指标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>Graph、Meta 和 Storage 服务都有自身的单进程指标。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>context_switches_total</code></td>
-<td>上下文切换数量。</td>
-</tr>
-<tr>
-<td><code>cpu_seconds_total</code></td>
-<td>基于用户时间和系统时间的 CPU 使用量。</td>
-</tr>
-<tr>
-<td><code>memory_bytes_gauge</code></td>
-<td>使用的内存字节数。</td>
-</tr>
-<tr>
-<td><code>open_filedesc_gauge</code></td>
-<td>文件描述符的数量。</td>
-</tr>
-<tr>
-<td><code>read_bytes_total</code></td>
-<td>读取的字节数量。</td>
-</tr>
-<tr>
-<td><code>write_bytes_total</code></td>
-<td>写入的字节数量。</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
 
   <hr>
 <div class="md-source-file">

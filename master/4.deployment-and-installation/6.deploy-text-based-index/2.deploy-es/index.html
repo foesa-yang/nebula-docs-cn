@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1440,20 +1441,6 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3340,7 +3327,7 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3354,7 +3341,21 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3921,7 +3922,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4871,7 +4872,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7667,58 +7668,17 @@
 <h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>使用全文索引前，请确认已经了解全文索引的<a href="../1.text-based-index-restrictions/">使用限制</a>。</p>
 <h2 id="elasticsearch">部署 Elasticsearch 集群<a class="headerlink" href="#elasticsearch" title="Permanent link">&para;</a></h2>
-<p>部署 Elasticsearch 集群请参见 <a href="https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-elasticsearch.html">Kubernetes 安装 Elasticsearch</a> 或<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.15/targz.html">单机安装 Elasticsearch</a>。</p>
-<p>当 Elasticsearch 集群启动时，请添加 NebulaGraph 全文索引的模板文件，以下面的模板为例：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>以下模板对应 ES 7.8 版本。ES 的版本不同，索引模板可能也不同。打开 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html">Elasticsearch 官方文档</a> 查看对应 ES 版本使用的索引模板。</p>
+<p>部署 Elasticsearch 集群请参见 <a href="https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-elasticsearch.html">Kubernetes 安装 Elasticsearch</a> 或<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.15/targz.html">单机安装 Elasticsearch</a>。目前仅支持 7.x 版本的 Elasticsearch。</p>
+<div class="admonition compatibility">
+<p class="admonition-title">Compatibility</p>
+<p>NebulaGraph 3.4 及以后，不需要额外创建模板。</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w"> </span><span class="nt">&quot;template&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nebula*&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;number_of_shards&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;number_of_replicas&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;mappings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;tag_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;long&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;column_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyword&quot;</span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>请确保指定的以下字段严格符合上述模板格式：</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;template&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;nebula*&quot;</span>
-<span class="nt">&quot;tag_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;long&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="nt">&quot;column_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyword&quot;</span><span class="p">}</span>
-</code></pre></div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>创建全文索引时，索引名称需要以<code>nebula</code>开头。</p>
+<ul>
+<li>创建全文索引时，索引名称需要以<code>nebula_</code>开头。</li>
+</ul>
 </div>
-<p>示例命令：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json; charset=utf-8&quot;</span><span class="w"> </span>-XPUT<span class="w"> </span>http://127.0.0.1:9200/_template/nebula_index_template<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;</span>
-<span class="s1">{</span>
-<span class="s1"> &quot;template&quot;: &quot;nebula*&quot;,</span>
-<span class="s1">  &quot;settings&quot;: {</span>
-<span class="s1">    &quot;index&quot;: {</span>
-<span class="s1">      &quot;number_of_shards&quot;: 3,</span>
-<span class="s1">      &quot;number_of_replicas&quot;: 1</span>
-<span class="s1">    }</span>
-<span class="s1">  },</span>
-<span class="s1">  &quot;mappings&quot;: {</span>
-<span class="s1">    &quot;properties&quot; : {</span>
-<span class="s1">            &quot;tag_id&quot; : { &quot;type&quot; : &quot;long&quot; },</span>
-<span class="s1">            &quot;column_id&quot; : { &quot;type&quot; : &quot;text&quot; },</span>
-<span class="s1">            &quot;value&quot; :{ &quot;type&quot; : &quot;keyword&quot;}</span>
-<span class="s1">        }</span>
-<span class="s1">  }</span>
-<span class="s1">}&#39;</span>
-</code></pre></div>
 <p>用户可以配置 Elasticsearch 来满足业务需求，如果需要定制 Elasticsearch，请参见 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html">Elasticsearch 官方文档</a>。</p>
 <h2 id="_3">登录文本搜索客户端<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>部署 Elasticsearch 集群之后，可以使用<code>SIGN IN</code>语句登录 Elasticsearch 客户端。必须使用 Elasticsearch 配置文件中的 IP 地址和端口才能正常连接，同时登录多个客户端，请在多个<code>elastic_ip:port</code>之间用英文逗号（,）分隔。</p>
@@ -7731,6 +7691,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Elasticsearch 默认没有用户名和密码，如果设置了用户名和密码，请在<code>SIGN IN</code>语句中指定。</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Elasticsearch 客户端只能登录一次，如有修改，需要<code>SIGN OUT</code>后重新<code>SIGN IN</code>，且客户端对全局生效，多个图空间共享相同的 Elasticsearch 客户端。</p>
 </div>
 <h2 id="_6">显示文本搜索客户端<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p><code>SHOW TEXT SEARCH CLIENTS</code>语句可以列出文本搜索客户端。</p>
@@ -7759,7 +7723,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
       
     
   </small>

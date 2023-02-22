@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1438,20 +1439,6 @@
     <li class="md-nav__item">
       <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3207,7 +3194,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3221,7 +3208,21 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3788,7 +3789,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4738,7 +4739,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -8098,7 +8099,7 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <td align="left"><code>files.csv.delimiter</code></td>
 <td align="left"><code>","</code></td>
 <td align="left">是</td>
-<td align="left">指定 csv 文件的分隔符。只支持一个字符的字符串分隔符。</td>
+<td align="left">指定 csv 文件的分隔符。只支持一个字符的字符串分隔符。使用特殊字符做分隔符时需要进行转义。例如当分隔符为十六进制<code>0x03</code>即<code>Ctrl+C</code>时，转义的写法为：<code>"\x03"</code>或<code>"\u0003"</code>。关于 yaml 格式特殊字符转义的细节请参见<a href="https://yaml.org/spec/1.2.2/#escaped-characters">更多</a>。</td>
 </tr>
 <tr>
 <td align="left"><code>files.csv.lazyQuotes</code></td>
@@ -8119,6 +8120,12 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <span class="w">  </span><span class="nt">vertex</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">vid</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">concatItems</span><span class="p">:</span><span class="w"> </span><span class="c1"># &quot;c1{index0}c2{index1}2&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;c1&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c2</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
 <span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span>
 <span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">abc</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
@@ -8132,13 +8139,20 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <span class="w">            </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gender</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">defaultValue</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;male&quot;</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phone</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">            </span><span class="nt">nullable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wechat</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">            </span><span class="nt">nullable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">            </span><span class="nt">nullValue</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;__NULL__&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">address</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">nullable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">alternativeIndices</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
 </code></pre></div>
 <table>
 <thead>
@@ -8161,6 +8175,12 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <td align="left">-</td>
 <td align="left">否</td>
 <td align="left">点 ID 对应 CSV 文件中列的序号。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.vid.concatItem</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">用于连接两个或多个数组，连接项可以是<code>string</code>、<code>int</code>或者混合。<code>string</code>代表常量，<code>int</code>表示索引列。如果设置了<code>concatItem</code>，<code>index</code>参数将不生效。</td>
 </tr>
 <tr>
 <td align="left"><code>files.schema.vertex.vid.function</code></td>
@@ -8215,6 +8235,18 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
 <td align="left"><code>""</code></td>
 <td align="left">否</td>
 <td align="left"><code>nullable</code>设置为<code>true</code>时，属性的值与<code>nullValue</code>相等则将该属性值设置为<code>NULL</code>。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.tags.props.alternativeIndices</code></td>
+<td align="left">-</td>
+<td align="left">否</td>
+<td align="left">当<code>nullable</code>为<code>false</code>时忽略。该属性根据索引顺序从 csv 中获取，直到不等于<code>nullValue</code>。</td>
+</tr>
+<tr>
+<td align="left"><code>files.schema.vertex.tags.props.defaultValue</code></td>
+<td align="left">-</td>
+<td align="left">否当<code>nullable</code>为<code>false</code>时忽略。根据<code>index</code>和<code>alternativeIndices</code>获取的所有值为<code>nullValue</code>时设置默认值。</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -8334,7 +8366,7 @@ $<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2023</span>
       
     
   </small>

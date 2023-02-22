@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1452,20 +1453,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
@@ -2649,19 +2636,6 @@
     全文索引
   </a>
   
-    <nav class="md-nav" aria-label="全文索引">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    全文索引操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2672,14 +2646,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     没有唯一索引
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     数字、日期和时间类型的范围查询
   </a>
   
@@ -3306,7 +3280,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3320,7 +3294,21 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3887,7 +3875,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4837,7 +4825,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7538,19 +7526,6 @@
     全文索引
   </a>
   
-    <nav class="md-nav" aria-label="全文索引">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    全文索引操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7561,14 +7536,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     没有唯一索引
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     数字、日期和时间类型的范围查询
   </a>
   
@@ -7637,12 +7612,9 @@
 <li><a href="../7.general-query-statements/2.match/">MATCH</a></li>
 </ul>
 <h2 id="_4">全文索引<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>全文索引是基于Elastic Search来实现的，用于对字符串属性进行前缀搜索、通配符搜索、正则表达式搜索和模糊搜索，有如下特点：</p>
+<p>全文索引是基于 Elasticsearch 来实现的，用于对字符串属性进行前缀搜索、通配符搜索、正则表达式搜索和模糊搜索，有如下特点：</p>
 <ul>
 <li>只允许创建一个属性的索引。</li>
-</ul>
-<ul>
-<li>只能创建指定长度（不超过 256 字节）字符串的索引。</li>
 </ul>
 <ul>
 <li>不支持逻辑操作，例如<code>AND</code>、<code>OR</code>、<code>NOT</code>。</li>
@@ -7651,15 +7623,11 @@
 <p class="admonition-title">Note</p>
 <p>如果需要进行整个字符串的匹配，请使用原生索引。</p>
 </div>
-<h3 id="_5">全文索引操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>在对全文索引执行任何操作之前，请确保已经部署全文索引。详情请参见<a href="../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/">部署全文索引</a> 和<a href="../../4.deployment-and-installation/6.deploy-text-based-index/3.deploy-listener/">部署 listener</a>。</p>
-<p>部署完成后，Elasticsearch 集群上会自动创建全文索引。不支持重建或修改全文索引。如果需要删除全文索引，请在 Elasticsearch 集群上手动删除。</p>
-<p>使用全文索引请参见<a href="../15.full-text-index-statements/1.search-with-text-based-index/">使用全文索引查询</a>。</p>
 <h2 id="null">没有 NULL 值索引<a class="headerlink" href="#null" title="Permanent link">&para;</a></h2>
 <p>不支持对值为 NULL 的属性创建索引。</p>
-<h2 id="_6">没有唯一索引<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">没有唯一索引<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>在 Cypher 中，可以通过 Constrains 实现属性值的唯一性限制。在 MySQL 中，可以建立唯一索引来限制某字段只有唯一值。在 nGQL 中没有属性的唯一索引（用户自行保证属性值的唯一性）。</p>
-<h2 id="_7">数字、日期和时间类型的范围查询<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">数字、日期和时间类型的范围查询<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>原生索引还支持对数字、日期和时间类型的属性进行范围查询，不支持其他属性类型的范围查询。</p>
 
   <hr>
@@ -7667,7 +7635,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
       
     
   </small>

@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -314,27 +315,20 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    最新发布
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     其他资料
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     图例说明
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     修改文档中的错误
   </a>
   
@@ -1507,20 +1501,6 @@
     <li class="md-nav__item">
       <a href="3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3276,7 +3256,7 @@
   
     <li class="md-nav__item">
       <a href="4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3290,7 +3270,21 @@
   
     <li class="md-nav__item">
       <a href="4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3857,7 +3851,7 @@
   
     <li class="md-nav__item">
       <a href="backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4807,7 +4801,7 @@
   
     <li class="md-nav__item">
       <a href="nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7492,27 +7486,20 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    最新发布
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     其他资料
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     图例说明
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     修改文档中的错误
   </a>
   
@@ -7539,51 +7526,42 @@
 
 
 <h1 id="nebulagraph_340">欢迎阅读 NebulaGraph 3.4.0 文档<a class="headerlink" href="#nebulagraph_340" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本文档更新时间2023-2-22，GitHub commit <a href="https://github.com/vesoft-inc/nebula-docs/commits/v3.4.0">391276ab</a>。该版本主色系为"海后红"，色号为 #C65467。</p>
+</div>
 <!--
 !!! caution
 
     该版本文档仅包括 NebulaGraph 3.4.0 社区版内容和对应版本的周边工具内容。NebulaGraph 3.4.0 未发布企业版（[企业版发布周期通常为 6 个月](20.appendix/6.eco-tool-version.md)）。详情查看[版本发布说明](20.appendix/release-notes/nebula-comm-release-note.md)。
+
+
+!!! Compatibility
+
+    在 NebulaGraph 3.2 的版本中，允许存在无 Tag 的点，但从 NebulaGraph 3.3.0 开始默认不支持无 Tag 的点。
+
+NebulaGraph 是一款开源的、分布式的、易扩展的原生图数据库，能够承载数千亿个点和数万亿条边的超大规模数据集，并且提供毫秒级查询。
 -->
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>本文档更新时间2023-2-2，GitHub commit <a href="https://github.com/vesoft-inc/nebula-docs/commits/v3.4.0">6b296f8c</a>。该版本主色系为"海后红"，色号为 #C65467。</p>
-</div>
-<div class="admonition compatibility">
-<p class="admonition-title">Compatibility</p>
-<p>在 NebulaGraph 3.2 的版本中，允许存在无 Tag 的点，但从 NebulaGraph 3.3.0 开始默认不支持无 Tag 的点。</p>
-</div>
-<p>NebulaGraph 是一款开源的、分布式的、易扩展的原生图数据库，能够承载数千亿个点和数万亿条边的超大规模数据集，并且提供毫秒级查询。</p>
+
 <h2 id="_1">快速开始<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="20.appendix/learning-path/">学习路径</a>与<a href="https://academic.nebula-graph.io/?lang=ZH_CN">获取认证</a></li>
-<li><a href="1.introduction/1.what-is-nebula-graph/">什么是 NebulaGraph</a></li>
 <li><a href="2.quick-start/1.quick-start-overview/">快速开始</a></li>
 <li><a href="4.deployment-and-installation/1.resource-preparations/">部署要求</a></li>
 <li><a href="2.quick-start/6.cheatsheet-for-ngql-command/">nGQL 命令汇总</a></li>
 <li><a href="20.appendix/0.FAQ/">FAQ</a></li>
 <li><a href="20.appendix/6.eco-tool-version/">生态工具</a></li>
+<li><a href="https://academic.nebula-graph.io/intro/">Academy 课程</a></li>
 </ul>
-<h2 id="_2">最新发布<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">其他资料<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="20.appendix/release-notes/nebula-comm-release-note/">NebulaGraph 社区版 3.4.0</a></li>
-</ul>
-<!-- - [NebulaGraph 企业版 3.4.0](20.appendix/release-notes/nebula-ent-release-note.md)。 -->
-<ul>
-<li><a href="20.appendix/release-notes/studio-release-note/">NebulaGraph Studio</a></li>
-<li><a href="20.appendix/release-notes/dashboard-comm-release-note/">NebulaGraph Dashboard</a></li>
-<li><a href="20.appendix/release-notes/dashboard-ent-release-note/">NebulaGraph Dashboard 企业版</a></li>
-<li><a href="20.appendix/release-notes/explorer-release-note/">NebulaGraph Explorer</a></li>
-</ul>
-<h2 id="_3">其他资料<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://docs.nebula-graph.com.cn/site/pdf/NebulaGraph-book.pdf">Nebula
-Graph 完全指南</a>与<a href="https://arxiv.org/abs/2206.07278">摘要版本</a></li>
+<li><a href="https://academic.nebula-graph.io/?lang=ZH_CN">学习路径</a></li>
+<li><a href="https://arxiv.org/abs/2206.07278">引用 NebulaGraph</a></li>
 <li><a href="https://discuss.nebula-graph.com.cn/">论坛</a></li>
-<li><a href="https://nebula-graph.com.cn/">项目主页</a></li>
+<li><a href="https://nebula-graph.com.cn/">主页</a></li>
 <li><a href="https://space.bilibili.com/472621355">系列视频</a></li>
 <li><a href="https://docs.nebula-graph.io/">英文文档</a></li>
 </ul>
-<h2 id="_4">图例说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">图例说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <!-- 
 本文有 40+ 个 caution。
 本文有 30+ 个 danger。
@@ -7618,7 +7596,7 @@ Graph 完全指南</a>与<a href="https://arxiv.org/abs/2206.07278">摘要版本
 <p class="admonition-title">Enterpriseonly</p>
 <p>描述社区版和企业版的差异。</p>
 </div>
-<h2 id="_5">修改文档中的错误<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">修改文档中的错误<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>NebulaGraph 文档以 Markdown 语言编写。单击文档标题右上侧的铅笔图标即可提交修改建议。</p>
 
   <hr>
@@ -7626,7 +7604,7 @@ Graph 完全指南</a>与<a href="https://arxiv.org/abs/2206.07278">摘要版本
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2023</span>
       
     
   </small>

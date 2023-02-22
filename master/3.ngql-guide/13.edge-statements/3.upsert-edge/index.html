@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1440,20 +1441,6 @@
     <li class="md-nav__item">
       <a href="../../6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3266,7 +3253,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3280,7 +3267,21 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3847,7 +3848,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4797,7 +4798,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7517,9 +7518,9 @@
 <h1 id="upsert_edge">UPSERT EDGE<a class="headerlink" href="#upsert_edge" title="Permanent link">&para;</a></h1>
 <p><code>UPSERT EDGE</code>语句结合<code>UPDATE</code>和<code>INSERT</code>，如果边存在，会更新边的属性；如果边不存在，会插入新的边。</p>
 <p><code>UPSERT EDGE</code>性能远低于<code>INSERT</code>，因为<code>UPSERT</code>是一组分片级别的读取、修改、写入操作。</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>禁止在高并发写操作的情况下使用<code>UPSERT</code>语句，请使用<code>UPDATE</code>或<code>INSERT</code>代替。</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>并发<code>UPSERT</code>同一个 TAG 或 EDGE TYPE 会报错。</p>
 </div>
 <h2 id="_1">语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>UPSERT EDGE ON &lt;edge_type&gt;
@@ -7748,7 +7749,7 @@ nebula&gt; UPSERT EDGE on serve \
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 22, 2023</span>
       
     
   </small>

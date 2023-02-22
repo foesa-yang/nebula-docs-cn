@@ -151,6 +151,7 @@
         
       </form>
     
+    <a href="https://discuss.nebula-graph.com.cn/" target="_blank" rel="noopener" class="md-header__button md-header__option" style="font-size: .9rem" aria-label="NebulaGraph 论坛" title="NebulaGraph 论坛">论坛</a>
     
       <div class="md-header__option">
         <div class="md-select">
@@ -1440,20 +1441,6 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         geo 函数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch 查询函数
       </a>
     </li>
   
@@ -3221,7 +3208,7 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 NebulaGraph 版本
+        升级 v2.x 至 v3.4（社区版）
       </a>
     </li>
   
@@ -3235,7 +3222,21 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至当前版本
+        升级 v3.x 至 v3.4（社区版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        升级 v3.x 至 v3.4（企业版）
       </a>
     </li>
   
@@ -3802,7 +3803,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        编译 BR
+        安装 BR
       </a>
     </li>
   
@@ -4752,7 +4753,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是NebulaGraph Dashboard
+        什么是 NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7445,27 +7446,18 @@
 <p class="admonition-title">Caution</p>
 <p>本文介绍全文索引的限制，请在使用全文索引前仔细阅读。</p>
 </div>
-<p>全文索引有如下 16 条限制：</p>
+<p>全文索引有如下 14 条限制：</p>
 <ul>
 <li>全文索引当前仅支持<code>LOOKUP</code>语句。</li>
 </ul>
 <ul>
-<li>不支持全文索引的名称包含大写字母。</li>
-</ul>
-<ul>
-<li>定长字符串长度超过 256 字节，将无法创建全文索引。</li>
-</ul>
-<ul>
-<li>全文索引依赖原生索引，必须先为 Tag/Edge type 创建原生索引。</li>
+<li>全文索引名称必须以<code>nebula_</code>开头，只能包含数字、小写字母、下划线，字符串长度不能超过 256 字节。</li>
 </ul>
 <ul>
 <li>如果 Tag/Edge type 上存在全文索引，无法删除或修改 Tag/Edge type。</li>
 </ul>
 <ul>
-<li>一个 Tag/Edge type 只能有一个全文索引。</li>
-</ul>
-<ul>
-<li>属性的类型必须为<code>String</code>。</li>
+<li>属性的类型必须为<code>STRING</code>或<code>FIXED_STRING</code>。</li>
 </ul>
 <ul>
 <li>全文索引不支持多个 Tag/Edge type 的搜索。</li>
@@ -7477,9 +7469,6 @@
 <li>全文索引不支持搜索属性值为<code>NULL</code>的属性。</li>
 </ul>
 <ul>
-<li>写入数据时，Elasticsearch 会自动创建相应的索引。在 NebulaGraph 中创建全文索引，但是未写入数据，查询时会报错<code>text search not found</code>。</li>
-</ul>
-<ul>
 <li>不支持修改 Elasticsearch 中的索引，只能删除重建。</li>
 </ul>
 <ul>
@@ -7489,13 +7478,7 @@
 <li><code>WHERE</code>子句只能用单个条件进行全文搜索。</li>
 </ul>
 <ul>
-<li>全文索引不会与图空间一起删除。</li>
-</ul>
-<ul>
 <li>确保同时启动了 Elasticsearch 集群和 NebulaGraph，否则可能导致 Elasticsearch 集群写入的数据不完整。</li>
-</ul>
-<ul>
-<li>在点或边的属性值中不要包含<code>'</code>或 <code>\</code>，否则会导致 Elasticsearch 集群存储时报错。</li>
 </ul>
 <ul>
 <li>从写入 NebulaGraph，到写入 listener，再到写入 Elasticsearch 并创建索引可能需要一段时间。如果访问全文索引时返回未找到索引，可等待索引生效（但是，该等待时间未知，也无返回码检查）。</li>
@@ -7503,18 +7486,13 @@
 <ul>
 <li>使用 K8s 方式部署的 NebulaGraph 集群不支持全文索引。</li>
 </ul>
-<!-- -->
-<ul>
-<li>不能与 <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/">calles()</a> 函数同时使用。</li>
-</ul>
-<!-- -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
       
     
   </small>
