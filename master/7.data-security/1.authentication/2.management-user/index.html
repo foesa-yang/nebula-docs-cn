@@ -1451,6 +1451,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function.md" class="md-nav__link">
+        Elasticsearch 查询函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
@@ -3194,7 +3208,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 v2.x 至 v3.4（社区版）
+        升级 NebulaGraph 版本
       </a>
     </li>
   
@@ -3208,21 +3222,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至 v3.4（社区版）
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
-        升级 v3.x 至 v3.4（企业版）
+        升级 v3.x 至当前版本
       </a>
     </li>
   
@@ -3890,7 +3890,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        安装 BR
+        编译 BR
       </a>
     </li>
   
@@ -4840,7 +4840,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是 NebulaGraph Dashboard
+        什么是NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7623,6 +7623,20 @@
 </ul>
 </li>
 </ul>
+<!-- -->
+
+<ul>
+<li>
+<p>企业版语法</p>
+<div class="highlight"><pre><span></span><code>CREATE USER [IF NOT EXISTS] &lt;user_name&gt; [WITH PASSWORD &#39;&lt;password&gt;&#39;][WITH IP WHITELIST &lt;ip_list&gt;];
+</code></pre></div>
+<ul>
+<li><code>ip_list</code>（企业版）：IP 白名单列表。该用户只有通过列表内的 IP 才能连接 NebulaGraph。多个 IP 之间用英文逗号（,）分隔。</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+
 <ul>
 <li>
 <p>示例</p>
@@ -7637,6 +7651,22 @@ nebula&gt; SHOW USERS;
 </code></pre></div>
 </li>
 </ul>
+<!-- -->
+<ul>
+<li>
+<p>企业版示例</p>
+<div class="highlight"><pre><span></span><code>nebula&gt; CREATE USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10,192.168.10.12;
+nebula&gt; SHOW USERS;
++---------+-------------------------------+
+| Account | IP Whitelist                  |
++---------+-------------------------------+
+| &quot;user2&quot; | &quot;192.168.10.10,192.168.10.12&quot; |
++---------+-------------------------------+
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <h2 id="grant_role">授权用户（<code>GRANT ROLE</code>）<a class="headerlink" href="#grant_role" title="Permanent link">&para;</a></h2>
 <p>执行<code>GRANT ROLE</code>语句可以将指定图空间的内置角色权限授予用户。当前仅 <strong>God</strong> 角色用户和 <strong>Admin</strong> 角色用户能够执行<code>GRANT ROLE</code>语句。角色权限的说明，请参见<a href="../3.role-list/">内置角色权限</a>。</p>
 <ul>
@@ -7737,6 +7767,16 @@ DESC USER &lt;user_name&gt;;
 </code></pre></div>
 </li>
 </ul>
+<!-- -->
+<ul>
+<li>
+<p>企业版语法</p>
+<div class="highlight"><pre><span></span><code>ALTER USER &lt;user_name&gt; WITH PASSWORD &#39;&lt;password&gt;&#39; [WITH IP WHITELIST &lt;ip_list&gt;];
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <ul>
 <li>
 <p>示例</p>
@@ -7752,6 +7792,21 @@ nebula&gt; SHOW USERS;
 </code></pre></div>
 </li>
 </ul>
+<!-- -->
+
+<ul>
+<li>
+<p>企业版示例</p>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>没有使用<code>WITH IP WHITELIST</code>时，表示取消 IP 白名单，用户使用任何 IP 都可以连接 NebulaGraph。  </p>
+</div>
+<div class="highlight"><pre><span></span><code>nebula&gt; ALTER USER user2 WITH PASSWORD &#39;nebula&#39; WITH IP WHITELIST 192.168.10.10;
+</code></pre></div>
+</li>
+</ul>
+<!-- -->
+
 <h2 id="drop_user">删除用户（<code>DROP USER</code>）<a class="headerlink" href="#drop_user" title="Permanent link">&para;</a></h2>
 <p>执行<code>DROP USER</code>语句可以删除用户。当前仅<strong> God </strong>角色用户能够执行<code>DROP USER</code>语句。</p>
 <div class="admonition note">

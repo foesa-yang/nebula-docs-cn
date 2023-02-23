@@ -1451,6 +1451,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function.md" class="md-nav__link">
+        Elasticsearch 查询函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
@@ -3194,7 +3208,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 v2.x 至 v3.4（社区版）
+        升级 NebulaGraph 版本
       </a>
     </li>
   
@@ -3208,21 +3222,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至 v3.4（社区版）
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
-        升级 v3.x 至 v3.4（企业版）
+        升级 v3.x 至当前版本
       </a>
     </li>
   
@@ -3716,6 +3716,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3841,7 +3875,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        安装 BR
+        编译 BR
       </a>
     </li>
   
@@ -4791,7 +4825,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是 NebulaGraph Dashboard
+        什么是NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7481,6 +7515,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic 角色(企业版)
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic 角色(企业版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7578,6 +7646,24 @@
 </ul>
 </li>
 </ul>
+<!-- -->
+<ul>
+<li>
+<p>Basic</p>
+<ul>
+<li>对权限内的图空间拥有 Schema 的<strong>只读</strong>权限。</li>
+</ul>
+<ul>
+<li>（需额外授权）对权限内的图空间拥有 Tag 和 Edge Type 的读写权限。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>Basic 角色仅在企业版中提供。</p>
+</div>
+<!-- -->
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -7716,6 +7802,80 @@
 <p>Show operations 为特殊操作，只会在自身权限内执行。例如<code>SHOW SPACES</code>，每个角色都可以执行，但是只会返回自身权限内的图空间。
 只有 God 角色可以执行<code>SHOW USERS</code>和<code>SHOW SNAPSHOTS</code>语句。</p>
 </div>
+<!-- -->
+<h2 id="basic">Basic 角色(企业版)<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h2>
+<h3 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>进入图空间后才可执行以下命令。</p>
+</div>
+<ul>
+<li>授予 Basic 用户 Tag/Edge 权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>GRANT { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
+OPTION = { READ | WRITE }
+</code></pre></div>
+<ul>
+<li>取消 Basic 用户 Tag/Edge 权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>REVOKE { OPTION[,OPTION] } [ TAG {  * | &lt;tag&gt;[,...] } | EDGE {  * | &lt;edge_type&gt;[, ...] }] TO &lt;user_name&gt;;
+OPTION = { READ | WRITE }
+</code></pre></div>
+<ul>
+<li>查询用户权限</li>
+</ul>
+<div class="highlight"><pre><span></span><code>SHOW GRANTS [&lt;user_name&gt;]
+</code></pre></div>
+<h3 id="_5">注意事项<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>默认 Basic 角色无任何 Tag/Edge 读写权限。</li>
+<li>只有 GOD 和 ADMIN 角色用户能执行授权（GRANT）和撤销权限（REVOKE）操作。</li>
+<li>只允许用户在指定图空间对 Basic 角色进行授权（GRANT）和撤销权限（REVOKE）操作，不允许授权给其他角色用户。</li>
+<li>Basic 角色不允许插入无 Tag 的点。</li>
+<li>执行 UPDATE 或 UPSERT 操作必须同时拥有读权限和写权限。</li>
+</ul>
+<h3 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># 创建 test 用户
+nebula&gt; CREATE USER test WITH PASSWORD &#39;nebula&#39;;
+
+# 为 test 用户创建 Basic 角色权限
+nebula&gt; GRANT ROLE BASIC ON basketballplayer TO test;
+
+# 选择图空间 basketballplayer
+nebula&gt; use basketballplayer;
+
+# 授予 test 用户 Tag `player` 和 Edge Type `follow` 和 `serve` 的读写权限 
+# 授予用户指定 Tag/Edge 读写权限必须在指定图空间后
+nebula&gt; GRANT READ, WRITE TAG player EDGE follow, serve TO test;
+
+# 查询 test 用户权限
+nebula&gt; &gt; SHOW GRANTS test;
++--------+------------+---------------------+------------+---------------------+
+| user   | READ(TAG)  | READ(EDGE)          | WRITE(TAG) | WRITE(EDGE)         |
++--------+------------+---------------------+------------+---------------------+
+| &quot;test&quot; | [&quot;player&quot;] | [&quot;follow&quot;, &quot;serve&quot;] | [&quot;player&quot;] | [&quot;follow&quot;, &quot;serve&quot;] |
++--------+------------+---------------------+------------+---------------------+
+
+# 取消 test 用户 所有 Edge Type 的读、写权限
+nebula&gt; REVOKE READ,WRITE EDGE * FROM test;
+
+# 查询 test 用户权限
+nebula&gt; SHOW GRANTS test;
++--------+------------+------------+------------+-------------+
+| user   | READ(TAG)  | READ(EDGE) | WRITE(TAG) | WRITE(EDGE) |
++--------+------------+------------+------------+-------------+
+| &quot;test&quot; | [&quot;player&quot;] | []         | [&quot;player&quot;] | []          |
++--------+------------+------------+------------+-------------+
+
+# Basic 角色用户读取无权限的数据时，将会出现以下报错
+nebula&gt;  MATCH (v:player)-[:likex]-() RETURN v;
+[ERROR (-1008)]: PermissionError: Edge `likex&#39; does not exist or is not readable.
+</code></pre></div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>对于 Basic 角色用户，显式指定无读权限的 Tag/Edge Type 将报错，未显式指定无读权限的 Tag/Edge Type 不会报错。在遍历过程中，所有查询无法读取无权限的 Tag/Edge Type 及其上的属性。Edge Type 的读权限可控制边的扩展行为，在遍历过程中，如果 Edge Type 无权限，将不会进行拓展；Tag 的读权限不控制点的拓展行为，拓展过程中即使点上 Tag 无权限，仍可进行拓展。</p>
+</div>
+<!-- -->
 
   <hr>
 <div class="md-source-file">

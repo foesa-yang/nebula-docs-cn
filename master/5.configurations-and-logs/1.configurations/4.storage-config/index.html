@@ -1451,6 +1451,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function.md" class="md-nav__link">
+        Elasticsearch 查询函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
@@ -3194,7 +3208,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 v2.x 至 v3.4（社区版）
+        升级 NebulaGraph 版本
       </a>
     </li>
   
@@ -3208,21 +3222,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至 v3.4（社区版）
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
-        升级 v3.x 至 v3.4（企业版）
+        升级 v3.x 至当前版本
       </a>
     </li>
   
@@ -3454,6 +3454,13 @@
         <li class="md-nav__item">
   <a href="#rocksdb_options" class="md-nav__link">
     rocksdb options 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
   </a>
   
 </li>
@@ -3911,7 +3918,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        安装 BR
+        编译 BR
       </a>
     </li>
   
@@ -4861,7 +4868,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是 NebulaGraph Dashboard
+        什么是NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7601,6 +7608,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#memory_tracker" class="md-nav__link">
     memory tracker 配置
   </a>
@@ -8048,6 +8062,66 @@ disable_auto_compactions
 </li>
 </ul>
 <p>参数的详细说明请参见 <a href="https://rocksdb.org/">RocksDB 官方文档</a>。</p>
+<!-- -->
+
+<!-- open after being fully tested
+
+## storage cache 配置
+
+!!! enterpriseonly
+
+    仅企业版支持 storage cache 配置。
+
+| 名称                           | 预设值  | 说明                               |
+| :-----------------------------| :------| :------------------------------- |
+| `enable_storage_cache`        | `false`|  是否开启 Storage 缓存功能。|
+| `storage_cache_capacity`      | `0`    |  为 Storage 缓存预留的内存大小，取值需要稍大于`vertex_pool_capacity`和`negative_pool_capacity`的总和。单位：兆字节。|
+| `storage_cache_entries_power` | `20`   |  预估 Storage 节点上缓存条目的个数，计算公式：2$^{<设置值>}$。例如当设置的值为`20`时，表示缓存条目的个数为 2$^{20}$。建议设置的值为`log2(该 Storage 中点的数量)`，最大值可设置为`31`。|
+| `enable_vertex_pool`          | `false`| 是否使用点的缓存池。仅在启用 Storage 缓存功能时生效。  |
+| `vertex_pool_capacity`        | `50`   | 点缓存池的大小。 单位：兆字节。|
+| `vertex_item_ttl`             | `300`  | 点缓存条目的有效时间。单位：秒。 |
+| `enable_negative_pool`       | `false`| 是否添加消极缓存池（消极缓存池表示 Key 不存在于数据库中的数据缓存池）。仅当`enable_storage_cache`为`true`时有效。  |
+| `negative_pool_capacity`     | `50`   | 消极缓存池的大小。 单位：兆字节。  |
+| `negative_item_ttl`          | `300`  | 消极缓存条目的有效时间。单位：秒。  | -->
+
+<h2 id="black_box">Black box 配置<a class="headerlink" href="#black_box" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅企业版支持黑匣子功能配置。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">预设值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>ng_black_box_switch</code></td>
+<td align="left"><code>true</code></td>
+<td align="left">是否开启黑匣子功能。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_home</code></td>
+<td align="left"><code>black_box</code></td>
+<td align="left">存储黑匣子数据的目录名称。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_dump_period_seconds</code></td>
+<td align="left"><code>5</code></td>
+<td align="left">黑匣子采集指标的时间间隔。单位：秒。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_file_lifetime_seconds</code></td>
+<td align="left"><code>1800</code></td>
+<td align="left">采集指标后生成文件的保存时间。单位：秒</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+
 <h2 id="memory_tracker">memory tracker 配置<a class="headerlink" href="#memory_tracker" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

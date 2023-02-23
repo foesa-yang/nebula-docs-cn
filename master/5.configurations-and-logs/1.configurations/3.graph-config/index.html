@@ -1451,6 +1451,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function.md" class="md-nav__link">
+        Elasticsearch 查询函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         自定义函数
       </a>
@@ -3194,7 +3208,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        升级 v2.x 至 v3.4（社区版）
+        升级 NebulaGraph 版本
       </a>
     </li>
   
@@ -3208,21 +3222,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        升级 v3.x 至 v3.4（社区版）
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
-        升级 v3.x 至 v3.4（企业版）
+        升级 v3.x 至当前版本
       </a>
     </li>
   
@@ -3445,6 +3445,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    audit 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metrics" class="md-nav__link">
     metrics 配置
   </a>
@@ -3461,6 +3468,13 @@
         <li class="md-nav__item">
   <a href="#experimental" class="md-nav__link">
     experimental 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
   </a>
   
 </li>
@@ -3918,7 +3932,7 @@
   
     <li class="md-nav__item">
       <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        安装 BR
+        编译 BR
       </a>
     </li>
   
@@ -4868,7 +4882,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
-        什么是 NebulaGraph Dashboard
+        什么是NebulaGraph Dashboard
       </a>
     </li>
   
@@ -7608,6 +7622,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    audit 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metrics" class="md-nav__link">
     metrics 配置
   </a>
@@ -7624,6 +7645,13 @@
         <li class="md-nav__item">
   <a href="#experimental" class="md-nav__link">
     experimental 配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#black_box" class="md-nav__link">
+    Black box 配置
   </a>
   
 </li>
@@ -7969,6 +7997,15 @@
 </tr>
 </tbody>
 </table>
+<!-- -->
+<h2 id="audit">audit 配置<a class="headerlink" href="#audit" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅 NebulaGraph 企业版支持审计日志功能。</p>
+</div>
+<p>详细参数说明参见<a href="../../2.log-management/audit-log/">审计日志</a>。</p>
+<!-- -->
+
 <h2 id="metrics">metrics 配置<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -8025,6 +8062,46 @@
 </tr>
 </tbody>
 </table>
+<!-- -->
+
+<h2 id="black_box">Black box 配置<a class="headerlink" href="#black_box" title="Permanent link">&para;</a></h2>
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>仅企业版支持黑匣子功能配置。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">预设值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>ng_black_box_switch</code></td>
+<td align="left"><code>true</code></td>
+<td align="left">是否开启黑匣子功能。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_home</code></td>
+<td align="left"><code>black_box</code></td>
+<td align="left">存储黑匣子数据的目录名称。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_dump_period_seconds</code></td>
+<td align="left"><code>5</code></td>
+<td align="left">黑匣子采集指标的时间间隔。单位：秒。</td>
+</tr>
+<tr>
+<td align="left"><code>ng_black_box_file_lifetime_seconds</code></td>
+<td align="left"><code>1800</code></td>
+<td align="left">采集指标后生成文件的保存时间。单位：秒</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+
 <h2 id="memory_tracker">memory tracker 配置<a class="headerlink" href="#memory_tracker" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
